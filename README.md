@@ -22,6 +22,7 @@ Nếu bạn (hoặc một AI agent) sắp đóng góp vào dự án, đọc theo
 | 2 | [SCHEMA.md](00-foundation/SCHEMA.md) | Cấu trúc 12 loại entity, frontmatter, bộ quan hệ |
 | 3 | [VERIFY-PROTOCOL.md](00-foundation/VERIFY-PROTOCOL.md) | Luồng kiểm định độc lập. **Không bỏ qua** |
 | 4 | [SAGA-STYLE.md](00-foundation/SAGA-STYLE.md) | Ranh giới canon vs sáng tạo khi viết truyện |
+| 5 | [TIMELINE-SPINE.md](00-foundation/TIMELINE-SPINE.md) | Xương sống thời gian. Quan hệ tương đối, không phải năm tuyệt đối |
 
 `CANON-POLICY.md` có quyền lực cao nhất. Bài viết nào xung đột với nó thì bài viết sai.
 
@@ -102,10 +103,27 @@ Saga chỉ được viết sau khi entity Codex liên quan đạt `status: verif
 
 **Giai đoạn 1 — Xây nền.**
 
-- [x] Bốn tài liệu nền
-- [ ] `sources/REGISTRY.md`
-- [ ] Entity mẫu (Sandro) — thử lửa cho schema
-- [ ] `TIMELINE-SPINE.md`
-- [ ] Công cụ kiểm toàn vẹn
+- [x] Năm tài liệu nền
+- [x] [`sources/REGISTRY.md`](sources/REGISTRY.md) — 46 source key từ đợt research đầu
+- [x] Entity mẫu [Sandro](codex/heroes/sandro.md) — thử lửa cho schema (trạng thái `draft`)
+- [x] [`TIMELINE-SPINE.md`](00-foundation/TIMELINE-SPINE.md)
+- [x] [`tools/check.py`](tools/check.py) — kiểm 8 điều kiện toàn vẹn (Tầng 1)
+- [ ] Sandro đạt `status: verified` sau khi xử lý báo cáo kiểm định
+- [ ] Chỉnh schema theo những gì Sandro phá vỡ
 
 Chưa bắt đầu viết Codex hàng loạt. Chưa bắt đầu Saga.
+
+### Kiểm nhanh
+
+```bash
+python3 tools/check.py
+```
+
+### Hạn chế lớn nhất hiện tại
+
+Toàn bộ text in-game trong Codex mang tier **`T1*`** — bản chép của fan wiki, **không
+phải file game gốc**. Xem [`sources/REGISTRY.md`](sources/REGISTRY.md) mục "Lưu ý về
+T1\*" để biết vì sao vẫn tin ở mức cao, và cần làm gì để nâng lên `T1` thật.
+
+Ngoài ra: dự án **không tìm được bất kỳ developer commentary nào** về Old Universe
+trong đợt research đầu. Codex không được khẳng định "ý định của developer".
