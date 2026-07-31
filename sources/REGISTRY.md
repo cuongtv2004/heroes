@@ -90,7 +90,9 @@ gốc **một bước**.
 | `sod-union` | T1* | FETCHED | Region text + prologue Gem — Angelic Alliance |
 | `sod-fall-of-sandro` | T1* | FETCHED | Region text, prologue Gem, **epilogue Yog** — phá hủy và phân tán artifact |
 | `sod-secrets-revealed` | T1* | FETCHED | Yog + Crag Hack hợp lực |
-| `sod-agents-of-vengeance` | T1* | FETCHED | Gelu/Gem điều tra, **thư Ethric gửi Gem** |
+| `sod-agents-of-vengeance` | T1* | FETCHED | Gelu/Gem điều tra, **thư Ethric gửi Gem** — chứa neo thời gian "decades" |
+| `sod-gathering-the-legion` | T1* | FETCHED | **Tuyến Tyranell / Statue of Legion** — xác nhận đây là game text thật, không phải wiki bịa. Map event (8,60,0) là bằng chứng quyết định |
+| `h3wiki-tyranell` | T1* | FETCHED | Hero Tyranell — knight quân Erathia, được Sandro trả tiền đi lấy các mảnh Legion, bị Crag Hack đánh bại |
 
 ### Campaign: Specter of Power (Sandro là người chơi)
 
@@ -145,6 +147,7 @@ Chỉ dùng để dẫn đường tới T1–T4.
 | `ch-walkthrough-302` | T6 | FETCHED | Celestial Heavens walkthrough *Wrath of Sandro* — chiến thuật, không có transcript |
 | `ch-walkthrough-303` | T6 | FETCHED | Celestial Heavens walkthrough *Invasion* |
 | `ch-walkthrough-307` | T6 | FETCHED | Celestial Heavens walkthrough *Fall of Sandro*. Số liệu hữu ích: Sandro trận cuối có 13 Attack / 14 Defense / 17 Power / 7 Knowledge, bị chặn sau Quest Gate cần Boots of Levitation |
+| `mm8-guide-walkthrough` | T6 | FETCHED | Walkthrough MM8 độc lập với Fandom, `tumblr.com/mm8-guide/663630859431231488` — **xác nhận độc lập** phần MM8 và **sửa** một chi tiết: Sandro là **lãnh đạo**, Thant là **phó**, không phải đồng lãnh đạo |
 
 ---
 
@@ -164,11 +167,92 @@ Ghi lại để lần sau thử tiếp. **Không được dùng làm nguồn.**
 
 ---
 
-## Nhóm 4 — Nguồn KHÔNG tồn tại
+## Nhóm 4 — Developer statement (T4)
 
-| Loại | Kết luận |
-|------|----------|
-| **Developer commentary về Sandro** | **KHÔNG TÌM ĐƯỢC GÌ.** Không có phỏng vấn nào của NWC về Sandro hay cốt truyện SoD. Ba đường còn lại đều tắc: archive.org bị chặn, site chính thức đã chết, báo game 1999–2000 không tìm được. **Codex tuyệt đối không được khẳng định "ý định của developer" về Sandro** |
+⚠️ **Đợt research đầu kết luận sai rằng "không có developer commentary nào".** Luồng
+kiểm định độc lập tìm được nguồn T4 thật. Ghi lại sai sót này để nhớ: **kết luận
+"không tồn tại" cần được kiểm chứng nghiêm khắc như mọi claim khác.**
+
+| key | tier | access | Nội dung |
+|-----|------|--------|----------|
+| `bullard-interview-2013` | **T4** | FETCHED | **Phỏng vấn Jennifer Bullard**, do Alchemik thực hiện năm 2013 cho Acid Cave. `acidcave.net/jennifer_bullard_interview.html` — **còn sống, truy cập trực tiếp được, không cần archive.org**. Mirror/index tại `heroes.thelazy.net/index.php/Jennifer_Bullard` |
+| `bullard-papers-ut-austin` | **T3** | NOT_FETCHED | **Tài liệu thiết kế gốc do chính Bullard tập hợp**, lưu tại Dolph Briscoe Center for American History, University of Texas. `repositories.lib.utexas.edu/items/e3abd6e5-b6be-4547-8900-17b2c9e237da` — mục lục ghi "Heroes [of Might and Magic] documents" |
+
+### Jennifer Bullard là ai
+
+Thành viên gốc của New World Computing. **"Designer and storyline writer for Heroes III
+and IV as well as the Heroes Chronicles series."** Được ghi công là một trong các
+designer của *Shadow of Death*, cùng **Gregory Fulton** và **Jon Van Caneghem**.
+
+Nghĩa là: đây không phải phát ngôn của một nhân viên bên lề. Đây là **người viết cốt
+truyện**.
+
+### Phát ngôn quan trọng nhất — về thầy của Sandro
+
+> **Hỏi:** "Ethric the Mad from Might and Magic VI - The Mandate of Heaven. Was he the
+> same master of Sandro from Heroes of Might and Magic III - Shadow of Death
+> storyline?"
+>
+> **Đáp:** "**Yes**, we always tried to tie the different products together so people
+> who played everything could see a theme."
+
+{T4 EXPLICIT: bullard-interview-2013}
+
+Đây là phát ngôn có sức nặng nhất về tiểu sử Sandro mà dự án có: nó xác nhận thầy của
+Sandro **chính là** Ethric the Mad — lich đầu tiên và necromancer đầu tiên của thế
+giới, cũng là kẻ bị nhóm nhân vật MM6 giết. Nó cũng xác lập việc **nối các sản phẩm
+với nhau là chính sách thiết kế có chủ ý**, không phải trùng hợp.
+
+### Phát ngôn về Heroes Chronicles — liên quan trực tiếp tới vấn đề trùng tên
+
+> "Jon Van Caneghem was not involved in the Heroes Chronicles series - In fact **I did
+> a majority of the work myself.**"
+
+> "The Heroes Chronicles were meant to be more **stand-alone** than anything.
+> Honestly, it was marketing who had the greatest hand in driving the products. We were
+> slipping on Heroes IV and they wanted our fan base to have more maps to play. So I was
+> asked to create 8 campaigns that could stand alone and be played in any order,
+> **without any reference to each other or the other products in development**. […]
+> Each original story & maps was written by one level designer and then I cleaned and
+> polished them until ship. **Each one was supposed to take place in 'the distant past'
+> and we didn't create a specific order to their events.**"
+
+{T4 EXPLICIT: bullard-interview-2013}
+
+**Đây là chìa khóa giải thích vấn đề Sandro trong Chronicles.** Chronicles được làm như
+sản phẩm độc lập, **cố ý không tham chiếu** các sản phẩm khác, mỗi campaign do một
+level designer viết. Một designer chọn tên necromancer dễ nhận ra cho boss một map —
+trong sản phẩm bị tách biệt có chủ ý — chính là quy trình sinh ra một cái tên trùng
+ngẫu nhiên.
+
+Lưu ý: đây là **suy luận từ mô tả quy trình**, không phải phát ngôn về Sandro. Bullard
+không được hỏi về Sandro dưới hầm.
+
+Bà cũng cảnh báo fan "are even finding references which may not exist" trong Chronicles
+— lời nhắc áp đúng vào trường hợp này.
+
+### Phát ngôn về việc bỏ Forge
+
+> "The story was relatively unchanged after we removed the Forge. It just had a
+> different origin from the original story."
+
+{T4 EXPLICIT: bullard-interview-2013}
+
+### Điều phỏng vấn KHÔNG trả lời
+
+Không có phát ngôn nào về: quá trình Sandro thành lich, tên khai sinh của hắn, hay các
+cảnh Tyranell / Finneas. Phỏng vấn là dạng hỏi-đáp theo câu hỏi của fan, và **không ai
+hỏi những điều đó.**
+
+### Lead giá trị nhất chưa khai thác
+
+`bullard-papers-ut-austin` — tài liệu thiết kế gốc của Shadow of Death và Heroes IV,
+do chính người viết cốt truyện tập hợp, lưu tại thư viện đại học. **Chưa fetch.**
+
+Đây là đường có triển vọng nhất để trả lời câu hỏi mở lớn nhất về Sandro (quá trình
+thành lich). Cũng đáng chú ý: `heroes3wog.net` được cho là có lưu tư liệu phục hồi từ
+bộ này, ví dụ "General Kendal's Diary". Thread cộng đồng liên quan:
+`celestialheavens.com/forum/topic/16558` ("Jennifer Bullard - Lost manuscript files").
 
 ---
 
@@ -193,6 +277,39 @@ Hai vấn đề độc lập: **niên đại** (Chronicles xảy ra trước hà
 
 **Xử lý:** claim này bắt buộc `DISPUTED`. Không được ghi Sandro xuất hiện trong
 Chronicles như dữ kiện.
+
+**Cập nhật sau kiểm định — hai lập luận KHÔNG mạnh như nhau:**
+
+Luồng kiểm định độc lập đọc lại toàn bộ `hc-truth-within-nightmares` và tách được:
+
+- **Lập luận niên đại (mạnh, có nguồn game text).** Ethric nói Sandro làm học trò mình
+  "**decades**" — vài thập kỷ, không phải hàng trăm năm.
+  {T1* EXPLICIT: sod-agents-of-vengeance} Thêm nữa, Jeddite — bạn học cùng thời, người
+  **phàm** — vẫn còn sống và hoạt động trong Shadow of Death, giới hạn khoảng cách
+  trong một đời người. {T1* EXPLICIT: sod-target} Trong khi *Conquest of the Underworld*
+  diễn ra dưới thời **Rion Gryphonheart, vua đầu tiên** của Erathia — cách Nicolas
+  Gryphonheart nhiều thế hệ. Lệch nhau khoảng một bậc độ lớn. **Đây là lập luận gánh
+  toàn bộ kết luận.**
+
+- **Lập luận sinh tử (YẾU hơn thelazy.net hàm ý).** Chữ "kill" chỉ xuất hiện trong
+  **mô tả scenario** ("Tarnum must kill Sandro to get the key"), **không** có đoạn nào
+  trong phần kể mô tả Sandro chết — không epilogue, không xác. Điều kiện thắng là
+  "Defeat Hero", một mục tiêu cơ chế thông thường **không** hàm ý cái chết. Và Sandro
+  chứng minh nhiều lần rằng hắn sống sót qua thất bại.
+  {T1* INFERENCE: hc-truth-within-nightmares}
+
+**Thêm một mảnh từ nguồn T4:** Bullard cho biết Chronicles được làm như sản phẩm độc
+lập, **cố ý không tham chiếu** sản phẩm khác, mỗi campaign do một level designer viết,
+và "we didn't create a specific order to their events."
+{T4 EXPLICIT: bullard-interview-2013} Đây là quy trình sinh ra tên trùng ngẫu nhiên.
+
+**Kết luận sau kiểm định:** vẫn `DISPUTED`, nhưng nghiêng mạnh về "người trùng tên" —
+và lý do là **niên đại**, không phải chuyện Tarnum có giết hắn hay không. Khi viết,
+phải dùng đúng lập luận mạnh.
+
+**Không có năm tuyệt đối cho *Conquest of the Underworld*.** Đây không phải thất bại
+tra cứu mà là **thuộc tính của tư liệu** — theo Bullard, chưa từng có thứ tự cụ thể nào
+được tạo ra.
 
 ### `h3wiki-lord-haart` vs `sod-poison-fit-for-a-king` — ai ra lệnh đầu độc?
 
@@ -222,16 +339,34 @@ Nhưng phải nêu rõ mâu thuẫn, không được im lặng chọn bên.
 
 ---
 
+## Đã giải quyết sau kiểm định
+
+| Việc | Kết quả |
+|------|---------|
+| ~~Tìm nguồn MM8 độc lập~~ | ✅ `mm8-guide-walkthrough` xác nhận độc lập. **Sửa một chi tiết:** Sandro là **lãnh đạo** guild, Thant là **phó** và là người **tạo ra** Nightshade Brazier — không phải đồng lãnh đạo |
+| ~~Kiểm tuyến Tyranell / Statue of Legion~~ | ✅ **Là game text thật.** Nằm trong `sod-gathering-the-legion` (campaign của Crag Hack). Bằng chứng quyết định: map event (8,60,0) — một cựu thuộc hạ của Tyranell khai "Sandro was going to pay Tyranell well to find the Head and other pieces of Legion". Tyranell tồn tại như hero thật, mang Head of Legion |
+| ~~Kiểm cảnh "dấu ngón tay xương trên ngực Finneas"~~ | ✅ **Tìm được.** Ở `sod-invasion` Day 17, **không** phải Specter of Power. Nguyên văn: "The impression of your bony fingertips is now permanently emblazoned on his chest, a small spell you picked up years ago." Wiki paraphrase **chính xác** |
+| ~~Tìm developer commentary~~ | ✅ **Kết luận "không tồn tại" của đợt đầu là SAI.** Xem Nhóm 4 |
+
+**Bài học từ hai mục đầu:** cả hai claim wiki bị nghi là "wiki tự bịa" đều **có thật**.
+Lý do đợt đầu không tìm được: text nằm trong scenario mà **Sandro không phải nhân vật
+chính** — tuyến Tyranell hiện qua một NPC phụ trong campaign của Crag Hack, còn cảnh
+Finneas nằm ở `sod-invasion`. Tra cứu chỉ giới hạn trong scenario của Sandro sẽ bỏ sót.
+
+**Bài học quan trọng hơn:** đợt đầu kết luận "không có developer commentary" và mình đã
+ghi điều đó vào ba chỗ trong Codex. Kết luận đó sai.
+**Claim dạng "không tồn tại" phải bị kiểm nghiêm như mọi claim khác.**
+
 ## Cần bổ sung sau
 
 | Việc | Vì sao |
 |------|--------|
-| Trích text từ file `.h3c` | Nâng toàn bộ `T1*` → `T1`. Là hạn chế lớn nhất hiện tại |
+| **Fetch `bullard-papers-ut-austin`** | Tài liệu thiết kế gốc của chính người viết cốt truyện. **Lead giá trị nhất chưa khai thác** — có thể chứa phần tiểu sử Sandro chưa từng phát hành |
+| Trích text từ file `.h3c` | Nâng toàn bộ `T1*` → `T1`. Vẫn là hạn chế lớn nhất |
 | Thử lại `heroesofmightandmagic.com` qua proxy khác | Nguồn chính thức duy nhất còn khả năng |
-| Tìm nguồn MM8 độc lập | Toàn bộ phần MM8 hiện chỉ có `fandom-sandro-enroth` (T6, không dẫn nguồn) |
 | Kiểm quote Gauldoth Half-Dead (H4) | Hiện chỉ là quote-box trên Fandom, không dẫn nguồn |
-| Kiểm tuyến Tyranell / Statue of Legion | `h3wiki-sandro` khẳng định nhưng chưa tìm được scenario text chống lưng |
-| Kiểm cảnh "dấu ngón tay xương trên ngực Finneas" | `h3wiki-finneas` kể nhưng không rõ từ scenario nào |
+| Thử lại Celestial Heavens interview archive | Trả 403 trong cả hai đợt. Có thể còn phỏng vấn NWC khác |
+| Tìm `heroes3wog.net` — tư liệu phục hồi từ bộ Bullard | Được cho là có "General Kendal's Diary" và tài liệu khác |
 
 ---
 

@@ -125,5 +125,14 @@ Toàn bộ text in-game trong Codex mang tier **`T1*`** — bản chép của fa
 phải file game gốc**. Xem [`sources/REGISTRY.md`](sources/REGISTRY.md) mục "Lưu ý về
 T1\*" để biết vì sao vẫn tin ở mức cao, và cần làm gì để nâng lên `T1` thật.
 
-Ngoài ra: dự án **không tìm được bất kỳ developer commentary nào** về Old Universe
-trong đợt research đầu. Codex không được khẳng định "ý định của developer".
+### Một bài học đã học được
+
+Đợt research đầu kết luận "không tìm được developer commentary nào". **Kết luận đó
+sai** — luồng kiểm định độc lập tìm được phỏng vấn **Jennifer Bullard**, người viết cốt
+truyện *Shadow of Death*, còn truy cập được trực tiếp.
+
+Đợt đó cũng kết luận sai hai lần nữa, cùng một dạng: **claim phủ định ("không tồn
+tại", "không xác nhận được") được đưa ra quá sớm.** Cả ba đều bị phản bác.
+
+Từ đây: claim dạng phủ định phải bị kiểm nghiêm như claim khẳng định. Đây chính là lý
+do [`VERIFY-PROTOCOL.md`](00-foundation/VERIFY-PROTOCOL.md) tồn tại.
