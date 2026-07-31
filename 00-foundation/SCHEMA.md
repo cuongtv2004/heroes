@@ -328,7 +328,11 @@ không được đặt `status: verified`:
 3. Mọi `source` trong `relations` tồn tại trong `sources/REGISTRY.md`.
 4. Mọi `sources_used` tồn tại trong registry.
 5. Mọi claim trong thân bài có nhãn — không có câu khẳng định nào trơ trọi.
-6. Không có `UNVERIFIED` nào trong thân bài.
+6. `UNVERIFIED` chỉ được xuất hiện ở **mục dành riêng**: *Câu hỏi mở*,
+   *Giả thuyết cộng đồng*, *Điểm tranh chấp canon*, *Trivia & Dev Notes*.
+   Trong các mục thân bài chính (*Tiểu sử*, *Quan hệ*, *Xuất hiện trong game*,
+   *Gameplay*), `UNVERIFIED` chỉ được dùng khi **đang cảnh báo** rằng một claim lưu
+   hành là không đáng tin — không bao giờ để **chống lưng** cho một khẳng định của bài.
 7. `type` thuộc 12 loại đã định.
 8. Mọi `relations[].type` thuộc bộ quan hệ đóng ở mục 3.
 

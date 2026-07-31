@@ -44,6 +44,17 @@ CERTAINTY = {"EXPLICIT", "INFERENCE", "DISPUTED", "FAN_THEORY", "UNVERIFIED"}
 # Nhãn inline trong thân bài: {T1* EXPLICIT: source-key ...}
 CLAIM_RE = re.compile(r"\{(T\d\*?)\s+([A-Z_]+):\s*([^}]+)\}")
 
+# SCHEMA.md điều kiện 6 — các mục được phép chứa UNVERIFIED.
+# Lý do: có những điều thật sự không xác minh được (nguồn không dẫn nguồn, site chặn
+# bot). Cấm tuyệt đối thì buộc phải xóa thông tin hữu ích, hoặc không bao giờ đạt
+# `verified`. Cả hai đều tệ hơn là ghi rõ "chưa kiểm được" ở đúng chỗ.
+UNVERIFIED_OK_SECTIONS = {
+    "Câu hỏi mở",
+    "Giả thuyết cộng đồng",
+    "Điểm tranh chấp canon",
+    "Trivia & Dev Notes",
+}
+
 errors: list[str] = []
 warnings: list[str] = []
 
@@ -212,22 +223,40 @@ def main() -> int:
                 # Bài chưa viết là chuyện bình thường ở giai đoạn đầu
                 warn(f"{rel(path)}: quan hệ {rtype} → `{target}` (bài chưa tồn tại)")
 
-        # (5)(6) nhãn trong thân bài
+        # (5)(6) nhãn trong thân bài — theo dõi mục hiện tại để áp điều kiện 6
         claims = CLAIM_RE.findall(body)
         if not claims:
             warn(f"{rel(path)}: thân bài không có nhãn claim nào")
 
-        for tier, certainty, payload in claims:
-            if certainty not in CERTAINTY:
-                err(f"{rel(path)}: nhãn certainty không hợp lệ trong thân bài: {certainty}")
-            # (6) không UNVERIFIED trong thân bài khi đã verified
-            if certainty == "UNVERIFIED" and status == "verified":
-                err(f"{rel(path)}: bài `verified` nhưng còn claim UNVERIFIED")
+        section = ""
+        for line in body.splitlines():
+            if line.startswith("## "):
+                section = line[3:].strip()
+                continue
 
-            # source key là token đầu của payload
-            first = payload.strip().split()[0].rstrip(",;")
-            if first and first not in registry and not first.startswith("("):
-                warn(f"{rel(path)}: nhãn dùng source key ngoài registry: {first}")
+            for tier, certainty, payload in CLAIM_RE.findall(line):
+                if certainty not in CERTAINTY:
+                    err(f"{rel(path)}: nhãn certainty không hợp lệ: {certainty}")
+
+                # (6) UNVERIFIED chỉ được ở mục dành riêng.
+                # Trong thân bài chính, chỉ chấp nhận khi đang CẢNH BÁO về claim của
+                # người khác — dấu hiệu: payload nói rõ nguồn không đáng tin.
+                if certainty == "UNVERIFIED" and status == "verified":
+                    if section not in UNVERIFIED_OK_SECTIONS:
+                        is_warning = any(
+                            kw in payload
+                            for kw in ("không dẫn nguồn", "chưa fetch", "không xác minh")
+                        )
+                        if not is_warning:
+                            err(
+                                f"{rel(path)}: bài `verified` có UNVERIFIED chống lưng "
+                                f"cho khẳng định trong mục '{section}' — "
+                                f"chuyển xuống Câu hỏi mở hoặc ghi rõ vì sao không tin được"
+                            )
+
+                first = payload.strip().split()[0].rstrip(",;")
+                if first and first not in registry and not first.startswith("("):
+                    warn(f"{rel(path)}: nhãn dùng source key ngoài registry: {first}")
 
     # Báo cáo
     print(f"Đã kiểm {len(entities)} bài, {len(registry)} source key trong registry.\n")

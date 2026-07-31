@@ -129,7 +129,13 @@ gốc **một bước**.
 | `h3wiki-thant` | T1* | FETCHED | **Xác nhận Thant KHÔNG có vai trò cốt truyện trong H3** |
 | `h3wiki-nimbus` | T1* | FETCHED | Vai trò MM7/RoE; **xác nhận không có liên hệ với Sandro** |
 | `h3wiki-lord-haart` | T1* | FETCHED | **Nguồn của mâu thuẫn "theo lệnh Finneas Vilmar"** |
-| `h3wiki-jabarkas` | T1* | FETCHED | Hero Stronghold; bio ghi là con Duke Boragus — **không** có nội dung về Ethric hay con gái |
+| `h3wiki-jabarkas` | T1* | FETCHED | Hero Stronghold; bio ghi là **con trai cả của Duke Boragus**, race Ogre của Krewlod — **xung đột** với claim "em trai Ethric" trong `sod-target` |
+| `h3wiki-necromancer` | T1* | FETCHED | Định nghĩa class Necromancer — chỉ số khởi đầu 1/0/2/2 |
+| `h3wiki-death-knight` | T1* | FETCHED | Định nghĩa class Death Knight — 1/2/2/1, khởi đầu có Spell Book. **Bằng chứng thật** cho việc hai class khác nhau |
+| `h3wiki-a-gryphons-heart` | T1* | FETCHED | Epilogue — Finneas "met with an unfortunate accident" khi hồi sinh Gryphonheart |
+| `h3wiki-on-the-run` | T1* | FETCHED | Yog kể từng yêu Vidomina trước khi nàng bị tha hóa |
+| `sod-manual-p14` | T2* | FETCHED | Manual tr.14 — Yog phân tán các mảnh Angelic Alliance |
+| `sod-manual-p15` | T2* | FETCHED | Manual tr.15 — thông số Sandro. **Lưu ý: KHÔNG có đoạn bio nào** |
 
 ---
 
@@ -148,6 +154,7 @@ Chỉ dùng để dẫn đường tới T1–T4.
 | `ch-walkthrough-303` | T6 | FETCHED | Celestial Heavens walkthrough *Invasion* |
 | `ch-walkthrough-307` | T6 | FETCHED | Celestial Heavens walkthrough *Fall of Sandro*. Số liệu hữu ích: Sandro trận cuối có 13 Attack / 14 Defense / 17 Power / 7 Knowledge, bị chặn sau Quest Gate cần Boots of Levitation |
 | `mm8-guide-walkthrough` | T6 | FETCHED | Walkthrough MM8 độc lập với Fandom, `tumblr.com/mm8-guide/663630859431231488` — **xác nhận độc lập** phần MM8 và **sửa** một chi tiết: Sandro là **lãnh đạo**, Thant là **phó**, không phải đồng lãnh đạo |
+| `fandom-sandro-xeen` | T6 | FETCHED | Trang `Sandro (Xeen)` — nhân vật **riêng** trong *Might and Magic V: Darkside of Xeen*, lich, questgiver/boss ở Necropolis. **Quan trọng:** sprite của nhân vật này là gốc của portrait Sandro Enroth |
 
 ---
 
@@ -177,6 +184,9 @@ kiểm định độc lập tìm được nguồn T4 thật. Ghi lại sai sót 
 |-----|------|--------|----------|
 | `bullard-interview-2013` | **T4** | FETCHED | **Phỏng vấn Jennifer Bullard**, do Alchemik thực hiện năm 2013 cho Acid Cave. `acidcave.net/jennifer_bullard_interview.html` — **còn sống, truy cập trực tiếp được, không cần archive.org**. Mirror/index tại `heroes.thelazy.net/index.php/Jennifer_Bullard` |
 | `bullard-papers-ut-austin` | **T3** | NOT_FETCHED | **Tài liệu thiết kế gốc do chính Bullard tập hợp**, lưu tại Dolph Briscoe Center for American History, University of Texas. `repositories.lib.utexas.edu/items/e3abd6e5-b6be-4547-8900-17b2c9e237da` — mục lục ghi "Heroes [of Might and Magic] documents" |
+| `fulton-fanstratics-13` | **T4** | FETCHED | **Greg Fulton, Lead Designer Heroes III** — Fanstratics Newsletter #13. Gọi Sandro là hero mang tính biểu tượng: "Astral, Crag Hack, Dracon, **Sandro**, Solmyr, Tazar..." |
+| `fulton-fanstratics-27` | **T4** | FETCHED | Fulton, Newsletter #27 — ghi lại yêu cầu thiết kế ở buổi họp khởi động H3: "Keep specific heroes from HoMM2, like **Sandro the Necromancer**, Halon the Wizard, Lord Haart..." |
+| `fulton-fanstratics-3` | **T4** | FETCHED | Fulton, Newsletter #3 — xác nhận **Bullard là Lead Designer của SoD**: "I was not involved in the conception or creation of SoD... Jennifer Bullard was the project's Lead Designer, and any questions you have about SoD would best be directed to her" |
 
 ### Jennifer Bullard là ai
 
@@ -324,7 +334,40 @@ tra cứu mà là **thuộc tính của tư liệu** — theo Bullard, chưa t�
 Haart ra tay; **lòng trung thành cuối cùng của Haart (Sandro hay Finneas) thì các
 nguồn nói khác nhau**.
 
-### `h3wiki-sandro` (bio chính thức) tự mâu thuẫn với campaign text
+### ⚠️ Bio hero chính thức là `T1*`, KHÔNG phải `T2*`
+
+Sai sót về tier mà luồng kiểm định phát hiện, ghi lại vì nó ảnh hưởng nhiều bài sau này.
+
+Bio chính thức của hero trong Heroes III/IV **không** đến từ manual in. Wiki ghi rõ
+chúng được chép từ **`HEROBIOS.TXT`** — một **file dữ liệu trong game**. Do đó tier đúng
+là `T1*`, không phải `T2*`.
+
+Kiểm chứng ngược: manual in của Shadow of Death **trang 15** có thông số Sandro (class,
+specialty, kỹ năng khởi đầu) nhưng **không có đoạn bio nào**.
+{T2* EXPLICIT: sod-manual-p15}
+
+**Hệ quả:** khi trích bio hero, dùng `T1*`. Đừng nâng lên `T2*` vì nghe "chính thức
+hơn" — tier phản ánh **nguồn**, không phản ánh mức trang trọng.
+
+### ⚠️ Có một Sandro khác trong Might and Magic V
+
+Luồng kiểm định phát hiện claim "Sandro không xuất hiện trong game MM RPG nào ngoài MM8"
+là **sai**.
+
+Có **`Sandro (Xeen)`** — nhân vật riêng trong *Might and Magic V: Darkside of Xeen*, một
+lich, questgiver và boss ở Necropolis. {T6 EXPLICIT: fandom-sandro-xeen}
+
+Và hai người có liên hệ thật ở tầng sản xuất: **sprite của Sandro Xeen là gốc của
+portrait Sandro Enroth** — "by essentially just recoloring and throwing him into a robe."
+
+**Khác với ca Chronicles:** ở Chronicles, tranh chấp là *có phải cùng một người không*.
+Ở đây wiki đã xếp sẵn thành hai nhân vật riêng; điều đáng ghi là quan hệ tái sử dụng
+hình ảnh.
+
+**Bài học:** claim phủ định dạng "không xuất hiện ở đâu khác" phải kiểm qua **trang
+disambiguation**, không chỉ trang nhân vật.
+
+### `h3wiki-sandro` (bio chính thức) lệch với campaign text — nhưng không phải mâu thuẫn thẳng
 
 Bio chính thức H3: *"Sandro first studied **Necromancy** under the tutelage of the
 wizard, and later the lich, Ethric."*
@@ -333,9 +376,40 @@ Nhưng toàn bộ campaign text nói ngược: Ethric dạy **warlock**, nổi g
 thành necromancer, và truy sát hắn vì điều đó. `h3wiki-ethric` ghi Ethric "trained
 him to be a warlock and objected to him becoming a necromancer."
 
-**Xử lý:** đây là mâu thuẫn **trong chính tư liệu chính thức**. Theo
-`CANON-POLICY.md` R1 (cùng game, in-game thắng manual/bio), campaign text thắng.
-Nhưng phải nêu rõ mâu thuẫn, không được im lặng chọn bên.
+**Cập nhật sau kiểm định — sự lệch này YẾU hơn tưởng ban đầu.**
+
+Hai điều làm dịu:
+
+1. **Wiki tự dung hòa** thay vì coi là xung đột: "It can be surmised that Ethric has had
+   an alter-ego of a mortal Bracadan wizard and warlock for a considerable time."
+   {T1* INFERENCE: h3wiki-ethric}
+2. **Chính người viết cốt truyện xác nhận** Ethric ở MM6 và thầy của Sandro là cùng một
+   người. {T4 EXPLICIT: bullard-interview-2013} Nếu Ethric xuyên nhiều thế kỷ với nhiều
+   danh tính, thì "the wizard, and later the lich" không sai — chỉ nén thời gian.
+
+**Xử lý:** ghi nhận sự lệch, nhưng **không** gọi là "mâu thuẫn trong tư liệu chính thức".
+Điều còn đứng vững: campaign text nhấn mạnh necromancy là thứ Ethric **phản đối**, còn
+bio đọc như thể ông dạy nó. Đây là lệch **giọng**, không phải lệch **dữ kiện**.
+
+Cũng lưu ý `CANON-POLICY.md` R1 (in-game thắng manual) **không áp dụng được ở đây** — vì
+cả hai đều là in-game text (bio từ `HEROBIOS.TXT`, campaign text từ file campaign).
+
+### `sod-target` vs `h3wiki-jabarkas` — Jabarkas có phải em trai Ethric?
+
+`sod-target` (Day 24) nói Lord Jabarkas là "Ethric's illegitimate younger brother".
+Nhưng có ba vấn đề:
+
+1. **Là tin nghe lại *trong* game text.** Nguyên văn mở đầu "**According to you
+   advisors**..." — cố vấn của Sandro nói, không phải người kể chuyện.
+2. **Xung đột với bio in-game khác.** `h3wiki-jabarkas` ghi Jabarkas là "**eldest son of
+   Duke Boragus**", race **Ogre** của Krewlod — khó dung hòa với em trai một wizard-lich
+   người Bracada.
+3. **Wiki cũng đánh giá là chuyện bịa.** `h3wiki-ethric`: "It is not made clear whether
+   Jabarkas is Ethric's actual brother, or if this is part of the cover story. **The
+   latter is very likely**, since lore implies that, as the first necromancer, Ethric
+   should be centuries old."
+
+**Xử lý:** `DISPUTED`, nghiêng về **đây là vỏ bọc**. Không được ghi như dữ kiện.
 
 ---
 
