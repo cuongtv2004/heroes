@@ -41,6 +41,25 @@ RELATION_TYPES = {
 
 CERTAINTY = {"EXPLICIT", "INFERENCE", "DISPUTED", "FAN_THEORY", "UNVERIFIED"}
 
+# Cặp nghịch đảo — SCHEMA.md mục 3. Dùng để phát hiện quan hệ mâu thuẫn giữa hai bài
+# (Tầng 3 của VERIFY-PROTOCOL.md). Quan hệ đối xứng ánh xạ về chính nó.
+INVERSE = {
+    "belongs_to": "has_member", "rules": "ruled_by", "located_in": "contains",
+    "member_of_race": "has_member",
+    "parent_of": "child_of", "student_of": "teacher_of",
+    "served": "was_served_by", "betrayed": "was_betrayed_by",
+    "killed": "was_killed_by",
+    "owns": "owned_by", "created": "created_by",
+    "component_of": "assembled_from", "wielded_in": "featured_artifact",
+    "participated_in": "involves", "caused": "caused_by",
+    "occurred_at": "site_of", "appears_in": "features", "depicted_in": "depicts",
+    "practices": "practiced_by", "school_of": "has_spell",
+}
+SYMMETRIC = {"sibling_of", "spouse_of", "ally_of", "enemy_of"}
+
+# Cặp không thể cùng đúng giữa hai nhân vật.
+CONFLICTING = [("ally_of", "enemy_of")]
+
 # Nhãn inline trong thân bài: {T1* EXPLICIT: source-key ...}
 CLAIM_RE = re.compile(r"\{(T\d\*?)\s+([A-Z_]+):\s*([^}]+)\}")
 
@@ -145,6 +164,64 @@ def load_registry_keys() -> set[str]:
 
 def strip_quotes(val: str) -> str:
     return val.strip().strip('"').strip("'")
+
+
+def check_relation_consistency(entities: list) -> None:
+    """Tầng 3 — phát hiện mâu thuẫn quan hệ GIỮA các bài.
+
+    Chỉ chạy có ý nghĩa khi Codex đã có nhiều bài. Bắt ba loại lỗi:
+
+    1. Quan hệ đối xứng khai một chiều (A ally_of B nhưng bài B không nhắc A)
+    2. Cặp loại trừ nhau (A ally_of B trong khi B enemy_of A)
+    3. Quan hệ nghịch đảo khai tay ngược chiều nhau, gây trùng lặp
+    """
+    # (entity_id, rel_type) -> set các target
+    graph: dict[tuple[str, str], set[str]] = {}
+    paths: dict[str, str] = {}
+
+    for path, fm, _ in entities:
+        eid = strip_quotes(str(fm.get("id", "")))
+        if not eid:
+            continue
+        paths[eid] = rel(path)
+        for r in fm.get("relations", []) or []:
+            if not isinstance(r, dict):
+                continue
+            rtype = strip_quotes(r.get("type", ""))
+            target = strip_quotes(r.get("target", ""))
+            if rtype and target:
+                graph.setdefault((eid, rtype), set()).add(target)
+
+    known = set(paths)
+
+    for (eid, rtype), targets in graph.items():
+        for target in targets:
+            if target not in known:
+                continue  # bài chưa viết — đã cảnh báo ở nơi khác
+
+            # (1) đối xứng phải khai hai chiều
+            if rtype in SYMMETRIC and eid not in graph.get((target, rtype), set()):
+                warn(
+                    f"{paths[eid]}: `{rtype}` → {target} là quan hệ đối xứng "
+                    f"nhưng {paths[target]} không khai ngược lại"
+                )
+
+            # (2) cặp loại trừ nhau
+            for a, b in CONFLICTING:
+                if rtype == a and eid in graph.get((target, b), set()):
+                    err(
+                        f"{paths[eid]}: `{eid} {a} {target}` mâu thuẫn với "
+                        f"`{target} {b} {eid}` trong {paths[target]}"
+                    )
+
+            # (3) nghịch đảo viết tay hai chiều — sinh tự động, không viết tay
+            inv = INVERSE.get(rtype)
+            if inv and eid in graph.get((target, inv), set()):
+                warn(
+                    f"{paths[eid]}: `{rtype}` → {target} đã có nghịch đảo `{inv}` "
+                    f"viết tay ở {paths[target]} — nghịch đảo do công cụ sinh, "
+                    f"không viết tay (SCHEMA.md mục 3)"
+                )
 
 
 def main() -> int:
@@ -257,6 +334,8 @@ def main() -> int:
                 first = payload.strip().split()[0].rstrip(",;")
                 if first and first not in registry and not first.startswith("("):
                     warn(f"{rel(path)}: nhãn dùng source key ngoài registry: {first}")
+
+    check_relation_consistency(entities)
 
     # Báo cáo
     print(f"Đã kiểm {len(entities)} bài, {len(registry)} source key trong registry.\n")

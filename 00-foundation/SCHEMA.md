@@ -268,6 +268,40 @@ không phải lore.)
 ## Liên kết
 ```
 
+### Khác biệt `character` so với `hero`
+
+Dùng cùng khung với `hero`, **bỏ** mục *Gameplay* (nhân vật không chơi được thì không
+có class/specialty), và **thêm**:
+
+```markdown
+## Vì sao không phải hero chơi được
+(Ngắn. Giải thích tiêu chí phân loại cho người đọc — vì nhiều `character` quan trọng
+hơn phần lớn `hero`.)
+```
+
+Nếu nhân vật **có** xuất hiện dưới dạng hero ở một game nào đó nhưng không phải game
+chính đang bàn, ghi ở mục *Xuất hiện trong game*, không tạo mục Gameplay riêng.
+
+### Lưu ý riêng cho `artifact`
+
+Mục *Gameplay* của artifact **phải tách hai phần**, vì hai loại thông tin này có tuổi
+thọ khác nhau:
+
+```markdown
+## Gameplay
+### Cơ chế gốc
+(Bản Heroes III/SoD gốc. Đây là phần ổn định, không đổi.)
+
+### Thay đổi qua các bản
+(HotA, các bản mod lớn. Phần này **có ngày tháng** và sẽ lỗi thời — ghi rõ số phiên bản.)
+```
+
+Lý do tách: cơ chế gốc là canon vĩnh viễn; thay đổi của HotA là trạng thái tại một thời
+điểm. Trộn chung thì hai năm sau không biết cái nào còn đúng.
+
+Với artifact ghép (combination), **mỗi thành phần cần một bảng thông số riêng** — người
+tra cứu thường tìm thành phần chứ không tìm bộ hoàn chỉnh.
+
 Các loại còn lại (`creature`, `race`, `magic`, `location`, `campaign`,
 `organization`, `timeline`) dùng khung tương tự, điều chỉnh theo nội dung. Bổ sung
 khi viết bài đầu tiên của mỗi loại.
