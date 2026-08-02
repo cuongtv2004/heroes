@@ -3,7 +3,15 @@
 Bộ tài liệu tiếng Việt về **Heroes of Might and Magic – Old Universe**
 (Heroes I–IV, Heroes Chronicles, Might and Magic I–VIII).
 
-📖 **[Đọc bản web →](https://cuongtv2004.github.io/heroes/)**
+📖 **Bản web:** https://cuongtv2004.github.io/heroes/
+
+*(Nếu trang đó hiện đúng file README này thay vì giao diện có sidebar và ô tìm kiếm,
+nghĩa là Jekyll đang ghi đè bản MkDocs — xem [`.github/workflows/pages.yml`](.github/workflows/pages.yml).)*
+
+**Đọc trực tiếp trong repo:**
+[Codex](docs/codex/index.md) ·
+[Tài liệu nền](docs/00-foundation/index.md) ·
+[Sổ nguồn](docs/sources/REGISTRY.md)
 
 ---
 

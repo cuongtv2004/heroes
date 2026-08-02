@@ -12,15 +12,15 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -41,28 +41,27 @@ jobs:
       - name: Build site
         run: mkdocs build --strict
 
-      - name: Chặn Jekyll
-        # BẮT BUỘC. Không có file này, GitHub Pages chạy workflow Jekyll mặc định
-        # SONG SONG với workflow này, và Jekyll thắng — trang chủ vẫn sống nhưng
-        # MỌI trang con 404 vì Jekyll không hiểu cấu trúc nav của MkDocs.
-        run: touch _site/.nojekyll
-
       - name: Kiểm render
         # Bắt markup lọt ra ngoài dưới dạng chữ thô. `mkdocs build` KHÔNG bắt
         # được loại lỗi này — icon Material từng hiện thành chữ trên site thật
         # mà build vẫn báo thành công.
         run: python3 tools/lint_site.py --strict
 
-      - uses: actions/upload-pages-artifact@v3
+      # Deploy bằng cách đẩy _site/ sang nhánh gh-pages.
+      #
+      # VÌ SAO KHÔNG DÙNG actions/deploy-pages: repo đang ở chế độ Pages
+      # `build_type: legacy`, nên GitHub chạy workflow Jekyll mặc định
+      # (`pages-build-deployment`) SONG SONG và nó thắng — kết quả là trang chủ
+      # hiện README.md do Jekyll render, còn mọi trang con 404.
+      #
+      # Đổi setting đó cần quyền admin mà token CI không có. Nhưng khi nhánh
+      # `gh-pages` tồn tại, GitHub ưu tiên phục vụ từ đó. `.nojekyll` trong
+      # nhánh này chặn Jekyll xử lý tiếp.
+      - name: Deploy sang gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: _site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          enable_jekyll: false
+          commit_message: "deploy: ${{ github.event.head_commit.message }}"
