@@ -1,0 +1,2355 @@
+
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bách khoa toàn thư và sử thi tiếng Việt về Heroes of Might and Magic – Old Universe (Heroes I–IV, Heroes Chronicles, Might and Magic I–VIII)">
+      
+      
+      
+        <link rel="canonical" href="https://cuongtv2004.github.io/heroes/00-foundation/SCHEMA/">
+      
+      
+        <link rel="prev" href="../CANON-POLICY/">
+      
+      
+        <link rel="next" href="../VERIFY-PROTOCOL/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Cấu trúc dữ liệu - Heroes Codex & Saga</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#schema" class="md-skip">
+          Bỏ qua
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Đầu trang">
+    <a href="../.." title="Heroes Codex &amp; Saga" class="md-header__button md-logo" aria-label="Heroes Codex & Saga" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a9 9 0 0 0-9 9 8.99 8.99 0 0 0 4 7.47V22h2v-3h2v3h2v-3h2v3h2v-3.54c2.47-1.65 4-4.46 4-7.46a9 9 0 0 0-9-9m-4 9a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m8 0a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m-4 3 1.5 3h-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Heroes Codex & Saga
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cấu trúc dữ liệu
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Chuyển sang nền tối"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Chuyển sang nền tối" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Chuyển sang nền sáng"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Chuyển sang nền sáng" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Tìm kiếm" placeholder="Tìm kiếm" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Tìm kiếm">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Chia sẻ" aria-label="Chia sẻ" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Xoá" aria-label="Xoá" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cuongtv2004/heroes" title="Xem mã nguồn" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cuongtv2004/heroes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Thanh điều hướng" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Heroes Codex &amp; Saga" class="md-nav__button md-logo" aria-label="Heroes Codex & Saga" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a9 9 0 0 0-9 9 8.99 8.99 0 0 0 4 7.47V22h2v-3h2v3h2v-3h2v3h2v-3.54c2.47-1.65 4-4.46 4-7.46a9 9 0 0 0-9-9m-4 9a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m8 0a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m-4 3 1.5 3h-3z"/></svg>
+
+    </a>
+    Heroes Codex & Saga
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cuongtv2004/heroes" title="Xem mã nguồn" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cuongtv2004/heroes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trang chủ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Nền tảng
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Nền tảng
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CANON-POLICY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chính sách canon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cấu trúc dữ liệu
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Cấu trúc dữ liệu
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-mười-hai-loại-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Mười hai loại entity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-frontmatter-chung-cho-mọi-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Frontmatter chung cho mọi entity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Frontmatter chung cho mọi entity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trường-bắt-buộc-với-mọi-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trường bắt buộc với mọi entity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quy-tắc-đặt-tên-quan-trọng--quyết-định-ngôn-ngữ" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quy tắc đặt tên (quan trọng — quyết định ngôn ngữ)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-quan-hệ-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Quan hệ (Relations)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Quan hệ (Relations)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cú-pháp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cú pháp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bộ-quan-hệ-được-phép" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bộ quan hệ được phép
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nghịch-đảo-tự-sinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nghịch đảo tự sinh
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cấu-trúc-thân-bài-theo-loại" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Cấu trúc thân bài theo loại
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Cấu trúc thân bài theo loại">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hero--character" class="md-nav__link">
+    <span class="md-ellipsis">
+      hero / character
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifact" class="md-nav__link">
+    <span class="md-ellipsis">
+      artifact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kingdom" class="md-nav__link">
+    <span class="md-ellipsis">
+      kingdom
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event" class="md-nav__link">
+    <span class="md-ellipsis">
+      event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#khác-biệt-character-so-với-hero" class="md-nav__link">
+    <span class="md-ellipsis">
+      Khác biệt character so với hero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lưu-ý-riêng-cho-kingdom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lưu ý riêng cho kingdom
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lưu-ý-riêng-cho-artifact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lưu ý riêng cho artifact
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-trường-riêng-theo-loại" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Trường riêng theo loại
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Trường riêng theo loại">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hero" class="md-nav__link">
+    <span class="md-ellipsis">
+      hero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifact_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      artifact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kingdom_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      kingdom
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-kiểm-tra-tính-toàn-vẹn" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Kiểm tra tính toàn vẹn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-lịch-sử-sửa-đổi" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Lịch sử sửa đổi
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VERIFY-PROTOCOL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Luồng kiểm định
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SAGA-STYLE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quy tắc viết Saga
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TIMELINE-SPINE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Xương sống thời gian
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WORKFLOW/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quy trình làm việc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BACKLOG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Việc còn tồn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../codex/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Codex
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Codex
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hero
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hero
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codex/heroes/sandro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandro
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--verified"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codex/heroes/jeddite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jeddite
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nhân vật
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Nhân vật
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codex/characters/ethric/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ethric
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--verified"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Quốc gia
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Quốc gia
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codex/kingdoms/deyja/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deyja
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vật phẩm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Vật phẩm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codex/artifacts/cloak-of-the-undead-king/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloak of the Undead King
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--verified"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codex/artifacts/armor-of-the-damned/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Armor of the Damned
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codex/artifacts/amulet-of-the-undertaker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amulet of the Undertaker
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codex/artifacts/vampires-cowl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vampire's Cowl
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codex/artifacts/dead-mans-boots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dead Man's Boots
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Nguồn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Nguồn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/REGISTRY/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sổ nguồn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Báo cáo kiểm định
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Báo cáo kiểm định
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/notes/verify-sandro-2026-07-31/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verify report: sandro — 2026-07-31
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/notes/verify-ethric-cloak-2026-08-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verify report: ethric + cloak-of-the-undead-king — 2026-08-02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-mười-hai-loại-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Mười hai loại entity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-frontmatter-chung-cho-mọi-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Frontmatter chung cho mọi entity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Frontmatter chung cho mọi entity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trường-bắt-buộc-với-mọi-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trường bắt buộc với mọi entity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quy-tắc-đặt-tên-quan-trọng--quyết-định-ngôn-ngữ" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quy tắc đặt tên (quan trọng — quyết định ngôn ngữ)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-quan-hệ-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Quan hệ (Relations)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Quan hệ (Relations)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cú-pháp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cú pháp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bộ-quan-hệ-được-phép" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bộ quan hệ được phép
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nghịch-đảo-tự-sinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nghịch đảo tự sinh
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cấu-trúc-thân-bài-theo-loại" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Cấu trúc thân bài theo loại
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Cấu trúc thân bài theo loại">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hero--character" class="md-nav__link">
+    <span class="md-ellipsis">
+      hero / character
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifact" class="md-nav__link">
+    <span class="md-ellipsis">
+      artifact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kingdom" class="md-nav__link">
+    <span class="md-ellipsis">
+      kingdom
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event" class="md-nav__link">
+    <span class="md-ellipsis">
+      event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#khác-biệt-character-so-với-hero" class="md-nav__link">
+    <span class="md-ellipsis">
+      Khác biệt character so với hero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lưu-ý-riêng-cho-kingdom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lưu ý riêng cho kingdom
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lưu-ý-riêng-cho-artifact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lưu ý riêng cho artifact
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-trường-riêng-theo-loại" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Trường riêng theo loại
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Trường riêng theo loại">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hero" class="md-nav__link">
+    <span class="md-ellipsis">
+      hero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifact_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      artifact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      event
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kingdom_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      kingdom
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-kiểm-tra-tính-toàn-vẹn" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Kiểm tra tính toàn vẹn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-lịch-sử-sửa-đổi" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Lịch sử sửa đổi
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/cuongtv2004/heroes/edit/main/docs/00-foundation/SCHEMA.md" title="Chỉnh sửa" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="schema">SCHEMA<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h1>
+<p>Quy định cấu trúc dữ liệu cho toàn bộ Heroes Codex.</p>
+<p>Nguyên tắc thiết kế: <strong>mỗi entity là một file Markdown có YAML frontmatter.</strong>
+Frontmatter chứa dữ liệu máy đọc được (quan hệ, mốc thời gian, nhãn). Thân bài
+chứa văn xuôi tiếng Việt cho người đọc.</p>
+<p>Lý do chọn cách này thay vì database: Atlas, timeline tương tác, gia phả và
+infographic ở Giai đoạn 4 chỉ là chuyện <strong>render</strong> từ frontmatter, không phải
+chuyện migrate dữ liệu. Đồng thời file Markdown vẫn đọc được bằng mắt thường và
+diff được bằng git — quan trọng với một dự án kéo dài nhiều năm.</p>
+<hr />
+<h2 id="1-mười-hai-loại-entity">1. Mười hai loại entity<a class="headerlink" href="#1-mười-hai-loại-entity" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Loại</th>
+<th>Thư mục</th>
+<th>Là gì</th>
+<th>Ví dụ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hero</code></td>
+<td><code>codex/heroes/</code></td>
+<td>Nhân vật xuất hiện dưới dạng hero điều khiển được trong game</td>
+<td>Sandro, Gelu, Catherine</td>
+</tr>
+<tr>
+<td><code>character</code></td>
+<td><code>codex/characters/</code></td>
+<td>Nhân vật có vai trò trong lore nhưng <strong>không</strong> là hero chơi được</td>
+<td>Nicolas Gryphonheart (đã chết trước H3)</td>
+</tr>
+<tr>
+<td><code>artifact</code></td>
+<td><code>codex/artifacts/</code></td>
+<td>Vật phẩm có tên riêng</td>
+<td>Armageddon's Blade, Cloak of the Undead King</td>
+</tr>
+<tr>
+<td><code>kingdom</code></td>
+<td><code>codex/kingdoms/</code></td>
+<td>Thực thể chính trị có chủ quyền</td>
+<td>Erathia, Deyja, Nighon</td>
+</tr>
+<tr>
+<td><code>location</code></td>
+<td><code>codex/locations/</code></td>
+<td>Địa điểm không phải quốc gia</td>
+<td>Steadwick, Hall of Valhalla</td>
+</tr>
+<tr>
+<td><code>creature</code></td>
+<td><code>codex/creatures/</code></td>
+<td>Loại sinh vật dùng làm quân</td>
+<td>Black Dragon, Archangel</td>
+</tr>
+<tr>
+<td><code>race</code></td>
+<td><code>codex/races/</code></td>
+<td>Chủng tộc có văn hóa riêng</td>
+<td>Elf, Dwarf, Vampire</td>
+</tr>
+<tr>
+<td><code>magic</code></td>
+<td><code>codex/magic/</code></td>
+<td>Trường phái phép, spell, hoặc hệ thống phép thuật</td>
+<td>Necromancy, Armageddon</td>
+</tr>
+<tr>
+<td><code>event</code></td>
+<td><code>codex/events/</code></td>
+<td>Sự kiện lịch sử có thể định vị trên timeline</td>
+<td>Cuộc xâm lược Erathia (1164)</td>
+</tr>
+<tr>
+<td><code>campaign</code></td>
+<td><code>codex/campaigns/</code></td>
+<td>Campaign của game — đơn vị tư liệu, không phải sự kiện lore</td>
+<td><em>Shadow of Death</em></td>
+</tr>
+<tr>
+<td><code>organization</code></td>
+<td><code>codex/organizations/</code></td>
+<td>Tổ chức, hội, giáo phái, triều đại</td>
+<td>Necromancer Council, Nhà Ironfist</td>
+</tr>
+<tr>
+<td><code>timeline</code></td>
+<td><code>codex/timeline/</code></td>
+<td>Mốc hoặc giai đoạn thời gian</td>
+<td>Silence, Age of Kings</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Phân biệt <code>hero</code> vs <code>character</code>:</strong> tiêu chí là <em>có điều khiển được trong game
+nào không</em>, không phải mức độ quan trọng. Nicolas Gryphonheart cực kỳ quan trọng
+với lore Heroes III nhưng không phải hero chơi được → <code>character</code>.</p>
+<p><strong>Phân biệt <code>event</code> vs <code>campaign</code>:</strong> <code>campaign</code> là <strong>nguồn tư liệu</strong> (một sản
+phẩm), <code>event</code> là <strong>thứ đã xảy ra trong thế giới</strong>. Một campaign kể nhiều event.
+Không được lẫn — nếu lẫn, timeline sẽ bị cấu trúc theo game thay vì theo thế giới,
+đúng cái điều dự án muốn tránh.</p>
+<hr />
+<h2 id="2-frontmatter-chung-cho-mọi-entity">2. Frontmatter chung cho mọi entity<a class="headerlink" href="#2-frontmatter-chung-cho-mọi-entity" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nn">---</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sandro</span><span class="w">                      </span><span class="c1"># slug, unique toàn dự án, không đổi sau khi tạo</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hero</span><span class="w">                      </span><span class="c1"># một trong 12 loại</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">name_vi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sandro</span><span class="w">                 </span><span class="c1"># tên dùng trong văn bản tiếng Việt</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">name_en</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sandro</span><span class="w">                 </span><span class="c1"># tên gốc tiếng Anh — dùng để tra cứu chéo</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">aliases</span><span class="p">:</span><span class="w">                        </span><span class="c1"># tên khác, dùng cho search</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sandro the Necromancer</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">appears_in</span><span class="p">:</span><span class="w">                     </span><span class="c1"># game/campaign nào — dùng source key</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">h3-shadow-of-death</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">h3-restoration-of-erathia</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">draft</span><span class="w">                   </span><span class="c1"># draft | verified | needs-rework</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nt">verify_pass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w">               </span><span class="c1"># ngày qua luồng kiểm định, hoặc null</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nt">sources_used</span><span class="p">:</span><span class="w">                   </span><span class="c1"># mọi source key bài này dùng</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sod-rise-of-the-necromancer</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nt">relations</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w">                   </span><span class="c1"># xem mục 3</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nt">open_questions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">               </span><span class="c1"># số câu hỏi mở còn tồn</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nn">---</span>
+</code></pre></div>
+<h3 id="trường-bắt-buộc-với-mọi-entity">Trường bắt buộc với mọi entity<a class="headerlink" href="#trường-bắt-buộc-với-mọi-entity" title="Permanent link">&para;</a></h3>
+<p><code>id</code>, <code>type</code>, <code>name_vi</code>, <code>name_en</code>, <code>status</code>, <code>sources_used</code>.</p>
+<h3 id="quy-tắc-đặt-tên-quan-trọng--quyết-định-ngôn-ngữ">Quy tắc đặt tên (quan trọng — quyết định ngôn ngữ)<a class="headerlink" href="#quy-tắc-đặt-tên-quan-trọng--quyết-định-ngôn-ngữ" title="Permanent link">&para;</a></h3>
+<p>Dự án viết <strong>tiếng Việt</strong>, nhưng <strong>giữ nguyên tên riêng tiếng Anh</strong>:</p>
+<ul>
+<li>✅ "Sandro nắm giữ Cloak of the Undead King"</li>
+<li>❌ "Sandro nắm giữ Áo Choàng Vua Bất Tử"</li>
+</ul>
+<p>Lý do: người chơi lâu năm tra cứu bằng tên gốc. Dịch tên riêng làm Codex mất chức
+năng tra cứu — đúng thứ nó tồn tại để làm.</p>
+<p>Ngoại lệ được dịch: danh từ chung và chức danh khi dùng trong câu văn
+("necromancer" → "pháp sư tử linh" khi là danh từ chung; nhưng "Necromancer" giữ
+nguyên khi là tên class trong game).</p>
+<p>Lần đầu một thuật ngữ xuất hiện trong bài, ghi kèm giải nghĩa trong ngoặc.</p>
+<hr />
+<h2 id="3-quan-hệ-relations">3. Quan hệ (Relations)<a class="headerlink" href="#3-quan-hệ-relations" title="Permanent link">&para;</a></h2>
+<p>Quan hệ là thứ biến Codex từ tập hợp bài viết thành <strong>knowledge graph</strong>.</p>
+<h3 id="cú-pháp">Cú pháp<a class="headerlink" href="#cú-pháp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">relations</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">student_of</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ethric</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">certainty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EXPLICIT</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sod-birth-of-a-barbarian</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">belongs_to</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deyja</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nt">certainty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INFERENCE</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">h3-manual-deyja</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Suy</span><span class="nv"> </span><span class="s">ra</span><span class="nv"> </span><span class="s">từ</span><span class="nv"> </span><span class="s">chức</span><span class="nv"> </span><span class="s">vị,</span><span class="nv"> </span><span class="s">game</span><span class="nv"> </span><span class="s">không</span><span class="nv"> </span><span class="s">nói</span><span class="nv"> </span><span class="s">thẳng&quot;</span>
+</code></pre></div>
+<p><strong>Mỗi quan hệ bắt buộc có <code>certainty</code> và <code>source</code>.</strong> Một quan hệ không có nguồn
+là một quan hệ không tồn tại.</p>
+<h3 id="bộ-quan-hệ-được-phép">Bộ quan hệ được phép<a class="headerlink" href="#bộ-quan-hệ-được-phép" title="Permanent link">&para;</a></h3>
+<p>Danh sách này là <strong>đóng</strong>. Muốn thêm loại quan hệ mới phải sửa file này trước.
+Lý do: nếu ai cũng tự đặt tên quan hệ, graph sẽ không query được.</p>
+<p><strong>Quan hệ thuộc về:</strong></p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>Từ → Đến</th>
+<th>Nghịch đảo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>belongs_to</code></td>
+<td>hero/character → kingdom/organization</td>
+<td><code>has_member</code></td>
+</tr>
+<tr>
+<td><code>rules</code></td>
+<td>hero/character → kingdom</td>
+<td><code>ruled_by</code></td>
+</tr>
+<tr>
+<td><code>located_in</code></td>
+<td>location → kingdom/location</td>
+<td><code>contains</code></td>
+</tr>
+<tr>
+<td><code>member_of_race</code></td>
+<td>hero/character → race</td>
+<td><code>has_member</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quan hệ nhân vật:</strong></p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>Từ → Đến</th>
+<th>Nghịch đảo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>parent_of</code></td>
+<td>character → character</td>
+<td><code>child_of</code></td>
+</tr>
+<tr>
+<td><code>sibling_of</code></td>
+<td>character → character</td>
+<td>đối xứng</td>
+</tr>
+<tr>
+<td><code>spouse_of</code></td>
+<td>character → character</td>
+<td>đối xứng</td>
+</tr>
+<tr>
+<td><code>student_of</code></td>
+<td>character → character</td>
+<td><code>teacher_of</code></td>
+</tr>
+<tr>
+<td><code>ally_of</code></td>
+<td>character → character</td>
+<td>đối xứng</td>
+</tr>
+<tr>
+<td><code>enemy_of</code></td>
+<td>character → character</td>
+<td>đối xứng</td>
+</tr>
+<tr>
+<td><code>served</code></td>
+<td>character → character/organization</td>
+<td><code>was_served_by</code></td>
+</tr>
+<tr>
+<td><code>betrayed</code></td>
+<td>character → character</td>
+<td><code>was_betrayed_by</code></td>
+</tr>
+<tr>
+<td><code>killed</code></td>
+<td>character → character</td>
+<td><code>was_killed_by</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quan hệ vật phẩm:</strong></p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>Từ → Đến</th>
+<th>Nghịch đảo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>owns</code></td>
+<td>character → artifact</td>
+<td><code>owned_by</code></td>
+</tr>
+<tr>
+<td><code>created</code></td>
+<td>character → artifact</td>
+<td><code>created_by</code></td>
+</tr>
+<tr>
+<td><code>component_of</code></td>
+<td>artifact → artifact</td>
+<td><code>assembled_from</code></td>
+</tr>
+<tr>
+<td><code>wielded_in</code></td>
+<td>artifact → event</td>
+<td><code>featured_artifact</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quan hệ sự kiện &amp; tư liệu:</strong></p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>Từ → Đến</th>
+<th>Nghịch đảo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>participated_in</code></td>
+<td>character → event</td>
+<td><code>involves</code></td>
+</tr>
+<tr>
+<td><code>caused</code></td>
+<td>event → event</td>
+<td><code>caused_by</code></td>
+</tr>
+<tr>
+<td><code>occurred_at</code></td>
+<td>event → location</td>
+<td><code>site_of</code></td>
+</tr>
+<tr>
+<td><code>appears_in</code></td>
+<td>bất kỳ → campaign</td>
+<td><code>features</code></td>
+</tr>
+<tr>
+<td><code>depicted_in</code></td>
+<td>event → campaign</td>
+<td><code>depicts</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quan hệ phép thuật:</strong></p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>Từ → Đến</th>
+<th>Nghịch đảo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>practices</code></td>
+<td>character → magic</td>
+<td><code>practiced_by</code></td>
+</tr>
+<tr>
+<td><code>school_of</code></td>
+<td>magic → magic</td>
+<td><code>has_spell</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="nghịch-đảo-tự-sinh">Nghịch đảo tự sinh<a class="headerlink" href="#nghịch-đảo-tự-sinh" title="Permanent link">&para;</a></h3>
+<p>Không viết tay quan hệ nghịch đảo. Chỉ ghi một chiều, công cụ ở
+<code>tools/</code> sẽ sinh chiều còn lại khi build. Viết tay hai chiều → sớm muộn lệch nhau.</p>
+<hr />
+<h2 id="4-cấu-trúc-thân-bài-theo-loại">4. Cấu trúc thân bài theo loại<a class="headerlink" href="#4-cấu-trúc-thân-bài-theo-loại" title="Permanent link">&para;</a></h2>
+<h3 id="hero--character"><code>hero</code> / <code>character</code><a class="headerlink" href="#hero--character" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gu">## Tóm lược</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>(3–5 câu. Ai, quan trọng vì sao. Không nhãn ở đây — đây là phần dẫn.)
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="gu">## Tiểu sử</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="gu">### Xuất thân</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="gu">### (các giai đoạn theo thứ tự thời gian)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="gu">## Quan hệ</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>(Diễn giải bằng văn xuôi những gì frontmatter đã ghi. Vì sao quan hệ đó quan trọng.)
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="gu">## Xuất hiện trong game</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="gu">### &lt;Tên game / campaign&gt;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>(Vai trò trong lore, không phải hướng dẫn chơi.)
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="gu">## Gameplay</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>(Class, specialty, chỉ số khởi đầu. Tách riêng vì đây là thông tin cơ chế,
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>không phải lore.)
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="gu">## Điểm tranh chấp canon</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>(Mọi claim DISPUTED. Trình bày các phương án, không chọn ngầm.)
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="gu">## Giả thuyết cộng đồng</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>(FAN_THEORY. Bắt buộc tách khỏi phần trên.)
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="gu">## Trivia &amp; Dev Notes</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="gu">## Câu hỏi mở</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>(Những gì dự án chưa trả lời được. Ghi ra để không tự lừa mình.)
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="gu">## Nguồn</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>(Bảng source key → mô tả → độ tin cậy.)
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="gu">## Liên kết</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>(Điều hướng sang entity liên quan.)
+</code></pre></div>
+<h3 id="artifact"><code>artifact</code><a class="headerlink" href="#artifact" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gu">## Tóm lược</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="gu">## Xuất xứ</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="gu">### Ai tạo ra</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="gu">### Được tạo như thế nào</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="gu">## Lịch sử sở hữu</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>(Theo thứ tự thời gian. Mỗi lần đổi chủ là một mốc.)
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="gu">## Ý nghĩa trong lore</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="gu">## Gameplay</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="gu">### Hiệu ứng</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="gu">### Cân bằng game</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="gu">## Xuất hiện trong game</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="gu">## Điểm tranh chấp canon</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="gu">## Giả thuyết cộng đồng</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="gu">## Trivia &amp; Dev Notes</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="gu">## Câu hỏi mở</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="gu">## Nguồn</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="gu">## Liên kết</span>
+</code></pre></div>
+<h3 id="kingdom"><code>kingdom</code><a class="headerlink" href="#kingdom" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gu">## Tóm lược</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="gu">## Địa lý</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="gu">## Lịch sử</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="gu">### (theo giai đoạn)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="gu">## Chính thể &amp; các đời quân chủ</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="gu">## Chiến tranh &amp; liên minh</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="gu">## Văn hóa &amp; tôn giáo</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="gu">## Xuất hiện trong game</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="gu">## Điểm tranh chấp canon</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="gu">## Câu hỏi mở</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="gu">## Nguồn</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="gu">## Liên kết</span>
+</code></pre></div>
+<h3 id="event"><code>event</code><a class="headerlink" href="#event" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gu">## Tóm lược</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="gu">## Định vị thời gian</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>(Quan hệ tương đối là chính. Năm tuyệt đối kèm nhãn riêng.)
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="gu">## Nguyên nhân</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="gu">## Diễn biến</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="gu">## Kết quả &amp; ảnh hưởng</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="gu">## Các bên tham gia</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="gu">## Được kể trong</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>(Campaign nào kể sự kiện này, kể từ góc nhìn ai — quan trọng vì góc nhìn
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>ảnh hưởng độ tin cậy.)
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="gu">## Điểm tranh chấp canon</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="gu">## Câu hỏi mở</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="gu">## Nguồn</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="gu">## Liên kết</span>
+</code></pre></div>
+<h3 id="khác-biệt-character-so-với-hero">Khác biệt <code>character</code> so với <code>hero</code><a class="headerlink" href="#khác-biệt-character-so-với-hero" title="Permanent link">&para;</a></h3>
+<p>Dùng cùng khung với <code>hero</code>, <strong>bỏ</strong> mục <em>Gameplay</em> (nhân vật không chơi được thì không
+có class/specialty), và <strong>thêm</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gu">## Vì sao không phải hero chơi được</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>(Ngắn. Giải thích tiêu chí phân loại cho người đọc — vì nhiều <span class="sb">`character`</span> quan trọng
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>hơn phần lớn <span class="sb">`hero`</span>.)
+</code></pre></div>
+<p>Nếu nhân vật <strong>có</strong> xuất hiện dưới dạng hero ở một game nào đó nhưng không phải game
+chính đang bàn, ghi ở mục <em>Xuất hiện trong game</em>, không tạo mục Gameplay riêng.</p>
+<h3 id="lưu-ý-riêng-cho-kingdom">Lưu ý riêng cho <code>kingdom</code><a class="headerlink" href="#lưu-ý-riêng-cho-kingdom" title="Permanent link">&para;</a></h3>
+<p>Khung ở mục 4 là đủ, nhưng ba mục sau cần cẩn thận đặc biệt:</p>
+<p><strong>Mục <em>Chính thể &amp; các đời quân chủ</em></strong> — đây là chỗ dễ sai nhất của loại entity này.
+Trình bày dạng <strong>bảng theo thứ tự</strong>, mỗi đời một dòng, và <strong>mỗi dòng có nhãn riêng</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>| Người trị vì | Giai đoạn | Kết cục | Nguồn |
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>|---|---|---|---|
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>| (không rõ tên) | trước 1164 | Bị Finneas phế | {T1* INFERENCE: sod-duke-alarice} |
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>| Finneas Vilmar | ~1164–? | Chết khi hồi sinh Gryphonheart | {T1* EXPLICIT: h3wiki-finneas} |
+</code></pre></div>
+<p>Lý do bắt buộc bảng: chuỗi kế vị hay có <strong>khoảng trống</strong> và <strong>người không tên</strong>. Viết
+thành văn xuôi sẽ che mất chỗ nào là suy luận.</p>
+<p><strong>Mục <em>Lịch sử</em></strong> phải phân biệt rõ <strong>thời điểm quốc gia hình thành</strong> với <strong>thời điểm
+nó rơi vào tay thế lực hiện tại</strong>. Với Deyja, hai mốc này khác nhau và nguồn thường lẫn.</p>
+<p><strong>Mục <em>Chiến tranh &amp; liên minh</em></strong> — với mỗi liên minh, ghi <strong>cái giá</strong> nếu game có nêu.
+Ví dụ: Nighon đòi 100.000 vàng cộng gỗ hàng tuần. Con số cụ thể là thứ Codex có mà wiki
+thường bỏ.</p>
+<h3 id="lưu-ý-riêng-cho-artifact">Lưu ý riêng cho <code>artifact</code><a class="headerlink" href="#lưu-ý-riêng-cho-artifact" title="Permanent link">&para;</a></h3>
+<p>Mục <em>Gameplay</em> của artifact <strong>phải tách hai phần</strong>, vì hai loại thông tin này có tuổi
+thọ khác nhau:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gu">## Gameplay</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="gu">### Cơ chế gốc</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>(Bản Heroes III/SoD gốc. Đây là phần ổn định, không đổi.)
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="gu">### Thay đổi qua các bản</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>(HotA, các bản mod lớn. Phần này <span class="gs">**có ngày tháng**</span> và sẽ lỗi thời — ghi rõ số phiên bản.)
+</code></pre></div>
+<p>Lý do tách: cơ chế gốc là canon vĩnh viễn; thay đổi của HotA là trạng thái tại một thời
+điểm. Trộn chung thì hai năm sau không biết cái nào còn đúng.</p>
+<p>Với artifact ghép (combination), <strong>mỗi thành phần cần một bảng thông số riêng</strong> — người
+tra cứu thường tìm thành phần chứ không tìm bộ hoàn chỉnh.</p>
+<p>Các loại còn lại (<code>creature</code>, <code>race</code>, <code>magic</code>, <code>location</code>, <code>campaign</code>,
+<code>organization</code>, <code>timeline</code>) dùng khung tương tự, điều chỉnh theo nội dung. Bổ sung
+khi viết bài đầu tiên của mỗi loại.</p>
+<hr />
+<h2 id="5-trường-riêng-theo-loại">5. Trường riêng theo loại<a class="headerlink" href="#5-trường-riêng-theo-loại" title="Permanent link">&para;</a></h2>
+<h3 id="hero"><code>hero</code><a class="headerlink" href="#hero" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Necromancer</span><span class="w">              </span><span class="c1"># class trong game</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nt">specialty</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">                   </span><span class="c1"># specialty hero</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nt">faction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">necropolis</span><span class="w">             </span><span class="c1"># town type</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nt">first_appearance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">h2</span><span class="w">            </span><span class="c1"># game xuất hiện đầu</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nt">playable_in</span><span class="p">:</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">game</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">h3</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="nt">campaigns</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">sod-rise-of-the-necromancer</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<h3 id="artifact_1"><code>artifact</code><a class="headerlink" href="#artifact_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">slot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloak</span><span class="w">                     </span><span class="c1"># vị trí trang bị</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nt">artifact_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">relic</span><span class="w">           </span><span class="c1"># treasure | minor | major | relic | combo</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nt">combo_parts</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w">                 </span><span class="c1"># nếu là combo artifact</span>
+</code></pre></div>
+<h3 id="event_1"><code>event</code><a class="headerlink" href="#event_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">date_absolute</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1164</span><span class="w">             </span><span class="c1"># có thể null</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nt">date_certainty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DISPUTED</span><span class="w">        </span><span class="c1"># nhãn riêng cho năm</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nt">date_source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">h3-manual-timeline</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="nt">before</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">event-x</span><span class="p p-Indicator">]</span><span class="w">               </span><span class="c1"># quan hệ tương đối — xương sống thật</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="nt">after</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">event-y</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="nt">concurrent_with</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+</code></pre></div>
+<h3 id="kingdom_1"><code>kingdom</code><a class="headerlink" href="#kingdom_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">capital</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">steadwick</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nt">existed_from</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="nt">existed_until</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="nt">successor_of</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+</code></pre></div>
+<hr />
+<h2 id="6-kiểm-tra-tính-toàn-vẹn">6. Kiểm tra tính toàn vẹn<a class="headerlink" href="#6-kiểm-tra-tính-toàn-vẹn" title="Permanent link">&para;</a></h2>
+<p>Công cụ trong <code>tools/</code> phải kiểm được các điều kiện sau. Bài nào vi phạm thì
+không được đặt <code>status: verified</code>:</p>
+<ol>
+<li>Mọi <code>id</code> là unique toàn dự án.</li>
+<li>Mọi <code>target</code> trong <code>relations</code> trỏ tới một <code>id</code> có thật.</li>
+<li>Mọi <code>source</code> trong <code>relations</code> tồn tại trong <code>sources/REGISTRY.md</code>.</li>
+<li>Mọi <code>sources_used</code> tồn tại trong registry.</li>
+<li>Mọi claim trong thân bài có nhãn — không có câu khẳng định nào trơ trọi.</li>
+<li><code>UNVERIFIED</code> chỉ được xuất hiện ở <strong>mục dành riêng</strong>: <em>Câu hỏi mở</em>,
+   <em>Giả thuyết cộng đồng</em>, <em>Điểm tranh chấp canon</em>, <em>Trivia &amp; Dev Notes</em>.
+   Trong các mục thân bài chính (<em>Tiểu sử</em>, <em>Quan hệ</em>, <em>Xuất hiện trong game</em>,
+   <em>Gameplay</em>), <code>UNVERIFIED</code> chỉ được dùng khi <strong>đang cảnh báo</strong> rằng một claim lưu
+   hành là không đáng tin — không bao giờ để <strong>chống lưng</strong> cho một khẳng định của bài.</li>
+<li><code>type</code> thuộc 12 loại đã định.</li>
+<li>Mọi <code>relations[].type</code> thuộc bộ quan hệ đóng ở mục 3.</li>
+</ol>
+<hr />
+<h2 id="7-lịch-sử-sửa-đổi">7. Lịch sử sửa đổi<a class="headerlink" href="#7-lịch-sử-sửa-đổi" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Ngày</th>
+<th>Thay đổi</th>
+<th>Lý do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-07-31</td>
+<td>Bản đầu</td>
+<td>Khởi tạo. Sẽ điều chỉnh sau khi viết entity mẫu Sandro — schema chưa qua thử lửa thì chưa đáng tin</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Trở lại mục lục
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Heroes of Might and Magic là tài sản của Ubisoft. Dự án này là tài liệu phi thương mại do người hâm mộ biên soạn.
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/cuongtv2004/heroes" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

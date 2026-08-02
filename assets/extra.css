@@ -1,0 +1,29 @@
+/* Entity được nhắc nhưng chưa viết.
+   Hiện mờ, gạch chân nét đứt — báo cho người đọc biết đây là liên kết
+   sẽ có, chứ không phải link hỏng. */
+.wl-todo em {
+  color: var(--md-default-fg-color--light);
+  border-bottom: 1px dashed var(--md-default-fg-color--lighter);
+  cursor: help;
+  font-style: italic;
+}
+
+/* Nhãn nguồn inline {T1* EXPLICIT: key} xuất hiện dày đặc trong thân bài.
+   Làm chúng nhỏ và mờ hơn để không cắt mạch đọc, nhưng vẫn tra được. */
+.md-typeset p code:only-child {
+  font-size: 0.85em;
+}
+
+/* KHÔNG đụng vào .md-typeset__table hay .md-typeset table:not([class]).
+   Material đã đặt display:inline-block + overflow:auto — ĐÓ CHÍNH LÀ cơ chế
+   cuộn ngang. Ghi đè display:table sẽ phá nó, và bảng rộng sẽ tràn layout. */
+
+/* Trích dẫn game text nguyên văn — phân biệt rõ với văn của dự án. */
+.md-typeset blockquote {
+  border-left: 3px solid var(--md-accent-fg-color);
+}
+
+/* Thẻ grid ở trang chủ */
+.md-typeset .grid.cards > ul > li {
+  border-radius: 0.4rem;
+}
