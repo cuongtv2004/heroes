@@ -31,18 +31,27 @@ tới entity chưa viết, không phải lỗi.
 
 Nếu có lỗi: **dừng lại, sửa, chạy lại.** Không được push đè lỗi.
 
-### Bước 2 — Kiểm trạng thái entity
+### Bước 2 — Cửa chặn `verified` (BẮT BUỘC, không có ngoại lệ)
 
 ```bash
-grep -l "^status: draft\|^status: needs-rework" docs/codex/*/*.md
+python3 tools/check.py --publish-gate
 ```
 
-Nếu có bài chưa `verified`:
+**Nếu có BẤT KỲ bài nào ở `draft` hoặc `needs-rework` → DỪNG. Không push.**
 
-- **Bài đó là mục đích của lần push này** → dừng. Chạy verify trước
-  (xem `/heroes-entity` hoặc `00-foundation/VERIFY-PROTOCOL.md`).
-- **Bài đó không liên quan** (đang viết dở, sẽ verify sau) → được phép push,
-  nhưng **nói rõ với user** rằng có bài draft đang nằm trên `main`.
+Đây là quy tắc **cứng**, do user đặt ra sau khi 6 bài draft bị đẩy lên `main`:
+
+> **Phải verify xong mới đẩy lên GitHub.**
+
+`main` là thứ GitHub Pages phục vụ cho người đọc. Nội dung chưa qua luồng kiểm định
+độc lập **không được xuất hiện ở đó** — kể cả khi "bài đó không liên quan tới lần
+push này".
+
+**Không có ngoại lệ nào cho quy tắc này.** Nếu đang viết dở nhiều bài, verify hết
+rồi push một lượt; hoặc để chúng ở máy cho tới khi verify xong.
+
+Nếu user **chủ động yêu cầu** push nội dung chưa verify, hỏi lại một lần để chắc
+chắn, rồi nói rõ trong commit message rằng có bài chưa verify.
 
 ### Bước 3 — Kiểm build và render
 

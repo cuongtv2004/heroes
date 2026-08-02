@@ -41,6 +41,12 @@ jobs:
       - name: Build site
         run: mkdocs build --strict
 
+      - name: Chặn Jekyll
+        # BẮT BUỘC. Không có file này, GitHub Pages chạy workflow Jekyll mặc định
+        # SONG SONG với workflow này, và Jekyll thắng — trang chủ vẫn sống nhưng
+        # MỌI trang con 404 vì Jekyll không hiểu cấu trúc nav của MkDocs.
+        run: touch _site/.nojekyll
+
       - name: Kiểm render
         # Bắt markup lọt ra ngoài dưới dạng chữ thô. `mkdocs build` KHÔNG bắt
         # được loại lỗi này — icon Material từng hiện thành chữ trên site thật

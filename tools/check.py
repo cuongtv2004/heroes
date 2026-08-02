@@ -255,6 +255,38 @@ def check_relation_consistency(entities: list) -> None:
                     )
 
 
+def publish_gate(entities: list) -> int:
+    """Cửa chặn xuất bản: chỉ cho push khi MỌI bài đã `verified`.
+
+    Quy tắc do user đặt ra sau khi 6 bài draft bị đẩy nhầm lên main:
+    `main` là thứ GitHub Pages phục vụ người đọc, nên nội dung chưa qua luồng
+    kiểm định độc lập không được xuất hiện ở đó.
+
+    Trả 0 nếu sạch, 1 nếu còn bài chưa verified.
+    """
+    blocked: list[tuple[str, str]] = []
+    verified = 0
+
+    for path, fm, _ in entities:
+        status = strip_quotes(str(fm.get("status", "")))
+        if status == "verified":
+            verified += 1
+        else:
+            blocked.append((rel(path), status or "(thiếu status)"))
+
+    if not blocked:
+        print(f"✓ Cửa chặn xuất bản: {verified} bài, tất cả đã `verified`. Được push.")
+        return 0
+
+    print(f"✗ CHẶN PUSH — {len(blocked)} bài chưa `verified` "
+          f"(đã verified: {verified}):\n")
+    for path, status in blocked:
+        print(f"    {status:<16} {path}")
+    print("\n  Chạy luồng verify độc lập trước khi push.")
+    print("  Xem docs/00-foundation/VERIFY-PROTOCOL.md, hoặc /heroes-entity.")
+    return 1
+
+
 NAV_ENTRY_RE = re.compile(r"^\s+-\s+(?:[^:\n]+:\s*)?([\w./-]+\.md)\s*$", re.MULTILINE)
 # Trang không cần có trong nav: index của từng mục (Material tự gắn qua
 # navigation.indexes), và dossier thô (đã loại khỏi site bằng plugin exclude).
@@ -473,6 +505,9 @@ def main() -> int:
     if "--next" in sys.argv:
         report_missing_entities(entities, set(ids))
         return 0
+
+    if "--publish-gate" in sys.argv:
+        return publish_gate(entities)
 
     if errors:
         print(f"LỖI ({len(errors)}):")
