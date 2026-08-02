@@ -255,6 +255,52 @@ def check_relation_consistency(entities: list) -> None:
                     )
 
 
+NAV_ENTRY_RE = re.compile(r"^\s+-\s+(?:[^:\n]+:\s*)?([\w./-]+\.md)\s*$", re.MULTILINE)
+# Trang không cần có trong nav: index của từng mục (Material tự gắn qua
+# navigation.indexes), và dossier thô (đã loại khỏi site bằng plugin exclude).
+NAV_EXEMPT = ("index.md", "sources/raw/")
+
+
+def check_nav_coverage() -> None:
+    """Đối chiếu `nav:` trong mkdocs.yml với file thực tế.
+
+    Hai lỗi khác nhau, đều âm thầm:
+    - Bài có file nhưng KHÔNG trong nav → build được nhưng không ai tìm thấy
+      từ sidebar. Bài mồ côi.
+    - nav trỏ tới file không tồn tại → mkdocs build --strict sẽ bắt, nhưng
+      bắt ở đây thì biết sớm hơn.
+    """
+    cfg = ROOT / "mkdocs.yml"
+    if not cfg.exists():
+        return
+
+    text = cfg.read_text(encoding="utf-8")
+    nav_start = text.find("\nnav:")
+    if nav_start == -1:
+        return
+    # nav kết thúc ở key top-level tiếp theo
+    rest = text[nav_start + 1:]
+    m = re.search(r"\n(?=[a-z_]+:)", rest[4:])
+    nav_block = rest[: m.start() + 4] if m else rest
+
+    in_nav = set(NAV_ENTRY_RE.findall(nav_block))
+
+    on_disk = {
+        str(p.relative_to(DOCS))
+        for p in DOCS.rglob("*.md")
+        if not any(str(p.relative_to(DOCS)).startswith(e) or p.name == e
+                   for e in NAV_EXEMPT)
+    }
+
+    for orphan in sorted(on_disk - in_nav):
+        warn(f"mkdocs.yml: `{orphan}` có file nhưng KHÔNG trong nav — "
+             f"không ai tìm thấy từ sidebar")
+
+    for ghost in sorted(in_nav - on_disk):
+        if not (DOCS / ghost).exists():
+            err(f"mkdocs.yml: nav trỏ tới `{ghost}` nhưng file không tồn tại")
+
+
 WIKILINK_RE = re.compile(r"\[\[([a-z0-9][a-z0-9\-]*)\]\]")
 
 
@@ -421,6 +467,8 @@ def main() -> int:
 
     # Báo cáo
     print(f"Đã kiểm {len(entities)} bài, {len(registry)} source key trong registry.\n")
+
+    check_nav_coverage()
 
     if "--next" in sys.argv:
         report_missing_entities(entities, set(ids))
