@@ -9,8 +9,8 @@ appears_in:
   - sod-new-beginning
   - sod-rise-of-the-necromancer
   - sod-unholy-alliance
-status: draft
-verify_pass: null
+status: verified
+verify_pass: 2026-08-02
 slot: cape
 artifact_class: relic
 combo_parts:
@@ -35,9 +35,11 @@ sources_used:
   - sod-retrieving-the-cowl
   - sod-driving-for-the-boots
   - sod-target
+  - sod-master
   - sod-fall-of-sandro
   - sod-a-tough-start
   - sod-manual-p14
+  - h3wiki-ethric
 relations:
   - type: assembled_from
     target: amulet-of-the-undertaker
@@ -83,13 +85,23 @@ của nó.** Chúng chỉ đơn giản tồn tại trong thế giới, nằm tro
 nhau.
 
 ⚠️ Có một claim lưu hành rằng cả Cloak lẫn Armor of the Damned "từng thuộc về Ethric,
-thầy cũ của Sandro". **Claim này bị game text phản bác** — xem *Điểm tranh chấp* mục 1.
+thầy cũ của Sandro". Claim này **không có nguồn** và bị hai đoạn game text làm suy yếu —
+xem *Điểm tranh chấp* mục 1.
 
-Điều game text **có** nói: các thành phần nằm rải rác, được canh giữ bởi quái vật và các
-lãnh chúa. Amulet of the Undertaker chôn trong kho báu của bầy Ghost Dragon
-{T1* EXPLICIT: sod-after-the-amulet — "Buried under the gems and gold of the Ghost
-Dragons' hoard you find the Amulet of the Undertaker"}; Dead Man's Boots được canh bởi một
-đội quân undead nhiều tầng. {T1* EXPLICIT: sod-driving-for-the-boots}
+Điều game text **có** nói về chủ cũ: một trong hai artifact **bị lấy từ người dwarf**.
+
+> "...when they learned that **one of your artifacts was stolen from their people**"
+
+{T1* EXPLICIT: sod-master — Day 15}
+
+Đây là chủ cũ duy nhất được game nêu đích danh. Nó cũng là lý do các tộc dwarf — vốn thù
+địch với nhau — lần đầu hợp lại để chống Sandro.
+
+Ngoài ra, các thành phần nằm rải rác, được canh giữ bởi quái vật và lãnh chúa. Amulet of
+the Undertaker chôn trong kho báu của bầy Ghost Dragon {T1* EXPLICIT: sod-after-the-amulet
+— "Buried under the gems and gold of the Ghost Dragons' hoard you find the Amulet of the
+Undertaker"}; Dead Man's Boots được canh bởi một đội quân undead nhiều tầng.
+{T1* EXPLICIT: sod-driving-for-the-boots}
 
 ### Vụ lừa — cách Sandro có được nó
 
@@ -170,7 +182,7 @@ sống. Xem [[sandro]].)*
 
 | Giai đoạn | Ai giữ | Nguồn |
 |---|---|---|
-| Trước SoD | Ba thành phần rải rác, nhiều người giữ khác nhau | {T1* EXPLICIT: sod-target — "those who lost these two precious artifacts"} |
+| Trước SoD | Ba thành phần rải rác. Chủ cũ duy nhất được nêu tên: **người dwarf** | {T1* EXPLICIT: sod-master — Day 15} |
 | *New Beginning* | Gem thu thập, tưởng là cho Ethric | {T1* EXPLICIT: sod-after-the-amulet} |
 | *Rise of the Necromancer* | **Sandro** — mang bộ đã ghép | {T1* EXPLICIT: sod-target} |
 | *Unholy Alliance* | Sandro, cho tới khi bị bốn anh hùng đánh bại | {T1* EXPLICIT: sod-fall-of-sandro} |
@@ -364,7 +376,7 @@ qua nhiều town. {T1* EXPLICIT: h3wiki-necromancy}
 
 ## Điểm tranh chấp canon
 
-### 1. "Artifact từng thuộc về Ethric" — bị game text phản bác
+### 1. "Artifact từng thuộc về Ethric" — không có nguồn, và bị hai đoạn text làm suy yếu
 
 Trang tổng quan *Shadow of Death* trên wiki viết:
 
@@ -372,28 +384,41 @@ Trang tổng quan *Shadow of Death* trên wiki viết:
 
 {T6 FAN_THEORY: h3wiki-shadow-of-death — văn wiki, **không dẫn nguồn**}
 
-**Game text nói ngược.** `sod-target` Day 1:
+**Bằng chứng mạnh nhất chống lại nó — `sod-master` Day 15**, nêu một chủ cũ **có thật và
+khác hẳn**:
+
+> "...when they learned that **one of your artifacts was stolen from their people**"
+
+{T1* EXPLICIT: sod-master — nói về các tộc dwarf}
+
+Đây là chỗ game text nêu đích danh một bên từng sở hữu artifact — và đó là **người dwarf**,
+không phải Ethric.
+
+**Bằng chứng thứ hai — `sod-target` Day 1:**
 
 > "You have also learned Ethric has spread word of your whereabouts to those **who lost
 > these two precious artifacts**..."
 
-{T1* EXPLICIT: sod-target}
+{T1* INFERENCE: sod-target — câu phân biệt Ethric (người tung tin) với "những kẻ đã mất
+artifact" (người nhận tin), nhưng không nói thẳng rằng Ethric chưa từng sở hữu}
 
-Chủ cũ là **những bên khác, không được nêu tên** — được phân biệt rõ với Ethric. Trong
-toàn bộ scenario, Ethric xuất hiện với **hai** vai: thầy cũ, và kẻ truy đuổi. Không lần
-nào là chủ sở hữu.
+**Nguồn của hiểu nhầm có lẽ là thư Jeddite** — và wiki tự nêu đúng lý do đó:
 
-**Nguồn của hiểu nhầm có lẽ là thư Jeddite:**
+> "...once belonged to Ethric, **since Jeddite's stated goal in Target is to return them to
+> him**."
 
-> "I will take the artifacts from your rotting corpse and **return them to Ethric**."
+{T6 FAN_THEORY: h3wiki-ethric}
 
-{T1* EXPLICIT: sod-target}
+Nhưng "return them to Ethric" là **ý định giao nộp trong tương lai** của một bên thù địch —
+không nói gì về sở hữu quá khứ. Tương tự, Jabarkas "wants the artifacts to remain in their
+possession" cũng là chuyện quyền giữ về sau.
 
-Nhưng đó là **ý định giao nộp trong tương lai** của một bên thù địch — không nói gì về sở
-hữu quá khứ. Tương tự, Jabarkas "wants the artifacts to remain in their possession" cũng
-là chuyện quyền giữ về sau.
+**Xử lý:** Codex không dùng claim này. Nhưng nói cho chính xác: claim này **không có nguồn
+và rất có thể sai**, chứ không phải bị một câu phản bác thẳng.
 
-**Xử lý:** Codex không dùng claim này.
+*(Sửa sau kiểm định: bài này ban đầu viết "bị game text phản bác". Verifier hạ xuống
+`INFERENCE` và đúng — `sod-target` Day 1 chỉ hàm ý qua cấu trúc câu. Bù lại, verifier tìm
+được `sod-master` Day 15, bằng chứng mạnh hơn mà đợt research đầu bỏ sót.)*
 
 ### 2. Trang artifact ghi sai về HotA 1.7.2
 

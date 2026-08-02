@@ -13,8 +13,8 @@ appears_in:
   - sod-new-beginning
   - sod-unholy-alliance
   - sod-specter-of-power
-status: draft
-verify_pass: null
+status: verified
+verify_pass: 2026-08-02
 race: lich
 sources_used:
   - h3wiki-ethric
@@ -33,7 +33,10 @@ sources_used:
   - mm6-shadow-dagger
   - mm7-ethrics-staff
   - fandom-ritual-endless-night
+  - fandom-timeline-ancient
   - fandom-sandro-enroth
+  - sod-after-the-amulet
+  - sod-agents-of-vengeance
   - oe-ethric-bio
   - bullard-interview-2013
 relations:
@@ -128,17 +131,27 @@ khi** chọn lichdom. Nhưng game không nói thêm.
 
 ### Ethric ở Bracada — danh tính công khai
 
-Chỉ **một** dòng game text nói Ethric sống công khai như một wizard người thường. Nó nằm
-trong epilogue của Gem, và nàng nói ra khi vẫn chưa hiểu mình bị lừa:
+Game text cho thấy Ethric — một lich — **duy trì một danh tính người sống mà công chúng
+chấp nhận**. Có hai đoạn độc lập.
+
+Đoạn nêu đích danh **Bracada** nằm trong epilogue của Gem, và nàng nói ra khi vẫn chưa
+hiểu mình bị lừa:
 
 > "I will have to **write to Ethric in Bracada** and tell Lord Fayette about this
 > immediately."
 
 {T1* EXPLICIT: sod-driving-for-the-boots}
 
-Đây là nguồn duy nhất cho "Ethric ở Bracada". Nó quan trọng vì nó cho thấy Ethric — một
-lich — **duy trì một danh tính người sống mà công chúng chấp nhận**, đủ để một druid có
-thể viết thư cho ông.
+Đây là **nguồn duy nhất nêu tên Bracada**. Nhưng danh tính học giả công khai của ông còn
+được xác lập độc lập ở một chỗ khác:
+
+> "Sandro's master, Ethric, needs an Amulet of the Undertaker to perform anti-necromancy
+> research, but **Ethric is an academician**..."
+
+{T1* EXPLICIT: sod-after-the-amulet}
+
+Chi tiết này đáng chú ý: một druid ở AvLee có thể viết thư cho ông, và người ta biết ông
+là "một học giả". Lich đầu tiên của thế giới sống giữa người sống, công khai.
 
 *(Cách hiểu này khớp với việc Sandro cũng dùng ảo ảnh để che thân xác lich khi giao tiếp
 với Gem và Crag Hack. Nhưng game không nói Ethric dùng cùng thủ đoạn — xem
@@ -422,8 +435,13 @@ Ethric trước, rồi Sandro đánh bại ông sau.
 | **Fandom** | Lấp bằng một câu không dẫn nguồn: "**Somehow surviving** his encounter in Enroth, Ethric returned to Antagarich in his human guise..." Chữ "Somehow" gánh toàn bộ lập luận {T6 FAN_THEORY: fandom-sandro-enroth} |
 | **thelazy** | **Đảo ngược thứ tự.** Đặt sự kiện SoD trước, rồi "**Afterwards**, he became active on Enroth... slain by MM6 protagonists" → MM6 thành cái chết cuối {T6 FAN_THEORY: h3wiki-ethric} |
 
+**Một chi tiết nghiêng cán cân:** timeline của **chính Fandom** đặt Shadow of Death vào
+khoảng 1155–1164 AS và MM6 vào **1165 AS** — tức là **ủng hộ thứ tự của thelazy, chống lại
+văn xuôi của chính Fandom.** {T6 INFERENCE: fandom-timeline-ancient}
+
 **Xử lý của dự án:** `DISPUTED`, và **không chọn bên**. Hai wiki mâu thuẫn nhau, cả hai
-không dẫn nguồn, và nguồn developer duy nhất không đề cập vấn đề.
+không dẫn nguồn, và nguồn developer duy nhất không đề cập vấn đề. Nhưng nếu buộc phải
+nghiêng, thứ tự của thelazy (MM6 là cái chết sau) được timeline chống lưng tốt hơn.
 
 Cần nói thêm: claim của Fandom rằng Sandro "**eradicate** Ethric" và infobox
 `status = Eradicated` là **suy ra từ điều kiện thắng**, không từ text kể nào.
@@ -571,7 +589,10 @@ Nghịch lý: chân dung sống động nhất của Ethric trong Heroes III n�
 
 1. "**He was mad**" — thì quá khứ, và đây là chỗ Heroes III tiến gần nhất tới việc gọi ông
    là "the Mad". Là cầu nối in-game mạnh nhất tới Ethric the Mad của MM6.
-2. Cảnh này diễn ra **sau** *Master* — Ethric vẫn ám ảnh Sandro sau khi đã bị đánh bại.
+2. Cảnh này diễn ra **sau** *Master* — Ethric vẫn ám ảnh Sandro sau khi đã bị đánh bại. Và
+   cơn ác mộng **lặp lại**: nó còn xuất hiện ở Day 71, "you know **his sword** is about to
+   slice through you as though you were melted butter." {T1* EXPLICIT:
+   sod-poison-fit-for-a-king — Day 71}
 3. Nhưng Ethric ở đây vung **kiếm** — không hợp với một wizard/warlock. Và đây là **giấc mơ
    chủ quan** của một kẻ thù. Không nên đọc như mô tả khách quan.
 

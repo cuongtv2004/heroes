@@ -19,9 +19,13 @@ appears_in:
   - sod-specter-of-power
   - h4
   - mm8
-status: needs-rework
-verify_pass: 2026-07-31
-rework_reason: "Tang 3 phat hien mau thuan voi codex/characters/ethric.md ve do chac cua quan he killed. Da sua EXPLICIT -> DISPUTED. Can verify lai."
+status: verified
+verify_pass: 2026-08-02
+verify_history:
+  - date: 2026-07-31
+    result: "65 claim: 47 CONFIRMED / 10 DOWNGRADE / 3 CONTRADICTED. Sua 3 BLOCKER + 3 MAJOR."
+  - date: 2026-08-02
+    result: "Tang 3 phat hien mau thuan voi ethric.md ve quan he killed. Ha EXPLICIT -> DISPUTED. Luong verify Ethric xac nhan doc lap (E-09, E-10 deu CONFIRMED: khong co doan ke nao mo ta cai chet)."
 class: Necromancer
 specialty: Sorcery
 faction: necropolis

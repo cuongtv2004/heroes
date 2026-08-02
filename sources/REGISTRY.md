@@ -137,6 +137,7 @@ gốc **một bước**.
 | `mm6-shadow-dagger` | T1* | FETCHED | Mô tả item MM6 — "Commissioned by Ethric the Mad **while still a human**". Xác nhận độc lập quá trình người → lich |
 | `mm7-ethrics-staff` | T1* | FETCHED | Mô tả item MM7 — **khẳng định thẳng** "the world's first Lich - Ethric the Mad", không rào "tin đồn" |
 | `fandom-ritual-endless-night` | T6 | FETCHED | Trang Fandom giá trị nhất về Ethric — nêu rõ claim "lich đầu tiên + necromancer đầu tiên" là **theo tin đồn** |
+| `fandom-timeline-ancient` | T6 | FETCHED | Timeline Old Universe của Fandom. Đặt SoD ~1155–1164 AS, MM6 **1165 AS** — **mâu thuẫn với văn xuôi của chính Fandom** về thứ tự hai cái chết của Ethric |
 | `oe-ethric-bio` | **T5** | FETCHED | Tiểu sử Ethric trong *Heroes: Olden Era*. ⚠️ **NGOÀI Old Universe** theo `CANON-POLICY.md` R5. Sản phẩm chưa phát hành, có thể đổi. Chỉ dùng tham chiếu |
 | `h3wiki-jeddite` | T1* | FETCHED | Bạn thân cũ, người giới thiệu Sandro với Ethric; bio H4 |
 | `h3wiki-vidomina` | T1* | FETCHED | Học trò; Yog từng yêu; bio H3+H4 |
