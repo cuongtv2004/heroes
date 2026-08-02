@@ -12,15 +12,15 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -41,27 +41,39 @@ jobs:
       - name: Build site
         run: mkdocs build --strict
 
+      - name: Chặn Jekyll
+        run: touch _site/.nojekyll
+
       - name: Kiểm render
         # Bắt markup lọt ra ngoài dưới dạng chữ thô. `mkdocs build` KHÔNG bắt
         # được loại lỗi này — icon Material từng hiện thành chữ trên site thật
         # mà build vẫn báo thành công.
         run: python3 tools/lint_site.py --strict
 
-      # Deploy bằng cách đẩy _site/ sang nhánh gh-pages.
-      #
-      # VÌ SAO KHÔNG DÙNG actions/deploy-pages: repo đang ở chế độ Pages
-      # `build_type: legacy`, nên GitHub chạy workflow Jekyll mặc định
-      # (`pages-build-deployment`) SONG SONG và nó thắng — kết quả là trang chủ
-      # hiện README.md do Jekyll render, còn mọi trang con 404.
-      #
-      # Đổi setting đó cần quyền admin mà token CI không có. Nhưng khi nhánh
-      # `gh-pages` tồn tại, GitHub ưu tiên phục vụ từ đó. `.nojekyll` trong
-      # nhánh này chặn Jekyll xử lý tiếp.
-      - name: Deploy sang gh-pages
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          publish_branch: gh-pages
-          enable_jekyll: false
-          commit_message: "deploy: ${{ github.event.head_commit.message }}"
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+# LỊCH SỬ SỰ CỐ — đọc trước khi sửa file này.
+#
+# Repo từng ở chế độ Pages `build_type: legacy` (deploy from a branch). Khi đó
+# GitHub chạy workflow Jekyll mặc định (`pages-build-deployment`) SONG SONG với
+# workflow này, và Jekyll deploy sau nên ghi đè — kết quả: trang chủ hiện
+# README.md do Jekyll render, còn MỌI trang con 404.
+#
+# Ba cách đã thử và KHÔNG giải quyết được:
+#   1. Thêm `.nojekyll` — chỉ chặn Jekyll xử lý file, không chặn nó chạy+deploy
+#   2. Tạo nhánh `gh-pages` — GitHub KHÔNG tự chuyển sang nhánh đó
+#   3. Đổi setting qua API — token CI không đủ quyền (404 dù có scope `repo`)
+#
+# Cách duy nhất là đổi thủ công: Settings → Pages → Source → "GitHub Actions".
+# Nếu ai đó đổi ngược về "Deploy from a branch", sự cố sẽ tái diễn y hệt.
