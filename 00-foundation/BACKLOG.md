@@ -78,6 +78,24 @@ dạng — **claim phủ định** ("không tồn tại", "không tìm được"
 
 **Trạng thái:** đã ghi thành quy tắc. Cần áp dụng nhất quán.
 
+### B-014 · Cảnh giác: claim "hai artifact từng thuộc về Ethric"
+
+**Là gì:** có claim lưu hành rằng Cloak of the Undead King và Armor of the Damned
+"once belonged to his former mentor Ethric".
+
+**Vì sao ghi lại:** một luồng research (bị lỗi API giữa chừng) kịp báo rằng đây có thể là
+**suy luận của wiki, không phải game text** — có thể bắt nguồn từ scenario `Target`.
+
+**Trạng thái hiện tại:** ✅ **claim này CHƯA lọt vào Codex.** Đã kiểm cả
+`codex/heroes/sandro.md` lẫn dossier thô — không có.
+
+**Việc cần làm:** khi viết bài `cloak-of-the-undead-king`, **không** đưa claim này vào
+cho tới khi xác minh được nó là game text hay wiki narration. Đang có luồng research
+kiểm.
+
+**Bài học nhỏ:** một luồng research chết giữa chừng vẫn có thể để lại cảnh báo hữu ích.
+Đọc phần nó kịp trả về trước khi bỏ.
+
 ### B-004 · Tìm đường vào `homm.miraheze.org`
 
 **Vấn đề:** site này **chặn bot** (403 với cả curl và fetch) trong **cả hai** đợt

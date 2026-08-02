@@ -166,6 +166,21 @@ def strip_quotes(val: str) -> str:
     return val.strip().strip('"').strip("'")
 
 
+# Nhãn INFERENCE thường dẫn nhiều nguồn: {T1* INFERENCE: key-a + key-b — lý do}
+# Phần sau dấu gạch dài là văn giải thích, không phải key.
+SOURCE_KEY_RE = re.compile(r"\b([a-z][a-z0-9]*(?:-[a-z0-9]+){1,})\b")
+
+
+def extract_source_keys(payload: str) -> list[str]:
+    """Lấy mọi source key trong phần payload của một nhãn.
+
+    Cắt ở dấu gạch dài (—) hoặc " - " vì phần sau là lời giải thích bằng tiếng Việt,
+    có thể chứa từ gạch nối không phải key.
+    """
+    head = re.split(r"—|\s-\s", payload, maxsplit=1)[0]
+    return SOURCE_KEY_RE.findall(head)
+
+
 def check_relation_consistency(entities: list) -> None:
     """Tầng 3 — phát hiện mâu thuẫn quan hệ GIỮA các bài.
 
@@ -331,9 +346,9 @@ def main() -> int:
                                 f"chuyển xuống Câu hỏi mở hoặc ghi rõ vì sao không tin được"
                             )
 
-                first = payload.strip().split()[0].rstrip(",;")
-                if first and first not in registry and not first.startswith("("):
-                    warn(f"{rel(path)}: nhãn dùng source key ngoài registry: {first}")
+                for key in extract_source_keys(payload):
+                    if key not in registry:
+                        warn(f"{rel(path)}: nhãn dùng source key ngoài registry: {key}")
 
     check_relation_consistency(entities)
 
