@@ -124,6 +124,19 @@ gốc **một bước**.
 | `h3wiki-necromancy` | T1* | FETCHED | Giới hạn cơ chế Necromancy. Khác biệt SoD vs HotA về cách tính |
 | `hota-changelog` | T1* | FETCHED | Changelog Horn of the Abyss, 201.529 byte. **Nguồn chuẩn** cho mọi claim về HotA — trang artifact không đáng tin bằng |
 | `sod-a-tough-start` | T1* | FETCHED | Yog phân tán các mảnh Angelic Alliance — bài kiểm tra lòng trung thành của Boragus |
+| `sod-black-sheep` | T1* | FETCHED | Hack and Slash #2 — Blackshard. Chứa event (64,9,0): mắt đồng minh **trống rỗng** — bằng chứng Sandro thao túng tâm trí |
+| `sod-a-cage-in-the-hand` | T1* | FETCHED | Hack and Slash #3 — Rib Cage. Vỏ bọc "Sanctuary" bị Ebon Hand phản bác |
+| `h3wiki-skull-helmet` | T1* | FETCHED | Thành phần Armor — Treasure, Helmet, 3000, +2 Knowledge |
+| `h3wiki-rib-cage` | T1* | FETCHED | Thành phần Armor — Minor, Torso, 3000, +2 Power |
+| `h3wiki-blackshard` | T1* | FETCHED | Thành phần Armor — Minor, Weapon, 3000, +3 Attack |
+| `h3wiki-shield-yawning-dead` | T1* | FETCHED | Thành phần Armor — Minor, Shield, 3000, +3 Defense. ⚠️ **Khác** `Shield of the Damned` |
+| `h3wiki-orb-of-inhibition` | T1* | FETCHED | **Phản bác** cách nói "anti-magic artifacts chặn Armor" — Orb ghi rõ "Does not prevent: Artifact spell casting (i.e. Armor of the Damned...)" |
+| `h3wiki-trivia` | T1* | FETCHED | Xác nhận độc lập: Armor hoạt động bình thường trong Anti-Magic Garrison |
+| `h3wiki-weakness` | T1* | FETCHED | Armor of the Damned là artifact **duy nhất** cast được Weakness; 4 hero chuyên |
+| `h3wiki-terek` | T1* | FETCHED | Barbarian/Battle Mage, tay sai đầu tiên Sandro thuê lấy Cowl; bị cướp bắt |
+| `h3wiki-sandals-of-the-saint` | T1* | FETCHED | Cần để qua Quest Guard lấy Dead Man's Boots |
+| `fandom-artifact-list` | T6 | FETCHED | `List of Heroes III artifacts` — **nguồn duy nhất** cho mô tả in-game của artifact. Fandom **không dẫn nguồn** |
+| `h3wiki-herobios-txt` | **T1** | FETCHED | ⭐ `Translation Data/HeroBios.txt` — **file string table TRÍCH TỪ GAME** (168KB, cột EN/FR/PL/RU). Đây là `T1` **thật**, không phải `T1*` |
 
 ### Nhân vật liên quan
 
@@ -137,7 +150,28 @@ gốc **một bước**.
 | `mm6-shadow-dagger` | T1* | FETCHED | Mô tả item MM6 — "Commissioned by Ethric the Mad **while still a human**". Xác nhận độc lập quá trình người → lich |
 | `mm7-ethrics-staff` | T1* | FETCHED | Mô tả item MM7 — **khẳng định thẳng** "the world's first Lich - Ethric the Mad", không rào "tin đồn" |
 | `fandom-ritual-endless-night` | T6 | FETCHED | Trang Fandom giá trị nhất về Ethric — nêu rõ claim "lich đầu tiên + necromancer đầu tiên" là **theo tin đồn** |
-| `fandom-timeline-ancient` | T6 | FETCHED | Timeline Old Universe của Fandom. Đặt SoD ~1155–1164 AS, MM6 **1165 AS** — **mâu thuẫn với văn xuôi của chính Fandom** về thứ tự hai cái chết của Ethric |
+| `fandom-timeline-ancient` | T6 | FETCHED | Timeline Old Universe của Fandom. Đặt SoD ~1155–1164 AS, MM6 **1165 AS** — **mâu thuẫn với văn xuôi của chính Fandom** về thứ tự hai cái chết của Ethric. ⚠️⚠️ **Xem cảnh báo archive-link bên dưới** |
+| `h3wiki-deyja` | T1* | FETCHED | Trang Deyja. ⚠️ Danh sách "Rulers" **không đầy đủ** — bỏ cả hai vua không tên mà chính trang scenario của thelazy chứng thực |
+| `h3wiki-the-pit` | T1* | FETCHED | Thủ đô ngầm, hoàng cung Castle Gloaming, trung tâm Path of Darkness |
+| `h3wiki-antagarich` | T1* | FETCHED | Địa lý lục địa — Deyja kín trong đất liền, giáp Erathia (nam/tây) và AvLee (bắc/đông) |
+| `h3wiki-deyja-moors` | T1* | FETCHED | Vùng Deyja. **Goblin là đa số cư dân sống**. ⚠️ Tên vùng đến từ bản đồ HotA |
+| `h3wiki-erathia` | T1* | FETCHED | "the north fell to Deyja" (1164) |
+| `h3wiki-lord-alarice` | T1* | FETCHED | Lãnh chúa triều Deyja cảnh báo AvLee. ⚠️ **Hai stat profile khác nhau** ở hai scenario |
+| `h3wiki-lord-smedth` | T1* | FETCHED | Lich, tranh chỗ cố vấn thân cận của Finneas. Là bẫy Finneas giăng cho Sandro |
+| `h3wiki-mot` | T1* | FETCHED | Death Knight **từ chối lệnh** Lich King, tin trung lập sẽ giữ được đất. Bị giết làm gương |
+| `h3wiki-kastore` | T1* | FETCHED | Đảo chính Archibald (1169). Trích MM7 về "factionism and discord" |
+| `roe-a-gryphons-heart` | T1* | FETCHED | **Nguồn quan trọng nhất về động cơ Deyja**: "the man who banished us from **Erathia**". Epilogue: Finneas "met with an unfortunate accident" |
+| `roe-safe-passage` | T1* | FETCHED | Catherine xác nhận độc lập: "After killing King Vilmar, he took command of their military and their throne" |
+| `roe-corporeal-punishment` | T1* | FETCHED | Tuyến Mot; rumor về Caverns of the Dead |
+| `t2-necromancy-origin` | **T2*** | FETCHED | ⭐ **Truyện ngắn nguồn gốc Necromancy**, do **Christian Vanover** (nhân viên NWC) viết, đăng trên 3DO message board (**đã chết**). Người kể trong truyện: Marcus Finch. Nguồn duy nhất cho nguồn gốc Deyja và bản chất lich |
+| `fandom-deyja` | T6 | FETCHED | ⚠️ Infobox ghi thủ đô là **Moulder**, mâu thuẫn 3 nguồn khác ghi **The Pit** |
+| `fandom-finneas-vilmar` | T6 | FETCHED | ⚠️ **Tiểu thuyết hóa nặng** — "Sandro admitted to himself", "retreated into his private chambers". Khai thác làm đầu mối, **không trích như dữ kiện**. Nhưng infobox ghi thẳng `predecessors = Unnamed King of Deyja` |
+| `fandom-path-of-darkness` | T6 | FETCHED | Tín ngưỡng đối xứng với Path of Light của Bracada |
+| `fandom-jeddite-disambig` | T6 | FETCHED | ⚠️ **Có HAI Jeddite**: `(Enroth)` là chủ thể; `(Ashan)` là Demon cultist trong Heroes VI — **continuity khác, không được gộp** |
+| `fandom-jeddite-enroth` | T6 | FETCHED | Trang Jeddite bản Enroth. Bio H4 khớp thelazy. ⚠️ Trạng thái "Alive (as of Heroes IV)" là **suy luận từ roster**, không text nào khẳng định |
+| `h3wiki-jeddite` | T1* | FETCHED | Infobox H3 (Warlock/Dungeon/Human, specialty Resurrection, hero ID 91), bio H4, bảng xuất hiện |
+| `h3wiki-ufretin` | T1* | FETCHED | Ranger Rampart, đồng minh Jeddite trong `Target`. ⚠️ Câu "tried, but failed" là **văn wiki giả định kết quả người chơi thắng** |
+| `h3wiki-dungeon` | T1* | FETCHED | Trang town Dungeon — khuyến nghị Jeddite cho lối chơi thường, xác nhận hắn là hero **chuẩn** không phải campaign-only |
 | `oe-ethric-bio` | **T5** | FETCHED | Tiểu sử Ethric trong *Heroes: Olden Era*. ⚠️ **NGOÀI Old Universe** theo `CANON-POLICY.md` R5. Sản phẩm chưa phát hành, có thể đổi. Chỉ dùng tham chiếu |
 | `h3wiki-jeddite` | T1* | FETCHED | Bạn thân cũ, người giới thiệu Sandro với Ethric; bio H4 |
 | `h3wiki-vidomina` | T1* | FETCHED | Học trò; Yog từng yêu; bio H3+H4 |
@@ -349,6 +383,48 @@ tra cứu mà là **thuộc tính của tư liệu** — theo Bullard, chưa t�
 **Xử lý:** `DISPUTED`. Cách diễn đạt an toàn: Sandro cung cấp thuốc độc và dàn kế;
 Haart ra tay; **lòng trung thành cuối cùng của Haart (Sandro hay Finneas) thì các
 nguồn nói khác nhau**.
+
+### ⚠️⚠️ `fandom-timeline-ancient` — phần lớn `<ref>` KHÔNG xác minh được
+
+Đây là cảnh báo nghiêm trọng nhất về nguồn mà dự án phát hiện được, vì nó ảnh hưởng tới
+**mọi mốc niên đại** lấy từ trang đó.
+
+Trang Timeline của Fandom **trông rất chỉn chu** vì có nhiều thẻ `<ref>`. Nhưng các ref
+`Deyja`, `TimberWars`, `Nicolas`, `Catherine`, `Shadowspire` đều trỏ tới:
+
+```
+web.archive.org/.../homm3.ga-strategy.com/...
+```
+
+**Archive.org bị chặn trong môi trường này.** Không xác minh được **một cái nào**.
+
+**Hệ quả:** mọi mốc dựa trên archive link là **chưa xác minh ở cấp nguồn gốc**. Chúng có thể
+đúng, nhưng **không được nâng lên `T2*`** nếu chưa lấy được độc lập.
+
+**Ngoại lệ — đáng tin hơn:** các ref trích thẳng text MM6/MM7/H3 trong chính bài (`Melian`,
+`ArchieDeposed`, `Gelu-Kendal`, `Celeste`) — vì **có nội dung trích kèm**, đọc được ngay.
+
+**Mốc đáng ngờ nhất:** `1164-09-27` cho vụ đầu độc Nicolas — **chính xác tới ngày** nhưng
+dòng đó **không có ref nào**. Độ chính xác kiểu này mà không nguồn là dấu hiệu xấu.
+
+**Mốc đáng tin nhất:** `1168-08-05` (Archibald lên ngôi) và `1169` (đảo chính Kastore) —
+cả hai truy được về text MM7 trích thẳng.
+
+### ⭐ `h3wiki-herobios-txt` là `T1` THẬT, không phải `T1*`
+
+Phát hiện đáng chú ý: thelazy có trang `Translation Data/HeroBios.txt` — **file string table
+trích trực tiếp từ game** (168KB, bốn cột EN/FR/PL/RU).
+
+Đây **không phải** bản chép do người viết lại, mà là **dữ liệu trích từ file game**. Theo
+`CANON-POLICY.md`, nó xứng đáng tier **`T1`** không có dấu sao.
+
+**Đây là nguồn tốt nhất dự án có được tính tới nay**, và là bước tiến nhỏ hướng tới `B-001`.
+
+*(Chi tiết phụ thú vị từ chính file: bản dịch **Ba Lan và Nga đều để Jeddite là nữ**. Lỗi
+dịch, không phải lore.)*
+
+**Việc cần làm:** kiểm xem thelazy còn trang `Translation Data/` nào khác —
+`Talk:Artifact/descriptions` cũng được nêu là có thể chứa chuỗi trích từ game.
 
 ### ⚠️ Claim "artifact từng thuộc về Ethric" — BỊ GAME TEXT PHẢN BÁC
 

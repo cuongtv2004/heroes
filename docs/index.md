@@ -83,13 +83,19 @@ Ví dụ thật từ [bài về Sandro](codex/heroes/sandro.md):
 !!! info "Giai đoạn 1 — Xây nền: đã xong"
     Sáu tài liệu nền · [Sổ nguồn](sources/REGISTRY.md) 77 key · công cụ kiểm 3 tầng
 
-**Codex hiện có 3 bài, cả ba đã `verified`:**
+**Codex hiện có 9 bài trên 4 loại schema:**
 
-| Bài | Loại | Nguồn T4 |
+| Bài | Loại | Trạng thái |
 |---|---|---|
-| [Sandro](codex/heroes/sandro.md) | hero | 12 |
-| [Ethric](codex/characters/ethric.md) | character | 1 |
-| [Cloak of the Undead King](codex/artifacts/cloak-of-the-undead-king.md) | artifact | — |
+| [Sandro](codex/heroes/sandro.md) | hero | ✅ verified |
+| [Ethric](codex/characters/ethric.md) | character | ✅ verified |
+| [Cloak of the Undead King](codex/artifacts/cloak-of-the-undead-king.md) | artifact | ✅ verified |
+| [Jeddite](codex/heroes/jeddite.md) | hero | draft |
+| [Deyja](codex/kingdoms/deyja.md) | kingdom | draft |
+| [Armor of the Damned](codex/artifacts/armor-of-the-damned.md) | artifact | draft |
+| [Amulet of the Undertaker](codex/artifacts/amulet-of-the-undertaker.md) | artifact | draft |
+| [Vampire's Cowl](codex/artifacts/vampires-cowl.md) | artifact | draft |
+| [Dead Man's Boots](codex/artifacts/dead-mans-boots.md) | artifact | draft |
 
 Saga chưa bắt đầu — theo `SAGA-STYLE.md` S6, chỉ được viết khi entity Codex liên
 quan đã `verified`.

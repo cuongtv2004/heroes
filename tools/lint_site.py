@@ -43,7 +43,10 @@ CLAIM_LABEL_RE = re.compile(r"\{T\d\*?\s+[A-Z_]+:[^}]*\}")
 # {{fanopinion}}". Đây là nội dung có chủ đích, không phải template chưa xử lý.
 WIKI_TEMPLATE_RE = re.compile(
     r"\{\{(sic|fanopinion|user commentary|end of user commentary|gl|cn|hn|"
-    r"hota|sod|mm\d|imprisoned|player|enemy|mention|Sng|Ss2|Psg)\b[^}]*\}?\}?"
+    r"hota|sod|mm\d|imprisoned|player|enemy|mention|Sng|Ss2|Psg|"
+    r"HeroNew|CampaignHero|DungeonHeroesNew|swh|showwithhota|inhota|wll|wh|"
+    r"ArtifactNewSB|CombinationArtifactNewSB|H4Story|herobios|hero row|"
+    r"appear|insod|prison|Hn|Cn|Psg)\b[^}]*\}?\}?"
 )
 
 TAG_RE = re.compile(r"<script.*?</script>|<style.*?</style>|<[^>]+>", re.S)

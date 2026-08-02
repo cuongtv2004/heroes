@@ -111,10 +111,17 @@ nav:
       - Tổng quan: codex/index.md
       - Hero:
           - codex/heroes/sandro.md
+          - codex/heroes/jeddite.md
       - Nhân vật:
           - codex/characters/ethric.md
+      - Quốc gia:
+          - codex/kingdoms/deyja.md
       - Vật phẩm:
           - codex/artifacts/cloak-of-the-undead-king.md
+          - codex/artifacts/armor-of-the-damned.md
+          - codex/artifacts/amulet-of-the-undertaker.md
+          - codex/artifacts/vampires-cowl.md
+          - codex/artifacts/dead-mans-boots.md
   - Nguồn:
       - Sổ nguồn: sources/REGISTRY.md
       - Báo cáo kiểm định:

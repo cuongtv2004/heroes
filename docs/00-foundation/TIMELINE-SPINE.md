@@ -160,16 +160,70 @@ nếu một trong hai nguồn sai thì cái còn lại vẫn đứng.
 Hai neo này cộng lại đặt quãng "Sandro học việc → Restoration Wars" trong khoảng **vài
 thập kỷ**, không thể là hàng thế kỷ.
 
-### Neo về Deyja
+### Neo về Deyja — có HAI vị vua, không phải một
 
-> Trong *Duke Alarice*, "**The new king is still not settled into his throne** and will
+> Trong *Duke Alarice*: "**The new king is still not settled into his throne** and will
 > be easily replaced."
 
 {T1* EXPLICIT: sod-duke-alarice}
 
-Nghĩa là ngay trước khi Finneas lên ngôi, Deyja **vừa đổi vua** — có một đời vua ngắn
-xen giữa. Đây là mốc tương đối hữu ích cho lịch sử Deyja, và là thứ dễ bị bỏ qua nếu chỉ
-đọc bản tóm tắt.
+Và trong *Finneas Vilmar*, một dòng dễ bỏ sót:
+
+> "...before he can tell the others of **Finneas' transgressions against the old King of
+> Deyja**."
+
+{T1* EXPLICIT: sod-finneas-vilmar}
+
+→ Có **"the old King"** và **"the new king"** — hai người khác nhau, **cả hai đều không
+tên**. Finneas đã phản bội vị đầu **trước** chiến dịch Alarice; vị thứ hai là người Sandro
+sắp phế.
+
+Việc không có tên này **có nguồn**, không phải chưa tìm ra: infobox Fandom ghi thẳng
+`predecessors = Unnamed King of Deyja`.
+
+### Neo xa nhất — nguồn gốc Deyja
+
+> "Today the nation of Deyja, **barren home of the Necromancers for nearly a millennium**,
+> continues to grow like a cancerous scar in the heart of the AvLee."
+
+{T2* EXPLICIT: t2-necromancy-origin}
+
+Nếu tính tới thập niên 1160 AS, Deyja hình thành khoảng **thập niên 200 AS**. Đây là neo
+tương đối **xa nhất** dự án có — và nó đến từ một truyện ngắn của nhân viên NWC, không
+phải manual.
+
+⚠️ thelazy diễn đạt lại thành "nearly a millennium before the 1160s AS" — đó là **phép
+tính của wiki chồng lên truyện**. Trích truyện, không trích wiki.
+
+### Chuỗi Deyja — nối vào xương sống chính
+
+```
+Necromancy tách khỏi Alchemy (Bracada)     ⟨"centuries ago"⟩
+      ↓ bị Bracada trục xuất
+Giáo phái định cư trong rừng AvLee đang sống  ⟨~200s AS, INFERENCE⟩
+      ↓ hút cạn đất → thành hoang mạc
+      ↓ ~ một thiên niên kỷ
+"the old King" trị vì · Finneas phản bội ông
+      ↓
+"the new king" — vừa lên ngôi, chưa vững
+      ↓  Sandro + Finneas giết Duke Alarice
+Sandro phế vua mới → Finneas lên ngôi
+      ↓                    ⟨GIAO với chuỗi Sandro ở trên⟩
+      ↓  Finneas hồi sinh Nicolas → Nicolas giết Finneas
+Lich King trị vì · dẹp Mot · thu 2500 skeleton
+      ↓  Nimbus đào ngũ → liên quân bốn nước phản công
+Nicolas bị Catherine tiêu diệt              ⟨1168-08-05⟩
+      ↓
+Archibald Ironfist lên ngôi                 ⟨1168⟩
+      ↓  chia rẽ Science / Military
+Kastore đảo chính                           ⟨1169⟩
+      ↓
+Deyja bị hủy trong Reckoning
+```
+
+⭐ **Hai chuỗi giao nhau ở đúng một điểm** — lúc Finneas lên ngôi. Trước đó là lịch sử
+Deyja; sau đó là hệ quả của việc Sandro can thiệp vào nó.
+
 
 ### Mốc có năm tuyệt đối
 
@@ -180,9 +234,43 @@ xen giữa. Đây là mốc tương đối hữu ích cho lịch sử Deyja, và
 | Nimbus tập hợp tàn dư Necromancer's Guild ở Enroth | ~1166 AS | `INFERENCE` | `h3wiki-nimbus` |
 | Shadow of Death (khoảng) | ~1155–1164 AS | `INFERENCE` | `fandom-timeline-ancient` |
 
-Bốn mốc, và **không mốc nào là `EXPLICIT`** — tất cả đều là suy luận từ timeline do
-cộng đồng dựng. Đây là tình trạng thực tế, và chính là lý do xương sống không thể dựa
-vào năm.
+### Bổ sung từ đợt Deyja (2026-08-02)
+
+⚠️ **Đọc cảnh báo ở mục 3.5 trước khi dùng bất kỳ mốc nào dưới đây.**
+
+| Sự kiện | Năm | Độ chắc | Nguồn |
+|---|---|---|---|
+| Nicolas Gryphonheart sinh | 1110 AS | `INFERENCE` | `fandom-timeline-ancient` |
+| Finneas Vilmar lên ngôi Deyja | ~1160–1164 | `UNVERIFIED` | `fandom-timeline-ancient` — **dòng không có ref** |
+| Sandro lập liên minh Nighon + Eeofol | 1164 | `INFERENCE` | `fandom-timeline-ancient` |
+| **Lord Haart đầu độc Nicolas** | **1164-09-27** | `UNVERIFIED` | ⚠️ **chính xác tới ngày nhưng KHÔNG có ref** |
+| Deyja chiếm miền bắc Erathia | 1164 | `INFERENCE` | `h3wiki-erathia` |
+| Nicolas được hồi sinh; **Finneas chết** | 1164–1165 | `INFERENCE` | `fandom-timeline-ancient` |
+| Người Terra tới bằng tàu *Lincoln* | ~1166 | `INFERENCE` | `fandom-timeline-ancient` |
+| Nimbus kéo tàn dư Guild sang Deyja | ~1166 | `INFERENCE` | `h3wiki-nimbus` |
+| Archibald sang Antagarich | 1167-10-23 | `INFERENCE` | ref *Diaries of Archibald* |
+| ⭐ **Restoration Wars kết thúc; Archibald làm vua Deyja** | **1168-08-05** | `INFERENCE` | ref *Diaries* — **đáng tin nhất** |
+| ⭐ **Occult War; Kastore phế Archibald** | **1169** | `INFERENCE` | ref trích thẳng MM7 — **đáng tin nhất** |
+| HQ Guild dời Moulder → Shadowspire | ~1170 | `INFERENCE` | ref MM8 |
+
+**Không mốc nào là `EXPLICIT`** — tất cả đều suy từ timeline do cộng đồng dựng. Đây là
+tình trạng thực tế, và chính là lý do xương sống không thể dựa vào năm.
+
+### 3.5 ⚠️⚠️ Cảnh báo bắt buộc về nguồn của mọi mốc trên
+
+Trang Timeline của Fandom **trông rất chỉn chu** vì có nhiều thẻ `<ref>`. Nhưng phần lớn
+ref trỏ tới **web.archive.org** — bị chặn trong môi trường này. **Không xác minh được cái
+nào.**
+
+**Hệ quả:** mọi mốc dựa trên archive link là **chưa xác minh ở cấp nguồn gốc**. Chúng có
+thể đúng, nhưng **không được nâng lên `T2*`**.
+
+| | Mốc | Vì sao |
+|---|---|---|
+| **Đáng tin nhất** | 1168-08-05, 1169 | Truy được về text MM7 **trích thẳng trong bài**, không qua archive link |
+| **Đáng ngờ nhất** | 1164-09-27 | **Chính xác tới ngày** nhưng dòng đó **không có ref nào**. Độ chính xác kiểu này mà không nguồn là dấu hiệu xấu |
+
+Xem `sources/REGISTRY.md` mục cảnh báo về `fandom-timeline-ancient`.
 
 ⚠️ **Mốc Shadow of Death có vấn đề.** Timeline của Fandom đặt SoD vào ~1155–1164 AS,
 tức là **trước** MM6 (1165). Nhưng văn xuôi của **chính Fandom** lại kể Ethric sống sót

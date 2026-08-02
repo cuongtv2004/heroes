@@ -14,21 +14,33 @@ Mỗi bài tuân theo [SCHEMA.md](../00-foundation/SCHEMA.md) và phải qua
 
 Nhân vật điều khiển được trong game.
 
-- [**Sandro**](heroes/sandro.md) — necromancer nổi tiếng nhất Old Universe.
-  Protagonist chơi được của hai campaign trọn vẹn, và là kẻ thao túng bị thao túng.
+- [**Sandro**](heroes/sandro.md) — necromancer nổi tiếng nhất Old Universe. Protagonist chơi
+  được của hai campaign trọn vẹn, và là kẻ thao túng bị thao túng.
+- [**Jeddite**](heroes/jeddite.md) — người đã giới thiệu Sandro với Ethric, và không tha thứ
+  cho mình được. Bio chính thức của hắn **không nhắc một chữ nào** về điều đó.
 
 ### Nhân vật
 
 Nhân vật có vai trò lore nhưng không chơi được.
 
-- [**Ethric**](characters/ethric.md) — "Ethric the Mad", lich đầu tiên của thế giới,
-  thầy của Sandro. Và là nhân vật **không nói một câu nào** trong toàn bộ Heroes III.
+- [**Ethric**](characters/ethric.md) — "Ethric the Mad", lich đầu tiên của thế giới, thầy của
+  Sandro. Và là nhân vật **không nói một câu nào** trong toàn bộ Heroes III.
+
+### Quốc gia
+
+- [**Deyja**](kingdoms/deyja.md) — vương quốc necromancer, nơi **ám sát là thủ tục kế vị**.
+  Sự cằn cỗi của nó không phải điều kiện có sẵn mà là **thứ nó tự tạo ra**.
 
 ### Vật phẩm
 
-- [**Cloak of the Undead King**](artifacts/cloak-of-the-undead-king.md) —
-  combination artifact mạnh nhất phe Necropolis, bị cấm ghép trong HotA. Artifact mà
-  Sandro lừa một người tử tế đi thu thập hộ.
+- [**Cloak of the Undead King**](artifacts/cloak-of-the-undead-king.md) — combination artifact
+  mạnh nhất phe Necropolis, bị cấm ghép trong HotA. Artifact mà Sandro lừa một người tử tế đi
+  thu thập hộ.
+    - Thành phần: [Amulet of the Undertaker](artifacts/amulet-of-the-undertaker.md) ·
+      [Vampire's Cowl](artifacts/vampires-cowl.md) ·
+      [Dead Man's Boots](artifacts/dead-mans-boots.md)
+- [**Armor of the Damned**](artifacts/armor-of-the-damned.md) — artifact đối xứng, và là món
+  Sandro lừa Crag Hack bằng cách hứa sẽ **phá hủy** nó.
 
 ---
 
@@ -64,7 +76,7 @@ Loại đã dùng được đánh dấu ✅.
 | `hero` | Nhân vật điều khiển được | ✅ |
 | `character` | Nhân vật lore, không chơi được | ✅ |
 | `artifact` | Vật phẩm có tên riêng | ✅ |
-| `kingdom` | Thực thể chính trị | — |
+| `kingdom` | Thực thể chính trị | ✅ |
 | `location` | Địa điểm không phải quốc gia | — |
 | `creature` | Loại sinh vật dùng làm quân | — |
 | `race` | Chủng tộc có văn hóa riêng | — |
