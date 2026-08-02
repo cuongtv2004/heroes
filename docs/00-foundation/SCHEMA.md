@@ -282,6 +282,30 @@ hơn phần lớn `hero`.)
 Nếu nhân vật **có** xuất hiện dưới dạng hero ở một game nào đó nhưng không phải game
 chính đang bàn, ghi ở mục *Xuất hiện trong game*, không tạo mục Gameplay riêng.
 
+### Lưu ý riêng cho `kingdom`
+
+Khung ở mục 4 là đủ, nhưng ba mục sau cần cẩn thận đặc biệt:
+
+**Mục *Chính thể & các đời quân chủ*** — đây là chỗ dễ sai nhất của loại entity này.
+Trình bày dạng **bảng theo thứ tự**, mỗi đời một dòng, và **mỗi dòng có nhãn riêng**:
+
+```markdown
+| Người trị vì | Giai đoạn | Kết cục | Nguồn |
+|---|---|---|---|
+| (không rõ tên) | trước 1164 | Bị Finneas phế | {T1* INFERENCE: sod-duke-alarice} |
+| Finneas Vilmar | ~1164–? | Chết khi hồi sinh Gryphonheart | {T1* EXPLICIT: h3wiki-finneas} |
+```
+
+Lý do bắt buộc bảng: chuỗi kế vị hay có **khoảng trống** và **người không tên**. Viết
+thành văn xuôi sẽ che mất chỗ nào là suy luận.
+
+**Mục *Lịch sử*** phải phân biệt rõ **thời điểm quốc gia hình thành** với **thời điểm
+nó rơi vào tay thế lực hiện tại**. Với Deyja, hai mốc này khác nhau và nguồn thường lẫn.
+
+**Mục *Chiến tranh & liên minh*** — với mỗi liên minh, ghi **cái giá** nếu game có nêu.
+Ví dụ: Nighon đòi 100.000 vàng cộng gỗ hàng tuần. Con số cụ thể là thứ Codex có mà wiki
+thường bỏ.
+
 ### Lưu ý riêng cho `artifact`
 
 Mục *Gameplay* của artifact **phải tách hai phần**, vì hai loại thông tin này có tuổi

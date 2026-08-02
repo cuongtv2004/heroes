@@ -57,28 +57,52 @@ Trong mỗi kỷ nguyên, các sự kiện nối nhau bằng quan hệ `before` 
 Ví dụ đã xác lập được từ dữ liệu Sandro:
 
 ```
-Sandro học dưới Ethric
+Jeddite giới thiệu Sandro với Ethric
+     ↓ (Ethric nghi ngờ Sandro NGAY TỪ ĐẦU)
+Sandro học dưới Ethric — được dạy làm warlock
      ↓ (Sandro chuyển sang necromancy — Ethric nổi giận)
+        ⟨khoảng cách: "decades" trước Restoration Wars⟩
 Sandro thu thập artifact qua Gem và Crag Hack
+   · mưu thứ ba qua Tyranell (Statue of Legion) THẤT BẠI
      ↓
 Ethric tung tin vị trí Sandro cho kẻ thù
      ↓
-Sandro giết Ethric  ·  nhận Vidomina làm học trò
+Sandro ĐÁNH BẠI Ethric  ·  nhận Vidomina làm học trò
      ↓
 Sandro dựng Finneas Vilmar lên ngôi Deyja
+   · loại Duke Alarice
      ↓
-Bốn anh hùng đánh bại Sandro  ·  Angelic Alliance bị tháo rời
+Sandro in dấu ngón tay xương lên ngực Finneas (Invasion Day 17)
      ↓
-Sandro liên minh Kreegan + Nighon
+Bốn anh hùng đánh bại Sandro
+   · Cloak + Armor bị tháo rời, phân tán khắp Antagarich
      ↓
-Nicolas Gryphonheart bị đầu độc
+Sandro liên minh Kreegan (Eeofol) + Dungeon Overlord (Nighon)
      ↓
-Finneas gài Sandro vào tù
+Nicolas Gryphonheart bị đầu độc qua tay Lord Haart
+     ↓
+Finneas gài Sandro vào tù (With Blinders On)
      ↓
 Cuộc xâm lược Erathia (Restoration of Erathia bắt đầu)
+     ↓
+Finneas hồi sinh Gryphonheart thành lich — và chết trong quá trình đó
+     ↓
+Vidomina và Vokial giải thoát Sandro (tùy chọn, Season of Harvest)
 ```
 
 Toàn bộ chuỗi này là `EXPLICIT` về **thứ tự**, dù phần lớn **không có năm**.
+
+### ⚠️ Hai chỗ chuỗi này KHÔNG nói được
+
+**Số phận Ethric.** Chuỗi ghi "đánh bại", **không ghi "giết"** — vì game chỉ đặt đó là
+điều kiện thắng, không có đoạn kể nào mô tả cái chết. Và Ethric còn một cái chết khác
+trong MM6, **trước** cả sự kiện này. Hai wiki lớn giải quyết theo hai hướng ngược nhau.
+Xem [Ethric](../codex/characters/ethric.md).
+
+**Timeline không đặt được MM6 vào chuỗi này.** Nếu Ethric chết ở MM6 (~1165 AS) rồi
+mới bị Sandro đánh bại, thì hoặc chuỗi sai, hoặc ông sống lại. Không nguồn nào giải
+quyết. Đây là ví dụ điển hình cho việc timeline dùng để **phát hiện điều bất khả thi**
+chứ không phải để lấp nó.
 
 ### Tầng C — Năm tuyệt đối (Absolute date)
 
@@ -119,18 +143,53 @@ năm tuyệt đối.
 {T1* INFERENCE: h3wiki-sandro}
 
 Neo này quan trọng vì nó **loại trừ** khả năng Sandro trong Chronicles là cùng một
-người — xem `codex/heroes/sandro.md` mục *Điểm tranh chấp*. Timeline không chỉ dùng
-để xếp thứ tự, mà còn để phát hiện điều bất khả thi.
+người — xem [Sandro](../codex/heroes/sandro.md) mục *Điểm tranh chấp*. Timeline không
+chỉ dùng để xếp thứ tự, mà còn để phát hiện điều bất khả thi.
+
+### Neo củng cố — người phàm cùng thời còn sống
+
+> **Jeddite** — bạn học cùng thời với Sandro, và là **người phàm** — vẫn còn sống và
+> hoạt động trong Shadow of Death.
+
+{T1* EXPLICIT: sod-target}
+
+Đây là neo độc lập, và mạnh theo cách riêng: một người **phàm** cùng thời còn sống thì
+giới hạn khoảng cách trong **một đời người**. Nó không phụ thuộc vào lời Ethric, nên
+nếu một trong hai nguồn sai thì cái còn lại vẫn đứng.
+
+Hai neo này cộng lại đặt quãng "Sandro học việc → Restoration Wars" trong khoảng **vài
+thập kỷ**, không thể là hàng thế kỷ.
+
+### Neo về Deyja
+
+> Trong *Duke Alarice*, "**The new king is still not settled into his throne** and will
+> be easily replaced."
+
+{T1* EXPLICIT: sod-duke-alarice}
+
+Nghĩa là ngay trước khi Finneas lên ngôi, Deyja **vừa đổi vua** — có một đời vua ngắn
+xen giữa. Đây là mốc tương đối hữu ích cho lịch sử Deyja, và là thứ dễ bị bỏ qua nếu chỉ
+đọc bản tóm tắt.
 
 ### Mốc có năm tuyệt đối
 
 | Sự kiện | Năm | Độ chắc | Nguồn |
 |---|---|---|---|
 | Ethric bị nhóm nhân vật MM6 giết trên Enroth | ~đầu 1165 AS | `INFERENCE` | `h3wiki-ethric` |
+| Nhóm bốn nhà thám hiểm khởi hành (MM6) | 1165 AS | `INFERENCE` | `fandom-timeline-ancient` |
 | Nimbus tập hợp tàn dư Necromancer's Guild ở Enroth | ~1166 AS | `INFERENCE` | `h3wiki-nimbus` |
+| Shadow of Death (khoảng) | ~1155–1164 AS | `INFERENCE` | `fandom-timeline-ancient` |
 
-Chỉ hai mốc. Đây là tình trạng thực tế sau đợt research đầu — và chính là lý do
-xương sống không thể dựa vào năm.
+Bốn mốc, và **không mốc nào là `EXPLICIT`** — tất cả đều là suy luận từ timeline do
+cộng đồng dựng. Đây là tình trạng thực tế, và chính là lý do xương sống không thể dựa
+vào năm.
+
+⚠️ **Mốc Shadow of Death có vấn đề.** Timeline của Fandom đặt SoD vào ~1155–1164 AS,
+tức là **trước** MM6 (1165). Nhưng văn xuôi của **chính Fandom** lại kể Ethric sống sót
+qua MM6 rồi mới bị Sandro đánh bại. Hai phần của cùng một wiki mâu thuẫn nhau.
+
+Timeline (con số) ủng hộ thứ tự của thelazy; văn xuôi ủng hộ thứ tự ngược lại. Dự án
+**không chọn bên** — xem [Ethric](../codex/characters/ethric.md) mục *Điểm tranh chấp*.
 
 ---
 
