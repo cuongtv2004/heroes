@@ -110,6 +110,23 @@ research. Có thể là nguồn của một số claim đang lưu hành mà dự
 
 ## P2 — Làm khi tiện
 
+### B-015 · Search index sẽ nặng khi Codex lớn
+
+**Vấn đề:** `search_index.json` hiện **339 KB cho 17 trang** (~20 KB/trang), và trình
+duyệt tải **toàn bộ** ở lần tìm kiếm đầu tiên. Ở mức ~200 bài, đó là **~4 MB**.
+
+**Không dùng được `prebuild_index`** — plugin search của Material không hỗ trợ tùy chọn
+đó (chỉ plugin search gốc MkDocs có). Đã thử, build báo lỗi.
+
+**Hướng xử lý khi tới ngưỡng:**
+
+- Chuyển `sources/notes/` (báo cáo kiểm định) ra khỏi index — chúng dài và ít ai tìm
+- Cân nhắc `search.separator` để giảm số token
+- Hoặc chuyển sang giải pháp tìm kiếm ngoài (Algolia DocSearch miễn phí cho dự án
+  mã nguồn mở)
+
+**Ngưỡng cần hành động:** khoảng **80–100 bài**, tức ~2 MB index.
+
 ### B-005 · Thử lại `heroesofmightandmagic.com` (site chính thức NWC)
 
 Connection refused — có thể đã chết hẳn. `web.archive.org` bị chặn trong môi trường này

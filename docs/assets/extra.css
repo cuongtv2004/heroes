@@ -14,14 +14,9 @@
   font-size: 0.85em;
 }
 
-/* Bảng trong Codex thường rộng (bảng nguồn, bảng xuất hiện).
-   Cho phép cuộn ngang thay vì vỡ layout. */
-.md-typeset__table {
-  min-width: 100%;
-}
-.md-typeset table:not([class]) {
-  display: table;
-}
+/* KHÔNG đụng vào .md-typeset__table hay .md-typeset table:not([class]).
+   Material đã đặt display:inline-block + overflow:auto — ĐÓ CHÍNH LÀ cơ chế
+   cuộn ngang. Ghi đè display:table sẽ phá nó, và bảng rộng sẽ tràn layout. */
 
 /* Trích dẫn game text nguyên văn — phân biệt rõ với văn của dự án. */
 .md-typeset blockquote {

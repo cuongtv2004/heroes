@@ -13,6 +13,9 @@ site_dir: _site
 theme:
   name: material
   language: vi
+  # Tắt Google Fonts: bỏ request bên thứ ba, và Roboto phủ tiếng Việt yếu —
+  # một số dấu chồng (ế, ộ, ữ) bị fallback sang font hệ thống không đồng nhất.
+  font: false
   icon:
     logo: material/skull
     repo: fontawesome/brands/github
@@ -49,6 +52,9 @@ plugins:
       lang:
         - vi
         - en
+      # LƯU Ý: `prebuild_index` KHÔNG được plugin search của Material hỗ trợ
+      # (chỉ có ở plugin search gốc MkDocs). Index hiện ~20KB/trang và tải toàn
+      # bộ ở lần tìm đầu — khi Codex lên vài trăm bài cần xem lại. Xem BACKLOG.
   - exclude:
       glob:
         - sources/raw/*
@@ -63,6 +69,14 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 3
+      # Slugify mặc định chuẩn hóa NFKD rồi ép ASCII. `ế` phân rã thành e+dấu
+      # (giữ chữ), nhưng `Đ`/`đ` là chữ cái Latin RIÊNG BIỆT, không phân rã được
+      # nên bị xóa thẳng: "Đọc gì trước" → #oc-gi-truoc.
+      # pymdownx.slugs giữ nguyên Unicode → #doc-gi-truoc.
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+          percent_encode: false
   - pymdownx.details
   - pymdownx.superfences
   # Cần cho cú pháp icon :material-xxx: của Material. Thiếu cái này thì
