@@ -192,6 +192,8 @@ def check_relation_consistency(entities: list) -> None:
     """
     # (entity_id, rel_type) -> set các target
     graph: dict[tuple[str, str], set[str]] = {}
+    # (entity_id, rel_type, target) -> certainty, để so độ chắc hai chiều
+    certainty_of: dict[tuple[str, str, str], str] = {}
     paths: dict[str, str] = {}
 
     for path, fm, _ in entities:
@@ -206,6 +208,7 @@ def check_relation_consistency(entities: list) -> None:
             target = strip_quotes(r.get("target", ""))
             if rtype and target:
                 graph.setdefault((eid, rtype), set()).add(target)
+                certainty_of[(eid, rtype, target)] = strip_quotes(r.get("certainty", ""))
 
     known = set(paths)
 
@@ -232,11 +235,23 @@ def check_relation_consistency(entities: list) -> None:
             # (3) nghịch đảo viết tay hai chiều — sinh tự động, không viết tay
             inv = INVERSE.get(rtype)
             if inv and eid in graph.get((target, inv), set()):
-                warn(
-                    f"{paths[eid]}: `{rtype}` → {target} đã có nghịch đảo `{inv}` "
-                    f"viết tay ở {paths[target]} — nghịch đảo do công cụ sinh, "
-                    f"không viết tay (SCHEMA.md mục 3)"
-                )
+                # (3b) Nếu đã viết tay cả hai chiều, ít nhất hai bên phải khớp
+                # độ chắc. Lệch nhau nghĩa là hai bài đang nói hai điều khác nhau
+                # về cùng một sự thật — lỗi nghiêm trọng hơn việc trùng lặp.
+                c_fwd = certainty_of.get((eid, rtype, target), "")
+                c_inv = certainty_of.get((target, inv, eid), "")
+                if c_fwd and c_inv and c_fwd != c_inv:
+                    err(
+                        f"{paths[eid]}: `{eid} {rtype} {target}` gán `{c_fwd}` "
+                        f"nhưng {paths[target]} gán `{c_inv}` cho chiều ngược "
+                        f"`{inv}` — hai bài mâu thuẫn về độ chắc của cùng một claim"
+                    )
+                else:
+                    warn(
+                        f"{paths[eid]}: `{rtype}` → {target} đã có nghịch đảo `{inv}` "
+                        f"viết tay ở {paths[target]} — nghịch đảo do công cụ sinh, "
+                        f"không viết tay (SCHEMA.md mục 3)"
+                    )
 
 
 def main() -> int:

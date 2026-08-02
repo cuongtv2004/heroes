@@ -19,8 +19,9 @@ appears_in:
   - sod-specter-of-power
   - h4
   - mm8
-status: verified
+status: needs-rework
 verify_pass: 2026-07-31
+rework_reason: "Tang 3 phat hien mau thuan voi codex/characters/ethric.md ve do chac cua quan he killed. Da sua EXPLICIT -> DISPUTED. Can verify lai."
 class: Necromancer
 specialty: Sorcery
 faction: necropolis
@@ -85,6 +86,7 @@ sources_used:
   - fandom-sandro-xeen
   - h3wiki-necromancer
   - h3wiki-death-knight
+  - mm6-cartman-quest
   - bullard-interview-2013
   - bullard-papers-ut-austin
   - fulton-fanstratics-3
@@ -98,9 +100,9 @@ relations:
     note: "Campaign text nhiều chỗ khẳng định. Nhưng Ethric dạy hắn thành warlock, không phải necromancer — xem mục Điểm tranh chấp"
   - type: killed
     target: ethric
-    certainty: EXPLICIT
+    certainty: DISPUTED
     source: sod-master
-    note: "Điều kiện thắng scenario Master: 'Defeat Ethric and all of his allies'"
+    note: "CHỈ là điều kiện thắng ('Defeat Ethric'), không có đoạn kể nào mô tả cái chết. Xung đột với việc Ethric bị nhóm MM6 giết. Xem codex/characters/ethric.md"
   - type: teacher_of
     target: vidomina
     certainty: EXPLICIT
@@ -118,6 +120,11 @@ relations:
     certainty: EXPLICIT
     source: sod-target
     note: "Từng là bạn thân nhất"
+  - type: enemy_of
+    target: ethric
+    certainty: EXPLICIT
+    source: sod-target
+    note: "Đối xứng — Ethric cũng khai chiều này"
   - type: was_betrayed_by
     target: finneas-vilmar
     certainty: EXPLICIT
@@ -365,9 +372,15 @@ khung nó — "thời trẻ, khi hắn còn là Người" — thì **không** c�
 nói "several years back" và không nói gì về hình dạng của hắn lúc đó.
 {T6 INFERENCE: fandom-sandro-enroth — đây là diễn giải, không phải điều text nói}
 
-Trong scenario *Master*, Sandro giết Ethric. {T1* EXPLICIT: sod-master — điều kiện
-thắng: "Defeat Ethric and all of his allies"} Ở đây hắn cũng nhận **Vidomina** làm
-học trò — với ý định bỏ rơi ngay từ đầu:
+Trong scenario *Master*, Sandro **đánh bại** Ethric. {T1* EXPLICIT: sod-master — điều
+kiện thắng: "Defeat Ethric and all of his allies"}
+
+⚠️ Cẩn thận với chữ "giết". Game **chỉ** đặt đây là điều kiện thắng — **không có đoạn kể
+nào mô tả cái chết của Ethric**, không epilogue, không xác. Và campaign sau đó không nhắc
+ông một lần nào nữa. {T1* EXPLICIT: sod-finneas-vilmar} Thêm nữa, Ethric còn một cái chết
+khác trong MM6. Xem [[ethric]] mục *Điểm tranh chấp*.
+
+Ở đây hắn cũng nhận **Vidomina** làm học trò — với ý định bỏ rơi ngay từ đầu:
 
 > "For the time being she will be useful, but we will part ways once we get past
 > Ethric and into Deyja proper."
@@ -638,9 +651,11 @@ hắn khai thác.** Thầy, bạn thân, học trò, đồng minh, con rối —
 cụ cho một mục đích.
 
 **Ethric** — thầy, rồi kẻ thù, rồi nạn nhân. Trục quan hệ định hình cả arc. Ethric
-dạy hắn thành warlock và nổi giận khi hắn thành necromancer; Sandro giết thầy trong
-*Master*. {T1* EXPLICIT: sod-master} Về sau Ethric bị nhóm nhân vật MM6 giết trên
-Enroth. {T1* EXPLICIT: h3wiki-ethric}
+dạy hắn thành warlock và nổi giận khi hắn thành necromancer; Sandro **đánh bại** thầy
+trong *Master*. {T1* EXPLICIT: sod-master}
+
+Nhưng Ethric có **hai cái chết mâu thuẫn nhau** — một ở đây, một trong MM6 — và không
+nguồn nào hòa giải được. Xem [[ethric]]. {T1* DISPUTED: sod-master + mm6-cartman-quest}
 
 **Jeddite** — bạn thân nhất, người giới thiệu hắn với Ethric, và là kẻ hắn dùng cảm
 giác tội lỗi làm vũ khí. {T1* EXPLICIT: sod-target}

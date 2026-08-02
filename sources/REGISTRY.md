@@ -115,14 +115,29 @@ gốc **một bước**.
 
 | key | tier | access | Nội dung |
 |-----|------|--------|----------|
-| `h3wiki-cloak-undead-king` | T1* | FETCHED | Cơ chế, thành phần, hạn chế trong HotA 1.7.2 |
-| `h3wiki-armor-of-the-damned` | T1* | FETCHED | Cơ chế, thành phần, synergy với hero |
+| `h3wiki-cloak-undead-king` | T1* | FETCHED | Cơ chế, thành phần, bảng hồi sinh, quy tắc cộng dồn. ⚠️ Câu về HotA 1.7.2 trên trang này **sai** — xem cảnh báo bên dưới |
+| `h3wiki-armor-of-the-damned` | T1* | FETCHED | Cơ chế, thành phần, synergy với hero. Mô tả in-game: **4 spell**, không phải 5 |
+| `h3wiki-amulet-of-the-undertaker` | T1* | FETCHED | Thành phần Cloak — Treasure, Necklace, 2000, +5% Necromancy |
+| `h3wiki-vampires-cowl` | T1* | FETCHED | Thành phần Cloak — Minor, Cape, 4000, +10% Necromancy |
+| `h3wiki-dead-mans-boots` | T1* | FETCHED | Thành phần Cloak — Major, Feet, 6000, +15% Necromancy |
+| `h3wiki-angelic-alliance` | T1* | FETCHED | Artifact đối kháng — 84000, đắt nhất SoD, +21 cả bốn primary skill |
+| `h3wiki-necromancy` | T1* | FETCHED | Giới hạn cơ chế Necromancy. Khác biệt SoD vs HotA về cách tính |
+| `hota-changelog` | T1* | FETCHED | Changelog Horn of the Abyss, 201.529 byte. **Nguồn chuẩn** cho mọi claim về HotA — trang artifact không đáng tin bằng |
+| `sod-a-tough-start` | T1* | FETCHED | Yog phân tán các mảnh Angelic Alliance — bài kiểm tra lòng trung thành của Boragus |
 
 ### Nhân vật liên quan
 
 | key | tier | access | Nội dung |
 |-----|------|--------|----------|
-| `h3wiki-ethric` | T1* | FETCHED | Ethric the Mad — lich đầu tiên, chết trong MM6, hộp sọ về tay Gabriel Cartman |
+| `h3wiki-ethric` | T1* | FETCHED | Ethric the Mad — infobox H3 (Warlock/Lich, portrait Ajit, specialty Mysticism), Story section. ⚠️ **Trang không có một footnote nào** |
+| `h3wiki-ajit` | T1* | FETCHED | Hero Ajit — specialty **Beholders**. Dùng để kiểm chéo: Ethric mượn portrait Ajit nhưng KHÔNG dùng template Ajit |
+| `h3wiki-jaegar` | T1* | FETCHED | Hero Jaegar — specialty **Mysticism**, khớp chuỗi chính xác với Ethric. **Đây mới là template nền của Ethric** |
+| `mm6-ethrics-tomb` | T1* | FETCHED | Dungeon MM6 — câu tin đồn in-game: "the first Sorcerer seeking life after death... **At least, that's how the rumor goes**" |
+| `mm6-cartman-quest` | T1* | FETCHED | Quest MM6 lấy hộp sọ Ethric cho Gabriel Cartman. Walkthrough: "Kill Ethric (he will look like a Power lich)" |
+| `mm6-shadow-dagger` | T1* | FETCHED | Mô tả item MM6 — "Commissioned by Ethric the Mad **while still a human**". Xác nhận độc lập quá trình người → lich |
+| `mm7-ethrics-staff` | T1* | FETCHED | Mô tả item MM7 — **khẳng định thẳng** "the world's first Lich - Ethric the Mad", không rào "tin đồn" |
+| `fandom-ritual-endless-night` | T6 | FETCHED | Trang Fandom giá trị nhất về Ethric — nêu rõ claim "lich đầu tiên + necromancer đầu tiên" là **theo tin đồn** |
+| `oe-ethric-bio` | **T5** | FETCHED | Tiểu sử Ethric trong *Heroes: Olden Era*. ⚠️ **NGOÀI Old Universe** theo `CANON-POLICY.md` R5. Sản phẩm chưa phát hành, có thể đổi. Chỉ dùng tham chiếu |
 | `h3wiki-jeddite` | T1* | FETCHED | Bạn thân cũ, người giới thiệu Sandro với Ethric; bio H4 |
 | `h3wiki-vidomina` | T1* | FETCHED | Học trò; Yog từng yêu; bio H3+H4 |
 | `h3wiki-finneas` | T1* | FETCHED | Puppet king; hero campaign-only; portrait dựa trên Thant |
@@ -333,6 +348,56 @@ tra cứu mà là **thuộc tính của tư liệu** — theo Bullard, chưa t�
 **Xử lý:** `DISPUTED`. Cách diễn đạt an toàn: Sandro cung cấp thuốc độc và dàn kế;
 Haart ra tay; **lòng trung thành cuối cùng của Haart (Sandro hay Finneas) thì các
 nguồn nói khác nhau**.
+
+### ⚠️ Claim "artifact từng thuộc về Ethric" — BỊ GAME TEXT PHẢN BÁC
+
+Trang `h3wiki-shadow-of-death` viết (văn wiki, **không dẫn nguồn**):
+
+> "...two powerful artifacts **that once belonged to his former mentor Ethric**."
+
+**Game text nói ngược.** `sod-target` Day 1:
+
+> "You have also learned Ethric has spread word of your whereabouts to those **who lost
+> these two precious artifacts**..."
+
+Chủ cũ là **những bên khác, không được nêu tên** — phân biệt rõ với Ethric. Trong toàn bộ
+`sod-target`, Ethric xuất hiện với hai vai: **thầy cũ** và **kẻ truy đuổi**, không lần nào
+là chủ sở hữu.
+
+**Nguồn của hiểu nhầm có lẽ là thư Jeddite:** "I will take the artifacts from your rotting
+corpse and **return them to Ethric**." Nhưng đó là **ý định giao nộp trong tương lai** của
+một bên thù địch, không nói gì về sở hữu quá khứ.
+
+**Xử lý:** không dùng claim này. Cách diễn đạt an toàn — Ethric là thầy cũ đã truy đuổi
+Sandro vì các artifact; các thành phần được lấy từ nhiều người giữ khác nhau qua tay Gem
+và Crag Hack.
+
+### ⚠️ Trang artifact KHÔNG đáng tin về HotA — dùng changelog
+
+Trang `h3wiki-cloak-undead-king` ghi lệnh cấm HotA 1.7.2 kèm **ba** template ngoại lệ.
+Đối chiếu `hota-changelog` cho thấy **sai**:
+
+- **1.7.2** (31/DEC/2024): cấm ghép, ngoại lệ **hai** template (Anarchy, Clash of Dragons)
+  và "a number of single player scenarios". **Không nhắc Legacy.**
+- **1.7.3** (08/JUN/2025): mới thêm template "Default Random Map (Legacy)"
+
+Trang wiki gộp hai phiên bản thành một.
+
+### ⚠️⚠️ Giá trị Necromancy ĐÃ ĐỔI qua các bản HotA
+
+Đây là phát hiện quan trọng nhất về gameplay trong đợt này, và nó ảnh hưởng **mọi bài
+artifact sau này**.
+
+- **HotA 1.3.0** (01/JAN/2014): "The number of Skeletons raised by necromancy is reduced by
+  half, as well as bonuses to it from artifacts and a Necromancy Amplifier"
+- **HotA 1.8.0** (31/DEC/2025): "5/10/15/30% Necromancy boost values are **back**... (instead
+  of 2.5/5/7.5/15%)"
+
+Nghĩa là trong HotA **1.3.0 → 1.7.x**, giá trị là **2,5/5/7,5/15%**. Con số chuẩn SoD chỉ
+trở lại ở **1.8.0**.
+
+**Quy tắc rút ra:** mọi con số gameplay trong Codex **phải ghi rõ phạm vi phiên bản**.
+Đây chính là lý do `SCHEMA.md` bắt tách *Cơ chế gốc* khỏi *Thay đổi qua các bản*.
 
 ### ⚠️ Bio hero chính thức là `T1*`, KHÔNG phải `T2*`
 
