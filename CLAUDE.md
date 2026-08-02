@@ -50,11 +50,24 @@ _build/ _site/        Sinh tự động, KHÔNG commit
 ## Lệnh thường dùng
 
 ```bash
-python3 tools/check.py           # kiểm toàn vẹn — PHẢI 0 lỗi trước khi push
+python3 tools/check.py           # kiểm toàn vẹn dữ liệu — PHẢI 0 lỗi trước khi push
 python3 tools/check.py --next    # entity nào được nhắc nhiều nhất mà chưa viết
 python3 tools/wikilinks.py --check   # liệt kê liên kết treo
 python3 tools/wikilinks.py --build   # sinh _build/ cho MkDocs
+mkdocs build --strict            # kiểm cấu trúc site
+python3 tools/lint_site.py       # kiểm hiển thị — markup lọt ra thành chữ thô
 ```
+
+**Ba lớp kiểm, mỗi lớp bắt loại lỗi khác nhau — không thay thế nhau được:**
+
+| Công cụ | Bắt gì |
+|---|---|
+| `check.py` | Dữ liệu: source key ma, quan hệ sai, mâu thuẫn giữa hai bài |
+| `mkdocs build --strict` | Cấu trúc site: link hỏng, anchor không tồn tại |
+| `lint_site.py` | Hiển thị: icon/wikilink/admonition lọt ra thành chữ thô |
+
+Lớp thứ ba tồn tại vì có tiền lệ: cú pháp icon hiện thành chữ trên site thật mà
+**build vẫn báo thành công**.
 
 ---
 

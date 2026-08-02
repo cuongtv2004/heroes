@@ -173,7 +173,54 @@ Sau khi hết `BLOCKER` và `MAJOR`:
 
 ---
 
-## Bước 7 — Xuất bản
+## Bước 7 — Rà site
+
+Bài mới có thể làm hỏng phần hiển thị mà `check.py` không thấy — `check.py` kiểm
+**dữ liệu**, không kiểm **giao diện**.
+
+**7a. Kiểm tự động** (luôn chạy, rẻ):
+
+```bash
+python3 tools/wikilinks.py --build
+mkdocs build --strict
+python3 tools/lint_site.py
+```
+
+`lint_site.py` bắt loại lỗi mà `mkdocs build` **không** bắt: markup lọt ra ngoài
+thành chữ thô. Đã có tiền lệ — cú pháp icon `:material-xxx:` hiện thành chữ trên
+site thật, build vẫn báo thành công, chỉ nhìn bằng mắt mới thấy.
+
+Nếu chưa cài mkdocs tại chỗ, bỏ qua và **nói rõ với user** rằng CI sẽ bắt.
+
+**7b. Agent rà định kỳ** — chạy khi:
+
+- Sửa `mkdocs.yml`, `nav:`, hoặc thêm loại entity mới
+- Thêm cú pháp Markdown chưa dùng bao giờ (icon, tab, grid, biểu đồ)
+- Mỗi ~5 entity mới, kể cả khi không có gì bất thường
+
+Dùng `Agent` với `subagent_type: general-purpose`, prompt yêu cầu rà:
+
+| Ưu tiên | Rà gì |
+|---|---|
+| P1 | Markup lọt ra thành chữ thô — icon, template, admonition, wikilink, attribute list, `grid cards` thiếu `<ul>` |
+| P2 | Link và anchor hỏng; trang tồn tại nhưng **không có trong `nav:`** (mồ côi); mục `nav:` trỏ file không tồn tại |
+| P3 | Tiếng Việt — search index có index được dấu không, anchor có đụng slug không, có mojibake không |
+| P4 | Frontmatter lọt ra thành chữ; bảng dài có cuộn được không; CSS có nạp không |
+| P5 | Extension dùng trong nội dung nhưng **chưa khai** trong config (âm thầm không render) |
+
+Ghi rõ trong prompt: **read-only, không sửa file**, và **không báo cáo ý kiến thẩm
+mỹ** — chỉ báo thứ hỏng, gây hiểu sai, không truy cập được, hoặc sẽ vỡ khi Codex
+lớn lên.
+
+Cũng dặn: *"nếu thấy có vẻ sai nhưng kiểm ra vẫn render đúng thì nói rõ, đừng báo
+— dương tính giả tốn thời gian."*
+
+**7c. Cập nhật `nav:`** trong `mkdocs.yml` cho bài mới. Bài không có trong `nav:`
+vẫn build được nhưng **không ai tìm thấy từ sidebar**.
+
+---
+
+## Bước 8 — Xuất bản
 
 Dùng skill `heroes-publish`. Nó có cửa chặn riêng và sẽ từ chối push nếu còn lỗi.
 

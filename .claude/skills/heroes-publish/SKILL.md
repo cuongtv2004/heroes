@@ -44,16 +44,25 @@ Nếu có bài chưa `verified`:
 - **Bài đó không liên quan** (đang viết dở, sẽ verify sau) → được phép push,
   nhưng **nói rõ với user** rằng có bài draft đang nằm trên `main`.
 
-### Bước 3 — Kiểm build (khi có thay đổi cấu trúc)
-
-Chỉ cần khi sửa `mkdocs.yml`, thêm thư mục mới, hoặc đổi tên file:
+### Bước 3 — Kiểm build và render
 
 ```bash
-python3 tools/wikilinks.py --build && mkdocs build --strict
+python3 tools/wikilinks.py --build
+mkdocs build --strict
+python3 tools/lint_site.py
 ```
 
-Nếu máy chưa có mkdocs, bỏ qua — GitHub Action sẽ bắt lỗi. Nhưng khi đó **báo
-trước cho user** rằng build chưa được kiểm tại chỗ.
+**Hai lớp kiểm khác nhau, cần cả hai:**
+
+- `mkdocs build --strict` bắt lỗi **cấu trúc** — link hỏng, anchor không tồn tại
+- `lint_site.py` bắt lỗi **hiển thị** — markup lọt ra thành chữ thô
+
+Lớp thứ hai tồn tại vì có tiền lệ: cú pháp icon `:material-xxx:` hiện thành chữ
+trên site thật, **build vẫn báo thành công**. Chỉ nhìn bằng mắt mới thấy — hoặc
+chạy `lint_site.py`.
+
+Nếu máy chưa có mkdocs, bỏ qua — CI sẽ bắt. Nhưng **báo trước cho user** rằng
+build chưa được kiểm tại chỗ.
 
 ### Bước 4 — Commit
 
