@@ -1,0 +1,56 @@
+name: Build & deploy Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Chỉ cho phép một lần deploy tại một thời điểm. Không hủy lần đang chạy —
+# để một deploy dở dang không làm site hỏng.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Cài dependency
+        run: pip install -r requirements.txt
+
+      - name: Kiểm toàn vẹn Codex
+        # Cửa chặn: site không được build từ Codex có lỗi cấu trúc.
+        run: python3 tools/check.py
+
+      - name: Chuyển [[wikilink]] sang liên kết Markdown
+        # Sinh _build/ từ docs/. MkDocs đọc _build, không đọc docs trực tiếp.
+        run: python3 tools/wikilinks.py --build
+
+      - name: Build site
+        run: mkdocs build --strict
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

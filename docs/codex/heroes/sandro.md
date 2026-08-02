@@ -345,7 +345,7 @@ trả artifact cho Ethric; số khác muốn giữ cho mình. {T1* EXPLICIT: sod
 Day 24 "Rumors"}
 
 *(Cùng đoạn text này còn nêu Lord Jabarkas là "em trai ngoài giá thú của Ethric" —
-nhưng claim đó có vấn đề, xem mục [Điểm tranh chấp](#5-jabarkas-có-phải-em-trai-ethric--disputed).)*
+nhưng claim đó có vấn đề, xem mục [Điểm tranh chấp](#tranh-chap-jabarkas).)*
 
 Phản ứng của hắn nói lên nhiều điều về tính cách:
 
@@ -1040,7 +1040,7 @@ Không tìm được game text nào trong *Master* mô tả việc này.
 
 **Xử lý:** không đưa vào tiểu sử. Ghi ở đây như claim gần như chắc chắn sai.
 
-### 5. Jabarkas có phải em trai Ethric? — `DISPUTED`
+### 5. Jabarkas có phải em trai Ethric? — `DISPUTED` { #tranh-chap-jabarkas }
 
 Game text (`sod-target`, Day 24) nói Lord Jabarkas là "Ethric's illegitimate younger
 brother". Nhưng claim này có **ba vấn đề**, và luồng kiểm định độc lập đã nêu đủ cả ba:
@@ -1314,14 +1314,14 @@ Theo `VERIFY-PROTOCOL.md`, claim dạng phủ định phải bị kiểm nghiêm
 ### Hạn chế nền tảng của bài này
 
 Toàn bộ text in-game trong bài mang tier **`T1*`** — nghĩa là **bản chép của fan
-wiki, không phải file game gốc**. Xem `sources/REGISTRY.md` để hiểu vì sao vẫn tin ở
+wiki, không phải file game gốc**. Xem [Sổ nguồn](../../sources/REGISTRY.md) để hiểu vì sao vẫn tin ở
 mức cao, và cần làm gì để nâng lên `T1` thật.
 
 ---
 
 ## Nguồn
 
-Xem `sources/REGISTRY.md` để có mô tả đầy đủ từng key.
+Xem [Sổ nguồn](../../sources/REGISTRY.md) để có mô tả đầy đủ từng key.
 
 | Loại | Số lượng | Ghi chú |
 |---|---|---|

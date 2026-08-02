@@ -1,138 +1,100 @@
-# Heroes Saga & Heroes Codex
+# Heroes Codex & Saga
 
 Bộ tài liệu tiếng Việt về **Heroes of Might and Magic – Old Universe**
 (Heroes I–IV, Heroes Chronicles, Might and Magic I–VIII).
 
-Hai sản phẩm, một nền dữ liệu:
+📖 **[Đọc bản web →](https://cuongtv2004.github.io/heroes/)**
+
+---
+
+## Hai sản phẩm, một nền dữ liệu
 
 - **Heroes Codex** — bách khoa toàn thư để tra cứu. Đây là **nền tảng**.
-- **Heroes Saga** — sử thi tiểu thuyết hóa, đọc từ đầu đến cuối. Xây **dựa trên** Codex.
+- **Heroes Saga** — sử thi tiểu thuyết hóa. Xây **dựa trên** Codex. *Chưa bắt đầu.*
 
 > Codex là *sự thật của thế giới*. Saga là *câu chuyện được kể từ sự thật đó*.
 
 ---
 
-## Đọc gì trước
+## Ba nguyên tắc
 
-Nếu bạn (hoặc một AI agent) sắp đóng góp vào dự án, đọc theo thứ tự:
+**1. Mọi thông tin có nhãn nguồn.** Mỗi khẳng định ghi rõ đến từ đâu (`T1`–`T6`) và chắc
+chắn đến mức nào (`EXPLICIT` / `INFERENCE` / `DISPUTED` / `FAN_THEORY`).
 
-| # | File | Nội dung |
-|---|------|----------|
-| 1 | [CANON-POLICY.md](00-foundation/CANON-POLICY.md) | Cách xác định điều gì là thật. Hệ thống nhãn hai trục. Thứ tự ưu tiên nguồn |
-| 2 | [SCHEMA.md](00-foundation/SCHEMA.md) | Cấu trúc 12 loại entity, frontmatter, bộ quan hệ |
-| 3 | [VERIFY-PROTOCOL.md](00-foundation/VERIFY-PROTOCOL.md) | Luồng kiểm định độc lập. **Không bỏ qua** |
-| 4 | [SAGA-STYLE.md](00-foundation/SAGA-STYLE.md) | Ranh giới canon vs sáng tạo khi viết truyện |
-| 5 | [TIMELINE-SPINE.md](00-foundation/TIMELINE-SPINE.md) | Xương sống thời gian. Quan hệ tương đối, không phải năm tuyệt đối |
+**2. Trí nhớ không phải nguồn.** "Theo tôi biết" không phải nguồn — kể cả với người, kể
+cả với AI.
 
-`CANON-POLICY.md` có quyền lực cao nhất. Bài viết nào xung đột với nó thì bài viết sai.
+**3. Người viết không tự kiểm bài của mình.** Mọi bài qua luồng kiểm định độc lập, do một
+agent riêng chạy, **không đọc bài gốc**, mặc định coi mọi claim là sai.
 
 ---
 
-## Ba nguyên tắc không thương lượng
-
-**1. Mọi thông tin có nhãn nguồn.**
-Không claim nào được đứng trơ trọi. Mỗi khẳng định ghi rõ đến từ đâu (T1–T6) và
-chắc chắn đến mức nào (EXPLICIT / INFERENCE / DISPUTED / FAN_THEORY).
-
-**2. Trí nhớ không phải nguồn.**
-"Theo tôi biết" không phải nguồn — kể cả với người, kể cả với AI. Không fetch được
-nguồn thì claim đó là `UNVERIFIED`, không được vào thân bài.
-
-**3. Người viết không tự kiểm bài của mình.**
-Mọi bài qua luồng verify độc lập, do một agent riêng chạy, mặc định coi claim là
-sai cho đến khi tìm được nguồn phản bác được.
-
----
-
-## Cấu trúc thư mục
+## Bố cục
 
 ```
-00-foundation/     Tài liệu nền — đọc trước khi làm gì
-codex/             Bách khoa toàn thư, chia theo 12 loại entity
-  heroes/          Nhân vật điều khiển được trong game
-  characters/      Nhân vật lore, không chơi được
-  artifacts/       Vật phẩm có tên riêng
-  kingdoms/        Quốc gia
-  locations/       Địa điểm
-  creatures/       Sinh vật
-  races/           Chủng tộc
-  magic/           Phép thuật, trường phái, spell
-  events/          Sự kiện lịch sử
-  campaigns/       Campaign game (đơn vị tư liệu, không phải sự kiện)
-  organizations/   Tổ chức, triều đại
-  timeline/        Mốc & giai đoạn thời gian
-saga/              Sử thi, chia theo Book
-sources/
-  REGISTRY.md      Sổ nguồn — mọi source key phải có ở đây
-  raw/             Tư liệu thô đã fetch
-  notes/           Báo cáo verify
-tools/             Công cụ kiểm toàn vẹn & sinh quan hệ nghịch đảo
+docs/                    Nội dung xuất bản
+  00-foundation/         Tài liệu nền — đọc trước khi đóng góp
+  codex/                 Bài viết, 12 loại entity
+  sources/               Sổ nguồn, dossier thô, báo cáo kiểm định
+  saga/                  Chưa bắt đầu
+tools/
+  check.py               Kiểm toàn vẹn 3 tầng
+  wikilinks.py           [[wikilink]] → link Markdown
+.claude/                 Skill và slash command cho Claude Code
 ```
 
 ---
 
-## Quy ước ngôn ngữ
-
-Viết **tiếng Việt**, **giữ nguyên tên riêng tiếng Anh**.
-
-- ✅ "Sandro nắm giữ Cloak of the Undead King"
-- ❌ "Sandro nắm giữ Áo Choàng Vua Bất Tử"
-
-Lý do: người chơi lâu năm tra cứu bằng tên gốc. Dịch tên riêng làm Codex mất đúng
-chức năng nó tồn tại để làm.
-
----
-
-## Bảy Book của Saga
-
-| Book | Nội dung |
-|------|----------|
-| I | The Ancients |
-| II | Age of Kings |
-| III | Rise of Erathia |
-| IV | Heroes III |
-| V | Heroes Chronicles |
-| VI | The Reckoning |
-| VII | Axeoth |
-
-Saga chỉ được viết sau khi entity Codex liên quan đạt `status: verified`.
-
----
-
-## Trạng thái hiện tại
-
-**Giai đoạn 1 — Xây nền.**
-
-- [x] Năm tài liệu nền
-- [x] [`sources/REGISTRY.md`](sources/REGISTRY.md) — 46 source key từ đợt research đầu
-- [x] Entity mẫu [Sandro](codex/heroes/sandro.md) — thử lửa cho schema (trạng thái `draft`)
-- [x] [`TIMELINE-SPINE.md`](00-foundation/TIMELINE-SPINE.md)
-- [x] [`tools/check.py`](tools/check.py) — kiểm 8 điều kiện toàn vẹn (Tầng 1)
-- [ ] Sandro đạt `status: verified` sau khi xử lý báo cáo kiểm định
-- [ ] Chỉnh schema theo những gì Sandro phá vỡ
-
-Chưa bắt đầu viết Codex hàng loạt. Chưa bắt đầu Saga.
-
-### Kiểm nhanh
+## Chạy tại chỗ
 
 ```bash
-python3 tools/check.py
+pip install -r requirements.txt
+
+python3 tools/check.py              # kiểm toàn vẹn Codex
+python3 tools/check.py --next       # entity nào nên viết tiếp
+python3 tools/wikilinks.py --build  # sinh _build/
+mkdocs serve                        # xem thử tại localhost:8000
 ```
 
-### Hạn chế lớn nhất hiện tại
+CI chạy `check.py` trước khi build — site không được deploy từ Codex có lỗi cấu trúc.
 
-Toàn bộ text in-game trong Codex mang tier **`T1*`** — bản chép của fan wiki, **không
-phải file game gốc**. Xem [`sources/REGISTRY.md`](sources/REGISTRY.md) mục "Lưu ý về
-T1\*" để biết vì sao vẫn tin ở mức cao, và cần làm gì để nâng lên `T1` thật.
+---
 
-### Một bài học đã học được
+## Trạng thái
 
-Đợt research đầu kết luận "không tìm được developer commentary nào". **Kết luận đó
-sai** — luồng kiểm định độc lập tìm được phỏng vấn **Jennifer Bullard**, người viết cốt
-truyện *Shadow of Death*, còn truy cập được trực tiếp.
+**Giai đoạn 1 — Xây nền: xong.** Sáu tài liệu nền, sổ nguồn 77 key, công cụ kiểm 3 tầng.
 
-Đợt đó cũng kết luận sai hai lần nữa, cùng một dạng: **claim phủ định ("không tồn
-tại", "không xác nhận được") được đưa ra quá sớm.** Cả ba đều bị phản bác.
+Codex có **3 entity `verified`** trên 3 loại schema:
+[Sandro](docs/codex/heroes/sandro.md) ·
+[Ethric](docs/codex/characters/ethric.md) ·
+[Cloak of the Undead King](docs/codex/artifacts/cloak-of-the-undead-king.md)
 
-Từ đây: claim dạng phủ định phải bị kiểm nghiêm như claim khẳng định. Đây chính là lý
-do [`VERIFY-PROTOCOL.md`](00-foundation/VERIFY-PROTOCOL.md) tồn tại.
+---
+
+## Hạn chế — nói thẳng
+
+Toàn bộ text in-game trong Codex mang tier **`T1*`**: bản chép của fan wiki, **không phải
+file game gốc**.
+
+Vẫn tin ở mức cao vì wiki nguồn chép nguyên cả lỗi chính tả trong game và đánh dấu bằng
+`{{sic}}` — dấu hiệu bản chép trung thực. Nhưng vẫn cách nguồn gốc một bước.
+
+Xem [`BACKLOG.md`](docs/00-foundation/BACKLOG.md) `B-001`.
+
+---
+
+## Đóng góp
+
+Đọc theo thứ tự: [CANON-POLICY](docs/00-foundation/CANON-POLICY.md) →
+[SCHEMA](docs/00-foundation/SCHEMA.md) →
+[VERIFY-PROTOCOL](docs/00-foundation/VERIFY-PROTOCOL.md) →
+[WORKFLOW](docs/00-foundation/WORKFLOW.md).
+
+`CANON-POLICY.md` có quyền lực cao nhất — bài viết nào xung đột với nó thì bài viết sai.
+
+---
+
+## Giấy phép
+
+Heroes of Might and Magic là tài sản của Ubisoft. Đây là tài liệu phi thương mại do người
+hâm mộ biên soạn. Nội dung do dự án viết: CC BY-SA 4.0.

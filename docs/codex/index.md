@@ -1,0 +1,79 @@
+# Heroes Codex
+
+Bách khoa toàn thư tra cứu về Old Universe. Mở đâu đọc đó.
+
+Mỗi bài tuân theo [SCHEMA.md](../00-foundation/SCHEMA.md) và phải qua
+[luồng kiểm định độc lập](../00-foundation/VERIFY-PROTOCOL.md) trước khi đạt
+`verified`.
+
+---
+
+## Đang có
+
+### Hero
+
+Nhân vật điều khiển được trong game.
+
+- [**Sandro**](heroes/sandro.md) — necromancer nổi tiếng nhất Old Universe.
+  Protagonist chơi được của hai campaign trọn vẹn, và là kẻ thao túng bị thao túng.
+
+### Nhân vật
+
+Nhân vật có vai trò lore nhưng không chơi được.
+
+- [**Ethric**](characters/ethric.md) — "Ethric the Mad", lich đầu tiên của thế giới,
+  thầy của Sandro. Và là nhân vật **không nói một câu nào** trong toàn bộ Heroes III.
+
+### Vật phẩm
+
+- [**Cloak of the Undead King**](artifacts/cloak-of-the-undead-king.md) —
+  combination artifact mạnh nhất phe Necropolis, bị cấm ghép trong HotA. Artifact mà
+  Sandro lừa một người tử tế đi thu thập hộ.
+
+---
+
+## Cách đọc một bài Codex
+
+**Nhãn hai trục.** Mỗi khẳng định trong thân bài mang nhãn dạng
+`{T1* EXPLICIT: source-key}`:
+
+| Trục | Ý nghĩa |
+|---|---|
+| **Cấp nguồn** | `T1` in-game text · `T2` manual · `T3` game data · `T4` developer · `T5` ngoài Old Universe · `T6` wiki cộng đồng |
+| **Độ chắc** | `EXPLICIT` nói thẳng · `INFERENCE` suy ra · `DISPUTED` nguồn mâu thuẫn · `FAN_THEORY` giả thuyết · `UNVERIFIED` chưa kiểm được |
+
+**Dấu hoa thị (`T1*`)** nghĩa là tiếp cận **qua trung gian** — bản chép fan wiki, không
+phải file game gốc. Xem [CANON-POLICY.md](../00-foundation/CANON-POLICY.md) mục 2.
+
+**Bố cục chuẩn.** Mọi bài đều có các mục này, và chúng có ý nghĩa cố định:
+
+- **Điểm tranh chấp canon** — nơi các nguồn nói khác nhau. Dự án trình bày cả hai
+  phía, **không chọn ngầm**.
+- **Giả thuyết cộng đồng** — claim không có nguồn T1–T4. Tách riêng để không lẫn vào
+  phần tiểu sử.
+- **Câu hỏi mở** — điều dự án **chưa** trả lời được. Ghi ra để không tự lừa mình.
+
+---
+
+## Mười hai loại entity
+
+Loại đã dùng được đánh dấu ✅.
+
+| Loại | Là gì | Trạng thái |
+|---|---|---|
+| `hero` | Nhân vật điều khiển được | ✅ |
+| `character` | Nhân vật lore, không chơi được | ✅ |
+| `artifact` | Vật phẩm có tên riêng | ✅ |
+| `kingdom` | Thực thể chính trị | — |
+| `location` | Địa điểm không phải quốc gia | — |
+| `creature` | Loại sinh vật dùng làm quân | — |
+| `race` | Chủng tộc có văn hóa riêng | — |
+| `magic` | Trường phái phép, spell | — |
+| `event` | Sự kiện lịch sử | — |
+| `campaign` | Campaign game (đơn vị tư liệu) | — |
+| `organization` | Tổ chức, triều đại | — |
+| `timeline` | Mốc hoặc giai đoạn thời gian | — |
+
+Phân biệt quan trọng: `event` là **thứ đã xảy ra trong thế giới**; `campaign` là
+**nguồn tư liệu kể về nó**. Không được lẫn — nếu lẫn thì timeline sẽ bị cấu trúc theo
+game thay vì theo thế giới.

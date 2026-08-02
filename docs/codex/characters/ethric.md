@@ -155,7 +155,7 @@ là "một học giả". Lich đầu tiên của thế giới sống giữa ngư
 
 *(Cách hiểu này khớp với việc Sandro cũng dùng ảo ảnh để che thân xác lich khi giao tiếp
 với Gem và Crag Hack. Nhưng game không nói Ethric dùng cùng thủ đoạn — xem
-[Điểm tranh chấp](#3-ethric-duy-trì-danh-tính-người-sống-bằng-cách-nào--suy-luận-của-wiki).)*
+[Điểm tranh chấp](#tranh-chap-danh-tinh).)*
 
 ### Thầy của Sandro và Jeddite
 
@@ -173,7 +173,7 @@ Câu cuối đáng chú ý: Ethric **nghi ngờ Sandro ngay từ đầu**. Ông 
 
 ### Ông dạy Sandro cái gì? — hai nguồn nói ngược nhau
 
-Xem [Điểm tranh chấp](#1-ethric-dạy-sandro-necromancy-hay-warlock) — đây là mâu thuẫn thật
+Xem [Điểm tranh chấp](#tranh-chap-day-gi) — đây là mâu thuẫn thật
 giữa hai nguồn in-game.
 
 ### Cuộc truy đuổi
@@ -213,7 +213,7 @@ Một nửa muốn trả artifact cho Ethric; nửa kia muốn giữ. Sandro kha
 
 ### Kết cục — hoặc hai kết cục
 
-Xem [Điểm tranh chấp](#2-ethric-chết-hai-lần--mâu-thuẫn-không-có-lời-giải).
+Xem [Điểm tranh chấp](#tranh-chap-hai-cai-chet).
 
 Sau khi bị Sandro đánh bại trong *Master*, **campaign đơn giản là không nhắc tới ông nữa.**
 {T1* EXPLICIT: sod-finneas-vilmar — scenario kế tiếp, Ethric hoàn toàn vắng mặt}
@@ -239,7 +239,7 @@ chiến đấu để **giành artifact về cho Ethric**. {T1* EXPLICIT: sod-tar
 
 **[[jabarkas]]** — theo một dòng game text thì là **em trai ngoài giá thú** của Ethric.
 Nhưng claim này có vấn đề nghiêm trọng — xem
-[Điểm tranh chấp](#4-jabarkas-có-phải-em-trai-ethric--rất-có-thể-là-vỏ-bọc).
+[Điểm tranh chấp](#tranh-chap-jabarkas).
 
 **[[gem]]** — Ethric cảnh báo nàng về Sandro. Trớ trêu: Sandro đã dùng **chính tên Ethric**
 làm vỏ bọc để lừa nàng thu thập artifact.
@@ -362,7 +362,7 @@ lich)"}
 
 ## Điểm tranh chấp canon
 
-### 1. Ethric dạy Sandro Necromancy hay Warlock?
+### 1. Ethric dạy Sandro Necromancy hay Warlock? { #tranh-chap-day-gi }
 
 **Hai nguồn in-game nói ngược nhau.**
 
@@ -403,7 +403,7 @@ in-game text nên `CANON-POLICY.md` R1 (in-game thắng manual) **không áp d�
 Cách dung hòa khả dĩ: Ethric có nhiều class qua nhiều thời kỳ (wiki liệt kê **năm** tham
 chiếu khác nhau: Wizard, Warlock, Lich). Bio có thể đang nén một quãng dài thành một câu.
 
-### 2. Ethric chết hai lần — mâu thuẫn không có lời giải
+### 2. Ethric chết hai lần — mâu thuẫn không có lời giải { #tranh-chap-hai-cai-chet }
 
 Đây là tranh chấp lớn nhất về nhân vật này, và **hai wiki giải quyết theo hai hướng ngược
 nhau.**
@@ -447,7 +447,7 @@ Cần nói thêm: claim của Fandom rằng Sandro "**eradicate** Ethric" và in
 `status = Eradicated` là **suy ra từ điều kiện thắng**, không từ text kể nào.
 {T6 FAN_THEORY: fandom-sandro-enroth}
 
-### 3. Ethric duy trì danh tính người sống bằng cách nào? — suy luận của wiki
+### 3. Ethric duy trì danh tính người sống bằng cách nào? { #tranh-chap-danh-tinh }
 
 Wiki đề xuất: "It can be surmised that Ethric has had an **alter-ego of a mortal Bracadan
 wizard and warlock** for a considerable time, the general public apparently being unaware
@@ -463,7 +463,7 @@ nào**.
 Điều **có** nguồn: Gem định viết thư cho "Ethric in Bracada" như một người bình thường.
 {T1* EXPLICIT: sod-driving-for-the-boots} Còn cơ chế cụ thể thì không.
 
-### 4. Jabarkas có phải em trai Ethric? — rất có thể là vỏ bọc
+### 4. Jabarkas có phải em trai Ethric? { #tranh-chap-jabarkas }
 
 Game text (`sod-target` Day 24) nói Jabarkas là "Ethric's illegitimate younger brother".
 Nhưng claim này có **bốn** vấn đề:

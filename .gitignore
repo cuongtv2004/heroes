@@ -1,1 +1,14 @@
+# Sinh tự động — không commit
+_build/
+_site/
+.cache/
+
+# Cấu hình cục bộ
 .claude/last-run.md
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/

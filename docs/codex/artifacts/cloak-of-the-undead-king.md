@@ -480,7 +480,7 @@ scenario HotA.
 ### Hạn chế nền tảng
 
 Toàn bộ text in-game trong bài mang tier **`T1*`** — bản chép fan wiki, không phải file
-game gốc. Xem `sources/REGISTRY.md`.
+game gốc. Xem [Sổ nguồn](../../sources/REGISTRY.md).
 
 ---
 

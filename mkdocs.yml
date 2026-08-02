@@ -1,0 +1,116 @@
+site_name: Heroes Codex & Saga
+site_description: >-
+  Bách khoa toàn thư và sử thi tiếng Việt về Heroes of Might and Magic –
+  Old Universe (Heroes I–IV, Heroes Chronicles, Might and Magic I–VIII)
+site_url: https://cuongtv2004.github.io/heroes/
+repo_url: https://github.com/cuongtv2004/heroes
+repo_name: cuongtv2004/heroes
+edit_uri: edit/main/docs/
+
+docs_dir: _build   # sinh boi tools/wikilinks.py --build, KHONG sua truc tiep
+site_dir: _site
+
+theme:
+  name: material
+  language: vi
+  icon:
+    logo: material/skull
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Chuyển sang nền tối
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Chuyển sang nền sáng
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+
+plugins:
+  - search:
+      lang:
+        - vi
+        - en
+  - exclude:
+      glob:
+        - sources/raw/*
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
+nav:
+  - Trang chủ: index.md
+  - Nền tảng:
+      - Tổng quan: 00-foundation/index.md
+      - Chính sách canon: 00-foundation/CANON-POLICY.md
+      - Cấu trúc dữ liệu: 00-foundation/SCHEMA.md
+      - Luồng kiểm định: 00-foundation/VERIFY-PROTOCOL.md
+      - Quy tắc viết Saga: 00-foundation/SAGA-STYLE.md
+      - Xương sống thời gian: 00-foundation/TIMELINE-SPINE.md
+      - Quy trình làm việc: 00-foundation/WORKFLOW.md
+      - Việc còn tồn: 00-foundation/BACKLOG.md
+  - Codex:
+      - Tổng quan: codex/index.md
+      - Hero:
+          - codex/heroes/sandro.md
+      - Nhân vật:
+          - codex/characters/ethric.md
+      - Vật phẩm:
+          - codex/artifacts/cloak-of-the-undead-king.md
+  - Nguồn:
+      - Sổ nguồn: sources/REGISTRY.md
+      - Báo cáo kiểm định:
+          - sources/notes/verify-sandro-2026-07-31.md
+          - sources/notes/verify-ethric-cloak-2026-08-02.md
+
+extra_css:
+  - assets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/cuongtv2004/heroes
+  generator: false
+
+copyright: >-
+  Heroes of Might and Magic là tài sản của Ubisoft. Dự án này là tài liệu phi
+  thương mại do người hâm mộ biên soạn.

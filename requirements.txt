@@ -1,0 +1,5 @@
+# Dependency để build site. Chỉ dùng cho MkDocs — tools/check.py chỉ cần stdlib.
+mkdocs==1.6.1
+mkdocs-material==9.5.49
+mkdocs-roamlinks-plugin==0.3.2
+mkdocs-exclude==1.0.2

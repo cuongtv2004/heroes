@@ -17,8 +17,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CODEX = ROOT / "codex"
-REGISTRY = ROOT / "sources" / "REGISTRY.md"
+DOCS = ROOT / "docs"
+CODEX = DOCS / "codex"
+REGISTRY = DOCS / "sources" / "REGISTRY.md"
 
 ENTITY_TYPES = {
     "hero", "character", "artifact", "kingdom", "location", "creature",
@@ -150,7 +151,7 @@ def load_registry_keys() -> set[str]:
     Key nằm trong cột đầu của bảng, bọc bằng backtick.
     """
     if not REGISTRY.exists():
-        err("sources/REGISTRY.md không tồn tại")
+        err("docs/sources/REGISTRY.md không tồn tại")
         return set()
     keys = set()
     for line in REGISTRY.read_text(encoding="utf-8").splitlines():
@@ -254,6 +255,56 @@ def check_relation_consistency(entities: list) -> None:
                     )
 
 
+WIKILINK_RE = re.compile(r"\[\[([a-z0-9][a-z0-9\-]*)\]\]")
+
+
+def report_missing_entities(entities: list, known: set[str]) -> None:
+    """Liệt kê entity được nhắc nhiều nhất nhưng chưa viết.
+
+    Dùng để quyết định viết gì tiếp: entity xuất hiện trong nhiều bài nhất sẽ dọn
+    được nhiều liên kết treo nhất. Chạy bằng `python3 tools/check.py --next`.
+    """
+    counts: dict[str, int] = {}
+    where: dict[str, set[str]] = {}
+
+    for path, fm, body in entities:
+        eid = strip_quotes(str(fm.get("id", "")))
+        seen_here = set()
+
+        for link in WIKILINK_RE.findall(body):
+            seen_here.add(link)
+        for r in fm.get("relations", []) or []:
+            if isinstance(r, dict):
+                t = strip_quotes(r.get("target", ""))
+                if t:
+                    seen_here.add(t)
+
+        for target in seen_here:
+            if target in known or target == eid:
+                continue
+            counts[target] = counts.get(target, 0) + 1
+            where.setdefault(target, set()).add(eid)
+
+    if not counts:
+        print("Không có liên kết treo. Codex nhất quán.")
+        return
+
+    ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+    print(f"Entity được nhắc nhưng chưa viết ({len(ranked)}):\n")
+    print(f"  {'lần':>4}  {'id':<32} nhắc bởi")
+    print(f"  {'-'*4}  {'-'*32} {'-'*30}")
+    for target, n in ranked[:25]:
+        src = ", ".join(sorted(where[target]))
+        print(f"  {n:>4}  {target:<32} {src}")
+
+    if len(ranked) > 25:
+        print(f"\n  ... còn {len(ranked) - 25} entity nữa")
+
+    top = [t for t, n in ranked if n >= 2]
+    if top:
+        print(f"\nƯu tiên (được ≥2 bài nhắc): {', '.join(top[:10])}")
+
+
 def main() -> int:
     strict = "--strict" in sys.argv
 
@@ -261,7 +312,8 @@ def main() -> int:
     if not registry:
         warn("registry rỗng — mọi source key sẽ báo thiếu")
 
-    files = sorted(CODEX.rglob("*.md"))
+    # index.md là trang điều hướng cho MkDocs, không phải entity — bỏ qua.
+    files = sorted(p for p in CODEX.rglob("*.md") if p.name != "index.md")
     if not files:
         print("Chưa có bài nào trong codex/.")
         return 0
@@ -369,6 +421,10 @@ def main() -> int:
 
     # Báo cáo
     print(f"Đã kiểm {len(entities)} bài, {len(registry)} source key trong registry.\n")
+
+    if "--next" in sys.argv:
+        report_missing_entities(entities, set(ids))
+        return 0
 
     if errors:
         print(f"LỖI ({len(errors)}):")
