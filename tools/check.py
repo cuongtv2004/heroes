@@ -109,8 +109,14 @@ def rel(path: Path) -> str:
 def parse_frontmatter(raw: str) -> dict:
     """Parse tối thiểu đủ cho schema của dự án.
 
-    Hỗ trợ: scalar, list phẳng, và list of dict (dùng cho relations).
-    Không hỗ trợ nested sâu hơn — schema không cần.
+    Hỗ trợ: scalar, list phẳng (cả dạng gạch đầu dòng lẫn inline `[a, b]`),
+    và list of dict (dùng cho relations). Không hỗ trợ nested sâu hơn —
+    schema không cần.
+
+    Dạng inline bắt buộc phải hỗ trợ vì `SCHEMA.md` mục 5 khai quan hệ thời gian
+    của `event` theo cú pháp đó: `before: [event-x]`. Trước khi có nhánh này,
+    cả list bị đọc thành MỘT chuỗi `"[event-x]"`, nên mọi kiểm tra trên
+    `before`/`after` đều lặng lẽ không bắt được gì.
     """
     data: dict = {}
     key = None
@@ -124,7 +130,15 @@ def parse_frontmatter(raw: str) -> dict:
             key, _, val = stripped.partition(":")
             key = key.strip()
             val = val.strip()
-            data[key] = val if val else []
+            if val.startswith("[") and val.endswith("]"):
+                inner = val[1:-1].strip()
+                data[key] = (
+                    [strip_quotes(p.strip()) for p in inner.split(",") if p.strip()]
+                    if inner
+                    else []
+                )
+            else:
+                data[key] = val if val else []
         elif stripped.startswith("- ") and key:
             item = stripped[2:].strip()
             if ":" in item and not item.startswith("http"):
@@ -253,6 +267,152 @@ def check_relation_consistency(entities: list) -> None:
                         f"viết tay ở {paths[target]} — nghịch đảo do công cụ sinh, "
                         f"không viết tay (SCHEMA.md mục 3)"
                     )
+
+
+def check_timeline_consistency(entities: list) -> None:
+    """Tầng 3 cho trục thời gian — TIMELINE-SPINE.md T3.
+
+    Xương sống của dự án là quan hệ TƯƠNG ĐỐI (`before`/`after`/`concurrent_with`),
+    không phải năm tuyệt đối. Nên chỗ mâu thuẫn nguy hiểm nhất cũng nằm ở đó, và
+    trước bản này không có gì kiểm nó cả.
+
+    Bắt năm loại lỗi:
+
+    1. `before`/`after`/`concurrent_with` trỏ tới `id` không tồn tại
+    2. Mâu thuẫn trực tiếp: A before B trong khi B before A
+    3. Vừa `concurrent_with` vừa `before`/`after` cùng một sự kiện
+    4. Chu trình trong đồ thị `before` — nghĩa là một sự kiện xảy ra trước chính nó
+    5. Năm tuyệt đối đi ngược quan hệ tương đối (A before B nhưng năm A > năm B)
+
+    Loại 4 và 5 là thứ TIMELINE-SPINE.md T3 gọi là "phát hiện điều bất khả thi".
+    """
+    TIME_RELS = ("before", "after", "concurrent_with")
+
+    # eid -> {rel: set(targets)}
+    time_graph: dict[str, dict[str, set[str]]] = {}
+    years: dict[str, int] = {}
+    paths: dict[str, str] = {}
+
+    for path, fm, _ in entities:
+        eid = strip_quotes(str(fm.get("id", "")))
+        if not eid:
+            continue
+        paths[eid] = rel(path)
+        buckets: dict[str, set[str]] = {}
+        for rname in TIME_RELS:
+            raw = fm.get(rname) or []
+            if isinstance(raw, str):
+                raw = [raw]
+            targets = {strip_quotes(str(t)) for t in raw if strip_quotes(str(t))}
+            if targets:
+                buckets[rname] = targets
+        if buckets:
+            time_graph[eid] = buckets
+
+        # Năm tuyệt đối chỉ dùng để đối chiếu khi nó KHÔNG phải suy đoán lỏng.
+        # UNVERIFIED thì bỏ qua — theo TIMELINE-SPINE.md, mốc không nguồn không
+        # được dùng để phản bác quan hệ tương đối có nguồn.
+        ycert = strip_quotes(str(fm.get("date_certainty", "")))
+        yval = strip_quotes(str(fm.get("date_absolute", "")))
+        if yval and yval.lower() not in ("null", "none", "~") and ycert != "UNVERIFIED":
+            m = re.search(r"-?\d+", yval)
+            if m:
+                years[eid] = int(m.group())
+
+    known = set(paths)
+
+    # (1) target treo + (3) vừa đồng thời vừa trước/sau
+    for eid, buckets in time_graph.items():
+        for rname, targets in buckets.items():
+            for t in targets:
+                if t not in known:
+                    warn(
+                        f"{paths[eid]}: `{rname}` → `{t}` (bài chưa tồn tại)"
+                    )
+        conc = buckets.get("concurrent_with", set())
+        for other in ("before", "after"):
+            both = conc & buckets.get(other, set())
+            for t in both:
+                err(
+                    f"{paths[eid]}: `{eid}` vừa `concurrent_with` vừa `{other}` "
+                    f"`{t}` — hai quan hệ loại trừ nhau"
+                )
+
+    # Chuẩn hóa về một chiều duy nhất: X trước Y.
+    # `A after B` nghĩa là B trước A — gộp vào cùng đồ thị để bắt được mâu thuẫn
+    # dù hai bài khai theo hai hướng khác nhau.
+    precedes: dict[str, set[str]] = {}
+    origin: dict[tuple[str, str], str] = {}
+
+    def add_edge(early: str, late: str, src: str) -> None:
+        precedes.setdefault(early, set()).add(late)
+        origin.setdefault((early, late), src)
+
+    for eid, buckets in time_graph.items():
+        for t in buckets.get("before", set()):
+            if t in known:
+                add_edge(eid, t, paths[eid])
+        for t in buckets.get("after", set()):
+            if t in known:
+                add_edge(t, eid, paths[eid])
+
+    # (2) mâu thuẫn trực tiếp hai chiều
+    reported: set[tuple[str, str]] = set()
+    for early, lates in precedes.items():
+        for late in lates:
+            if early in precedes.get(late, set()):
+                pair = tuple(sorted((early, late)))
+                if pair in reported:
+                    continue
+                reported.add(pair)
+                err(
+                    f"{paths[early]}: `{early}` và `{late}` được khai là xảy ra "
+                    f"trước NHAU — mâu thuẫn trực tiếp "
+                    f"(xem thêm {paths[late]})"
+                )
+
+    # (4) chu trình dài hơn 2 — DFS trên đồ thị đã chuẩn hóa
+    WHITE, GREY, BLACK = 0, 1, 2
+    color: dict[str, int] = {}
+
+    def find_cycle(node: str, stack: list[str]) -> list[str] | None:
+        color[node] = GREY
+        stack.append(node)
+        for nxt in sorted(precedes.get(node, ())):
+            if color.get(nxt, WHITE) == GREY:
+                return stack[stack.index(nxt):] + [nxt]
+            if color.get(nxt, WHITE) == WHITE:
+                found = find_cycle(nxt, stack)
+                if found:
+                    return found
+        stack.pop()
+        color[node] = BLACK
+        return None
+
+    seen_cycles: set[frozenset] = set()
+    for node in sorted(precedes):
+        if color.get(node, WHITE) == WHITE:
+            cyc = find_cycle(node, [])
+            if cyc and len(cyc) > 3:  # >2 đỉnh thật; loại 2-cycle đã báo ở (2)
+                sig = frozenset(cyc)
+                if sig not in seen_cycles:
+                    seen_cycles.add(sig)
+                    err(
+                        f"{paths.get(cyc[0], cyc[0])}: chu trình thời gian — "
+                        f"{' → '.join(cyc)}. Một sự kiện không thể xảy ra "
+                        f"trước chính nó"
+                    )
+
+    # (5) năm tuyệt đối đi ngược quan hệ tương đối
+    for early, lates in precedes.items():
+        for late in lates:
+            ye, yl = years.get(early), years.get(late)
+            if ye is not None and yl is not None and ye > yl:
+                err(
+                    f"{origin.get((early, late), paths.get(early, early))}: "
+                    f"`{early}` ({ye}) được khai xảy ra trước `{late}` ({yl}) "
+                    f"nhưng năm tuyệt đối nói ngược lại — một trong hai claim sai"
+                )
 
 
 def publish_gate(entities: list) -> int:
@@ -496,6 +656,7 @@ def main() -> int:
                         warn(f"{rel(path)}: nhãn dùng source key ngoài registry: {key}")
 
     check_relation_consistency(entities)
+    check_timeline_consistency(entities)
 
     # Báo cáo
     print(f"Đã kiểm {len(entities)} bài, {len(registry)} source key trong registry.\n")

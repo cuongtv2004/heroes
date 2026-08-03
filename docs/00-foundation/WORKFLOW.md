@@ -187,6 +187,33 @@ Sandro (hero)
 **Mẹo:** ưu tiên entity xuất hiện nhiều trong mục *Liên kết* của các bài đã viết. Chúng dọn
 được nhiều cảnh báo "bài chưa tồn tại" nhất.
 
+### ⚠️ Luật cân bằng kỷ nguyên — cửa chặn cho chính nguyên tắc trên
+
+"Đi theo cụm" hiệu quả về research, nhưng **nó không có điều kiện dừng.** Chín bài đầu tiên
+của Codex đều nằm trong đúng một cụm — necromancer của *Shadow of Death*. Cụm đó có thể nuốt
+60–80 bài trước khi cạn, và khi đó dự án là *bách khoa về Sandro*, không phải *bách khoa Old
+Universe*.
+
+> **Trước khi một kỷ nguyên vượt quá 15 bài, mọi kỷ nguyên khác phải có ít nhất một entity
+> trụ.**
+
+Entity trụ là entity **mở được một kỷ nguyên đang trống** — nó vừa nới chiều rộng Codex, vừa
+xây móng cho trục dọc của Saga.
+
+| Kỷ nguyên | Entity trụ | Mở được gì |
+|---|---|---|
+| Age of Kings (H1–H2) | `archibald-ironfist` | Toàn bộ H1–H2; nối sẵn vào chuỗi Deyja (làm vua Deyja 1168) |
+| Xuyên kỷ | `tarnum` | Heroes Chronicles — buộc phải giải quyết B-010 (cấu trúc Book V) |
+| The Reckoning | `the-reckoning` (event) | Ranh giới Enroth → Axeoth, hiện chưa có nguồn |
+| Kỷ Axeoth (H4) | `gauldoth-half-dead` | H4; dọn luôn B-007 |
+
+**Vì sao `archibald-ironfist` đi trước:** nó là entity trụ duy nhất **vẫn dùng chung nguồn**
+với cụm đã có — chuỗi kế vị Deyja đã dẫn tới hắn. Mở kỷ nguyên mới mà không mất lợi thế cụm.
+
+**Bài học đằng sau luật này:** lệch trục không biểu hiện thành lỗi. `check.py` vẫn 0 lỗi,
+mọi bài vẫn có nguồn, không luồng verify nào bắt được. Nó chỉ hiện ra khi đếm xem mỗi kỷ
+nguyên có bao nhiêu bài — nên phải đếm chủ động, định kỳ.
+
 ---
 
 ## Lịch sử

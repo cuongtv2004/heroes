@@ -34,6 +34,56 @@ lượng lớn nhất có thể có cho dự án.
 
 ## P1 — Đáng làm sớm
 
+### B-016 · Cân bằng kỷ nguyên — Codex đang lệch về đúng một cụm
+
+**Vấn đề:** 9 bài đầu tiên đều thuộc cụm necromancer *Shadow of Death*. Heroes I, Heroes II,
+Heroes IV, Might & Magic I–VIII có **0 bài**. `check.py --next` cho thấy 57 entity treo, và
+top đầu (`gem`, `crag-hack`, `vidomina`, `sod-*`) vẫn cùng cụm đó.
+
+**Vì sao đây là nợ, không phải chuyện thẩm mỹ:** dự án tự nhận là bách khoa *Old Universe*
+(`index.md` dòng 3). Nếu cụm SoD nuốt tiếp 60–80 bài, cái tên đó thành sai.
+
+**Loại lỗi này không có công cụ nào bắt được.** `check.py` 0 lỗi, mọi bài có nguồn, không
+luồng verify nào phản bác. Nó chỉ hiện ra khi **đếm bài theo kỷ nguyên**.
+
+**Đã xử lý một phần:** `WORKFLOW.md` giờ có *Luật cân bằng kỷ nguyên* — trước khi một kỷ
+nguyên vượt 15 bài, mọi kỷ nguyên khác phải có ít nhất một entity trụ.
+
+**Việc còn lại:** viết bốn entity trụ. Thứ tự đề xuất:
+
+| # | Entity | Kỷ nguyên | Ghi chú |
+|---|---|---|---|
+| 1 | `archibald-ironfist` | Age of Kings (H1–H2) | Đi trước vì **dùng chung nguồn** với chuỗi Deyja đã có |
+| 2 | `the-reckoning` (event) | The Reckoning | Ranh giới Enroth → Axeoth; `TIMELINE-SPINE.md` mục 6 ghi "chưa có nguồn" |
+| 3 | `gauldoth-half-dead` | Kỷ Axeoth (H4) | Dọn luôn B-007 |
+| 4 | `tarnum` | Xuyên kỷ | Buộc phải chốt B-010 (cấu trúc Book V) |
+
+**Trạng thái:** luật đã vào `WORKFLOW.md` (2026-08-03). `archibald-ironfist` là bài kế tiếp.
+
+### B-017 · `codex/events/` rỗng hoàn toàn — trục dọc chưa thành dữ liệu
+
+**Vấn đề:** `TIMELINE-SPINE.md` mục 3 chứa hai chuỗi sự kiện dựng công phu (chuỗi Sandro
+~14 mốc, chuỗi Deyja ~12 mốc), nhưng chúng chỉ là **ASCII art trong một file Markdown**.
+Không query được, không render được, không kiểm được bằng `check.py`.
+
+`SCHEMA.md` mục 1 định nghĩa loại `event` và nói rõ lý do tách nó khỏi `campaign`: để timeline
+cấu trúc theo **thế giới**, không theo game. Nhưng thư mục `codex/events/` **chưa có bài nào**.
+
+**Vì sao đáng làm:** `SCHEMA.md` hứa rằng Atlas / timeline tương tác ở Giai đoạn 4 "chỉ là
+chuyện render từ frontmatter". Lời hứa đó **chỉ đúng nếu event là entity thật**. Hiện tại
+trục dọc tồn tại dưới dạng người-đọc-được, không phải máy-đọc-được.
+
+`TIMELINE-SPINE.md` mục 6 đã tự ghi việc này vào bảng "cần làm" và chưa ai làm.
+
+**Phạm vi đã chốt:** chỉ lập event cho các mốc có nguồn `EXPLICIT`. **Không** lập cho mốc
+`UNVERIFIED` như `1164-09-27` — theo T1 của `TIMELINE-SPINE.md`, không có nguồn thì để trống,
+không lấp.
+
+**Cần gì trước:** chốt convention cho `event` — quan hệ `before`/`after`/`concurrent_with`,
+cách gắn `date_certainty`, và cách tránh trùng lặp với nội dung đã có trong bài entity.
+
+**Trạng thái:** chưa bắt đầu. Làm sau B-016 mục 1.
+
 ### B-002 · Fetch tài liệu thiết kế gốc của Jennifer Bullard (UT Austin)
 
 **Là gì:** Bullard — Lead Designer và người viết cốt truyện *Shadow of Death* — đã gửi
@@ -219,3 +269,4 @@ verifier độc lập tìm nguồn T1–T4 cho từng cái — đúng luồng đ
 | Ngày | Thay đổi |
 |---|---|
 | 2026-07-31 | Lập backlog sau khi Sandro đạt `verified` |
+| 2026-08-03 | Thêm B-016 (cân bằng kỷ nguyên) và B-017 (`codex/events/` rỗng) sau khi rà lại mục tiêu dự án. Phát hiện: 9/9 bài đầu nằm cùng một cụm, và không công cụ nào bắt được loại lệch này |

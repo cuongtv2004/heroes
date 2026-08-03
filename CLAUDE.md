@@ -83,6 +83,31 @@ Xuất bản: dùng skill `heroes-publish`. Chỉ push khi entity đã `verified
 
 ---
 
+## ⚠️ Giới hạn tài nguyên — TỐI ĐA 2 AGENT SONG SONG
+
+Máy dev là WSL2 trên host ~16 GB RAM. **Không được chạy quá 2 agent cùng lúc.**
+
+Tiền lệ (2026-08-03): chạy 4 agent song song (3 verify + 1 research) làm `VmmemWSL`
+phình lên **7,6 GB RAM và 432 MB/s disk** — treo cả máy Windows, phải bỏ dở toàn bộ
+bốn luồng.
+
+**Vì sao không có cách nào khác:** agent không phải process riêng biệt — chúng là các
+lượt gọi API trong cùng một process, và mọi việc chúng sinh ra (curl, python, đọc/ghi
+file) chạy trong **một** VM WSL2 dùng chung pool. **Không thể giới hạn tài nguyên cho
+từng agent.** Chỉ điều khiển được **số luồng song song**.
+
+Quy tắc thực hành:
+
+- Verify nhiều bài → chạy **tuần tự**, từng bài một. Không gom thành nhiều luồng song song.
+- Research + verify → **không chạy đồng thời**. Xong cái này mới tới cái kia.
+- Bảng claim lớn (>50 claim) → chia theo `PRIORITY` trong prompt, không chia thành nhiều agent.
+
+Lưới an toàn tầng hệ thống: `C:\Users\cuongtv\.wslconfig` đặt trần
+`memory=6GB` · `processors=6` · `autoMemoryReclaim=gradual` · `sparseVhd=true`.
+Sửa file đó phải `wsl --shutdown` mới có hiệu lực.
+
+---
+
 ## Ba bài học đã trả giá để có
 
 Cả ba đều tương ứng với lỗi thật đã lọt vào Codex rồi bị luồng kiểm định bắt.
