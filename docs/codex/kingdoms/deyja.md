@@ -11,8 +11,8 @@ appears_in:
   - sod-specter-of-power
   - sod-unholy-alliance
   - mm7
-status: draft
-verify_pass: null
+status: verified
+verify_pass: verify-deyja-2026-08-03
 capital: the-pit
 capital_certainty: DISPUTED
 existed_from: null
@@ -39,6 +39,11 @@ sources_used:
   - roe-season-of-harvest
   - roe-corporeal-punishment
   - t2-necromancy-origin
+  - 3do-mm7-diaries-archibald
+  - fulton-names-2023
+  - h3wiki-lord-falorel
+  - hota-changelog
+  - sod-wrath-of-sandro
   - fandom-deyja
   - fandom-finneas-vilmar
   - fandom-path-of-darkness
@@ -134,14 +139,53 @@ trục xuất họ. {T6 EXPLICIT: fandom-path-of-darkness}
 - **Blagden** — tây bắc Deyja, nơi Gem và Gelu gặp Yog và Crag Hack.
   {T1* EXPLICIT: sod-finneas-vilmar} ⚠️ Fandom viết "Bragden" — chính tả tranh chấp
 
-⚠️ Tên **Deyja Moors** và **Deyja Badlands** như đơn vị vùng đến từ **bản đồ campaign HotA**,
-một bản mở rộng của fan. Theo `CANON-POLICY.md` R5, đây không phải canon Old Universe.
-{T6 FAN_THEORY: h3wiki-deyja-moors}
+⚠️ **Hai tên vùng này KHÁC nhau về địa vị canon — không được gộp:**
+
+| Tên | Xuất xứ | Địa vị |
+|---|---|---|
+| **Deyja Moors** | Tên vùng **trong game MM7** (NWC) | ✅ **Canon Old Universe** |
+| **Deyja Badlands** | **Bản đồ campaign HotA** — bản mở rộng của fan | ❌ Không canon theo `CANON-POLICY.md` R5 |
+
+`Deyja Moors` xuất hiện trong **chuỗi tên quest của MM7**, tức nó là tên do NWC đặt:
+
+> "Go to Watchtower 6 in the **Deyja Moors**, and move the weight from the top of the tower to the
+> bottom of the tower."
+
+{T1* EXPLICIT: h3wiki-deyja-moors}
+
+Trang nguồn tự phân biệt hai việc: "A region that spans much of Deyja. **Featured in MM7**" — rồi
+**riêng một câu** — "This name is **also** used for the western part of Deyja on the HotA campaign
+map." Chữ "also" cho thấy tên có **trước** HotA.
+
+Chỉ `Deyja Badlands` mới là của HotA: "A region in southern Deyja. **The name 'Deyja Badlands' for
+this part of the continent comes from the HotA campaign map.**"
+
+{T6 FAN_THEORY: h3wiki-deyja-moors — chỉ áp cho `Deyja Badlands`}
+
+⚠️ Bản đầu của bài **gộp cả hai** và dán `FAN_THEORY` lên `Deyja Moors`. Đó là lỗi ngược hướng với
+mục đích của R5: R5 tồn tại để **giữ nội dung fan ra ngoài canon**, không phải để **đẩy nội dung
+canon của NWC ra ngoài**. Đối chiếu changelog HotA (nguồn chuẩn theo BH-3): `Deyja` **0 lần**,
+`Moors` **0 lần**, `Badlands` **0 lần** — changelog không hề nói gì về hai tên này.
+
+{T1* EXPLICIT: hota-changelog}
 
 ### Từ nguyên
 
-*Deyja* nghĩa là **"chết"** trong tiếng Bắc Âu cổ và tiếng Iceland.
-{T6 EXPLICIT: fandom-deyja — có dẫn nguồn ngoài}
+⭐ **Chính người đặt tên nói về nó.** Gregory Fulton, Lead Designer Heroes III:
+
+> "**Deyja is derived from Old Norse meaning 'to die'.** Deyja a barren wasteland, and home of the
+> undead. Deyja is the **'to die' nation, the nation of death**."
+
+{T4 EXPLICIT: fulton-names-2023}
+
+Đây là phát ngôn developer, không phải suy đoán từ điển — và nó cho biết cả **ý định thiết kế**: cái
+tên được chọn để vương quốc *là* cái chết, không chỉ *liên quan tới* cái chết.
+
+*(Bản đầu của bài dẫn Fandom, `T6`. Đã nâng lên `T4`. Cũng sửa nghĩa: **"to die"** — động từ — chứ
+không phải "chết" như một tính từ/danh từ.)*
+
+Phần "và tiếng Iceland" thì Fulton không nói; nó chỉ có ở Fandom.
+{T6 EXPLICIT: fandom-deyja}
 
 ---
 
@@ -246,8 +290,9 @@ Catherine xác nhận từ phía Erathia, thẳng thắn hơn:
 Lich King bị Catherine tiêu diệt năm 1168. Sau đó **Archibald Ironfist** lên ngôi, rồi bị
 **Kastore** đảo chính năm 1169. {T6 INFERENCE: fandom-timeline-ancient}
 
-Deyja bị hủy diệt trong **Reckoning**. {T6 UNVERIFIED: fandom-deyja — chỉ một dòng, không dẫn
-nguồn}
+Về việc Deyja bị hủy diệt trong **Reckoning**: chỉ có **một dòng trên Fandom, không dẫn nguồn**, nên
+claim này **không** được đặt trong thân bài — đã chuyển xuống *Câu hỏi mở* Q3 theo `CANON-POLICY.md`
+mục 5.3.
 
 ---
 
@@ -260,7 +305,7 @@ không tên**, mà viết văn xuôi sẽ che mất.
 |---|---|---|---|---|
 | 1 | **"the old King"** — không tên | Finneas phản bội ông; số phận không rõ | `EXPLICIT` | {T1*: sod-finneas-vilmar} |
 | 2 | **"the new king"** — không tên | Bị Sandro phế để lập Finneas | `EXPLICIT` | {T1*: sod-duke-alarice} |
-| 3 | **Finneas Vilmar** | Chết khi hồi sinh Gryphonheart (~1165) | `EXPLICIT` | {T1*: roe-a-gryphons-heart} |
+| 3 | **Finneas Vilmar** — còn gọi **Deathknell** | Bị chính lich hắn hồi sinh giết | `EXPLICIT` | {T2: 3do-mm7-diaries-archibald} |
 | 4 | **Lich King Nicolas Gryphonheart** | Bị Catherine tiêu diệt (~1168) | `EXPLICIT` | {T1*: roe-safe-passage} |
 | 5 | **Archibald Ironfist** | Bị Kastore phế (~1169) | `INFERENCE` | {T6: fandom-timeline-ancient} |
 | 6 | **Kastore** | Vua cuối cùng được biết | `INFERENCE` | {T1* + T6: h3wiki-kastore} |
@@ -329,7 +374,64 @@ Cơ chế thật được ba dòng game text xác lập:
 > "if Sandro loses even just one battle, **others will sense weakness in him and destroy all
 > he has worked for**." {T1* EXPLICIT: sod-with-blinders-on}
 
-Bốn cuộc kế vị được ghi lại. Bốn vụ giết.
+⚠️ **Nhưng "bốn cuộc kế vị, bốn vụ giết" là sai dữ kiện** — bản đầu của bài viết vậy vì câu đối ngẫu
+nghe hay. Đếm lại theo text:
+
+| Cuộc kế vị | Cơ chế thật |
+|---|---|
+| "vua cũ" → "vua mới" | **Không text nào** mô tả một vụ giết. Chỉ có "Finneas' transgressions" |
+| "vua mới" → Finneas | Fandom nói thẳng "**it is not explained how in detail**". Chỉ có **ý định** giết được nói ra |
+| Finneas → Lich King | ✅ **Vụ giết duy nhất được text mô tả** — "After killing King Vilmar" |
+| Lich King → Archibald | **Không phải giết bởi người kế vị** — Nicolas bị liên quân của Catherine tiêu diệt |
+| Archibald → Kastore | **Phế vị, không giết** — "Kastore later staged a coup and **ousted** Archibald" |
+
+{T1* EXPLICIT: roe-safe-passage + sod-finneas-vilmar + sod-duke-alarice}
+{T6 EXPLICIT: fandom-finneas-vilmar + fandom-deyja}
+
+**Archibald sống sót sau khi bị phế**, và điều đó có text chứng minh:
+
+> "**Archibald Ironfist, deposed lord of Deyja** and one of the most hated men in history, **offered
+> aid** for reasons of his own."
+
+{T6 EXPLICIT: fandom-deyja}
+
+Phát biểu đúng: **trong năm cuộc kế vị được ghi lại, đúng một được text mô tả là giết; hai vụ chỉ có
+ý định giết được nói ra; hai vụ cuối là phế vị, và người bị phế đều sống sót.**
+
+Điều đó **không** làm yếu nhận định gốc — chuẩn mực "tìm dấu hiệu yếu để thay" vẫn được ba dòng game
+text trên xác lập. Nhưng chuẩn mực đó thể hiện ra **chủ yếu dưới dạng ý định và phế vị**, không phải
+một chuỗi án mạng.
+
+### ⭐ "Deathknell" — tên thứ hai của Finneas, và nguồn chính thức duy nhất kể vụ giết
+
+*The Diaries of Archibald* — text manual MM7 trên **website chính thức của 3DO** — gọi vua Deyja bằng
+một cái tên mà game Heroes III không dùng, và kể vụ giết trực tiếp hơn mọi nguồn khác:
+
+> "The Erathian guild has made a bold and perhaps foolhardy play for power. **The guild leader and king
+> of Deyja, Deathknell**, sought to take the Erathian throne by assassinating Gryphonheart and then
+> reanimating him as a lich, bound to his service. Well, he got as far as the reanimation, but the
+> binding did not take. **Instead, the lich killed Deathknell.** Now Erathia and Deyja have a new
+> king…and the guild has a new leader."
+
+{T2 EXPLICIT: 3do-mm7-diaries-archibald — Entry 37}
+
+Và Entry 143 xác nhận chuỗi kế vị:
+
+> "For as the lich, Gryphonheart, **replaced Deathknell**, so have I replaced Gryphonheart."
+
+{T2 EXPLICIT: 3do-mm7-diaries-archibald — Entry 143}
+
+**Định danh chắc chắn:** "the guild leader and king of Deyja" bị "the lich" giết ngay sau nghi thức
+hồi sinh — điều đó chỉ có thể là Finneas Vilmar, và khớp từng chi tiết với game text Heroes III
+("former King Vilmar met with an unfortunate accident", "After killing King Vilmar").
+
+⚠️ **Nguồn này cũng lộ ra một lỗi của thelazy.** thelazy chép *Diaries* nhưng **sai hai con số năm**:
+Entry 37 là **1167** (thelazy ghi 1166), Entry 143 là **1168** (thelazy ghi 1167). Đây là ca **đầu tiên**
+dự án bắt được thelazy sai — đáng ghi vì cả registry dựa vào thelazy làm nguồn `T1*` xương sống với lý
+do "wiki này chép trung thực". **Chép trung thực không đồng nghĩa với chép đúng.** Xem `REGISTRY.md`.
+
+📌 Cả hai đoạn trên trước đây bị coi là không lấy được, vì registry ghi sai rằng `web.archive.org` bị
+chặn. Nó **không** bị chặn.
 
 ### Một chức, hai quyền
 
@@ -427,8 +529,33 @@ Duke Alarice cảnh báo các lãnh chúa AvLee về Sandro. Phản ứng của 
 
 {T6 INFERENCE: fandom-deyja}
 
-Deyja cũng dùng **xâm nhập**: vampire **Falorel** giả dạng thành công một lãnh chúa AvLee cho
-tới khi Sandro đầu độc hắn. {T6 INFERENCE: fandom-deyja}
+Deyja cũng dùng **xâm nhập**: một vampire giả dạng thành công một Border Lord của AvLee trong thời
+gian dài, cho tới khi Sandro đầu độc hắn vì hắn trở nên quá mạnh.
+
+⚠️ **Ai là vampire, ai là nạn nhân — đây là điểm `DISPUTED` thật.** Hai wiki nói ngược với game text:
+
+| Nguồn | Vampire giả dạng | Nạn nhân |
+|---|---|---|
+| **Game text** (bio hero trong `Wrath of Sandro`) | **Falorel** | (không nêu) |
+| thelazy `Lord Falorel` + Fandom `Falorel` | **Vayarad** | **Falorel** — một **elf**, Border Lord thật của AvLee |
+
+Game text viết mơ hồ đúng theo hướng gộp hai người:
+
+> "He investigated the death of Lord Falorel, **the vampire who had successfully impersonated an AvLee
+> lord**... until **you poisoned Falorel** for becoming too powerful."
+
+{T1* EXPLICIT: sod-wrath-of-sandro}
+
+Còn cả hai wiki tách rõ hai nhân vật:
+
+> "**The real Lord Falorel was killed and then impersonated by the vampire Vayarad** for a considerable
+> time... Soon after this mission he was poisoned by Sandro."
+
+{T6 EXPLICIT: h3wiki-lord-falorel}
+
+**Xử lý:** `DISPUTED`, nêu cả hai phương án. Cùng loại với tiền lệ `Dethmar/Dethard` đã ghi trong
+`REGISTRY.md` — game text tự lẫn tên, và wiki sửa lại. Bản đầu của bài chỉ ghi một phương án và
+**đảo tên**: nó gọi Falorel là vampire (theo game text) nhưng bỏ hẳn tên **Vayarad**.
 
 ### Krewlod — vì sao không có quan hệ
 
@@ -522,8 +649,13 @@ Kiểm tra cho thấy **Deyja không xuất hiện trong MM6**. Nhưng lý do qu
 lý**, không phải do thiếu bằng chứng.
 
 Và có một liên hệ **gián tiếp nhưng có thật**: Necromancers' Guild trong MM6 (Castle Darkmoor,
-Nimbus) chính là tổ chức về sau di cư sang Deyja khoảng năm 1166 để phục vụ Lich King.
+Nimbus) chính là tổ chức về sau di cư sang Deyja để phục vụ Lich King — theo *Diaries of Archibald*
+Entry 37, tức **1167**.
 {T6 INFERENCE: h3wiki-nimbus}
+{T2 EXPLICIT: 3do-mm7-diaries-archibald — Entry 37, ngày 23 October **1167**}
+
+⚠️ Bản đầu của bài ghi "khoảng năm **1166**" — đó là con số thelazy **chép sai**. Nguồn chính thức 3DO
+ghi **1167**.
 
 ⚠️ **Không được viết "Deyja không xuất hiện trong MM6" một cách trống trơn** — nó gợi ý sai
 rằng đây là một khoảng trống, trong khi thực chất là chuyện địa lý.
@@ -534,23 +666,34 @@ rằng đây là một khoảng trống, trong khi thực chất là chuyện đ
 
 ### 1. Thủ đô: The Pit hay Moulder? — `DISPUTED`
 
+✅ **Tranh chấp này phần lớn đã tan sau khi kiểm lại nguồn thứ tư.**
+
 | Nguồn | Thủ đô |
 |---|---|
 | thelazy `Deyja` | **The Pit** |
 | thelazy `Deyja Moors` | **The Pit** |
 | Fandom `The Pit` | **The Pit** |
-| **Fandom `Deyja` infobox** | **Moulder** |
+| ~~Fandom `Deyja` infobox → Moulder~~ | ⚠️ **`Moulder` là REDIRECT tới `The Pit`** |
 
-Ba chọi một cho The Pit. Nhưng **Moulder không phải lỗi thuần túy**: timeline của chính Fandom
-ghi Moulder là **trụ sở của Necromantic Order** cho tới khoảng 1170.
+Bản đầu của bài trình bày đây là "ba chọi một". Nhưng Fandom **không có** trang `Moulder` riêng — đã
+kiểm trực tiếp: `api.php?action=query&titles=Moulder&redirects` trả
+`redirects: [{"from":"Moulder","to":"The Pit"}]`.
 
-**Cách giải hợp lý nhất:** The Pit là **thủ đô và hoàng cung**; Moulder là **HQ hành chính của
-Guild**. Infobox Fandom có thể gộp nhầm hai vai trò.
+Nghĩa là trường `| capital = [[Moulder]]` trong infobox **trỏ về đúng trang `The Pit`**. Nó không phải
+một nguồn nói ngược — nó là **cùng một nguồn dùng tên cũ**. Bốn nguồn, **không có nguồn nào chọi**.
 
-⚠️ Đây **không** thể là biến thể tên: Moulder là town **trên mặt đất** ở tây bắc, The Pit
-**dưới lòng đất**. Hai nơi khác nhau.
+{T6 EXPLICIT: fandom-deyja — kiểm qua `api.php` với tham số `redirects`}
 
-**Xử lý:** dùng The Pit, ghi rõ tranh chấp. Không lặng lẽ chọn.
+⚠️ **Việc còn lại chưa giải được:** hai địa danh **thật sự khác nhau về địa lý** — Moulder là town
+**trên mặt đất** ở tây bắc, The Pit **dưới lòng đất**. Nên việc Fandom redirect tên này sang tên kia
+là **một sự gộp của wiki**, và nó không cho biết vai trò hành chính của Moulder.
+
+⚠️ **Và trụ đỡ cho cách giải cũ hóa ra không có thật.** Bản đầu của bài giải rằng "Moulder là HQ hành
+chính của Guild" và dẫn timeline Fandom. Nhưng nguồn chính thức 3DO — *Diaries of Archibald* — **không
+nhắc Moulder một lần nào**, và tài liệu Fulton cũng vậy (`Moulder` **0 lần**). Cách giải đó hiện chỉ
+dựa vào một dòng timeline `T6`.
+
+**Xử lý:** dùng The Pit. Ghi nhận rằng vai trò của Moulder **chưa có nguồn cấp cao** — xem *Câu hỏi mở*.
 
 ### 2. Bị trục xuất khỏi Bracada hay Erathia? — `DISPUTED` { #tranh-chap-truc-xuat }
 
@@ -574,14 +717,28 @@ loại trừ nhau: bị Bracada đuổi khỏi quê gốc (~200s AS) rồi bị 
 
 ### 3. Niên đại — phần lớn dựa vào nguồn KHÔNG xác minh được
 
-⚠️ Timeline của Fandom **trông rất chỉn chu** vì có nhiều `<ref>`. Nhưng phần lớn ref trỏ tới
-**web.archive.org**, và archive.org **bị chặn** — không xác minh được cái nào.
+⚠️ Timeline của Fandom **trông rất chỉn chu** vì có nhiều `<ref>`. Nhưng chất lượng ref không đều.
 
-**Mốc đáng ngờ nhất:** `1164-09-27` cho vụ đầu độc Nicolas — **chính xác tới ngày** nhưng dòng
-đó **không có ref**. {T6 UNVERIFIED: fandom-timeline-ancient}
+⚠️⚠️ **Bản đầu của bài kết luận sai ở đây, và cái sai đó nghiêm trọng theo hướng ngược thường lệ:** nó
+viết rằng "phần lớn ref trỏ tới web.archive.org, và archive.org **bị chặn** — không xác minh được cái
+nào". **Cả hai mệnh đề đều sai:**
 
-**Mốc đáng tin nhất:** 1168 (Archibald lên ngôi) và 1169 (đảo chính Kastore) — cả hai truy được
-về text MM7 **trích thẳng trong bài**, không qua archive link.
+- `web.archive.org` **không bị chặn**. Đã fetch được 151 KB nội dung thật. Nó trả **302** (redirect),
+  cần `-L`; API `wayback/available` trả **429** (giới hạn tần suất), không phải chặn.
+- Ref dạng archive là **thiểu số**: 13 trong 46 ref của trang timeline.
+
+Đây là một **claim phủ định về chính công cụ nghiên cứu**, và nó tự làm dự án nghèo đi: nó biến nguồn
+chính thức của NWC/3DO thành "không tiếp cận được" trong khi thực ra lấy được. Chính nhờ sửa nó mà bài
+này có thêm nguồn `T2` và đóng được một câu hỏi mở.
+
+**Mốc đáng ngờ nhất:** `1164-09-27` cho vụ đầu độc Nicolas — **chính xác tới ngày** nhưng dòng đó
+**không có ref**. Đã kiểm lại: đúng là không có.
+{T6 UNVERIFIED: fandom-timeline-ancient}
+
+⚠️ **Mốc 1168 và 1169 không đáng tin như bài từng nói.** Bản đầu viết chúng "truy được về text MM7
+trích thẳng trong bài, không qua archive link". Kiểm lại: chúng **dựa vào ref archive** (`MM7-Archie`).
+Điều đó **không** làm chúng sai — archive tiếp cận được — nhưng đánh giá "đáng tin hơn vì không qua
+archive" là **ngược**.
 
 Xem `sources/REGISTRY.md` mục cảnh báo về `fandom-timeline-ancient`.
 
@@ -614,12 +771,19 @@ of Deyja`), không phải chưa tìm ra. Đường còn lại: manual H3 hoặc 
 Chỉ có neo tương đối "nearly a millennium". Không nguồn nào cho năm tuyệt đối.
 
 **Q3. Reckoning ảnh hưởng Deyja thế nào?**
-Chỉ có một dòng Fandom, không dẫn nguồn.
+Chỉ có một dòng Fandom nói Deyja bị hủy diệt, **không dẫn nguồn**. Claim này đã được **chuyển từ thân
+bài xuống đây** theo `CANON-POLICY.md` mục 5.3.
 {T6 UNVERIFIED: fandom-deyja — **không dẫn nguồn**}
 
-**Q4. "Deathknell" có phải tên khác của Finneas?**
-Được cho là xuất hiện trong *The Diaries of Archibald* (manual MM7). Chưa xác minh từ nguồn gốc.
-{T6 UNVERIFIED: h3wiki-finneas — **chưa xác minh**}
+**Q3b. Moulder có vai trò hành chính gì?**
+Cách giải cho tranh chấp thủ đô giả định Moulder là HQ của Guild, nhưng **trụ đỡ đó chỉ là một dòng
+timeline `T6`**. Nguồn chính thức 3DO (*Diaries of Archibald*) và tài liệu Fulton **không nhắc Moulder
+lần nào**. Cần nguồn cấp cao hơn.
+
+**~~Q4. "Deathknell" có phải tên khác của Finneas?~~ — ✅ ĐÃ GIẢI QUYẾT (2026-08-03)**
+
+**Có.** Xác minh từ **website chính thức của 3DO** qua archive — xem mục *Chính thể*. Câu hỏi này
+từng bị coi là bế tắc vì registry ghi sai rằng `web.archive.org` bị chặn.
 
 **Q5. Text mô tả town Necropolis nói gì?**
 Chưa lấy được. Có thể chứa chi tiết văn hóa mà bài này thiếu.
@@ -627,16 +791,22 @@ Chưa lấy được. Có thể chứa chi tiết văn hóa mà bài này thiế
 **Q6. Lịch "AS" viết tắt của gì?**
 Vẫn chưa giải quyết — xem `TIMELINE-SPINE.md`.
 
-### Chưa xác minh được
+### ✅ Đã kiểm disambiguation (2026-08-03)
 
-**`Deyja (disambiguation)` chưa kiểm được trên cả hai wiki** — thelazy trả về rỗng. **Rỗng
-không đồng nghĩa với xác nhận không tồn tại.** Theo bài học từ ca `Sandro (Xeen)`, mọi claim
-"không xuất hiện ở đâu khác" phải kiểm qua trang disambiguation trước.
+Bản đầu của bài ghi "`Deyja (disambiguation)` chưa kiểm được — thelazy trả về rỗng". Đã kiểm bằng
+`api.php?action=query&list=allpages&apprefix=Deyja`: **không wiki nào có trang disambiguation cho
+Deyja**, và thelazy **không** trả về rỗng (trả 4 kết quả). Không có thực thể trùng tên thứ hai.
+
+⚠️ **Nhưng bẫy BH-2 thật nằm chỗ khác trong bài này: có HAI `Kastore`.** Bảng kế vị của bài dẫn tên
+này mà không phân định. Cần kiểm khi viết bài `kastore`.
 
 ### Hạn chế nền tảng
 
-Phần nguồn gốc dựa **hoàn toàn** vào một truyện ngắn đăng trên diễn đàn đã đóng cửa, chỉ tồn
-tại qua bản chép của wiki. Không thể tiếp cận bản gốc.
+Phần nguồn gốc dựa **hoàn toàn** vào một truyện ngắn đăng trên diễn đàn đã đóng cửa, chỉ tồn tại qua
+bản chép của wiki.
+
+📌 **Nhưng hạn chế này giờ nhỏ hơn tưởng:** `web.archive.org` **không bị chặn** (registry từng ghi sai
+là bị chặn), nên bản gốc trên diễn đàn 3DO **có thể còn lấy được**. Chưa thử.
 
 ---
 
@@ -644,12 +814,18 @@ tại qua bản chép của wiki. Không thể tiếp cận bản gốc.
 
 | Loại | Số lượng | Ghi chú |
 |---|---|---|
-| `T1*` — text in-game qua trung gian | 15 | heroes.thelazy.net |
+| **`T2`** — manual chính thức, site 3DO | **1** | ⭐⭐ `3do-mm7-diaries-archibald` — **nguồn không-phải-wiki** duy nhất của bài. Chốt `Deathknell` = Finneas, và **bắt được thelazy chép sai hai con số năm** |
+| **`T4`** — phát ngôn developer | **1** | ⭐ `fulton-names-2023` — Lead Designer nói về từ nguyên Deyja |
+| `T1*` — text in-game qua trung gian | 17 | heroes.thelazy.net |
 | `T2*` — truyện ngắn của nhân viên NWC | 1 | `t2-necromancy-origin` — nguồn duy nhất về nguồn gốc |
-| `T6` — wiki cộng đồng | 5 | ⚠️ `fandom-timeline-ancient` có vấn đề nghiêm trọng về ref |
+| `T6` — wiki cộng đồng | 6 | ⚠️ `fandom-timeline-ancient` — chất lượng ref không đều, nhưng **không** "không xác minh được" như bài từng nói |
 
 Nguồn giá trị nhất: `sod-finneas-vilmar` region text (phát hiện hai vị vua),
-`roe-a-gryphons-heart` (động cơ + cái chết Finneas), và `t2-necromancy-origin` (nguồn gốc).
+`3do-mm7-diaries-archibald` (nguồn chính thức, chốt Deathknell và sửa niên đại), và
+`t2-necromancy-origin` (nguồn gốc).
+
+⭐ **Bài này là bài đầu tiên trong Codex có nguồn cấp `T2` chính thức không qua wiki.** Nó có được nhờ
+luồng kiểm định phát hiện rằng cảnh báo "`web.archive.org` bị chặn" trong `REGISTRY.md` là **sai**.
 
 ---
 

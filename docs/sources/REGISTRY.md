@@ -147,6 +147,7 @@ gốc **một bước**.
 | `ab-here-there-be-pirates` | T1* | FETCHED | Armageddon's Blade — Cowl trên map, 26 Dragon Flies canh |
 | `roe-all-for-one` | T1* | FETCHED | Restoration of Erathia (`source = roe`) — map **Single/Multiplayer độc lập**, không thuộc campaign. Seer's Hut (1,16,0) → +5 Attack. ⚠️ Seer's Hut này **không có** text `prop`/`comp` |
 | `hota-all-hands-on-board` | T1* | FETCHED | Scenario **HotA** (`cback = hota hota 4`) — Seer's Hut (47,26,1) → 50 Vampire Lords |
+| `h3wiki-lord-falorel` | T1* | FETCHED | Border Lord của AvLee, láng giềng Lord Fayette. ⚠️ **Điểm DISPUTED:** trang này (và Fandom) nói **Vayarad** là vampire giả dạng và **Falorel** là nạn nhân elf; nhưng **game text** trong `sod-wrath-of-sandro` gọi chính **Falorel** là vampire. Cùng loại với ca `Dethmar/Dethard`. Trang `Vayarad` là redirect tới đây |
 | `h3wiki-mormolykos` | T1* | FETCHED | ⭐ Hero **HotA** — vampire gốc Jadame, mang sẵn Cowl (`spart_6`). Là **chủ sở hữu có tên trong truyện** duy nhất của Cowl; `hota-tomb-raiders` gọi nó là "Mormolykos' Cowl" |
 
 ### Artifact
@@ -262,7 +263,7 @@ Ghi lại để lần sau thử tiếp. **Không được dùng làm nguồn.**
 | `homm.miraheze.org/wiki/Sandro` | FAILED (403) | |
 | `strategywiki.org/.../Rise_of_the_Necromancer` | FAILED (403) | |
 | `heroesofmightandmagic.com/heroes3sod/campaigns.shtml` | FAILED (**403 web filter**, không phải site chết) | **Site chính thức của NWC** — nguồn không-phải-wiki tốt nhất có thể có. ⚠️ Ghi chú cũ "connection refused → có thể đã chết" là **SAI**: verify `dead-mans-boots` (2026-08-03) fetch lại được HTTP **403** với body `<title>Web Filter Violation</title>` — bị **filter mạng của môi trường dev** chặn, site có thể vẫn sống. Phải thử qua đường khác, **không** được coi là đã chết |
-| `web.archive.org` | FAILED (bị chặn hoàn toàn) | Nên không lấy được bản lưu của site chính thức |
+| ~~`web.archive.org`~~ | ✅ **FETCHED — cảnh báo cũ SAI** | Xem mục cảnh báo bên dưới. Trả **302 → nội dung thật**; đã fetch 151 KB. Dùng dạng có timestamp: `web.archive.org/web/<YYYYMMDDhhmmss>/<url>` |
 | `en.namu.wiki/.../Sandro` | NOT_FETCHED | Chỉ thấy trong kết quả tìm kiếm |
 | File campaign `.h3c` gốc | NOT_FETCHED | **Đây là việc cần làm để nâng T1\* thành T1** |
 
@@ -281,7 +282,8 @@ kiểm định độc lập tìm được nguồn T4 thật. Ghi lại sai sót 
 | `fulton-fanstratics-13` | **T4** | FETCHED | **Greg Fulton, Lead Designer Heroes III** — Fanstratics Newsletter #13. Gọi Sandro là hero mang tính biểu tượng: "Astral, Crag Hack, Dracon, **Sandro**, Solmyr, Tazar..." |
 | `fulton-fanstratics-27` | **T4** | FETCHED | Fulton, Newsletter #27 — ghi lại yêu cầu thiết kế ở buổi họp khởi động H3: "Keep specific heroes from HoMM2, like **Sandro the Necromancer**, Halon the Wizard, Lord Haart..." |
 | `fulton-fanstratics-3` | **T4** | FETCHED | Fulton, Newsletter #3 — xác nhận **Bullard là Lead Designer của SoD**: "I was not involved in the conception or creation of SoD... Jennifer Bullard was the project's Lead Designer, and any questions you have about SoD would best be directed to her" |
-| `fulton-names-2023` | **T4** | FETCHED | ⭐⭐ `Gregory Fulton/On Names in Heroes of Might and Magic III` trên thelazy — **98.499 byte**. Thư từ Amelrix ↔ Fulton 2022–2023, công bố 08/AUG/2023 trên Celestial Heavens, **~200 câu hỏi** về nguồn gốc tên town và hero, **do chính Fulton xem lại trước khi công bố**. Xem `B-020` — nguồn này chưa được khai thác |
+| `fulton-names-2023` | **T4** | FETCHED | ⭐⭐ `Gregory Fulton/On Names in Heroes of Might and Magic III` trên thelazy — **98.499 byte**. Thư từ Amelrix ↔ Fulton 2022–2023, công bố 08/AUG/2023 trên Celestial Heavens, **~200 câu hỏi** về nguồn gốc tên town và hero, **do chính Fulton xem lại trước khi công bố**. Xem `B-020` — nguồn này chưa được khai thác hết |
+| `3do-mm7-diaries-archibald` | **T2** | FETCHED | ⭐⭐ *The Diaries of Archibald* — **text manual MM7 trên website CHÍNH THỨC của 3DO**, lấy qua archive: `web.archive.org/web/20001017212754/http://www.3do.com/products/pc/mm7/story/story.htm`. Đây là nguồn **không-phải-wiki** tốt nhất dự án có cho niên đại Antagarich 1165–1168. ⚠️ **thelazy chép sai hai con số năm từ nguồn này** — xem cảnh báo bên dưới. Chốt được `Deathknell` = Finneas Vilmar |
 
 ### Jennifer Bullard là ai
 
@@ -513,6 +515,55 @@ Trang `h3wiki-cloak-undead-king` ghi lệnh cấm HotA 1.7.2 kèm **ba** templat
 - **1.7.3** (08/JUN/2025): mới thêm template "Default Random Map (Legacy)"
 
 Trang wiki gộp hai phiên bản thành một.
+
+### ⚠️⚠️⚠️ `web.archive.org` KHÔNG bị chặn — và điều đó mở ra nguồn chính thức của NWC/3DO
+
+Phát hiện khi verify `deyja` (2026-08-03). **Đây là cảnh báo quan trọng nhất trong registry**, vì nó
+đảo ngược một giả định đã dùng để hạ độ tin cậy của nhiều claim.
+
+Registry cũ ghi `web.archive.org` là "FAILED (bị chặn hoàn toàn)", và bài `deyja` dựa vào đó để kết
+luận rằng phần lớn `<ref>` của timeline Fandom "không xác minh được".
+
+**Cả hai đều sai.** Đã kiểm độc lập hai lần:
+
+- `https://web.archive.org/web/2005/http://www.3do.com/...` → **HTTP 302**, theo redirect ra **151.258
+  byte** nội dung thật.
+- `https://web.archive.org/web/20001017212754/http://www.3do.com/products/pc/mm7/story/story.htm` →
+  lấy được **toàn văn** *The Diaries of Archibald*.
+
+**Cách dùng đúng:** phải có `-L` (theo redirect) và **nên dùng dạng có timestamp đầy đủ**
+(`/web/YYYYMMDDhhmmss/`). Dạng `/web/2005/` cũng chạy nhưng hay ra trang wrapper rỗng. API
+`archive.org/wayback/available` trả **429** (rate limit) — đó là giới hạn tần suất, **không** phải bị chặn.
+
+**Hệ quả:** `heroesofmightandmagic.com` và `3do.com` — site chính thức của NWC/3DO, "nguồn
+không-phải-wiki tốt nhất có thể có" — **tiếp cận được qua archive**. Việc này liên quan trực tiếp tới
+`B-001` (nâng `T1*` → `T1`) và `B-002`.
+
+### ⚠️⚠️ thelazy CHÉP SAI hai con số năm trong *The Diaries of Archibald*
+
+Ca **đầu tiên** dự án bắt được **thelazy sai và Fandom đúng**. Đáng ghi vì toàn bộ registry dựa vào
+thelazy làm nguồn `T1*` xương sống, với lý do "wiki này chép trung thực, chép cả lỗi chính tả".
+
+Đối chiếu trang chính thức 3DO với trang `Archibald` mục `=== The Diaries of Archibald ===` trên
+thelazy (trang này **tự ghi** "*The following is from the MM7 manual*"):
+
+| Entry | 3DO chính thức | thelazy | |
+|---|---|---|---|
+| 1 | 11 June **1165** | 11 June 1165 | ✅ |
+| 37 | 23 October **1167** | 23 October **1166** | ❌ lệch 1 năm |
+| 143 | 5 August **1168** | 5 August **1167** | ❌ lệch 1 năm |
+
+**Quy tắc rút ra:** "chép trung thực" **không** đồng nghĩa với "chép đúng". Với **mọi mốc niên đại**
+lấy từ thelazy, phải đối chiếu nguồn chính thức qua archive khi có thể — nhất là các mốc quanh
+1165–1169, vốn là giai đoạn dày sự kiện nhất của Antagarich.
+
+### ⚠️ `Moulder` trên Fandom là REDIRECT tới `The Pit` — "tranh chấp thủ đô" phần lớn tan
+
+Đã kiểm trực tiếp: `api.php?action=query&titles=Moulder&redirects` trả
+`redirects: [{"from":"Moulder","to":"The Pit"}]`. Fandom **không có** trang `Moulder` riêng.
+
+Nghĩa là trường `| capital = [[Moulder]]` trong infobox Fandom **trỏ về đúng trang `The Pit`** — nó
+không phải một nguồn thứ tư nói ngược. Bài `deyja` từng trình bày đây là tranh chấp "ba chọi một".
 
 ### ⚠️⚠️ Bẫy `{{swh}}` — tham số ĐẦU là HotA, tham số SAU là SoD
 
