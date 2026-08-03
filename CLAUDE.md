@@ -151,9 +151,23 @@ sẽ bị `check.py` cảnh báo, và nếu hai bên gán độ chắc khác nha
 
 ## Trạng thái
 
-Giai đoạn 1 (xây nền) đã xong. Codex có 3 entity `verified` trên 3 loại schema khác
+Giai đoạn 1 (xây nền) đã xong. Codex có **9/9 entity `verified`** trên 4 loại schema khác
 nhau. Saga chưa bắt đầu — theo `SAGA-STYLE.md` S6, chỉ được viết khi entity Codex liên
 quan đã `verified`.
 
 Việc còn tồn: `docs/00-foundation/BACKLOG.md`. Ưu tiên cao nhất là `B-001` — nâng
 `T1*` lên `T1` thật bằng cách trích text từ file game gốc.
+
+**Đợt kiểm định 2026-08-03 (6 bài) để lại ba thứ phải biết trước khi viết bài mới:**
+
+1. ⚠️ **`web.archive.org` KHÔNG bị chặn.** Cảnh báo cũ trong `REGISTRY.md` là **sai** — nó biến
+   nguồn chính thức NWC/3DO thành "không lấy được" trong khi thực ra lấy được. Dùng `curl -L` với
+   **timestamp đầy đủ** (`/web/YYYYMMDDhhmmss/`); dạng `/web/2005/` hay trả trang wrapper rỗng.
+2. ⚠️ **thelazy chép trung thực nhưng KHÔNG luôn chép đúng.** Đã bắt được nó ghi sai hai con số năm
+   so với manual chính thức. Mọi mốc niên đại 1165–1169 phải đối chiếu nguồn 3DO qua archive.
+3. ⚠️ **Trang artifact/hero trên thelazy KHÔNG chứa danh sách scenario** (660–1.718 byte). Mọi bảng
+   "Xuất hiện trong game" phải dựng bằng `api.php?action=query&list=backlinks`, dẫn **key riêng cho
+   từng dòng**, và đọc `| source =` để ghi đúng sản phẩm.
+
+Ba nguồn mới đáng khai thác: `3do-mm7-diaries-archibald` (`T2`, site chính thức),
+`fulton-names-2023` (`T4`, ~200 câu hỏi — xem `B-020`), `h3wiki-artraits-txt` (`T1` thật).
