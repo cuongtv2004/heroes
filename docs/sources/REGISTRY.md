@@ -19,7 +19,7 @@ registry"* cho một key **không tồn tại**. Cảnh báo trông như lỗi c
 nguồn**. Đã gộp về `mm7-diaries-3do`.
 
 **Quy ước:** đặt phần định danh nguồn ở **cuối**, không ở đầu — `mm7-diaries-3do`,
-`h4-official-artifacts-minor`, `roe-all-for-one`.
+`aoh-h4-artifacts-minor`, `roe-all-for-one`.
 
 ---
 
@@ -225,11 +225,34 @@ gốc **một bước**.
 | `thelazy-nimbus` | T6 | FETCHED | ⚠️ Trang này **tách đúng** hai sự kiện (thắng Nimbus ≠ lên ngôi Deyja), trong khi trang `Archibald` của **cùng wiki** gộp sai. Bằng chứng thelazy tự mâu thuẫn |
 | `hota-beyond-the-horizon-rumors` | T1* | FETCHED | ⭐ Rumor game text HotA: "Zog named his powerful artifact **in memory of Archibald**. The usurper king and the Jackal were **allies during the Succession Wars**." Changelog HotA **0 hit** Archibald — nên chỉ tìm ra bằng cách đọc content, không đọc changelog |
 
-### ⭐⭐ Heroes IV — site CHÍNH THỨC của NWC (T2), lấy qua archive
+### ⭐ Heroes IV — `Age of Heroes` (T1*), lấy qua archive
 
-**Đây là lời giải cho `B-019`.** Mục `heroes4/` của `heroesofmightandmagic.com` — site chính thức của
-New World Computing — **được lưu đầy đủ trong archive**, khoảng **200 URL**. Registry từng ghi domain
+**Đây là lời giải cho `B-019`** — nhưng **không** ở tier như đợt đầu tưởng. Mục `heroes4/` của
+`heroesofmightandmagic.com` được lưu đầy đủ trong archive, khoảng **200 URL**. Registry từng ghi domain
 này là `FAILED (403 web filter)`; qua archive thì vào được bình thường.
+
+🔴 **ĐÍNH CHÍNH (2026-08-03): đây KHÔNG phải site chính thức của NWC.** Đợt giải `B-019` gán nó tier
+**`T2` official** và mô tả là "site chính thức của New World Computing" — **sai**, và cái sai đó **đã
+lên `main`** trước khi bị bắt.
+
+Footer của chính trang nói rõ:
+
+> "**Age of Heroes** and Heroes Community are copyrighted **©2005 Valera Koltsov**. Heroes of Might and
+> Magic 1, 2, 3, 4, 5 are registered trademarks of UbiSoft Entertainment."
+
+Đã grep toàn trang: **0 lần** nhắc `New World Computing`, **0 lần** nhắc `3DO`. Đây là **site fan** do
+Valera Koltsov làm, cùng nhà với diễn đàn *Heroes Community*.
+
+**Tier đúng là `T1*`** — không phải `T2`, cũng không phải `T6`: nội dung nó đăng là **mô tả item
+in-game** (tức `T1` theo mục 2 của `CANON-POLICY.md`) **tiếp cận qua trung gian fan**, đúng định nghĩa
+`T1*`. Cùng loại với `heroes.thelazy.net`.
+
+⚠️ **Nhưng độ tin thấp hơn thelazy.** Đã phát hiện nó **chép sai**: `"must of his humanity"` trong khi
+hai nguồn khác đều ghi `"most"`. thelazy được tin ở mức `T1*` phần vì nó đánh dấu `{{sic}}` và chép cả
+lỗi gốc; Age of Heroes **không** có kỷ luật đó. Claim quan trọng phải đối chiếu nguồn thứ hai.
+
+**Bài học:** đừng suy chủ sở hữu site từ **tên miền**. `heroesofmightandmagic.com` nghe như site chính
+thức, ghi chú cũ của registry cũng gọi nó là "site chính thức của NWC" — nhưng **chưa ai đọc footer**.
 
 **Cách lấy:** liệt kê bằng CDX API rồi fetch theo timestamp —
 
@@ -243,9 +266,9 @@ curl -sL "https://web.archive.org/web/<timestamp>/<url>"
 
 | key | tier | access | Nội dung |
 |-----|------|--------|----------|
-| `h4-official-artifacts-minor` | **T2** | FETCHED | ⭐ `heroes4/artifacts_minor.shtml` (24.206 byte) — bảng artifact **Minor** của H4 kèm Slot + Description nguyên văn. Chứa `Amulet of the Undertaker`: "Increases the hero's Necromancy skill by 10% if the hero has the skill. **Otherwise, it acts as the Basic Necromancy skill.**" **Thay được `fandom-h4-artifact-list` (`T6`)** — hai nguồn khớp từng chữ |
-| `h4-official-campaign-halfdead` | **T2** | FETCHED | ⭐⭐ `heroes4/campaign_halfdead.shtml` (12.894 byte) — **toàn bộ campaign *Half-Dead*** của Gauldoth: điều kiện thắng/thua từng scenario, carryover, và văn kể ở **ngôi thứ nhất**. Mở đường cho entity trụ `gauldoth-half-dead` (`B-016` mục 3) |
-| `h4-official-index` | **T2** | FETCHED | Mục `heroes4/` nói chung — còn `artifacts_{major,relic,treasure,potion,tgs}.shtml`, `heroes_{necromancers,deathknights,lords,…}.shtml`, `creatures_death.shtml`, `buildings_death.shtml`, và **năm campaign khác** (`blade`, `daughter`, `elwin`, `glory`, `price`). **Phần lớn chưa khai thác** |
+| `aoh-h4-artifacts-minor` | **T1*** | FETCHED | ⭐ `heroes4/artifacts_minor.shtml` (24.206 byte) — bảng artifact **Minor** của H4 kèm Slot + Description nguyên văn. Chứa `Amulet of the Undertaker`: "Increases the hero's Necromancy skill by 10% if the hero has the skill. **Otherwise, it acts as the Basic Necromancy skill.**" **Thay được `fandom-h4-artifact-list` (`T6`)** — hai nguồn khớp từng chữ |
+| `aoh-h4-campaign-halfdead` | **T1*** | FETCHED | ⭐⭐ `heroes4/campaign_halfdead.shtml` (12.894 byte) — **toàn bộ campaign *Half-Dead*** của Gauldoth: điều kiện thắng/thua từng scenario, carryover, và văn kể ở **ngôi thứ nhất**. Mở đường cho entity trụ `gauldoth-half-dead` (`B-016` mục 3) |
+| `aoh-h4-index` | **T1*** | FETCHED | Mục `heroes4/` nói chung — còn `artifacts_{major,relic,treasure,potion,tgs}.shtml`, `heroes_{necromancers,deathknights,lords,…}.shtml`, `creatures_death.shtml`, `buildings_death.shtml`, và **năm campaign khác** (`blade`, `daughter`, `elwin`, `glory`, `price`). **Phần lớn chưa khai thác** |
 
 ### Phát ngôn developer về Archibald (T4)
 
@@ -638,7 +661,7 @@ luận rằng phần lớn `<ref>` của timeline Fandom "không xác minh đư�
 (`/web/YYYYMMDDhhmmss/`). Dạng `/web/2005/` cũng chạy nhưng hay ra trang wrapper rỗng. API
 `archive.org/wayback/available` trả **429** (rate limit) — đó là giới hạn tần suất, **không** phải bị chặn.
 
-**Hệ quả:** `heroesofmightandmagic.com` và `3do.com` — site chính thức của NWC/3DO, "nguồn
+**Hệ quả:** `3do.com` — site chính thức của 3DO, "nguồn
 không-phải-wiki tốt nhất có thể có" — **tiếp cận được qua archive**. Việc này liên quan trực tiếp tới
 `B-001` (nâng `T1*` → `T1`) và `B-002`.
 

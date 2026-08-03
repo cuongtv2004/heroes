@@ -125,10 +125,10 @@ vì như vậy sẽ bỏ qua cửa chặn.
 
 ---
 
-## Ba bài học kỹ thuật — đưa vào MỌI prompt research
+## Bốn bài học kỹ thuật — đưa vào MỌI prompt research
 
-Ba lỗi này đã làm hỏng đợt research đầu tiên. Chúng **không hiển nhiên** và sẽ lặp lại nếu
-không nhắc rõ.
+Ba lỗi đầu đã làm hỏng đợt research đầu tiên; BH-4 xuất hiện muộn hơn, khi dự án bắt đầu dùng nguồn
+ngoài hai wiki quen. Cả bốn **không hiển nhiên** và sẽ lặp lại nếu không nhắc rõ.
 
 ### BH-1 — Text nằm trong block `==== Events ====`, không chỉ prologue
 
@@ -141,6 +141,7 @@ Cùng lỗi đó làm bỏ sót:
 - `sod-invasion` Day 17 — cảnh dấu ngón tay xương trên ngực Finneas
 
 **Quy tắc: đọc TOÀN BỘ trang scenario, kể cả block Events.**
+
 
 ### BH-2 — Kiểm trang disambiguation trước mọi claim phủ định
 
@@ -165,6 +166,33 @@ Nghiêm trọng hơn: **giá trị Necromancy đã đổi hai lần** (5/10/15/3
 phiên bản.**
 
 ---
+
+### BH-4 — Kiểm CHỦ SỞ HỮU của nguồn, đừng suy từ tên miền
+
+Xảy ra thật 2026-08-03, và cái sai **đã lên `main`** trước khi bị bắt.
+
+Dự án tìm thấy `heroesofmightandmagic.com/heroes4/` lưu trong archive, gọi nó là "**site chính thức
+của New World Computing**", gán tier **`T2` official**, rồi dùng để nâng một mục từ `T6` lên `T2`.
+
+**Nó là site fan.** Footer ghi rõ:
+
+> "**Age of Heroes** and Heroes Community are copyrighted **©2005 Valera Koltsov**."
+
+Grep toàn trang: `New World Computing` **0 lần**, `3DO` **0 lần**.
+
+**Vì sao lọt:** tên miền `heroesofmightandmagic.com` nghe **đúng như** site chính thức, và ghi chú cũ
+của registry cũng đã gọi nó vậy từ trước. Không ai đọc footer — kể cả khi đang gán cho nó tier cao
+thứ hai của hệ thống.
+
+**Quy tắc:** trước khi gán `T2` (official print) hay `T4` (developer statement) cho một nguồn web,
+**phải đọc footer/about/copyright của chính trang đó** và trích được dòng xác lập chủ sở hữu. Tên
+miền, tiêu đề trang, và cách cộng đồng gọi nó **đều không phải bằng chứng**.
+
+**Hệ quả kèm theo:** `T2` sai không chỉ là sai một bậc — nó đổi **loại** nguồn. Một site fan chép mô tả
+item in-game là `T1*` (in-game text qua trung gian), **không** phải `T2`. Và độ tin cũng khác: Age of
+Heroes bị bắt **chép sai** (`"must of his humanity"` thay vì `"most"`), trong khi thelazy được tin ở
+`T1*` phần vì nó đánh dấu `{{sic}}`.
+
 
 ## Bài học lớn nhất — về claim phủ định
 

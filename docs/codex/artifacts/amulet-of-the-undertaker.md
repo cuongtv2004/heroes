@@ -26,7 +26,7 @@ sources_used:
   - hota-frontier
   - hota-apocalypse-template
   - hota-nine-day-wonder
-  - h4-official-artifacts-minor
+  - aoh-h4-artifacts-minor
   - fandom-h4-artifact-list
   - fandom-prelude-to-invasion
 # component_of khai o cloak-of-the-undead-king (assembled_from);
@@ -175,18 +175,25 @@ ghi nhận điều này có thể rút ngắn scenario:
 | Hiệu ứng | +5% Necromancy | **+10% Necromancy** |
 | Khi hero không có skill Necromancy | Vô tác dụng *(văn wiki, không phải game text)* | **Hoạt động như Basic Necromancy** |
 
-Mô tả ở Heroes IV, nguyên văn từ **site chính thức của New World Computing**:
+Mô tả ở Heroes IV, nguyên văn:
 
 > "Name: **Amulet of the Undertaker** · Slot: **Neck** · Description: Increases the hero's Necromancy
 > skill by 10% if the hero has the skill. **Otherwise, it acts as the Basic Necromancy skill.**"
 
-{T2 EXPLICIT: h4-official-artifacts-minor}
+{T1* EXPLICIT: aoh-h4-artifacts-minor}
+{T6 EXPLICIT: fandom-h4-artifact-list — nguồn thứ hai, khớp từng chữ}
 
-⭐ **Đây là `T2` — nguồn chính thức của nhà phát triển, không phải wiki.** Bản đầu của bài dẫn Fandom
-(`T6`, không dẫn nguồn) cho cùng câu này; hai nguồn khớp **từng chữ**, nên Fandom đúng là bản chép.
-Nhưng giờ không cần dùng bản chép nữa.
+⭐ **Nâng từ `T6` lên `T1*`:** bản đầu của bài chỉ có Fandom (`T6`, không dẫn nguồn). Giờ có thêm
+`Age of Heroes`, và vì nội dung là **mô tả item in-game** tiếp cận qua trung gian fan, nó đạt `T1*` —
+cùng loại với `heroes.thelazy.net`.
 
-{T6 EXPLICIT: fandom-h4-artifact-list — giữ làm nguồn xác nhận trùng khớp}
+🔴 **Đính chính:** bản sửa đầu tiên gán câu này `T2` và gọi Age of Heroes là "site chính thức của New
+World Computing". **Sai.** Footer trang ghi rõ nó là *"Age of Heroes… copyrighted ©2005 Valera
+Koltsov"* — site fan, và grep toàn trang cho `New World Computing` ra **0 lần**. Tên miền
+`heroesofmightandmagic.com` nghe như site chính thức nhưng không phải. Xem `REGISTRY.md`.
+
+⚠️ Hai nguồn khớp **từng chữ**, nên claim đứng vững — nhưng **cả hai đều là trung gian fan**, không có
+nguồn chính thức nào chống lưng. Manual Heroes IV là hướng nâng tier tiếp theo (`B-023`).
 
 Nó cũng có vai trò quest thật ở H4, không chỉ là một dòng dữ liệu. Trong `Prelude to Invasion` —
 scenario đầu của campaign *Death March* (*Winds of War*) — Amulet là một trong **năm** artifact đem
@@ -198,12 +205,12 @@ scenario đầu của campaign *Death March* (*Winds of War*) — Amulet là m�
 
 {T6 EXPLICIT: fandom-prelude-to-invasion — Fandom **không dẫn nguồn**}
 
-✅ **`B-019` đã giải (2026-08-03):** mục Heroes IV không còn chỉ có `T6`. Site chính thức của NWC
-(`heroesofmightandmagic.com/heroes4/`) **lấy được qua archive** — khoảng 200 URL, gồm cả bảng artifact
-và toàn bộ năm campaign. thelazy vẫn không phủ H4, nhưng điều đó không còn là bế tắc.
+✅ **`B-019` đã giải (2026-08-03):** mục Heroes IV không còn chỉ có `T6`. Site `Age of Heroes`
+(`heroesofmightandmagic.com/heroes4/`) **lấy được qua archive** — khoảng 200 URL, gồm bảng artifact và
+toàn bộ sáu campaign, ở tier `T1*`. thelazy vẫn không phủ H4, nhưng điều đó không còn là bế tắc.
 
 *(Phần vai trò quest ở `Prelude to Invasion` bên dưới vẫn là `T6` — chưa đối chiếu với trang campaign
-chính thức tương ứng.)*
+tương ứng.)*
 
 ### Thay đổi qua các bản
 
@@ -282,7 +289,7 @@ from H3Bitmap.lod > artraits.txt`. Xem mục *Cơ chế trong Heroes III*.
 
 **~~Q3. Thông số Heroes IV có nguồn nào tốt hơn Fandom không?~~ — ✅ ĐÃ GIẢI QUYẾT (2026-08-03)**
 
-**Có, và tốt hơn hai bậc.** Site **chính thức của New World Computing** có mục `heroes4/` được lưu đầy
+**Có, tốt hơn một bậc — nhưng không phải hai bậc như bản sửa đầu tưởng.** Site `Age of Heroes` có mục `heroes4/` được lưu đầy
 đủ trong archive — `artifacts_minor.shtml` chứa đúng câu mô tả artifact này, ở tier **`T2`**.
 
 Câu hỏi này từng bị coi là bế tắc vì hai giả định sai cùng lúc: rằng `web.archive.org` bị chặn, và

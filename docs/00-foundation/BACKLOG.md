@@ -63,8 +63,8 @@ nguyên vượt 15 bài, mọi kỷ nguyên khác phải có ít nhất một en
 
 ✅ **Đánh giá "hai mục còn lại bị `B-019` chặn" đã sai — và cả hai lý do đều sai:**
 
-- `gauldoth-half-dead` — **không còn bị chặn**: `B-019` đã giải, và site chính thức NWC có **đủ sáu
-  trang** campaign *Half-Dead* ở tier `T2`. Đây giờ là entity trụ **dễ làm nhất** trong ba mục còn lại.
+- `gauldoth-half-dead` — **không còn bị chặn**: `B-019` đã giải, và `Age of Heroes` có **đủ sáu
+  trang** campaign *Half-Dead* ở tier `T1*`. Đây giờ là entity trụ **dễ làm nhất** trong ba mục còn lại.
 - `tarnum` — **chưa bao giờ bị chặn**. Đã kiểm: trang `Tarnum` trên thelazy có **18.754 byte**, phủ
   đủ tám campaign *Heroes Chronicles* kèm bảng class, và nhắc Axeoth/Reckoning. Tarnum là nhân vật
   **Chronicles**, không phải nhân vật H4 — mà Chronicles thì thelazy phủ tốt. Việc xếp hắn vào diện
@@ -130,16 +130,21 @@ lẻ sẽ tạo trạng thái nửa vời, tệ hơn hiện tại.
 
 ### ✅ B-019 · ~~Lỗ nguồn Heroes IV~~ — **ĐÃ GIẢI (2026-08-03)**
 
-**Lời giải:** mục `heroes4/` của `heroesofmightandmagic.com` — **site chính thức của New World
-Computing** — được lưu **đầy đủ** trong `web.archive.org`: khoảng **200 URL**, tier **`T2`**.
+**Lời giải:** mục `heroes4/` của `heroesofmightandmagic.com` — site **`Age of Heroes`** — được lưu
+**đầy đủ** trong `web.archive.org`: khoảng **200 URL**, tier **`T1*`**.
+
+🔴 **ĐÍNH CHÍNH:** bản đầu của mục này gọi đó là "site chính thức của New World Computing" và gán
+**`T2`** — **sai**. Footer trang ghi *"Age of Heroes… copyrighted ©2005 Valera Koltsov"*; grep toàn
+trang cho `New World Computing` ra **0 lần**. Đó là **site fan**. Tier đúng là **`T1*`** (mô tả item
+in-game qua trung gian fan). Cái sai này **đã lên `main`** trước khi bị bắt — xem `REGISTRY.md`.
 
 Gồm: `artifacts_{minor,major,relic,treasure,potion,tgs}.shtml`,
 `heroes_{necromancers,deathknights,lords,magi,priests,sorcerers,thieves,archers,barbarians,druids,knights,campaign}.shtml`,
 `creatures_*.shtml`, `buildings_*.shtml`, và **toàn bộ sáu campaign** (`halfdead`, `blade`, `daughter`,
 `elwin`, `glory`, `price`).
 
-**Đã dùng ngay:** bài `amulet-of-the-undertaker` nâng mục Heroes IV từ `T6` lên **`T2`** và **đóng
-câu hỏi mở Q3**. Câu mô tả artifact trên site chính thức khớp **từng chữ** với bản Fandom — nên Fandom
+**Đã dùng ngay:** bài `amulet-of-the-undertaker` nâng mục Heroes IV từ `T6` lên **`T1*`** và **đóng
+câu hỏi mở Q3**. Câu mô tả artifact trên Age of Heroes khớp **từng chữ** với bản Fandom — nên Fandom
 đúng là bản chép, nhưng giờ không cần dùng bản chép.
 
 **Vì sao trước đây tưởng là bế tắc:** hai giả định sai cùng lúc trong `REGISTRY.md` — rằng
@@ -148,7 +153,9 @@ cùng ngày. Bản thân `B-019` là hệ quả của hai cái sai đó, không 
 
 ⚠️ **thelazy vẫn KHÔNG phủ Heroes IV** — đã kiểm: `Heroes_of_Might_and_Magic_IV` và
 `Gauldoth_Half-Dead` đều trả **0 byte**, và cả **56 trang `Translation Data/`** đều là file **Heroes
-III**. Nên vẫn không có string table `T1` cho H4. Nhưng `T2` chính thức thì đủ tốt.
+III**. Nên vẫn không có string table `T1` cho H4, và cũng **không có nguồn chính thức nào** — Age of
+Heroes là site fan. Nhưng `T1*` đủ để viết bài, với điều kiện đối chiếu nguồn thứ hai cho claim quan
+trọng. Hướng nâng tier tiếp theo: **manual Heroes IV** — xem `B-023`.
 
 **Việc còn lại:** phần lớn 200 URL đó **chưa khai thác**. Xem `B-022`.
 
@@ -184,7 +191,7 @@ và nó sẽ tái diễn đúng vấn đề mà B-016 đang sửa.
 **Trạng thái:** ✅ đã giải — xem phần trên. Giữ lại mô tả gốc để thấy lập luận sai ở đâu: nó xếp
 "thelazy không phủ H4" thành "dự án không có nguồn H4", trong khi nguồn **chính thức** vẫn còn đó.
 
-### B-022 · Khai thác nốt ~200 URL Heroes IV trên site chính thức NWC
+### B-022 · Khai thác nốt ~200 URL Heroes IV trên `Age of Heroes`
 
 **Là gì:** `B-019` mở ra khoảng 200 URL `T2` trên `heroesofmightandmagic.com/heroes4/`. Hiện chỉ dùng
 **hai** trang (`artifacts_minor.shtml`, `campaign_halfdead.shtml`).
@@ -267,6 +274,57 @@ verify **đã báo lỗi nhãn** cho những chỗ thực ra đúng.
 4. Rà lại các bài đã `verified` xem nhãn có nhất quán không.
 
 **Trạng thái:** chưa bắt đầu. Phát hiện khi verify `archibald-ironfist` (2026-08-03).
+
+### B-023 · Tìm manual Heroes IV — nguồn chính thức duy nhất còn thiếu cho kỷ Axeoth
+
+**Vấn đề:** sau `B-019`, kỷ Axeoth có nguồn `T1*` (Age of Heroes) và `T4` (phỏng vấn tác giả). Nhưng
+**không có nguồn `T2` chính thức nào** — khác với Heroes III, nơi *Diaries of Archibald* trên `3do.com`
+cho `T2` thật.
+
+**Vì sao đáng làm:** `CANON-POLICY.md` mục 2 xếp *Heroes IV Manual* là ví dụ điển hình của `T2`. Nó tồn
+tại; dự án chỉ chưa tìm. Và **tác giả Heroes IV xác nhận ông có tham gia viết manual** (xem
+`B-024`) — nên manual có thể chứa lore không có trong game.
+
+**Đường đã biết là KHÔNG đi được:**
+
+- ❌ `3do.com` CDX: quét 4.000 URL, **0 hit** cho `heroes4`/`homm4`. 3DO có trang MM7 nhưng dường như
+  không có trang Heroes IV.
+- ❌ thelazy: **0 coverage** Heroes IV.
+
+**Đường chưa thử:**
+
+1. CDX cho `3do.com` với `limit` cao hơn 4.000 — lần quét trước có thể bị cắt.
+2. `ubi.com` — Ubisoft giữ thương hiệu từ 2003; manual có thể ở đó.
+3. Các site lưu manual game (`replacementdocs`, `archive.org` dạng item chứ không phải web capture).
+4. `archive.org` **item search** (không phải Wayback) cho ISO/manual Heroes IV.
+
+**Trạng thái:** chưa bắt đầu.
+
+### B-024 · Khai thác phỏng vấn Terry B. Ray — tác giả cốt truyện Heroes IV (T4)
+
+**Là gì:** research `gauldoth-half-dead` (2026-08-03) tìm được phỏng vấn Ubisoft ngày **09/11/2015**
+với **Terry B. Ray** — người **viết** Heroes IV. Đây là nguồn `T4` cho kỷ Axeoth, tương đương những gì
+`fulton-*` là cho Heroes III và `bullard-*` cho Shadow of Death.
+
+⚠️ **Lưu ý phân vai:** dự án trước đây giả định Jennifer Bullard viết Heroes IV (registry ghi bà là
+"designer and storyline writer for Heroes III and IV"). Ray là người viết **cốt truyện Heroes IV** cụ
+thể. Cần đối chiếu lại vai của hai người.
+
+**Đã trích được (chưa dùng hết):**
+
+- *"I set out to make Gauldoth the opposite of every necromancer from every fantasy story"*
+- *"He is neither good nor evil"* · *"I wanted him to be a metaphor for all Mankind"* · *"In my eyes,
+  he is a hero."*
+- Về dòng dõi: *"Not like they were all from the same mother, but all from the same bloodline"* và
+  *"this idea was never completely developed"* — quan trọng, vì Fandom trình bày điều này như **đã xác
+  nhận**.
+
+⚠️ **URL sống đã chết** (redirect sang store) — phải dùng Wayback.
+
+**Việc cần làm:** đọc hết bài phỏng vấn, không chỉ phần về Gauldoth. Ray có thể nói về Reckoning,
+Axeoth, và các nhân vật khác — tức nó phục vụ cả `the-reckoning` (`B-016` mục 2).
+
+**Trạng thái:** đã trích phần về Gauldoth, phần còn lại chưa khai thác.
 
 ### B-002 · Fetch tài liệu thiết kế gốc của Jennifer Bullard (UT Austin)
 
