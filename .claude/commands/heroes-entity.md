@@ -36,7 +36,20 @@ Dùng `Agent` với `subagent_type: general-purpose`. Prompt **bắt buộc** ch
   WebFetch tóm tắt thay vì trả nguyên văn — dùng curl khi cần chính xác từng chữ.
 - Fandom chỉ vào được qua API:
   https://mightandmagic.fandom.com/api.php?action=parse&page=PAGE&prop=wikitext&format=json&formatversion=2
-- web.archive.org BỊ CHẶN. homm.miraheze.org chặn bot (403).
+- web.archive.org VÀO ĐƯỢC (ghi chú cũ "bị chặn" là SAI, sửa 2026-08-03).
+  Phải dùng curl -L và TIMESTAMP ĐẦY ĐỦ: web.archive.org/web/YYYYMMDDhhmmss/<url>
+  Dạng /web/2005/<url> hay trả trang wrapper rỗng ~2KB. API wayback/available trả 429
+  (rate limit), KHÔNG phải chặn.
+  → Đây là đường vào site chính thức NWC/3DO, nguồn không-phải-wiki tốt nhất có thể có.
+    Ví dụ đã dùng được: 3do.com/products/pc/mm7/story/story.htm (Diaries of Archibald, T2).
+- homm.miraheze.org chặn bot (403). Và nó là FORK byte-identical của thelazy —
+  không phải nguồn xác nhận độc lập.
+- thelazy chép trung thực nhưng KHÔNG luôn chép ĐÚNG: đã bắt được nó ghi sai hai con số
+  năm so với manual chính thức. Mọi mốc niên đại 1165–1169 phải đối chiếu nguồn 3DO.
+- Trang artifact/hero trên thelazy KHÔNG chứa danh sách scenario (660–1.718 byte).
+  Phải quét api.php?action=query&list=backlinks&bltitle=PAGE&bllimit=500 rồi đọc
+  `| source =` của từng trang scenario để biết sản phẩm (RoE/AB/SoD/HotA/Chronicles).
+- Bẫy {{swh|A|B}}: tham số ĐẦU là HotA, tham số SAU là SoD. Đọc trái-sang-phải là sai.
 - Mọi claim về HotA: dùng CHANGELOG, không dùng trang artifact.
   https://heroes.thelazy.net/index.php?title=Horn_of_the_Abyss_(Changelog)&action=raw
 ```

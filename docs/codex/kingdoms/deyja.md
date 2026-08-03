@@ -388,12 +388,22 @@ nghe hay. Đếm lại theo text:
 {T1* EXPLICIT: roe-safe-passage + sod-finneas-vilmar + sod-duke-alarice}
 {T6 EXPLICIT: fandom-finneas-vilmar + fandom-deyja}
 
-**Archibald sống sót sau khi bị phế**, và điều đó có text chứng minh:
+**Archibald sống sót sau khi bị phế**, và cả hai wiki đều dùng động từ chỉ việc phế vị chứ không phải
+giết:
 
-> "**Archibald Ironfist, deposed lord of Deyja** and one of the most hated men in history, **offered
-> aid** for reasons of his own."
+> "Kastore later staged a coup and **ousted** Archibald from Deyja's throne."
 
-{T6 EXPLICIT: fandom-deyja}
+> "Kastore staged a coup and ousted Archibald from Deyja's throne. **Archibald fled Deyja** along with
+> the necromancers from the Science arm."
+
+{T6 EXPLICIT: h3wiki-deyja + fandom-deyja}
+
+⚠️ **Ghi lại một sự cố của chính luồng kiểm định:** bản sửa đầu tiên của mục này dẫn một câu trích
+khác — *"Archibald Ironfist, deposed lord of Deyja and one of the most hated men in history, offered
+aid for reasons of his own"* — do verifier của bài này cung cấp. **Câu đó không tồn tại.** Đã tìm lại
+độc lập: Fandom search cho `"most hated men"` và `"deposed lord of Deyja"` đều **rỗng**; grep toàn văn
+trang `Deyja` của cả hai wiki cho `most hated`, `deposed lord`, `offered aid` đều **0 lần**. Câu trích
+đã bị **bịa**. Xem `VERIFY-PROTOCOL.md` mục 7.
 
 Phát biểu đúng: **trong năm cuộc kế vị được ghi lại, đúng một được text mô tả là giết; hai vụ chỉ có
 ý định giết được nói ra; hai vụ cuối là phế vị, và người bị phế đều sống sót.**

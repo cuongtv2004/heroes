@@ -1048,3 +1048,79 @@ người sửa **không tự fetch lại được** hai nguồn đó trong phiê
 `status: draft` → **`status: verified`**. `verify_pass: verify-deyja-2026-08-03`.
 
 Không còn BLOCKER, không còn MAJOR.
+
+---
+
+## 🔴 SỰ CỐ: verifier của báo cáo này BỊA MỘT TRÍCH DẪN (phát hiện 2026-08-03, sau khi commit)
+
+Ghi ở đây thay vì xóa, vì đây là **sự cố của quy trình**, không phải một lỗi biên tập.
+
+### Câu bịa
+
+Ở mục P1-16, báo cáo này đưa ra câu trích sau làm **bằng chứng quyết định** cho việc Archibald sống
+sót sau khi bị phế:
+
+> *"Archibald Ironfist, deposed lord of Deyja and one of the most hated men in history, offered aid
+> for reasons of his own."*
+
+**Câu này không tồn tại ở bất kỳ nguồn nào.** Đã kiểm lại độc lập:
+
+| Cách kiểm | Kết quả |
+|---|---|
+| Fandom search `"most hated men"` | **rỗng** |
+| Fandom search `"deposed lord of Deyja"` | **rỗng** |
+| grep trang `Deyja` (thelazy) cho `most hated` | **0** |
+| grep trang `Archibald`, `Kastore` (thelazy) | **0** |
+| grep toàn văn wikitext trang `Deyja` (Fandom, 5.934 byte) cho `most hated` / `deposed lord` / `offered aid` | **0 / 0 / 0** |
+
+### Vì sao nó lọt qua người điều phối
+
+**Kết luận mà nó chống lưng thì ĐÚNG.** Archibald thật sự bị phế mà không bị giết — và có nguồn thật
+nói vậy, chỉ là bằng chữ khác: thelazy *"Kastore later staged a coup and **ousted** Archibald"*, Fandom
+*"**Archibald fled Deyja** along with the necromancers from the Science arm"*.
+
+Một trích dẫn bịa **đi kèm một kết luận đúng** là trường hợp khó bắt nhất: không có gì trong kết luận
+gợi ra sự bất thường, và người điều phối đang có lý do để tin nó.
+
+Nó được phát hiện **tình cờ** — đợt research `archibald-ironfist` ngay sau đó đi tìm câu này để dùng
+cho bài riêng của Archibald, tìm ở sáu chỗ, và không thấy.
+
+### Đã sửa
+
+Bài `deyja` thay bằng hai câu trích **thật** (`ousted` / `fled Deyja`), và ghi lại sự cố ngay tại chỗ.
+
+### Quy tắc mới — V4
+
+Đã thêm vào `VERIFY-PROTOCOL.md` mục 7: **người điều phối phải tự fetch lại mọi trích dẫn mà verifier
+dùng làm bằng chứng quyết định** — không chỉ những trích dẫn nó phản bác. Cụ thể khi câu trích (a) chốt
+một `BLOCKER`/`MAJOR`, (b) là nguồn **duy nhất** cho một claim, hoặc (c) được verifier giới thiệu như
+**nguồn mới** mà bài chưa có.
+
+Lý do sâu hơn: mục 1 của `VERIFY-PROTOCOL.md` viết rằng "mô hình ngôn ngữ có xu hướng tạo ra chi tiết
+nghe hợp lý mà không có nguồn". Điều bản đầu chưa lường: **verifier cũng là mô hình ngôn ngữ**, nên V3
+("phải trích được nguyên văn") **không tự bảo vệ được chính nó**.
+
+### Audit hồi tố — áp V4 cho cả sáu bài của đợt này
+
+Sau khi phát hiện, đã fetch lại **mọi trích dẫn quyết định** mà người điều phối đã nhận từ verifier
+trong cả đợt 6 bài:
+
+| Trích dẫn / bằng chứng | Bài | Kết quả |
+|---|---|---|
+| `artraits.txt` — "Worn on the feet…15%" | dead-mans-boots | ✅ có, đúng 1 lần |
+| `artraits.txt` — "Worn about the neck…5%" | amulet | ✅ có, đúng 1 lần |
+| `artraits.txt` — "Worn about the shoulders…10%" | vampires-cowl | ✅ có, đúng 1 lần |
+| `artraits.txt` — "All opponents have these spells…fifty turns" | armor | ✅ có, đúng 1 lần |
+| Caption `Information from H3Bitmap.lod > artraits.txt` | (cả bốn) | ✅ có |
+| `Template:Swh` — tham số 1 = `onlyhota` | jeddite | ✅ xác nhận |
+| Fulton — "obvious play on 'Jedi' from Star Wars" | jeddite | ✅ xác nhận |
+| `Jungle Fever` — "Jeddite the Reckless" | jeddite | ✅ xác nhận |
+| `Mormolykos` — `spart_6 = Vampire's Cowl` | vampires-cowl | ✅ xác nhận (dòng 29) |
+| `Tomb Raiders` — "Mormolykos' Cowl" | vampires-cowl | ✅ xác nhận |
+| 3DO — "the lich killed Deathknell" | deyja | ✅ xác nhận |
+| 3DO vs thelazy — lệch năm Entry 37/143 | deyja | ✅ xác nhận |
+| Fandom `Moulder` là redirect | deyja | ✅ xác nhận |
+| **"deposed lord of Deyja… most hated men"** | **deyja** | 🔴 **BỊA** |
+
+**Tỉ lệ: 1 câu bịa trên ~13 trích dẫn quyết định được audit.** Toàn bộ phần còn lại sạch — nghĩa là
+luồng verify vẫn đáng dùng, nhưng **không được nhận trích dẫn của nó mà không kiểm**.

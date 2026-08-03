@@ -156,6 +156,28 @@ ghi vào `saga/INVENTED-REGISTRY.md`. Chi tiết ở `SAGA-STYLE.md`.
 Ghi ra để trung thực:
 
 - Verifier cũng là AI, cũng có thể sai. Luồng này **giảm** lỗi, không **loại bỏ**.
+- 🔴 **VERIFIER CÓ THỂ BỊA TRÍCH DẪN — và đã xảy ra thật.** Ngày 2026-08-03, verifier của bài `deyja`
+  đưa ra câu trích *"Archibald Ironfist, deposed lord of Deyja and one of the most hated men in
+  history, offered aid for reasons of his own"* làm bằng chứng cho việc Archibald sống sót sau khi bị
+  phế. **Câu đó không tồn tại ở bất kỳ nguồn nào.** Kiểm lại: Fandom search cho `"most hated men"` và
+  `"deposed lord of Deyja"` đều **rỗng**; grep toàn văn trang `Deyja` trên cả hai wiki cho
+  `most hated`, `deposed lord`, `offered aid` đều **0 lần**.
+- **Vì sao nó lọt qua người điều phối:** claim mà nó chống lưng **đúng** (Archibald thật sự bị phế mà
+  không bị giết — có nguồn thật dùng chữ "ousted" và "fled Deyja"), và nó **khớp với điều người điều
+  phối đang muốn tin**. Một trích dẫn bịa **đi kèm một kết luận đúng** là trường hợp khó bắt nhất, vì
+  không có gì trong kết luận gợi ra sự bất thường.
+- **Trớ trêu là chính bước này được thiết kế để chặn đúng loại lỗi đó** — mục 1 của tài liệu nói thẳng:
+  "mô hình ngôn ngữ có xu hướng tạo ra chi tiết nghe hợp lý mà không có nguồn". Điều mà bản đầu của
+  tài liệu chưa lường: **verifier cũng là mô hình ngôn ngữ**, nên V3 ("phải trích được nguyên văn")
+  **không tự bảo vệ được chính nó**.
+- ✅ **Quy tắc bổ sung — V4: người điều phối phải tự fetch lại mọi trích dẫn mà verifier DÙNG LÀM BẰNG
+  CHỨNG QUYẾT ĐỊNH**, không chỉ những trích dẫn nó phản bác. Cụ thể: bất kỳ câu trích nào (a) chốt một
+  `BLOCKER`/`MAJOR`, (b) là **nguồn duy nhất** cho một claim, hoặc (c) verifier giới thiệu như **nguồn
+  mới** mà bài chưa có. Chi phí một lệnh `curl`; cái giá của việc bỏ qua là một câu bịa nằm trong bài
+  đã đóng dấu `verified`.
+- **Dấu hiệu đáng nghi:** trích dẫn nghe *quá vừa vặn* với luận điểm, có giọng văn kịch tính
+  ("one of the most hated men in history"), hoặc dẫn một trang mà các phần khác của cùng báo cáo mô tả
+  là ngắn/thiếu nội dung.
 - ⚠️ **Người điều phối có thể gieo lỗi cho verifier — và lỗi đó sẽ lan.** Xảy ra thật ngày
   2026-08-03: người soạn bảng claim tưởng rằng nhãn `UNVERIFIED` trong mục *Câu hỏi mở* là vi phạm
   mục 5.3 của `CANON-POLICY.md`, trong khi mục đó **quy định chính việc chuyển xuống *Câu hỏi mở***
@@ -190,3 +212,4 @@ Ghi ra để trung thực:
 |------|----------|-------|
 | 2026-07-31 | Bản đầu | Theo yêu cầu: phải có luồng verdict độc lập, không tin kết quả một chiều |
 | 2026-08-03 | Thêm mục 7: người điều phối có thể gieo lỗi cho verifier | Xảy ra thật — một cách đọc sai mục 5.3 được ghi vào bảng claim dưới nhãn "đã xác lập", hai verifier sau nhận làm tiền đề và cùng báo `BLOCKER` sai. V1 (cấm đọc bài gốc) khiến verifier không thể tự bắt |
+| 2026-08-03 | **Thêm V4: người điều phối phải tự fetch lại mọi trích dẫn verifier dùng làm bằng chứng quyết định** | 🔴 Verifier bài `deyja` **bịa một câu trích** và nó lọt vào bài đã đóng dấu `verified`. Nó lọt vì kết luận nó chống lưng thì **đúng** — trích dẫn bịa kèm kết luận đúng là ca khó bắt nhất. V3 không tự bảo vệ được chính nó, vì verifier cũng là mô hình ngôn ngữ |
