@@ -112,6 +112,7 @@ nav:
       - Hero:
           - codex/heroes/sandro.md
           - codex/heroes/jeddite.md
+          - codex/heroes/archibald-ironfist.md
       - Nhân vật:
           - codex/characters/ethric.md
       - Quốc gia:
@@ -133,6 +134,7 @@ nav:
           - sources/notes/verify-jeddite-2026-08-03.md
           - sources/notes/verify-armor-of-the-damned-2026-08-03.md
           - sources/notes/verify-deyja-2026-08-03.md
+          - sources/notes/verify-archibald-ironfist-2026-08-03.md
 
 extra_css:
   - assets/extra.css

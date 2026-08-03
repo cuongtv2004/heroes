@@ -18,6 +18,9 @@ Nhân vật điều khiển được trong game.
   được của hai campaign trọn vẹn, và là kẻ thao túng bị thao túng.
 - [**Jeddite**](heroes/jeddite.md) — người đã giới thiệu Sandro với Ethric, và không tha thứ
   cho mình được. Bio chính thức của hắn **không nhắc một chữ nào** về điều đó.
+- [**Archibald Ironfist**](heroes/archibald-ironfist.md) — vua tiếm ngôi của Enroth, bị hóa đá
+  khoảng mười năm, rồi lên ngôi một vương quốc **thứ hai**. Bài đầu tiên của kỷ nguyên
+  *Age of Kings*, và là bài duy nhất có nguồn **Archibald tự kể ở ngôi thứ nhất**.
 
 ### Nhân vật
 

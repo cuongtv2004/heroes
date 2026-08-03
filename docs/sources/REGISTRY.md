@@ -108,6 +108,7 @@ gốc **một bước**.
 | key | tier | access | Nội dung |
 |-----|------|--------|----------|
 | `roe-season-of-harvest` | T1* | FETCHED | Restoration of Erathia — Sandro bị giam, event Day 5, hero `imprisoned` tại 9,34 |
+| `sod-clearing-the-border` | T1* | FETCHED | Shadow of Death, prologue video campaign — ⭐ lời Gem chốt **kết cục canon Heroes II**: "a year has passed since **Archibald and his Necromancer allies were defeated**, ending the Succession Wars" |
 | `ab-march-of-the-undead` | T1* | FETCHED | Armageddon's Blade — Sandro là địch, level 14 |
 | `hc-truth-within-nightmares` | T1* | FETCHED | Heroes Chronicles *Conquest of the Underworld* — Tarnum vs Sandro. **Xem cảnh báo DISPUTED bên dưới** |
 | `hc-the-dragon-mothers` | T1* | FETCHED | **Heroes Chronicles** (`source = hc`, `cback = chronicles 4` = *Clash of the Dragons*) — Jeddite chỉ có mặt trong roster. ⚠️ Bài `jeddite` từng gán sai là SoD |
@@ -180,6 +181,36 @@ gốc **một bước**.
 | `h3wiki-artifact-events` | T1* | FETCHED | `Artifact Events` (35.645 byte) — text hiện ra khi **nhặt** artifact. Mở đầu: "Default descriptions when picking an artifact." Xác nhận độc lập cho trường `event` trên từng trang artifact |
 | `hota-apocalypse-template` | T6 | FETCHED | Trang đặc tả template `Apocalypse` của HotA — **do cộng đồng viết, KHÔNG phải in-game text**. Liệt kê ba artifact dưới đầu đề "Allowed artifacts". ⚠️ Sửa lần cuối 2025-05-14 ≈ HotA 1.7.2–1.7.3, **trước 1.8.0**. Changelog **không** xác nhận danh sách này — xem cảnh báo bên dưới |
 | `hota-blacknblue-template` | T6 | FETCHED | Trang đặc tả template `Black'n'Blue` của HotA — do cộng đồng viết. ⚠️ Dead Man's Boots nằm trong `Banned artifacts`, **không** phải danh sách cho phép |
+
+### Heroes I – II (kỷ Age of Kings)
+
+| key | tier | access | Nội dung |
+|-----|------|--------|----------|
+| `h2-first-blood` | T1* | FETCHED | Heroes II, scenario 1 campaign Archibald — briefing "**I am King! Not Roland.**" + scenario description. Lấy qua Fandom API; `{{quote}}` = briefing trong game, `{{text}}` = description trong game |
+| `h2-apocalypse` | T1* | FETCHED | Heroes II, scenario 11 (cuối campaign Archibald) — briefing "bring my brother back in chains!" + epilogue Archibald phong Roland làm "**monarch of the Western Tower**" |
+| `h2-final-justice` | T1* | FETCHED | Heroes II, scenario 10 (cuối campaign Roland) — ⭐ **bản án hóa đá**, mốc quan trọng nhất của Heroes II. Ràng buộc "until future generations should take pity upon you and restore you to life" |
+| `h2-archibalds-campaign` | T6 | FETCHED | Trang campaign Archibald trên Fandom — 11 scenario, `date = 1151–1154 AS`. ⚠️ Câu "Roland's campaign is the canonically true one" **không dẫn nguồn** — nhưng kết luận đó **có** chống lưng `T1` thật, xem `h3wiki-herobios-txt` |
+| `h1-morglin-ironfist` | T6 | FETCHED | Cha của Archibald và Roland. ⚠️ Tên in-game ở Heroes I là **"Jerico"**; "Morglin" chỉ có trong manual. Bốn lãnh chúa Heroes I **đều không playable** theo nghĩa hero có tên |
+| `thelazy-succession-wars` | T6 | FETCHED | Hai cuộc Succession Wars. Niên đại "around the 1110s to **1154** AS" — ⚠️ **không khít** với `1151–1154` của trang campaign |
+
+### Might & Magic VI – VII (Archibald sau Heroes II)
+
+| key | tier | access | Nội dung |
+|-----|------|--------|----------|
+| `mm7-diaries-3do` | **T2** | FETCHED | ⭐⭐ *The Diaries of Archibald* trên **site chính thức 3DO** qua archive — **Archibald tự kể**. Ba entry: 1165 / **1167** / **1168**. Là nguồn duy nhất kể đúng cách hắn lên ngôi Deyja. Cùng trang với `3do-mm7-diaries-archibald` |
+| `fandom-path-of-darkness` | T6 | FETCHED | Bảng quest Dark Path MM7 — Archibald **mời** party vào The Pit sau khi chọn Sleen |
+| `fandom-archibald-ironfist` | T6 | FETCHED | Bài dài nhất về nhân vật. ⚠️ **Gộp sai** Challenge of Dominance với việc lên ngôi Deyja — xem cảnh báo bên dưới |
+| `fandom-archibald-disambig` | T6 | FETCHED | ⚠️ **BH-2:** chứng minh có **`Archibald Dawnsglow`** — expert Light Magic trainer trong MM8, nhân vật **khác**. Đối xứng trớ trêu: Ironfist là Grandmaster **Dark** Magic trainer ở MM7 |
+| `thelazy-nimbus` | T6 | FETCHED | ⚠️ Trang này **tách đúng** hai sự kiện (thắng Nimbus ≠ lên ngôi Deyja), trong khi trang `Archibald` của **cùng wiki** gộp sai. Bằng chứng thelazy tự mâu thuẫn |
+| `hota-beyond-the-horizon-rumors` | T1* | FETCHED | ⭐ Rumor game text HotA: "Zog named his powerful artifact **in memory of Archibald**. The usurper king and the Jackal were **allies during the Succession Wars**." Changelog HotA **0 hit** Archibald — nên chỉ tìm ra bằng cách đọc content, không đọc changelog |
+
+### Phát ngôn developer về Archibald (T4)
+
+| key | tier | access | Nội dung |
+|-----|------|--------|----------|
+| `fulton-fanstratics-nl5` | **T4** | FETCHED | ⭐ Fulton: "the MM7 team decided to give Archibald an undefined 'behind the scenes' role in the Seeds of Discontent. So, **yes, Archibald did play a role in the Contested Lands becoming independent**." Giải nghĩa dòng cuối Entry 143 |
+| `fulton-fanstratics-nl4` | **T4** | FETCHED | Story AB gốc: "Archibald's **former** 'Advisors' restored production to… the 'Heavenly Forge'" — chữ "former" quan trọng |
+| `fulton-tavern-interview` | **T4** | FETCHED | Fulton gọi mâu thuẫn dòng dõi Ironfist/Gryphonheart là "**looks like a simple mistake**"; động cơ advisor là "simple lust for power" |
 
 ### Nhân vật liên quan
 
@@ -515,6 +546,36 @@ Trang `h3wiki-cloak-undead-king` ghi lệnh cấm HotA 1.7.2 kèm **ba** templat
 - **1.7.3** (08/JUN/2025): mới thêm template "Default Random Map (Legacy)"
 
 Trang wiki gộp hai phiên bản thành một.
+
+### ⚠️⚠️ Cả hai wiki hiểu SAI cách Archibald lên ngôi Deyja — và thelazy tự mâu thuẫn
+
+Phát hiện khi research `archibald-ironfist` (2026-08-03). Đáng ghi vì đây là ca **hai wiki lớn cùng
+sai theo cùng một hướng**, và nguồn chính thức nói khác.
+
+**Game text** (*Diaries of Archibald*, site 3DO, `T2`) nói **hai sự kiện tách rời**:
+
+1. **Challenge of Dominance** với Nimbus → Archibald thắng, và cái hắn giành được là *"this little
+   mission"* — quyền chỉ huy đoàn Necromancer Enroth sang Deyja. Xảy ra **TRƯỚC** khi Gryphonheart bị
+   tiêu diệt (Entry 37).
+2. **Thay thế Gryphonheart** → *"so have I replaced Gryphonheart"*. Đây mới là lúc hắn thành vua Deyja.
+   Xảy ra **SAU** khi Catherine thắng (Entry 143).
+
+**Cả hai wiki gộp hai sự kiện và gán nhân quả mà game text không có:**
+
+- thelazy `Archibald`: "After the lich form of King Nicolas Gryphonheart is put to rest, **Archibald
+  battles Nimbus for the title of King of Deyja**, and wins."
+- Fandom: "**Defeating Nimbus in the guild Challenge of Dominance, Archibald assumed control over the
+  now-vacant throne of Deyja.**"
+
+Cả hai còn đặt Challenge of Dominance **sau** khi Gryphonheart bị diệt — trái Entry 37.
+
+🔴 **Và thelazy tự mâu thuẫn với chính nó.** Trang `Nimbus` của **cùng wiki** tách đúng: "Archibald
+battled Nimbus for the title of **guildmaster**… becoming the new leader of **the Enrothian necromancers
+who joined the forces of Deyja**." Hai trang cùng wiki nói khác nhau.
+
+⚠️ **Hệ quả cho bài `deyja`:** bài đó viết "Archibald thắng chức guild bằng **đấu tay đôi** với Nimbus".
+Game text **không** nói đấu tay đôi, và cái thắng được là **quyền chỉ huy đoàn quân**, không phải chức
+guildmaster. Cần sửa.
 
 ### ⚠️⚠️⚠️ `web.archive.org` KHÔNG bị chặn — và điều đó mở ra nguồn chính thức của NWC/3DO
 

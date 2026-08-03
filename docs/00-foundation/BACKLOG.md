@@ -184,6 +184,32 @@ không phải thiếu sót của việc tìm kiếm — đã grep toàn bộ 98 
 
 **Trạng thái:** đã vào registry, đã dùng cho `jeddite`. Phần còn lại chưa khai thác.
 
+### B-021 · Policy chưa phân biệt "wiki là nguồn tin" với "wiki là đối tượng nghiên cứu"
+
+**Vấn đề:** `CANON-POLICY.md` mục 2 nói nguồn `T6` tối đa chỉ đạt `INFERENCE`. Quy tắc đó đúng khi wiki
+được dùng làm **bằng chứng về thế giới truyện**.
+
+Nhưng Codex ngày càng có một loại claim thứ hai: claim **về chính nội dung wiki**. Ví dụ từ bài
+`archibald-ironfist`:
+
+> "thelazy trang `Archibald` viết X, còn trang `Nimbus` của cùng wiki viết Y — nên nó tự mâu thuẫn."
+
+Ở đây wiki **là đối tượng nghiên cứu**, không phải nguồn tin về thế giới. Trích dẫn nó **là**
+`EXPLICIT` theo nghĩa chặt nhất: câu đó thật sự nằm ở đó, kiểm được từng chữ.
+
+**Vì sao đáng làm:** loại claim này không phải ngoại lệ hiếm — nó là **cơ chế chính** để Codex ghi nhận
+điểm tranh chấp. Bốn trong sáu bài đã verify đều có nó. Hiện mỗi bài tự xử theo cách riêng, và luồng
+verify **đã báo lỗi nhãn** cho những chỗ thực ra đúng.
+
+**Việc cần làm:**
+
+1. Thêm vào `CANON-POLICY.md` mục 2 một đoạn phân biệt hai cách dùng nguồn `T6`.
+2. Chốt cú pháp nhãn: có thể là `{T6 EXPLICIT: key — claim về nội dung wiki}` hoặc một trục thứ ba.
+3. Cập nhật `VERIFY-PROTOCOL.md` để verifier **không** báo lỗi nhãn cho loại này.
+4. Rà lại các bài đã `verified` xem nhãn có nhất quán không.
+
+**Trạng thái:** chưa bắt đầu. Phát hiện khi verify `archibald-ironfist` (2026-08-03).
+
 ### B-002 · Fetch tài liệu thiết kế gốc của Jennifer Bullard (UT Austin)
 
 **Là gì:** Bullard — Lead Designer và người viết cốt truyện *Shadow of Death* — đã gửi

@@ -448,8 +448,25 @@ chặn. Nó **không** bị chặn.
 Vua Deyja đồng thời là **Guildmaster của Necromancers' Guild**.
 {T6 EXPLICIT: fandom-timeline-ancient}
 
-Finneas giữ cả hai. Archibald thì thắng chức guild bằng **đấu tay đôi** với Nimbus, còn ngai
-vàng thì giành riêng — cho thấy hai chức có thể tách, nhưng thường không.
+Finneas giữ cả hai.
+
+⚠️ **Trường hợp Archibald cho thấy hai chức có thể tách — nhưng bản đầu của bài mô tả sai cơ chế.**
+Bài từng viết hắn "thắng chức guild bằng **đấu tay đôi** với Nimbus". Nguồn chính thức nói khác: cái
+hắn thắng trong *Challenge of Dominance* là **quyền chỉ huy đoàn Necromancer Enroth** sang Deyja — không
+phải chức guildmaster, và **không** có chữ "đấu tay đôi" nào.
+
+> "…and so it was that I won the **Challenge of Dominance**… and with it, **this little mission**."
+
+{T2 EXPLICIT: 3do-mm7-diaries-archibald — Entry 37}
+
+Ngai Deyja đến **sau và riêng biệt**, chỉ khi Gryphonheart bị Catherine tiêu diệt:
+
+> "For as the lich, Gryphonheart, replaced Deathknell, **so have I replaced Gryphonheart**."
+
+{T2 EXPLICIT: 3do-mm7-diaries-archibald — Entry 143}
+
+⚠️ **Cả hai wiki lớn gộp hai sự kiện này và gán nhân quả sai** — và **thelazy tự mâu thuẫn**: trang
+`Nimbus` tách đúng, trang `Archibald` gộp sai. Xem `REGISTRY.md`. Chi tiết ở [[archibald-ironfist]].
 
 ### Các lãnh chúa có nội dung thật
 
