@@ -170,12 +170,12 @@ sẽ bị `check.py` cảnh báo, và nếu hai bên gán độ chắc khác nha
 
 ## Trạng thái
 
-Giai đoạn 1 (xây nền) đã xong. Codex có **10/10 entity `verified`** trên 4 loại schema khác
+Giai đoạn 1 (xây nền) đã xong. Codex có **11/11 entity `verified`** trên 4 loại schema khác
 nhau. Saga chưa bắt đầu — theo `SAGA-STYLE.md` S6, chỉ được viết khi entity Codex liên
 quan đã `verified`.
 
-`B-016` mục 1 đã xong: `archibald-ironfist` mở kỷ nguyên **Age of Kings**, là bài đầu tiên
-ngoài cụm necromancer *Shadow of Death*.
+`B-016` **mục 1 và mục 3 đã xong**: `archibald-ironfist` mở kỷ **Age of Kings**, `gauldoth-half-dead`
+mở kỷ **Axeoth**. Codex không còn kỷ nguyên nào trống hoàn toàn. Còn `the-reckoning` và `tarnum`.
 
 Việc còn tồn: `docs/00-foundation/BACKLOG.md`. Ưu tiên cao nhất là `B-001` — nâng
 `T1*` lên `T1` thật bằng cách trích text từ file game gốc.

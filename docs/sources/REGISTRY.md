@@ -270,6 +270,44 @@ curl -sL "https://web.archive.org/web/<timestamp>/<url>"
 | `aoh-h4-campaign-halfdead` | **T1*** | FETCHED | ⭐⭐ `heroes4/campaign_halfdead.shtml` (12.894 byte) — **toàn bộ campaign *Half-Dead*** của Gauldoth: điều kiện thắng/thua từng scenario, carryover, và văn kể ở **ngôi thứ nhất**. Mở đường cho entity trụ `gauldoth-half-dead` (`B-016` mục 3) |
 | `aoh-h4-index` | **T1*** | FETCHED | Mục `heroes4/` nói chung — còn `artifacts_{major,relic,treasure,potion,tgs}.shtml`, `heroes_{necromancers,deathknights,lords,…}.shtml`, `creatures_death.shtml`, `buildings_death.shtml`, và **năm campaign khác** (`blade`, `daughter`, `elwin`, `glory`, `price`). **Phần lớn chưa khai thác** |
 
+### Kỷ Axeoth — Heroes IV, campaign *The Half-Dead*
+
+| key | tier | access | Nội dung |
+|-----|------|--------|----------|
+| `h4-death-texts-ch` | T1* | FETCHED | ⭐⭐ **Nguồn tốt nhất dự án có cho Heroes IV.** `H4-DeathTexts.rtf` trên Celestial Heavens qua Wayback (`20130117072816`) — **89.002 byte**, toàn bộ text kể chuyện campaign Death: 5 scenario description, 5 monologue, và **54 block sự kiện** gồm 5 quest có đủ `Proposal`/`Progress`/`Completion`. Tức có cả **region text và timed event**, đúng thứ BH-1 đòi. Trang index tự ghi: "collected by **Corlagon** and and Zamfir" *(chữ "and and" là nguyên văn)*. Đây là nguồn mà **Fandom dẫn cho mọi claim cốt truyện H4** |
+| `aoh-h4-heroes-campaign` | T1* | FETCHED | `Age of Heroes` — `heroes4/heroes_campaign.shtml` (31.882 byte). Bio các campaign hero H4, gồm Gauldoth và Kalibarr. ⚠️ Trang trộn **hai loại văn**: `Biography` là text in-game, `History` là ghi chú của fansite |
+| `aoh-h4-heroes-necromancers` | T1* | FETCHED | `Age of Heroes` — số liệu class Necromancer H4 (giá thuê, skill khởi đầu). ⚠️ **Heading trang ghi sai**: "Death/Necropolis **Might** Heroes — Necromancers"; Necromancer là **magic** class, might class của Death là Death Knight. Đừng chép heading |
+| `ray-interview-ubisoft-2015` | **T4** | FETCHED | ⭐⭐ **Phỏng vấn Terry B. Ray — người VIẾT cốt truyện Heroes IV.** Trên site chính thức Ubisoft MMH7, đăng **09/11/2015**. URL sống **đã chết** (redirect sang store); phải dùng `web.archive.org/web/20151020063103/…`. Ubisoft gọi ông là "**Heroes IV's master bard**". Ray tự thuật: *"I made maps, edited the stories, worked on the manual"* và *"I was hired to work on Heroes IV, but also wrote the **Heroes III Chronicles** series"* — nên nguồn này còn dùng được cho `tarnum`. ⚠️ Xem cảnh báo về dòng dõi Gauldoth bên dưới |
+| `fandom-gauldoth` | T6 | FETCHED | Bài Fandom về Gauldoth. ⚠️ Infobox ghi bốn quan hệ gia đình dẫn **cùng một** `<ref>` về bài Ray — nhưng nguồn đó **phủ định** đúng chi tiết ấy. Xem cảnh báo |
+| `fandom-iduna` | T6 | FETCHED | ⚠️ Khẳng định Iduna "**was the mother of** Lysander, Waerjak, and Gauldoth", dẫn ref về bài Ray. **Ray nói ngược.** Xem cảnh báo |
+| `thelazy-the-reckoning` | T6 | FETCHED | Ngày Reckoning: "On **February 10th, 1177 AS**…". ⚠️ Wiki tự dẫn nguồn là `Lost Manuscripts#11-08-1178` — **chưa fetch**, nên ngày này chưa truy tận nguồn. Và **hai số hiệu lệch nhau** (1177 vs 1178) |
+| `h4-official-3do-story` | **T2** | FETCHED | ⭐ Site **chính thức 3DO**, `3do.com/mightandmagic/heroes4/story.html` qua archive (`20011005033543`). Dòng bản quyền: *"© 2001 The 3DO Company. All Rights Reserved."* ⚠️ **Chỉ ~630 ký tự chữ hiển thị** — văn giới thiệu bán game, **không nhắc** `Axeoth`/`Reckoning`/`Gauldoth`. Mục `heroes4/` có **58 trang** sạch (`char_*`, `expansion-tgs`, `expansion-wow`, `features`, `gallery_*`, `intro`, `gameplay`, `story`). ⚠️ Đường dẫn là `/mightandmagic/heroes4/`, **không** phải `/heroes4` hay `/products/pc/heroes4` — lần quét CDX đầu tìm sai path và báo âm |
+| `fandom-necromancer-h4` | T6 | FETCHED | Trang `Necromancer (H4)` — class cơ bản magic của Necropolis, khởi đầu Basic Death Magic + Basic Occultism |
+
+### ⚠️⚠️ Dòng dõi Gauldoth — Fandom lấy tiền đề từ CÂU HỎI rồi trình bày như tác giả xác nhận
+
+Phát hiện khi research `gauldoth-half-dead` (2026-08-03). Đây là **cùng họ với lỗi "Archibald thắng
+Nimbus để lấy ngai Deyja"**: wiki đọc quá nguồn.
+
+- **Fandom `Iduna`:** *"Terry Ray's script notes for Heroes of Might and Magic IV revealed that **she
+  was the mother of** Lysander, Waerjak, and Gauldoth"* — dẫn `<ref>` về bài phỏng vấn Ubisoft.
+- **Fandom infobox `Gauldoth`:** `Iduna (mother)`, `Nicolas Gryphonheart (father)`, `Lysander
+  (brother)`, `Waerjak (brother)` — cả bốn dẫn **cùng một** ref.
+- **Nhưng trong chính nguồn đó, Ray nói:** *"I wanted these characters to share the same blood.
+  **Not like they were all from the same mother, but all from the same bloodline.**"* Và:
+  *"**this idea was never completely developed.** I was toying with other options too."*
+
+→ Người phỏng vấn đặt câu hỏi có tiền đề "cùng mẹ"; Ray **phủ định đúng chi tiết đó** ngay câu sau.
+Fandom lấy tiền đề của câu hỏi làm câu trả lời.
+
+**Xử lý:** claim dòng dõi là **`DISPUTED`**, tier `T4`, và phải ghi rõ đây là **ý tưởng chưa phát
+triển trong script notes chưa công bố**, không phải nội dung game. Ba quan hệ suy tầng hai
+(`Catherine` half-sister, `Nicolai Ironfist` nephew, `Beatrice` half-sister) **không có ref nào** →
+`UNVERIFIED`, không được vào thân bài.
+
+*(Chi tiết phụ: câu hỏi của Ubisoft viết **"Nicholas"**, Fandom viết **"Nicolas"** — lệch chính tả tên
+vua giữa hai nguồn.)*
+
 ### Phát ngôn developer về Archibald (T4)
 
 | key | tier | access | Nội dung |

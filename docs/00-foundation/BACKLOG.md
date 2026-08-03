@@ -55,24 +55,26 @@ nguyên vượt 15 bài, mọi kỷ nguyên khác phải có ít nhất một en
 |---|---|---|---|
 | 1 | ~~`archibald-ironfist`~~ ✅ **XONG 2026-08-03** | Age of Kings (H1–H2) | Đi trước vì **dùng chung nguồn** với chuỗi Deyja đã có. Kết quả: mở được nguồn `T2` chính thức (*Diaries of Archibald*) và phát hiện **cả hai wiki hiểu sai** cách hắn lên ngôi Deyja |
 | 2 | `the-reckoning` (event) | The Reckoning | Ranh giới Enroth → Axeoth; `TIMELINE-SPINE.md` mục 6 ghi "chưa có nguồn" |
-| 3 | `gauldoth-half-dead` | Kỷ Axeoth (H4) | Dọn luôn B-007 |
+| 3 | ~~`gauldoth-half-dead`~~ ✅ **XONG 2026-08-03** | Kỷ Axeoth (H4) | Dọn luôn B-007. Kết quả: mở được `h4-death-texts-ch` (89 KB transcript in-game) và nguồn `T4` Terry B. Ray |
 | 4 | `tarnum` | Xuyên kỷ | Buộc phải chốt B-010 (cấu trúc Book V) |
 
-**Trạng thái:** luật đã vào `WORKFLOW.md` (2026-08-03). **Mục 1 xong** — `archibald-ironfist` đã
-`verified`, kỷ nguyên Age of Kings không còn trống. Còn ba entity trụ.
+**Trạng thái:** luật đã vào `WORKFLOW.md` (2026-08-03). **Mục 1 và mục 3 xong** —
+`archibald-ironfist` mở kỷ Age of Kings, `gauldoth-half-dead` mở kỷ Axeoth. **Codex không còn kỷ
+nguyên nào trống hoàn toàn.** Còn hai entity trụ.
 
-✅ **Đánh giá "hai mục còn lại bị `B-019` chặn" đã sai — và cả hai lý do đều sai:**
+**Hai mục còn lại, và nguồn đã sẵn cho cả hai:**
 
-- `gauldoth-half-dead` — **không còn bị chặn**: `B-019` đã giải, và `Age of Heroes` có **đủ sáu
-  trang** campaign *Half-Dead* ở tier `T1*`. Đây giờ là entity trụ **dễ làm nhất** trong ba mục còn lại.
-- `tarnum` — **chưa bao giờ bị chặn**. Đã kiểm: trang `Tarnum` trên thelazy có **18.754 byte**, phủ
-  đủ tám campaign *Heroes Chronicles* kèm bảng class, và nhắc Axeoth/Reckoning. Tarnum là nhân vật
-  **Chronicles**, không phải nhân vật H4 — mà Chronicles thì thelazy phủ tốt. Việc xếp hắn vào diện
-  "chặn bởi lỗ nguồn H4" là **lỗi phân loại**.
+- `tarnum` — **chưa bao giờ bị chặn** (đánh giá cũ xếp hắn vào diện "chặn bởi lỗ nguồn H4" là **lỗi
+  phân loại**: hắn là nhân vật **Chronicles**, không phải H4, và thelazy phủ Chronicles tốt — trang
+  `Tarnum` có **18.754 byte**, đủ tám campaign kèm bảng class). ⭐ Và giờ có thêm nguồn `T4`: Terry
+  B. Ray nói ông **cũng viết cả series Heroes Chronicles** — xem `B-024`. **Vẫn phải chốt `B-010`**
+  (cấu trúc Book V) trước.
+- `the-reckoning` — khó nhất, `TIMELINE-SPINE.md` mục 6 ghi "chưa có nguồn". Nhưng hai bài vừa xong
+  đã gom được **ba mảnh**: ngày 10/02/1177 AS (`thelazy-the-reckoning`), game text Gauldoth *"During
+  the first hours of the Reckoning"* (`h4-death-texts-ch`), và việc Reckoning **giết Kilgor**. Cộng
+  với `B-024` (Ray có thể nói về Reckoning) thì mục này **đã bớt trống**.
 
-**Thứ tự đề xuất cho ba mục còn lại:** `gauldoth-half-dead` (nguồn `T2` đã sẵn) → `tarnum` (nguồn
-`T1*` đã sẵn, nhưng phải chốt `B-010` về cấu trúc Book V) → `the-reckoning` (khó nhất, `TIMELINE-SPINE`
-mục 6 ghi "chưa có nguồn").
+**Thứ tự đề xuất:** `tarnum` → `the-reckoning`.
 
 ### B-017 · `codex/events/` rỗng hoàn toàn — trục dọc chưa thành dữ liệu
 
@@ -285,10 +287,20 @@ cho `T2` thật.
 tại; dự án chỉ chưa tìm. Và **tác giả Heroes IV xác nhận ông có tham gia viết manual** (xem
 `B-024`) — nên manual có thể chứa lore không có trong game.
 
-**Đường đã biết là KHÔNG đi được:**
+🔴 **ĐÍNH CHÍNH (2026-08-03): kết quả âm ở dưới là SAI.** Verify `gauldoth-half-dead` phát hiện
+`3do.com` **CÓ** mục Heroes IV — **58 trang sạch** dưới `/mightandmagic/heroes4/`, gồm `story.html`
+với dòng *"© 2001 The 3DO Company"*, `expansion-tgs.html`, `expansion-wow.html`, `features.html`,
+`gameplay.html`, `intro.html`, 14 trang `char_*`.
 
-- ❌ `3do.com` CDX: quét 4.000 URL, **0 hit** cho `heroes4`/`homm4`. 3DO có trang MM7 nhưng dường như
-  không có trang Heroes IV.
+**Vì sao lần quét đầu báo âm:** chỉ thử ba path (`3do.com/heroes4*`, `/games/heroes4*`,
+`/products/pc/heroes4*`) và một lần `limit=4000` **không filter** rồi grep — bị cắt trước khi tới.
+Đường dẫn đúng có **thêm một tầng** (`/mightandmagic/`). Bài học: quét CDX phải dùng `filter=`, đừng
+grep một mẫu bị cắt.
+
+⚠️ Nhưng **manual** thì vẫn chưa tìm được — 58 trang đó là nội dung marketing/tính năng, không phải
+manual. Và `story.html` chỉ ~630 ký tự, không nhắc `Axeoth`/`Reckoning`/`Gauldoth`.
+
+**Đường đã biết là KHÔNG đi được:**
 - ❌ thelazy: **0 coverage** Heroes IV.
 
 **Đường chưa thử:**
