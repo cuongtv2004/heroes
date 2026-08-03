@@ -110,6 +110,12 @@ gốc **một bước**.
 | `roe-season-of-harvest` | T1* | FETCHED | Restoration of Erathia — Sandro bị giam, event Day 5, hero `imprisoned` tại 9,34 |
 | `ab-march-of-the-undead` | T1* | FETCHED | Armageddon's Blade — Sandro là địch, level 14 |
 | `hc-truth-within-nightmares` | T1* | FETCHED | Heroes Chronicles *Conquest of the Underworld* — Tarnum vs Sandro. **Xem cảnh báo DISPUTED bên dưới** |
+| `roe-from-day-to-night` | T1* | FETCHED | Restoration of Erathia, *Long Live the King* #4 — Dead Man's Boots là **bonus khởi đầu, trên hero Thant** |
+| `ab-taming-of-the-wild` | T1* | FETCHED | Armageddon's Blade — ⭐ **cả ba** thành phần Cloak nằm kề nhau, nhặt tự do không lính canh: Boots (67,3,0), Amulet (68,4,0), Cowl (69,4,0). Chứa text riêng "Dead men tell no tales" |
+| `sod-viking-we-shall-go` | T1* | FETCHED | Shadow of Death — Seer's Hut (53,116,0) đổi Boots → Statesman's Medal. ⚠️ Có **trang riêng** cho bản `(Allies)`, cùng toạ độ |
+| `hc-jorms-ambush` | T1* | FETCHED | Heroes Chronicles — Seer's Hut (3,7,1) đổi Boots → 13.349 vàng |
+| `hota-dead-or-alive` | T1* | FETCHED | Scenario **HotA** (fan-made, không phải NWC) — Quest Guard (56,30,0) đòi Boots |
+| `hota-the-life-guard` | T1* | FETCHED | Scenario **HotA** (fan-made, không phải NWC) — Boots từ Shipwreck Survivor (35,25,1) |
 
 ### Artifact
 
@@ -137,6 +143,10 @@ gốc **một bước**.
 | `h3wiki-sandals-of-the-saint` | T1* | FETCHED | Cần để qua Quest Guard lấy Dead Man's Boots |
 | `fandom-artifact-list` | T6 | FETCHED | `List of Heroes III artifacts` — **nguồn duy nhất** cho mô tả in-game của artifact. Fandom **không dẫn nguồn** |
 | `h3wiki-herobios-txt` | **T1** | FETCHED | ⭐ `Translation Data/HeroBios.txt` — **file string table TRÍCH TỪ GAME** (168KB, cột EN/FR/PL/RU). Đây là `T1` **thật**, không phải `T1*` |
+| `h3wiki-artraits-txt` | **T1** | FETCHED | ⭐ `Talk:Artifact/descriptions` — bảng mô tả artifact, tự ghi đầu bảng `Information from H3Bitmap.lod > artraits.txt`. **String table trích từ file game** → `T1` **thật**. Thay `fandom-artifact-list` cho mọi mô tả in-game của artifact |
+| `h3wiki-artifact-events` | T1* | FETCHED | `Artifact Events` (35.645 byte) — text hiện ra khi **nhặt** artifact. Mở đầu: "Default descriptions when picking an artifact." Xác nhận độc lập cho trường `event` trên từng trang artifact |
+| `hota-apocalypse-template` | T6 | FETCHED | Trang đặc tả template `Apocalypse` của HotA — **do cộng đồng viết, KHÔNG phải in-game text**. Liệt kê ba artifact dưới đầu đề "Allowed artifacts". ⚠️ Sửa lần cuối 2025-05-14 ≈ HotA 1.7.2–1.7.3, **trước 1.8.0**. Changelog **không** xác nhận danh sách này — xem cảnh báo bên dưới |
+| `hota-blacknblue-template` | T6 | FETCHED | Trang đặc tả template `Black'n'Blue` của HotA — do cộng đồng viết. ⚠️ Dead Man's Boots nằm trong `Banned artifacts`, **không** phải danh sách cho phép |
 
 ### Nhân vật liên quan
 
@@ -217,7 +227,7 @@ Ghi lại để lần sau thử tiếp. **Không được dùng làm nguồn.**
 | `mightandmagic.fandom.com/wiki/*` | FAILED (402/403) | Chỉ vào được qua `api.php` |
 | `homm.miraheze.org/wiki/Sandro` | FAILED (403) | |
 | `strategywiki.org/.../Rise_of_the_Necromancer` | FAILED (403) | |
-| `heroesofmightandmagic.com/heroes3sod/campaigns.shtml` | FAILED (connection refused) | **Site chính thức của NWC, có thể đã chết.** Đây là nguồn không-phải-wiki tốt nhất có thể có |
+| `heroesofmightandmagic.com/heroes3sod/campaigns.shtml` | FAILED (**403 web filter**, không phải site chết) | **Site chính thức của NWC** — nguồn không-phải-wiki tốt nhất có thể có. ⚠️ Ghi chú cũ "connection refused → có thể đã chết" là **SAI**: verify `dead-mans-boots` (2026-08-03) fetch lại được HTTP **403** với body `<title>Web Filter Violation</title>` — bị **filter mạng của môi trường dev** chặn, site có thể vẫn sống. Phải thử qua đường khác, **không** được coi là đã chết |
 | `web.archive.org` | FAILED (bị chặn hoàn toàn) | Nên không lấy được bản lưu của site chính thức |
 | `en.namu.wiki/.../Sandro` | NOT_FETCHED | Chỉ thấy trong kết quả tìm kiếm |
 | File campaign `.h3c` gốc | NOT_FETCHED | **Đây là việc cần làm để nâng T1\* thành T1** |
@@ -423,8 +433,17 @@ trích trực tiếp từ game** (168KB, bốn cột EN/FR/PL/RU).
 *(Chi tiết phụ thú vị từ chính file: bản dịch **Ba Lan và Nga đều để Jeddite là nữ**. Lỗi
 dịch, không phải lore.)*
 
-**Việc cần làm:** kiểm xem thelazy còn trang `Translation Data/` nào khác —
-`Talk:Artifact/descriptions` cũng được nêu là có thể chứa chuỗi trích từ game.
+**✅ Đã giải quyết (2026-08-03, verify `dead-mans-boots`):** `Talk:Artifact/descriptions` **đúng
+là** chuỗi trích từ game. Trang tự ghi ở đầu bảng:
+
+> `|+ style="white-space:nowrap;"|Information from H3Bitmap.lod > artraits.txt`
+
+Đã vào registry thành `h3wiki-artraits-txt`, tier **`T1`** thật. Đây là nguồn thứ **hai** đạt
+`T1` không dấu sao, và nó **thay được `fandom-artifact-list` (T6) cho mọi mô tả in-game của
+artifact** — dùng lại được cho toàn bộ bài artifact, không riêng một bài.
+
+**Việc còn lại:** quét nốt các trang `Translation Data/` khác trên thelazy để tìm string table
+tương tự cho creature, spell, town.
 
 ### ⚠️ Claim "artifact từng thuộc về Ethric" — BỊ GAME TEXT PHẢN BÁC
 
@@ -459,6 +478,40 @@ Trang `h3wiki-cloak-undead-king` ghi lệnh cấm HotA 1.7.2 kèm **ba** templat
 - **1.7.3** (08/JUN/2025): mới thêm template "Default Random Map (Legacy)"
 
 Trang wiki gộp hai phiên bản thành một.
+
+### ⚠️ Trang template HotA là `T6`, và "Allowed artifacts" KHÔNG có nghĩa "chỉ ba artifact"
+
+Phát hiện khi verify `dead-mans-boots` (2026-08-03). Cùng họ với cảnh báo trên, nhưng là một
+cái bẫy khác — **bẫy suy luận**, không phải bẫy phiên bản.
+
+Trang `hota-apocalypse-template` liệt kê đúng ba artifact dưới đầu đề `*Allowed artifacts:` —
+và đúng là ba thành phần Cloak. Rất dễ viết thành "một trong ba artifact **duy nhất** được cho
+phép". **Nguồn không nói chữ "only".**
+
+Ba lý do không được đọc theo nghĩa "duy nhất":
+
+- **Changelog không chống lưng.** Grep toàn bộ 201.529 byte `hota-changelog`: `Apocalypse` chỉ
+  xuất hiện **hai lần**, không lần nào là danh sách artifact (1.5.0 "Added the Boomerang and
+  Apocalypse templates"; 1.7.1 "Apocalypse template: Wanderer's Boots and Shrines of Magical
+  Mystery banned").
+- **Có bằng chứng ngược.** Dòng 1.7.1 cấm thêm **Wanderer's Boots**. Nếu template chỉ cho phép
+  ba artifact thì cấm riêng một artifact thứ tư là **vô nghĩa** — nó đã bị cấm sẵn. Cách đọc
+  dung hòa: "Allowed" = được cho phép **thêm**, ngoài các lệnh cấm mặc định.
+- **Trang luật chính thức không có danh sách này.** `h3hota.com/en/rules` (do chính trang
+  template dẫn tới) có mục Apocalypse nhưng **không có** danh sách artifact cho phép/bị cấm nào.
+
+**Hai quy tắc rút ra:**
+
+1. **Trang đặc tả template do cộng đồng viết là `T6`, không phải `T1*`.** Nó không phải in-game
+   text — không có chuỗi nào trong game hiện ra nội dung đó. Gán `T1*` là sai **loại nguồn**,
+   không chỉ sai cấp.
+2. **Trang template phải ghi phạm vi phiên bản theo ngày sửa cuối.** Trang `Apocalypse` sửa lần
+   cuối **2025-05-14** ≈ HotA 1.7.2–1.7.3, **trước 1.8.0** (31/DEC/2025), và tự nó **không ghi**
+   phiên bản nào.
+
+⚠️ **Bẫy đi kèm:** template `hota-blacknblue-template` liệt kê Dead Man's Boots trong
+`*Banned artifacts:` — **ngược chiều** với Apocalypse. Hai template này hay bị nhắc cạnh nhau
+nên rất dễ gộp thành cùng một chiều. Bài `dead-mans-boots` đã mắc đúng lỗi này (BLOCKER).
 
 ### ⚠️⚠️ Giá trị Necromancy ĐÃ ĐỔI qua các bản HotA
 

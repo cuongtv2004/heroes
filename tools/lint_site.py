@@ -51,6 +51,16 @@ WIKI_TEMPLATE_RE = re.compile(
 
 TAG_RE = re.compile(r"<script.*?</script>|<style.*?</style>|<[^>]+>", re.S)
 
+# Nội dung trong <code> và <pre> là thứ tác giả CỐ Ý cho hiện ra nguyên dạng —
+# trích cú pháp wikitext, ví dụ lệnh, đoạn YAML. Nó không bao giờ là "markup lọt".
+#
+# Vì sao cần loại trừ theo TẦNG này thay vì nối thêm vào WIKI_TEMPLATE_RE: báo cáo
+# kiểm định trích wikitext thô của nguồn, nên tên template là **không đóng** —
+# `{{An}}`, `{{SorQrow}}`, `{{BonusArt}}`, `{{encounter row}}`, `{{map object}}`...
+# Duy trì allowlist theo từng tên là cuộc đua không có đích. Còn markup lọt thật thì
+# **không** nằm trong <code>: icon Material lọt ra hiện thành chữ thường giữa câu.
+CODE_RE = re.compile(r"<code[^>]*>.*?</code>|<pre[^>]*>.*?</pre>", re.S)
+
 errors: list[str] = []
 warnings: list[str] = []
 
@@ -123,7 +133,10 @@ def main() -> int:
         text = visible_text(raw)
         checked += 1
 
-        check_leaked_markup(page, text)
+        # Bỏ <code>/<pre> TRƯỚC khi tìm markup lọt — xem ghi chú ở CODE_RE.
+        # Các kiểm khác vẫn dùng `text` đầy đủ: frontmatter hỏng có thể lọt ra
+        # bên trong <pre>, nên ở đó không được loại trừ.
+        check_leaked_markup(page, visible_text(CODE_RE.sub(" ", raw)))
         check_degraded_cards(page, raw)
         check_frontmatter_leak(page, text)
         if page.name == "index.html" and page.parent == SITE:

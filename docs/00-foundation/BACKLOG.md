@@ -84,6 +84,36 @@ cách gắn `date_certainty`, và cách tránh trùng lặp với nội dung đ�
 
 **Trạng thái:** chưa bắt đầu. Làm sau B-016 mục 1.
 
+### B-018 · `hota-changelog` đang mang tier `T1*` — sai **loại** nguồn, không chỉ sai cấp
+
+**Vấn đề:** `REGISTRY.md` xếp `hota-changelog` vào Nhóm 1 — *Text in-game Heroes III (T1\*)* — với
+tier `T1*`, tức "in-game text tiếp cận qua trung gian".
+
+Nó không phải in-game text. **Không có chuỗi nào trong game hiện ra nội dung changelog.** Đó là
+văn bản phát hành của nhóm phát triển một expansion **do fan làm**. Theo `CANON-POLICY.md` mục 2
+nó gần `T4` (phát ngôn developer) hơn nhiều, hoặc `T6` nếu không coi nhóm HotA là developer.
+
+**Vì sao đáng làm:** registry tự ghi key này là "**nguồn chuẩn** cho mọi claim về HotA". Một sai
+loại nguồn ở chỗ đó **lan ra mọi bài có phần HotA** — hiện đã là toàn bộ nhóm artifact.
+
+**Phát hiện ở đâu:** verify `dead-mans-boots` (2026-08-03). Verifier **không** hạ verdict của
+C-10 vì việc này, vì nội dung C-10 vẫn trích được nguyên văn và vẫn đúng — vấn đề nằm ở nhãn tier,
+không ở sự thật của claim.
+
+**Vì sao chưa sửa ngay:** đổi tier của key này buộc phải rà lại nhãn ở mọi bài đang dẫn nó. Làm
+lẻ sẽ tạo trạng thái nửa vời, tệ hơn hiện tại.
+
+**Việc cần làm:**
+
+1. Chốt `hota-changelog` thuộc `T4` hay `T6` — quyết định này cần một mục trong `CANON-POLICY.md`
+   về **cách xếp tier cho expansion do fan làm** (HotA), vì hiện policy chưa nói.
+2. Chuyển key sang nhóm đúng trong `REGISTRY.md`.
+3. Rà toàn bộ nhãn dẫn `hota-changelog` và sửa tier.
+4. Cân nhắc: các trang **template** HotA (`hota-apocalypse-template`,
+   `hota-blacknblue-template`) đã được xếp `T6` trong cùng đợt — nên nhất quán với quyết định trên.
+
+**Trạng thái:** chưa bắt đầu. Chặn bởi việc phải quyết định policy ở mục 1 trước.
+
 ### B-002 · Fetch tài liệu thiết kế gốc của Jennifer Bullard (UT Austin)
 
 **Là gì:** Bullard — Lead Designer và người viết cốt truyện *Shadow of Death* — đã gửi
@@ -270,3 +300,4 @@ verifier độc lập tìm nguồn T1–T4 cho từng cái — đúng luồng đ
 |---|---|
 | 2026-07-31 | Lập backlog sau khi Sandro đạt `verified` |
 | 2026-08-03 | Thêm B-016 (cân bằng kỷ nguyên) và B-017 (`codex/events/` rỗng) sau khi rà lại mục tiêu dự án. Phát hiện: 9/9 bài đầu nằm cùng một cụm, và không công cụ nào bắt được loại lệch này |
+| 2026-08-03 | Thêm B-018 (`hota-changelog` sai loại nguồn) từ verify `dead-mans-boots`. Cùng đợt: **B-001 tiến một bước thật** — tìm được `h3wiki-artraits-txt` (`T1` không dấu sao, string table trích từ `H3Bitmap.lod`), thay được `fandom-artifact-list` (`T6`) cho **mọi** bài artifact |

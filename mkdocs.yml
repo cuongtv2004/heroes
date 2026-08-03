@@ -127,6 +127,7 @@ nav:
       - Báo cáo kiểm định:
           - sources/notes/verify-sandro-2026-07-31.md
           - sources/notes/verify-ethric-cloak-2026-08-02.md
+          - sources/notes/verify-dead-mans-boots-2026-08-03.md
 
 extra_css:
   - assets/extra.css
