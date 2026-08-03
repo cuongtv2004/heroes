@@ -8,8 +8,8 @@ appears_in:
   - sod-hack-and-slash
   - sod-rise-of-the-necromancer
   - sod-unholy-alliance
-status: draft
-verify_pass: null
+status: verified
+verify_pass: verify-armor-of-the-damned-2026-08-03
 slot: torso
 artifact_class: relic
 combo_parts:
@@ -32,8 +32,16 @@ sources_used:
   - h3wiki-trivia
   - h3wiki-weakness
   - h3wiki-ethric
-  - fandom-artifact-list
+  - h3wiki-artraits-txt
+  - h3wiki-cuthbert
+  - h3wiki-olema
+  - h3wiki-mirlanda
+  - h3wiki-eanswythe
+  - h3wiki-ironfist-of-the-ogre
+  - h3wiki-shield-of-the-damned
   - hota-changelog
+  - sod-hack-and-slash
+  - sod-unholy-alliance
   - sod-bashing-skulls
   - sod-black-sheep
   - sod-a-cage-in-the-hand
@@ -96,14 +104,29 @@ thật** — nhưng do kẻ thù của hắn thực hiện.
 Game không kể nguồn gốc Armor, nhưng nó kể **lai lịch gần đây của từng thành phần**. Và đây là
 chỗ thú vị: **mỗi lần, lời của người đang giữ mới là lời đáng tin, còn lời Sandro là lời dối.**
 
-| Thành phần | Sandro nói | Người giữ nói |
-|---|---|---|
-| Skull Helmet | Barshon "**unearthed**" nó | "**a family heirloom** handed down from generations" |
-| Blackshard | Marzeth **trộm** từ mộ anh hùng | Marzeth **thừa kế** nó; thanh kiếm bóp méo linh hồn hắn |
-| Rib Cage | Necromancer **đốt Sanctuary** và trộm | "**We know nothing about a Sanctuary**" |
-| Shield | (ngụ ý bị chiếm) | "**our relic**... a part of our graveyard for many years" |
+| Thành phần | Sandro nói | Phía đối diện nói | Ai nói |
+|---|---|---|---|
+| Skull Helmet | Barshon "**unearthed**" nó | "It is **a family heirloom** handed down from generations" | **Barshon**, map event (54, 12, 0) |
+| Blackshard | Marzeth **trộm** từ mộ anh hùng | Marzeth **thừa kế** nó; thanh kiếm bóp méo linh hồn hắn | ⚠️ **Tin đồn trinh sát**, timed event Day 14 — **không phải Marzeth** |
+| Rib Cage | Necromancer **đốt Sanctuary** và trộm | "**We know nothing about a Sanctuary**, Mister Hack" | **Ebon Hand**, timed event Day 30 |
+| Shield | Bị chiếm từ một vampire slayer | "the Shield of the Yawning Dead is **our relic**. It has been a part of our graveyard for many years" | **Hand of Death**, Day 15 |
 
 {T1* EXPLICIT: sod-bashing-skulls + sod-black-sheep + sod-a-cage-in-the-hand + sod-grave-robber}
+
+⚠️ **Dòng Blackshard không cùng loại với ba dòng kia.** Marzeth **không có một câu thoại nào** trong
+toàn bộ `Black Sheep`. Phiên bản "thừa kế" là **tin đồn do trinh sát báo về**, và chính game text
+**tự rào lại**:
+
+> "Supposedly Marzeth was a Knight of the Blade who **inherited** the Blackshard, but the cursed sword
+> twisted his soul until he became a Death Knight. This would explain why the humans are protecting
+> him, but **it goes against Sandro's story** that Marzeth stole the sword from a warrior's tomb.
+> **At best the rumor must be only half-true.**"
+
+{T1* EXPLICIT: sod-black-sheep — timed event Day 14}
+
+Nghĩa là ở ba dòng kia, người đang giữ **trực tiếp phản bác** Sandro; còn ở dòng Blackshard, game chỉ
+đưa ra một tin đồn **và tự nói nó nhiều nhất là nửa đúng**. Bản đầu của bài xếp cả bốn vào cùng một
+cột "người giữ nói", làm mất sự phân biệt đó.
 
 Không lời nào trong số đó mô tả việc **tạo ra** Armor — chỉ là quyền giữ gần đây.
 
@@ -113,7 +136,10 @@ Sandro không tự đi lấy. Hắn thuê một barbarian, và vỏ bọc là **
 hắn nói sẽ dùng bốn món để **phá hủy** Armor.
 
 Mô tả campaign nói rõ khung: Crag Hack được thuê "to find the four pieces of the Armor of the
-Damned **so he can destroy the cursed thing**". {T1* EXPLICIT: sod-bashing-skulls}
+Damned **so he can destroy the cursed thing**". {T1* EXPLICIT: sod-hack-and-slash}
+
+*(Câu này nằm ở trang **campaign** `Hack and Slash`, không ở trang scenario `Bashing Skulls` — bản đầu
+của bài dẫn sai trang.)*
 
 Giá: **500.000 vàng và một mảnh đất phong**.
 
@@ -128,12 +154,25 @@ Giá: **500.000 vàng và một mảnh đất phong**.
 dối**. Sandro không nói sai điều gì về việc hắn *muốn* món đồ; hắn chỉ nói sai về việc hắn sẽ
 *làm gì* với nó.
 
-### ⭐ "Chúng sẽ nói dối anh" — thủ đoạn lặp lại bốn lần
+### ⭐ "Chúng sẽ nói dối anh" — thủ đoạn lặp lại ba lần
 
-Đây là kỹ thuật đặc trưng của Sandro, và nó xuất hiện ở **cả bốn** scenario: **tiêm chủng
-trước** cho Crag Hack chống lại sự thật.
+Đây là kỹ thuật đặc trưng của Sandro: **tiêm chủng trước** cho Crag Hack chống lại sự thật.
 
-Mỗi lần, kẻ bị gọi là "nói dối" đều **đang nói thật**.
+⚠️ **Ba trong bốn scenario, không phải cả bốn.** `A Cage in the Hand` **không có** thủ đoạn này —
+grep độc lập trên trang đó cho `will lie`, `would lie`, `lies like`, `do not listen`, `lying`: **0
+kết quả**. Lời Sandro ở scenario ấy chỉ cảnh báo về sự cản đường, không cáo buộc nói dối:
+
+> "They will do everything in their power to stop you from obtaining it."
+
+{T1* EXPLICIT: sod-a-cage-in-the-hand}
+
+Bản đầu của bài ghi "cả bốn" và dẫn cả bốn source key — trong đó một key trỏ vào chỗ trống.
+
+Và trong ba lần có thủ đoạn, **kẻ bị gọi là "nói dối" phần lớn đang nói thật** — nhưng đây là nhận
+định của người viết, không phải điều game khẳng định. Với Marzeth thì game **tự phủ định** (xem bảng
+trên: "at best the rumor must be only half-true").
+
+{T1* INFERENCE: sod-bashing-skulls + sod-black-sheep + sod-grave-robber — đối chiếu lời Sandro với lời/tin đồn phía người giữ}
 
 **Lần 1** (`sod-bashing-skulls`): "do not listen to anything he tells you... he has no honor
 and **lies like a snake**."
@@ -156,15 +195,15 @@ Rồi Barshon gửi thư nói Helmet là gia bảo. Phản ứng của Crag Hack
 
 {T1* EXPLICIT: sod-black-sheep — map event 64,9,0}
 
-**Lần 3** (`sod-a-cage-in-the-hand`) — vỏ bọc "Sanctuary bị đốt", bị phản bác thẳng:
-> "**We know nothing about a Sanctuary**, Mister Hack, but we do know this: you are already
-> dead. You just don't know it yet yourself."
-
-**Lần 4** (`sod-grave-robber`) — phát biểu rõ nhất:
+**Lần 3** (`sod-grave-robber`) — phát biểu rõ nhất:
 > "And one last thing. **Like the others you have battled, the Necromancers will lie to you.
 > Do not listen to them.**"
 
-{T1* EXPLICIT: sod-bashing-skulls + sod-black-sheep + sod-a-cage-in-the-hand + sod-grave-robber}
+{T1* EXPLICIT: sod-bashing-skulls + sod-black-sheep + sod-grave-robber}
+
+*(Vỏ bọc "Sanctuary bị đốt" ở `A Cage in the Hand` **cũng** bị phản bác thẳng — "We know nothing
+about a Sanctuary" — nhưng ở scenario đó Sandro **không** dùng thủ đoạn tiêm chủng trước. Xem bảng
+đối chiếu ở mục trên.)*
 
 ### Sự nghi ngờ của Crag Hack — dựng theo ba giai đoạn
 
@@ -215,9 +254,22 @@ là đồng nghiệp necromancer. Vỏ bọc đang rạn từ phía bên kia.
 | *Unholy Alliance* | Sandro | {T1* EXPLICIT: sod-wrath-of-sandro} |
 | Sau đó | **Tháo rời, phân tán khắp Antagarich** | {T1* EXPLICIT: sod-fall-of-sandro} |
 
-⭐ Có một chi tiết đáng chú ý về giai đoạn cuối: trang campaign *Unholy Alliance* ghi rằng khi
-Sandro trở lại làm địch ở các map cuối, hắn mang **Armor of the Damned nhưng KHÔNG có Cloak of
-the Undead King**. {T1* EXPLICIT: sod-wrath-of-sandro}
+Game text xác nhận Sandro sở hữu **cả hai** artifact khi hắn là người chơi:
+
+> "With the **Armor of the Damned** and the **Cloak of the Undead King** in your possession, you will
+> easily overtake them and force these invaders out of your lands."
+
+{T1* EXPLICIT: sod-wrath-of-sandro — timed event Day 4}
+
+⭐ Có một chi tiết đáng chú ý về giai đoạn cuối: khi Sandro **trở lại làm địch** ở các map cuối, hắn
+mang Armor of the Damned nhưng **không có** Cloak of the Undead King.
+
+{T6 EXPLICIT: sod-unholy-alliance — mục `Important information`, **văn biên tập viên wiki**, không phải game text}
+
+⚠️ Bản đầu của bài gán claim này `T1* EXPLICIT` và dẫn `sod-wrath-of-sandro`. Cả hai đều sai: câu đó
+nằm ở trang campaign *Unholy Alliance* trong mục `== Important information ==`, tức **văn biên tập
+viên** nằm ngoài mọi template → `T6`. Đây là quan sát cơ chế của người chơi, có thể đúng, nhưng không
+phải điều game nói.
 
 ### Kết cục — và một sự mỉa mai hoàn hảo
 
@@ -254,17 +306,32 @@ thù của hắn.**
 
 {T1* EXPLICIT: h3wiki-armor-of-the-damned}
 
-**Hiệu ứng in-game, nguyên văn:**
+**Mô tả in-game, nguyên văn từ file game:**
 
-> "Casts Expert Slow, Curse, Weakness, and Misfortune for 50 rounds at the start of combat."
+> "All opponents have these spells effective on them for fifty turns: **Slow, Curse, Weakness, and
+> Misfortune**."
 
-**Bốn spell.** Không phải năm, không có biến thể "Mass" — xem *Điểm tranh chấp*.
+{T1 EXPLICIT: h3wiki-artraits-txt}
 
-**Mô tả in-game** (từ Fandom, nguồn duy nhất có trường này):
-> "Worn on the torso, this armor casts Slow, Weakness, Misfortune and Curse on the enemy at the
-> start of every battle. The effect lasts for **fifty turns**."
+⭐ **Đây là `T1` thật, không dấu sao** — `H3Bitmap.lod > artraits.txt`, string table trích trực tiếp
+từ file game. **Bốn spell.** Không phải năm, không có biến thể "Mass" — xem *Điểm tranh chấp*.
 
-{T6 EXPLICIT: fandom-artifact-list — Fandom **không dẫn nguồn**}
+⚠️ **Bản đầu của bài dẫn một câu Fandom và gọi đó là "mô tả in-game". Câu đó không phải mô tả
+in-game.** Đối chiếu:
+
+| | Chuỗi thật (`artraits.txt`) | Câu Fandom |
+|---|---|---|
+| Thứ tự spell | Slow, **Curse**, Weakness, **Misfortune** | Slow, **Weakness**, **Misfortune**, Curse |
+| Chủ thể | "**All opponents** have these spells effective on them" | "casts ... **on the enemy**" |
+| Thêm vào | — | "**Worn on the torso**", "at the start of **every battle**" |
+| Trùng khớp | "fifty turns" | "fifty turns" |
+
+Chỉ hai chữ "fifty turns" là trùng. Câu Fandom là **diễn giải**, không phải chuỗi game — nên
+`fandom-artifact-list` đã được bỏ khỏi bài này.
+
+⚠️ **Trường `| effect =` trên trang wiki cũng KHÔNG phải in-game text.** Câu "Casts Expert Slow,
+Curse, Weakness, and Misfortune for 50 rounds at the start of combat" là cách biên tập viên tóm tắt
+cơ chế, không phải chuỗi nào trong game. Vế "bốn spell" của nó vẫn đúng và khớp `artraits.txt`.
 
 **Text khi nhặt:**
 > "You trip over the Armor of the Damned, dust it off, and stick it in your pack."
@@ -323,11 +390,18 @@ chơi) nhưng không phải game text.
 > able to take its turn**; if a creature misses a turn due to low morale, the Armor of the
 > Damned does not cast its spells until the next one is able to do so."
 
-{T1* INFERENCE: h3wiki-armor-of-the-damned — **không dẫn nguồn**}
+{T6 INFERENCE: h3wiki-armor-of-the-damned — văn biên tập viên, ngoài mọi template; **không dẫn nguồn**}
 
 Hệ quả chiến thuật: nếu địch đi trước và làm chậm quân bạn, Armor có thể **chưa kịp kích hoạt**.
 
 **Cái gì chặn được:** immunity của quân địch, Cursed Ground, và "anti-magic artifacts".
+
+{T6 INFERENCE: h3wiki-armor-of-the-damned + h3wiki-ironfist-of-the-ogre — xem cảnh báo dưới}
+
+⚠️ **Câu này là boilerplate của biên tập viên, không phải game text.** Nó lặp **nguyên văn** trên
+trang `Ironfist of the Ogre` và trang `Angelic Alliance` — cùng một câu dùng cho ba artifact khác
+nhau. Bản đầu của bài gán `T1*`, tức sai **loại** nguồn: `T1*` nghĩa là in-game text qua trung gian,
+mà không có chuỗi nào trong game nói điều này.
 
 **Nhưng hoạt động bình thường trong Anti-Magic Garrison** — điều này được xác nhận **độc lập**
 ở một trang thứ hai: "Armor of the Damned, Angelic Alliance, and Ironfist of the Ogre spells
@@ -344,24 +418,42 @@ still work in an Anti-Magic Garrison." {T1* EXPLICIT: h3wiki-trivia}
 | Mirlanda | Witch | Không |
 | **Eanswythe** | Artificer (Factory) | **Có** |
 
-{T1* EXPLICIT: h3wiki-weakness — kiểm từng trang hero, không tin danh sách}
+{T1* EXPLICIT: h3wiki-weakness + h3wiki-cuthbert + h3wiki-olema + h3wiki-mirlanda + h3wiki-eanswythe — kiểm từng trang hero, không tin danh sách}
 
 Specialty của cả bốn giống nhau:
-- **HotA:** tăng hiệu quả thêm 4 (quân cấp 1–2), 6 (cấp 3–4), 8 (cấp 5–6), 10 (cấp 7)
-- **SoD gốc:** thêm 3 (cấp 1–2), 2 (cấp 3–4), 1 (cấp 5–6)
+
+| Bậc quân | SoD gốc | HotA |
+|---|---|---|
+| Cấp 1–2 | +3 | +4 |
+| Cấp 3–4 | +2 | +6 |
+| Cấp 5–6 | +1 | +8 |
+| Cấp 7 | — | +10 |
+
+{T1* EXPLICIT: h3wiki-cuthbert + h3wiki-olema + h3wiki-mirlanda + h3wiki-eanswythe}
+
+⚠️ **Con số này nằm ở bốn trang hero, không ở trang `Weakness`** — trang `Weakness` không có con số
+nào. Bản đầu của bài dẫn `h3wiki-weakness` cho cả khối.
+
+⭐ **Chiều SoD/HotA ở đây đã được xác minh riêng**, vì nguồn dùng cú pháp `{{swh}}` mà trong đó tham số
+đầu là HotA — một bẫy đã gây lỗi thật ở bài khác. Mốc xác nhận độc lập: **Eanswythe** là hero
+**chỉ có ở HotA**, nên con số của hero đó **không cần** `{{swh}}` — và nó là dãy 4/6/8/10. Vậy dãy
+4/6/8/10 đúng là HotA.
 
 Đáng chú ý: Armor of the Damned là **artifact duy nhất trong game cast được Weakness**.
 {T1* EXPLICIT: h3wiki-weakness}
 
 ### Thay đổi qua các bản
 
-**Không có thay đổi nào riêng cho artifact này.**
+**Không có thay đổi nào nêu tên riêng artifact này.**
 
-Đây là kết luận sau khi grep toàn bộ changelog HotA (201 KB) cho cả năm cái tên — Armor và bốn
-thành phần. **Không một kết quả nào.** {T1* EXPLICIT: hota-changelog}
+Kết luận sau khi grep toàn bộ changelog HotA (201.529 byte) cho cả năm cái tên — Armor và bốn thành
+phần. **Không một kết quả nào.** Luồng kiểm định đã grep lại độc lập và xác nhận con số 0.
 
-Chỉ có thay đổi chung áp cho mọi combination artifact: tùy chọn cấm ghép, và ghi chú thành phần
-trong mô tả artifact.
+{T1* INFERENCE: hota-changelog — suy ra từ sự vắng mặt trong changelog, không từ một câu nào nói "không đổi"}
+
+⚠️ **Nhưng "không có thay đổi nào" thì mạnh hơn điều nguồn cho phép.** Changelog **có** những thay đổi
+**chung** áp cho mọi combination artifact — tùy chọn cấm ghép, và việc ghi chú thành phần trong mô tả
+artifact — và chúng **chạm tới** Armor of the Damned dù không nêu tên nó.
 
 ⭐ **Đáng chú ý:** [[cloak-of-the-undead-king]] **bị cấm ghép mặc định** trong HotA. Armor of the
 Damned **không nằm trong lệnh cấm đó** — dù cùng là combination artifact của phe Necropolis.
@@ -460,9 +552,14 @@ Văn wiki chi tiết nhưng **không dẫn nguồn**. Gần như chắc chắn l
 nhưng không phải game text.
 {T1* UNVERIFIED: h3wiki-armor-of-the-damned — **không dẫn nguồn**}
 
-**Q5. Mô tả in-game chính xác là gì?**
-Hiện lấy từ bảng của Fandom, **không phải file game**. Trang `Talk:Artifact/descriptions` trên
-thelazy có thể chứa chuỗi trích từ game — **chưa fetch**. Đây là bước tiếp theo giá trị nhất.
+**~~Q5. Mô tả in-game chính xác là gì?~~ — ✅ ĐÃ GIẢI QUYẾT (2026-08-03)**
+
+Trang `Talk:Artifact/descriptions` **đã fetch**, và đúng như dự đoán của câu hỏi này: nó tự ghi ở đầu
+bảng `Information from H3Bitmap.lod > artraits.txt` — **string table trích từ file game**, tier `T1`
+thật.
+
+Và phát hiện đi kèm quan trọng hơn câu trả lời: **câu Fandom mà bài từng dùng không phải mô tả
+in-game** — nó khác cả thứ tự spell lẫn chủ thể. Xem mục *Gameplay*.
 
 ---
 
@@ -532,8 +629,13 @@ Thứ tự thu thập **không** khớp thứ tự các thành phần được l
 
 | Loại | Số lượng | Ghi chú |
 |---|---|---|
-| `T1*` — text in-game qua trung gian | 16 | heroes.thelazy.net |
-| `T6` — wiki cộng đồng | 1 | `fandom-artifact-list` — nguồn duy nhất cho mô tả in-game, **không dẫn nguồn** |
+| **`T1`** — string table trích từ file game | **1** | ⭐ `h3wiki-artraits-txt` — mô tả in-game thật. Thay `fandom-artifact-list`, vốn là **diễn giải** chứ không phải chuỗi game |
+| `T1*` — text in-game qua trung gian | 22 | heroes.thelazy.net |
+| `T6` — văn biên tập viên / wiki cộng đồng | 3 | Cơ chế chiến đấu, mục *Important information*, và đoạn `{{fanopinion}}` |
+
+⚠️ **Toàn bộ mục *Cơ chế chiến đấu* là `T6`, không phải `T1*`.** Câu về "cái gì chặn được" lặp nguyên
+văn trên ba trang artifact khác nhau → boilerplate biên tập viên. Bản đầu của bài gán `T1*` cho nó,
+tức sai **loại** nguồn.
 
 Nguồn giá trị nhất: bốn scenario `Hack and Slash` — toàn bộ tuyến lừa Crag Hack nằm ở đó, và
 phần lớn chi tiết hay nhất nằm trong **map event**, không phải prologue.

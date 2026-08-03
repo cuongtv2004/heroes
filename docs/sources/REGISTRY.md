@@ -122,6 +122,17 @@ gốc **một bước**.
 | `fandom-jungle-fever` | T6 | FETCHED | Scenario **Heroes IV: Winds of War** (`version = H4X2`), Expert — ⭐ Jeddite là **địch duy nhất được nêu tên**, có text truyện riêng gọi hắn "**Jeddite the Reckless**" và cho chi tiết mới: hắn **nuôi rồng** và cho chúng ăn thịt dân đảo. **Trang này không tồn tại trên thelazy** — chỉ có trên Fandom |
 | `h3wiki-hero-specialty` | T1* | FETCHED | Trang `Hero specialty` — công thức specialty. Dòng 149 xác nhận HotA nâng hiệu ứng Resurrection lên **5%** (mặc định SoD là 3%) |
 | `h3wiki-reference-ids` | T1* | FETCHED | Trang `Reference IDs` — bảng ID nội bộ của game. Dòng 937: Jeddite = **91**. ⚠️ Con số này **không có** trên trang `Jeddite` |
+| `sod-hack-and-slash` | T1* | FETCHED | Trang **campaign** *Hack and Slash*. `\| description =` là text in-game hiện khi chọn campaign — chứa "…so he can **destroy the cursed thing**". ⚠️ Trang có **ba tier trộn lẫn**: `\| description =` (`T1*`), mục `== Manual description ==` (`T2*`, manual tr.13), mục `== Important information ==` (`T6`, văn biên tập viên) |
+| `sod-unholy-alliance` | T6 | FETCHED | Trang campaign *Unholy Alliance*, mục `== Important information ==` — **văn biên tập viên wiki**, ngoài mọi template. Chứa nhận định "Sandro xuất hiện ở map cuối với Armor of the Damned nhưng không có Cloak of the Undead King". ⭐ Cũng là nơi wiki **tự phản bác game text**: các campaign description nói hero mang skill sang campaign sau — "it is not true" |
+| `h3wiki-cuthbert` | T1* | FETCHED | Hero Cleric — specialty Weakness |
+| `h3wiki-olema` | T1* | FETCHED | Hero Heretic — specialty Weakness |
+| `h3wiki-mirlanda` | T1* | FETCHED | Hero Witch — specialty Weakness |
+| `h3wiki-eanswythe` | T1* | FETCHED | Hero Artificer (Factory) — specialty Weakness. **Chỉ có ở HotA**. ⭐ Con số specialty của hero này **không qua `{{swh}}`**, nên nó là mốc xác nhận độc lập cho chiều của template đó |
+| `h3wiki-shield-of-the-damned` | T1* | FETCHED | Artifact **riêng biệt**, không liên quan `Shield of the Yawning Dead`. Dùng để chống nhầm tên |
+| `h3wiki-recanters-cloak` | T1* | FETCHED | Artifact chặn phép — dùng kiểm claim "anti-magic artifacts chặn được Armor" |
+| `h3wiki-cape-of-silence` | T1* | FETCHED | Artifact chặn phép — dùng kiểm cùng claim trên |
+| `h3wiki-terrain` | T1* | FETCHED | Trang `Terrain` — cơ chế Cursed Ground |
+| `h3wiki-ironfist-of-the-ogre` | T1* | FETCHED | Combination artifact khác cũng cast phép đầu trận. ⚠️ Câu về "cái gì chặn được" lặp **nguyên văn** trên trang này, trang `Angelic Alliance` và trang `Armor of the Damned` → đó là **boilerplate của biên tập viên** (`T6`), không phải game text |
 | `roe-from-day-to-night` | T1* | FETCHED | Restoration of Erathia, *Long Live the King* #4 — Dead Man's Boots là **bonus khởi đầu, trên hero Thant** |
 | `ab-taming-of-the-wild` | T1* | FETCHED | Armageddon's Blade — ⭐ **cả ba** thành phần Cloak nằm kề nhau, nhặt tự do không lính canh: Boots (67,3,0), Amulet (68,4,0), Cowl (69,4,0). Chứa text riêng "Dead men tell no tales" |
 | `sod-viking-we-shall-go` | T1* | FETCHED | Shadow of Death — Seer's Hut (53,116,0) đổi Boots → Statesman's Medal. ⚠️ Có **trang riêng** cho bản `(Allies)`, cùng toạ độ |
