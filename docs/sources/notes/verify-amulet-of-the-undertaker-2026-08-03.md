@@ -1071,3 +1071,37 @@ Ba mục sau **làm bài tốt hơn** chứ không chỉ vá lỗi, nên đã đ
 `status: draft` → **`status: verified`**. `verify_pass: verify-amulet-of-the-undertaker-2026-08-03`.
 
 Không còn BLOCKER, không còn MAJOR.
+
+---
+
+## ⚠️ ĐÍNH CHÍNH (2026-08-03, sau khi verify `jeddite`)
+
+**Phát hiện "nhãn `UNVERIFIED` không được phép — vi phạm `CANON-POLICY.md` mục 5.3" là SAI.**
+
+Nguyên văn mục 5.3:
+
+> "Không claim nào ở trạng thái `UNVERIFIED` trong thân bài
+> (**chuyển xuống mục *Câu hỏi mở* nếu chưa giải quyết được**)."
+
+Nhãn `UNVERIFIED` bị phát hiện trong bài **đã nằm trong mục *Câu hỏi mở*** — tức là nó đã ở đúng
+chỗ mà mục 5.3 quy định. Đưa một claim chưa kiểm được xuống *Câu hỏi mở* **là cách xử lý đúng**,
+không phải vi phạm. Bài không hề vi phạm mục 5.3 ở điểm này.
+
+**Những phần khác của cùng phát hiện vẫn đúng và vẫn cần sửa** — chúng độc lập với mục 5.3:
+
+- Nhãn bị gán **sai cấp**: dữ kiện đếm được / trích được nguyên văn thì phải là `EXPLICIT`, không
+  phải `UNVERIFIED`. Gán `UNVERIFIED` cho điều đã kiểm xong là hạ cấp sai chiều.
+- **Cách phát biểu tự gài bẫy**: câu hỏi ngầm khẳng định một quan hệ chưa chứng minh được.
+- **Trộn hai loại claim vào một nhãn**: câu trích (`EXPLICIT`) và nhận định về sự vắng mặt
+  (`INFERENCE`) phải tách.
+
+Nên các sửa đã áp dụng vẫn giữ nguyên — chỉ **lý do** ghi trong báo cáo là sai ở một điểm.
+
+### Vì sao lỗi này lan ra ba báo cáo
+
+Người soạn bảng claim đưa "UNVERIFIED không được phép trong thân bài" vào mục *"Những phát hiện ĐÃ
+XÁC LẬP ở đợt trước"* của bảng claim cho hai bài sau. Verifier được yêu cầu **không đọc bài gốc**,
+nên không thấy nhãn đó nằm trong *Câu hỏi mở*, và cũng không có lý do nghi ngờ một điều đã được
+tuyên là "đã xác lập".
+
+**Đây là lỗi của người điều phối, không phải của verifier.** Xem `VERIFY-PROTOCOL.md` mục 7.

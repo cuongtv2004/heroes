@@ -156,6 +156,25 @@ ghi vào `saga/INVENTED-REGISTRY.md`. Chi tiết ở `SAGA-STYLE.md`.
 Ghi ra để trung thực:
 
 - Verifier cũng là AI, cũng có thể sai. Luồng này **giảm** lỗi, không **loại bỏ**.
+- ⚠️ **Người điều phối có thể gieo lỗi cho verifier — và lỗi đó sẽ lan.** Xảy ra thật ngày
+  2026-08-03: người soạn bảng claim tưởng rằng nhãn `UNVERIFIED` trong mục *Câu hỏi mở* là vi phạm
+  mục 5.3 của `CANON-POLICY.md`, trong khi mục đó **quy định chính việc chuyển xuống *Câu hỏi mở***
+  là cách xử lý đúng. Sai sót này được ghi vào bảng claim dưới nhãn *"phát hiện ĐÃ XÁC LẬP ở đợt
+  trước"*, nên **hai verifier sau nhận nó như tiền đề** và cùng báo `BLOCKER` cho một điều không
+  phải lỗi.
+- **Chính cơ chế bảo vệ của luồng lại làm lỗi này khó bị bắt:** verifier bị cấm đọc bài gốc (V1),
+  nên nó **không thể** thấy nhãn đó nằm trong *Câu hỏi mở*; và một điều đã được tuyên là "đã xác
+  lập" thì không có lý do gì để nghi ngờ. Verifier làm đúng nhiệm vụ và vẫn ra kết luận sai.
+- **Hai quy tắc rút ra:**
+  1. Bảng claim phải **trích nguyên văn** từ bài, kể cả **tên mục chứa claim**. Người soạn không
+     được diễn giải, tóm tắt, hay thêm ngữ cảnh — mọi chữ thêm vào đều trở thành claim mà verifier
+     tưởng là của bài. *(Cùng ngày còn một ca nữa: người soạn thêm mạo từ vào tên campaign
+     "A New Beginning", verifier báo lỗi tên campaign, trong khi bài viết đúng.)*
+  2. Mục *"phát hiện đã xác lập ở đợt trước"* **rút ngắn được công của verifier nhưng đánh đổi bằng
+     rủi ro lan lỗi**. Chỉ đưa vào đó những phát hiện đã **trích được nguyên văn nguồn**, và luôn
+     kèm câu "hãy tự xác nhận điều này áp dụng đúng cho bài hiện tại".
+- **Ai bắt được lỗi loại này:** chỉ người điều phối, vì chỉ họ thấy **đồng thời** bài gốc và văn bản
+  policy. Đó là một nhiệm vụ kiểm định riêng, không được coi là khâu thư ký.
 - Verifier và người viết có thể fetch cùng một nguồn sai giống nhau. Nếu cả cộng
   đồng Heroes truyền nhau một thông tin sai, luồng này không phát hiện được.
 - Sức mạnh thật của luồng nằm ở chỗ bắt được **claim không có nguồn** — đó là loại
@@ -170,3 +189,4 @@ Ghi ra để trung thực:
 | Ngày | Thay đổi | Lý do |
 |------|----------|-------|
 | 2026-07-31 | Bản đầu | Theo yêu cầu: phải có luồng verdict độc lập, không tin kết quả một chiều |
+| 2026-08-03 | Thêm mục 7: người điều phối có thể gieo lỗi cho verifier | Xảy ra thật — một cách đọc sai mục 5.3 được ghi vào bảng claim dưới nhãn "đã xác lập", hai verifier sau nhận làm tiền đề và cùng báo `BLOCKER` sai. V1 (cấm đọc bài gốc) khiến verifier không thể tự bắt |

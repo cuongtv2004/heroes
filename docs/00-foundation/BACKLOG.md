@@ -145,6 +145,45 @@ và nó sẽ tái diễn đúng vấn đề mà B-016 đang sửa.
 
 **Trạng thái:** chưa bắt đầu. Nên làm trước mục 3 và 4 của B-016.
 
+### B-020 · Khai thác `fulton-names-2023` — 98 KB phát ngôn developer chưa dùng
+
+**Là gì:** trang `Gregory Fulton/On Names in Heroes of Might and Magic III` trên thelazy —
+**98.499 byte**, thư từ giữa Amelrix và **Gregory Fulton (Lead Designer Heroes III)** trong
+2022–2023, khoảng **200 câu hỏi** về nguồn gốc tên town và hero. Công bố 08/AUG/2023 trên Celestial
+Heavens, và **do chính Fulton xem lại trước khi công bố**.
+
+Đây là nguồn **`T4`**, và nó trả lời đúng loại câu hỏi mà Codex hay phải để trống: *tên này từ đâu
+ra?*
+
+**Phát hiện ở đâu:** verify `jeddite` (2026-08-03), khi verifier tìm nguồn cho tên nhân vật.
+
+**Đã dùng được ngay:** entry `Jeddite` — "Possibly a suggestion given to me, with the obvious play
+on 'Jedi' from Star Wars."
+
+**Đã quét sẵn, dùng cho các bài sắp tới:**
+
+| Entity | Fulton nói gì |
+|---|---|
+| `deyja` | "Deyja is derived from **Old Norse** meaning 'to die'... the nation of death" — **dùng cho bài `deyja`** |
+| `thant` | "related to **Thanatos**; the Greek god of death" |
+| `vidomina` | mash-up của tiền tố 'Vid-' (visible) + 'domina' (Latin, nữ của dominus) → "clearly visible lord" |
+| `ufretin` | từ tiếng Pháp 'fretin' = 'cá bé'/'small fry' — hợp vì hero là dwarf |
+| `jabarkas` | có thể do **Christian Vanover** đặt, Fulton giữ lại |
+
+⚠️ **Đáng chú ý: `Sandro` và `Ethric` KHÔNG có trong tài liệu này** (0 lần xuất hiện). Entity chủ
+lực của dự án không được Fulton bình luận về tên, trong khi năm nhân vật phụ thì có. Đây là dữ kiện,
+không phải thiếu sót của việc tìm kiếm — đã grep toàn bộ 98 KB.
+
+**Việc cần làm:**
+
+1. Đọc hết phần *general questions* (không chỉ bảng tên) — có thể có phát ngôn về thiết kế
+   Necropolis/Necromancer, đã thấy `Necropolis` xuất hiện 6 lần, `Necromancer` 4 lần.
+2. Rà lại các bài đã `verified` xem có mục *Trivia & Dev Notes* nào bổ sung được bằng nguồn này.
+3. Lần theo lead gốc: `celestialheavens.com/forum/topic/17752` — bản post gốc có thể còn nội dung mà
+   trang wiki đã lược.
+
+**Trạng thái:** đã vào registry, đã dùng cho `jeddite`. Phần còn lại chưa khai thác.
+
 ### B-002 · Fetch tài liệu thiết kế gốc của Jennifer Bullard (UT Austin)
 
 **Là gì:** Bullard — Lead Designer và người viết cốt truyện *Shadow of Death* — đã gửi

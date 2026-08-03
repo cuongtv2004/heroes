@@ -110,6 +110,18 @@ gốc **một bước**.
 | `roe-season-of-harvest` | T1* | FETCHED | Restoration of Erathia — Sandro bị giam, event Day 5, hero `imprisoned` tại 9,34 |
 | `ab-march-of-the-undead` | T1* | FETCHED | Armageddon's Blade — Sandro là địch, level 14 |
 | `hc-truth-within-nightmares` | T1* | FETCHED | Heroes Chronicles *Conquest of the Underworld* — Tarnum vs Sandro. **Xem cảnh báo DISPUTED bên dưới** |
+| `hc-the-dragon-mothers` | T1* | FETCHED | **Heroes Chronicles** (`source = hc`, `cback = chronicles 4` = *Clash of the Dragons*) — Jeddite chỉ có mặt trong roster. ⚠️ Bài `jeddite` từng gán sai là SoD |
+| `hc-dragons-of-deepest-blue` | T1* | FETCHED | **Heroes Chronicles** (`cback = chronicles 4` = *Clash of the Dragons*) — Jeddite chỉ trong roster. ⚠️ Từng bị gán sai là SoD |
+| `hc-tarnum-the-overlord` | T1* | FETCHED | **Heroes Chronicles** (`cback = chronicles 8` = *The Sword of Frost*) — Jeddite chỉ trong roster. ⚠️ Từng bị gán sai là SoD |
+| `hc-old-wounds` | T1* | FETCHED | **Heroes Chronicles** (`cback = chronicles 2` = *Conquest of the Underworld*) — Jeddite chỉ trong roster. ⚠️ Từng bị gán sai là SoD, campaign *Contested Underworld* — **tên campaign đó không tồn tại** |
+| `hota-a-friendly-visit` | T1* | FETCHED | Scenario **HotA**, campaign ***All In*** (`cback = hota ai 1`) — Jeddite chỉ trong roster. ⚠️ Từng bị gán sai là AB / *Armageddon's Blade* |
+| `hota-homecoming` | T1* | FETCHED | Scenario **HotA**, campaign ***Forged in Fire*** (`cback = hota fif 8`) — Jeddite chỉ trong roster. ⚠️ Từng bị gán sai campaign là *Terror of the Seas* (là campaign HotA **khác**) |
+| `hota-a-cold-day-in-hell` | T1* | FETCHED | Scenario đơn **HotA** — ⭐ Jeddite là **tù nhân trong Prison** tại (63, 1) kèm **17 Harpy Hag** cố định. Vai trò cơ chế khác hẳn "một dòng đặt hero lên map" |
+| `roe-myth-and-legend` | T1* | FETCHED | Map Single/MP **Restoration of Erathia** (`source = roe`), size XL — ⭐ hero Jeddite có mặt tại (90, 123, 0) nhưng **đổi tên hiển thị thành `Abaris`** theo chủ đề thần thoại Hy Lạp. **Phản bác** claim "Jeddite không xuất hiện trong RoE" |
+| `sod-battle-of-the-sexes` | T1* | FETCHED | Scenario đơn **Shadow of Death** — Jeddite trong roster |
+| `fandom-jungle-fever` | T6 | FETCHED | Scenario **Heroes IV: Winds of War** (`version = H4X2`), Expert — ⭐ Jeddite là **địch duy nhất được nêu tên**, có text truyện riêng gọi hắn "**Jeddite the Reckless**" và cho chi tiết mới: hắn **nuôi rồng** và cho chúng ăn thịt dân đảo. **Trang này không tồn tại trên thelazy** — chỉ có trên Fandom |
+| `h3wiki-hero-specialty` | T1* | FETCHED | Trang `Hero specialty` — công thức specialty. Dòng 149 xác nhận HotA nâng hiệu ứng Resurrection lên **5%** (mặc định SoD là 3%) |
+| `h3wiki-reference-ids` | T1* | FETCHED | Trang `Reference IDs` — bảng ID nội bộ của game. Dòng 937: Jeddite = **91**. ⚠️ Con số này **không có** trên trang `Jeddite` |
 | `roe-from-day-to-night` | T1* | FETCHED | Restoration of Erathia, *Long Live the King* #4 — Dead Man's Boots là **bonus khởi đầu, trên hero Thant** |
 | `ab-taming-of-the-wild` | T1* | FETCHED | Armageddon's Blade — ⭐ **cả ba** thành phần Cloak nằm kề nhau, nhặt tự do không lính canh: Boots (67,3,0), Amulet (68,4,0), Cowl (69,4,0). Chứa text riêng "Dead men tell no tales" |
 | `sod-viking-we-shall-go` | T1* | FETCHED | Shadow of Death — Seer's Hut (53,116,0) đổi Boots → Statesman's Medal. ⚠️ Có **trang riêng** cho bản `(Allies)`, cùng toạ độ |
@@ -258,6 +270,7 @@ kiểm định độc lập tìm được nguồn T4 thật. Ghi lại sai sót 
 | `fulton-fanstratics-13` | **T4** | FETCHED | **Greg Fulton, Lead Designer Heroes III** — Fanstratics Newsletter #13. Gọi Sandro là hero mang tính biểu tượng: "Astral, Crag Hack, Dracon, **Sandro**, Solmyr, Tazar..." |
 | `fulton-fanstratics-27` | **T4** | FETCHED | Fulton, Newsletter #27 — ghi lại yêu cầu thiết kế ở buổi họp khởi động H3: "Keep specific heroes from HoMM2, like **Sandro the Necromancer**, Halon the Wizard, Lord Haart..." |
 | `fulton-fanstratics-3` | **T4** | FETCHED | Fulton, Newsletter #3 — xác nhận **Bullard là Lead Designer của SoD**: "I was not involved in the conception or creation of SoD... Jennifer Bullard was the project's Lead Designer, and any questions you have about SoD would best be directed to her" |
+| `fulton-names-2023` | **T4** | FETCHED | ⭐⭐ `Gregory Fulton/On Names in Heroes of Might and Magic III` trên thelazy — **98.499 byte**. Thư từ Amelrix ↔ Fulton 2022–2023, công bố 08/AUG/2023 trên Celestial Heavens, **~200 câu hỏi** về nguồn gốc tên town và hero, **do chính Fulton xem lại trước khi công bố**. Xem `B-020` — nguồn này chưa được khai thác |
 
 ### Jennifer Bullard là ai
 
@@ -489,6 +502,34 @@ Trang `h3wiki-cloak-undead-king` ghi lệnh cấm HotA 1.7.2 kèm **ba** templat
 - **1.7.3** (08/JUN/2025): mới thêm template "Default Random Map (Legacy)"
 
 Trang wiki gộp hai phiên bản thành một.
+
+### ⚠️⚠️ Bẫy `{{swh}}` — tham số ĐẦU là HotA, tham số SAU là SoD
+
+Phát hiện khi verify `jeddite` (2026-08-03). Đây là **bẫy đọc**, không phải lỗi chép của wiki —
+nguồn hoàn toàn đúng, người đọc suy sai.
+
+Nguyên văn `Template:Swh`:
+
+```
+<span class='onlyhota'>{{{1|}}}</span><span class='onlysod'>{{{2|}}}</span>
+```
+
+và trang tự ghi cách dùng:
+
+> `{{swh|content to be visible only when hota is ENABLED|content to be visible only when hota is DISABLED}}`
+
+**Nghĩa là `{{swh|A|B}}` → A = HotA, B = SoD.**
+
+⚠️ **Trực giác đọc trái-sang-phải là "bản gốc trước, bản mod sau" — và nó SAI.** Bài `jeddite` đọc
+`{{swh|5%|3%}}` thành "SoD 5%, HotA 3%", trong khi đúng là **SoD 3%, HotA 5%**. Cả ba con số
+gameplay của bài đều bị đảo, và đó là `BLOCKER`.
+
+**Cách tự kiểm mỗi lần dùng:** HotA hầu như luôn là bản **thay đổi**, nên nếu con số ở tham số 1
+trùng với giá trị "kinh điển" mà cộng đồng biết thì gần như chắc là đã đọc ngược. Kiểm chéo bằng
+`h3wiki-hero-specialty` hoặc `hota-changelog` — cả hai đều phát biểu theo hướng "HotA đổi thành X".
+
+Cũng lưu ý biến thể `{{swh|noicon=|A|B}}`: tham số `noicon=` **không** chiếm vị trí số, nên A vẫn là
+tham số 1 (HotA).
 
 ### ⚠️⚠️ Trang artifact trên thelazy KHÔNG chứa danh sách scenario — đã sai ba lần liên tiếp
 
