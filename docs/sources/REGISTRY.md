@@ -120,6 +120,11 @@ gốc **một bước**.
 | `hota-tomb-raiders` | T1* | FETCHED | Scenario **HotA** (`cback = hota fif 4`) — Seer's Hut **lặp lại** (`rpt=y`) tại (16,172,0) → +1 primary skill tự chọn; và Quest Guard (12,178,0) đòi Amulet để sửa **Skeleton Transformer** |
 | `hota-frontier` | T1* | FETCHED | Scenario **HotA** (`cback = hota hota 1`) — Seer's Hut (70,18,0) → Ring of Vitality |
 | `hota-nine-day-wonder` | T6 | FETCHED | Trang đặc tả template `Nine-day Wonder` của HotA — do cộng đồng viết. ⚠️ Amulet of the Undertaker nằm trong `Banned artifacts`, **ngược chiều** với `hota-apocalypse-template` |
+| `ab-undead-unrest` | T1* | FETCHED | Armageddon's Blade — `victory = Acquire Artifact Vampire's Cowl`. ⚠️ **Trang chỉ 623 byte**: không có mục Objects, không Timed events, không toạ độ. Gần như không có text map nào được chép — **không được dùng để suy claim phủ định** kiểu "Sandro không xuất hiện" |
+| `ab-here-there-be-pirates` | T1* | FETCHED | Armageddon's Blade — Cowl trên map, 26 Dragon Flies canh |
+| `roe-all-for-one` | T1* | FETCHED | Restoration of Erathia (`source = roe`) — map **Single/Multiplayer độc lập**, không thuộc campaign. Seer's Hut (1,16,0) → +5 Attack. ⚠️ Seer's Hut này **không có** text `prop`/`comp` |
+| `hota-all-hands-on-board` | T1* | FETCHED | Scenario **HotA** (`cback = hota hota 4`) — Seer's Hut (47,26,1) → 50 Vampire Lords |
+| `h3wiki-mormolykos` | T1* | FETCHED | ⭐ Hero **HotA** — vampire gốc Jadame, mang sẵn Cowl (`spart_6`). Là **chủ sở hữu có tên trong truyện** duy nhất của Cowl; `hota-tomb-raiders` gọi nó là "Mormolykos' Cowl" |
 
 ### Artifact
 
@@ -128,11 +133,11 @@ gốc **một bước**.
 | `h3wiki-cloak-undead-king` | T1* | FETCHED | Cơ chế, thành phần, bảng hồi sinh, quy tắc cộng dồn. ⚠️ Câu về HotA 1.7.2 trên trang này **sai** — xem cảnh báo bên dưới |
 | `h3wiki-armor-of-the-damned` | T1* | FETCHED | Cơ chế, thành phần, synergy với hero. Mô tả in-game: **4 spell**, không phải 5 |
 | `h3wiki-amulet-of-the-undertaker` | T1* | FETCHED | Thành phần Cloak — Treasure, Necklace, 2000, +5% Necromancy |
-| `h3wiki-vampires-cowl` | T1* | FETCHED | Thành phần Cloak — Minor, Cape, 4000, +10% Necromancy |
+| `h3wiki-vampires-cowl` | T1* | FETCHED | Thành phần Cloak — Minor, Cape, 4000, +10% Necromancy. ⚠️ **Chỉ 913 byte — KHÔNG dùng được cho bảng xuất hiện scenario.** Tên scenario duy nhất trên trang nằm trong chú thích gallery. Xem cảnh báo "Trang artifact không chứa danh sách scenario" bên dưới |
 | `h3wiki-dead-mans-boots` | T1* | FETCHED | Thành phần Cloak — Major, Feet, 6000, +15% Necromancy |
 | `h3wiki-angelic-alliance` | T1* | FETCHED | Artifact đối kháng — 84000, đắt nhất SoD, +21 cả bốn primary skill |
 | `h3wiki-necromancy` | T1* | FETCHED | Giới hạn cơ chế Necromancy. Khác biệt SoD vs HotA về cách tính |
-| `hota-changelog` | T1* | FETCHED | Changelog Horn of the Abyss, 201.529 byte. **Nguồn chuẩn** cho mọi claim về HotA — trang artifact không đáng tin bằng |
+| `hota-changelog` | T1* | FETCHED | Changelog Horn of the Abyss, 201.529 byte. **Nguồn chuẩn** cho mọi claim về HotA — trang artifact không đáng tin bằng. 📌 Tên trang đúng là `Horn of the Abyss (Changelog)` — dạng `Horn of the Abyss/Changelog` trả **404**. ⚠️ Tier `T1*` đang **sai loại nguồn** — xem `B-018` |
 | `sod-a-tough-start` | T1* | FETCHED | Yog phân tán các mảnh Angelic Alliance — bài kiểm tra lòng trung thành của Boragus |
 | `sod-black-sheep` | T1* | FETCHED | Hack and Slash #2 — Blackshard. Chứa event (64,9,0): mắt đồng minh **trống rỗng** — bằng chứng Sandro thao túng tâm trí |
 | `sod-a-cage-in-the-hand` | T1* | FETCHED | Hack and Slash #3 — Rib Cage. Vỏ bọc "Sanctuary" bị Ebon Hand phản bác |
@@ -143,7 +148,7 @@ gốc **một bước**.
 | `h3wiki-orb-of-inhibition` | T1* | FETCHED | **Phản bác** cách nói "anti-magic artifacts chặn Armor" — Orb ghi rõ "Does not prevent: Artifact spell casting (i.e. Armor of the Damned...)" |
 | `h3wiki-trivia` | T1* | FETCHED | Xác nhận độc lập: Armor hoạt động bình thường trong Anti-Magic Garrison |
 | `h3wiki-weakness` | T1* | FETCHED | Armor of the Damned là artifact **duy nhất** cast được Weakness; 4 hero chuyên |
-| `h3wiki-terek` | T1* | FETCHED | Barbarian/Battle Mage, tay sai đầu tiên Sandro thuê lấy Cowl; bị cướp bắt |
+| `h3wiki-terek` | T1* | FETCHED | Barbarian/Battle Mage, tay sai đầu tiên Sandro thuê lấy Cowl; bị cướp bắt. ⚠️ **Trang có HAI loại nội dung, tier khác nhau:** `\| biography =` là in-game text (`T1*`) và **không nhắc Sandro/Cowl/bị bắt** — nó nói về Circus of the Sun và quân Krewlod. Mục `== Story ==` là **văn biên tập viên wiki** (`T6`), nằm ngoài mọi template. Đừng gán `T1*` cho câu lấy từ `== Story ==` |
 | `h3wiki-sandals-of-the-saint` | T1* | FETCHED | Cần để qua Quest Guard lấy Dead Man's Boots |
 | `fandom-artifact-list` | T6 | FETCHED | `List of Heroes III artifacts` — **nguồn duy nhất** cho mô tả in-game của artifact. Fandom **không dẫn nguồn** |
 | `h3wiki-herobios-txt` | **T1** | FETCHED | ⭐ `Translation Data/HeroBios.txt` — **file string table TRÍCH TỪ GAME** (168KB, cột EN/FR/PL/RU). Đây là `T1` **thật**, không phải `T1*` |
@@ -484,6 +489,33 @@ Trang `h3wiki-cloak-undead-king` ghi lệnh cấm HotA 1.7.2 kèm **ba** templat
 - **1.7.3** (08/JUN/2025): mới thêm template "Default Random Map (Legacy)"
 
 Trang wiki gộp hai phiên bản thành một.
+
+### ⚠️⚠️ Trang artifact trên thelazy KHÔNG chứa danh sách scenario — đã sai ba lần liên tiếp
+
+Lỗi này xuất hiện ở **cả ba** bài thành phần Cloak, mỗi bài do một verifier độc lập bắt được.
+Ba lần thì không còn là sự cố — nó là **quy luật của nguồn**.
+
+| Trang | Kích thước | Có tên scenario? |
+|---|---|---|
+| `Dead Man's Boots` | 660 byte | Không |
+| `Amulet of the Undertaker` | 672 byte | Không |
+| `Vampire's Cowl` | 913 byte | Chỉ trong chú thích gallery |
+
+Trang artifact chỉ chứa template `{{ArtifactNewSB}}` (class/slot/cost/event/effect), một câu văn
+wiki về điều kiện Necromancy, mục *Related artifacts*, và category. **Không có mục scenario nào.**
+
+**Hệ quả:** mọi bảng "Xuất hiện trong game" dẫn về `h3wiki-<artifact>` là **mis-citation** — nhãn
+`EXPLICIT` trỏ vào chỗ trống, tức "EXPLICIT không nguồn" theo `CANON-POLICY.md` mục 2.
+
+**Cách làm đúng:** quét `api.php?action=query&list=backlinks&bltitle=<Artifact>&bllimit=500` (mỗi
+artifact có 190–195 backlink), rồi fetch `?action=raw` từng trang scenario và dẫn **key riêng cho
+từng dòng**. Bắt buộc đọc trường `| source =` của mỗi trang để ghi đúng sản phẩm — **gán sai sản
+phẩm đã từng là BLOCKER**, và cả ba đợt đều phát hiện mục bị gán sai hoặc bị bỏ sót.
+
+Cách này cũng là cách duy nhất tìm ra:
+- `Viking We Shall Go! (Allies)` — trang scenario riêng, bị bỏ sót ở bài Boots
+- template `Black'n'Blue` **cấm** Boots và `Nine-day Wonder` **cấm** Amulet — ngược chiều `Apocalypse`
+- `Mormolykos` — hero HotA mang sẵn Cowl, chủ sở hữu có tên duy nhất của nó
 
 ### ⚠️ Trang template HotA là `T6`, và "Allowed artifacts" KHÔNG có nghĩa "chỉ ba artifact"
 
