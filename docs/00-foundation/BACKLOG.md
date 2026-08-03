@@ -114,6 +114,37 @@ lẻ sẽ tạo trạng thái nửa vời, tệ hơn hiện tại.
 
 **Trạng thái:** chưa bắt đầu. Chặn bởi việc phải quyết định policy ở mục 1 trước.
 
+### B-019 · Lỗ nguồn Heroes IV — không có nguồn nào tốt hơn Fandom
+
+**Vấn đề:** `CANON-POLICY.md` mục 1 xác định phạm vi Old Universe gồm **Heroes I–IV**. Nhưng
+`heroes.thelazy.net` — nguồn `T1*` xương sống của cả dự án — gần như **chỉ phủ Heroes III**.
+
+Nghĩa là với mọi nội dung H4, nguồn tốt nhất hiện có là `mightandmagic.fandom.com`, tier `T6`,
+**không dẫn nguồn**. Theo `CANON-POLICY.md` mục 2, T6 không bao giờ đủ để một claim đạt `CANON`.
+
+**Phát hiện ở đâu:** verify `amulet-of-the-undertaker` (2026-08-03). Verifier chỉ ra bài **bỏ hẳn**
+phiên bản H4 của artifact, và điều đó làm **sai** các câu so sánh nhất không rào phạm vi — ở H4 cùng
+artifact là hạng **Minor** với **+10%** Necromancy, và **không vô tác dụng** khi hero thiếu skill.
+
+**Vì sao đây là nợ cấp dự án, không phải chuyện một bài:** nó chặn **cả B-016**. Trong bốn entity
+trụ mà `WORKFLOW.md` yêu cầu, `gauldoth-half-dead` thuộc kỷ Axeoth (H4) và `tarnum` xuyên kỷ qua
+Chronicles. Cả hai sẽ gặp đúng lỗ nguồn này. Viết chúng bằng nguồn `T6` sẽ tạo ra một loạt bài
+không bao giờ lên được `verified`.
+
+**Việc cần làm — theo thứ tự dễ trước:**
+
+1. Tìm string table của H4 tương tự `artraits.txt`/`HeroBios.txt` của H3. Nếu H4 cũng có file dữ
+   liệu trích được thì lỗ này đóng được ở mức `T1`.
+2. Tìm wiki H4 chuyên biệt có dẫn nguồn (`heroesofmightandmagic.com`, các fansite H4 cũ).
+3. Manual in của Heroes IV + *Winds of War* — tương đương `T2*`, vẫn hơn `T6` nhiều.
+4. Nếu cả ba thất bại: ghi thẳng vào `CANON-POLICY.md` rằng nội dung H4 **tối đa** đạt `INFERENCE`
+   cho tới khi có nguồn mới, để không ai tưởng bài H4 đạt chuẩn như bài H3.
+
+⚠️ **Không được xử lý bằng cách bỏ H4 khỏi Codex.** Đó là thu hẹp phạm vi dự án để né một lỗ nguồn,
+và nó sẽ tái diễn đúng vấn đề mà B-016 đang sửa.
+
+**Trạng thái:** chưa bắt đầu. Nên làm trước mục 3 và 4 của B-016.
+
 ### B-002 · Fetch tài liệu thiết kế gốc của Jennifer Bullard (UT Austin)
 
 **Là gì:** Bullard — Lead Designer và người viết cốt truyện *Shadow of Death* — đã gửi
@@ -301,3 +332,4 @@ verifier độc lập tìm nguồn T1–T4 cho từng cái — đúng luồng đ
 | 2026-07-31 | Lập backlog sau khi Sandro đạt `verified` |
 | 2026-08-03 | Thêm B-016 (cân bằng kỷ nguyên) và B-017 (`codex/events/` rỗng) sau khi rà lại mục tiêu dự án. Phát hiện: 9/9 bài đầu nằm cùng một cụm, và không công cụ nào bắt được loại lệch này |
 | 2026-08-03 | Thêm B-018 (`hota-changelog` sai loại nguồn) từ verify `dead-mans-boots`. Cùng đợt: **B-001 tiến một bước thật** — tìm được `h3wiki-artraits-txt` (`T1` không dấu sao, string table trích từ `H3Bitmap.lod`), thay được `fandom-artifact-list` (`T6`) cho **mọi** bài artifact |
+| 2026-08-03 | Thêm B-019 (lỗ nguồn Heroes IV) từ verify `amulet-of-the-undertaker`. Phát hiện: thelazy gần như chỉ phủ H3, nên mọi nội dung H4 hiện chỉ có nguồn `T6`. **Việc này chặn B-016** — hai trong bốn entity trụ (`gauldoth-half-dead`, `tarnum`) sẽ gặp đúng lỗ đó |

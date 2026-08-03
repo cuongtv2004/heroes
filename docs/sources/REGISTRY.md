@@ -116,6 +116,10 @@ gốc **một bước**.
 | `hc-jorms-ambush` | T1* | FETCHED | Heroes Chronicles — Seer's Hut (3,7,1) đổi Boots → 13.349 vàng |
 | `hota-dead-or-alive` | T1* | FETCHED | Scenario **HotA** (fan-made, không phải NWC) — Quest Guard (56,30,0) đòi Boots |
 | `hota-the-life-guard` | T1* | FETCHED | Scenario **HotA** (fan-made, không phải NWC) — Boots từ Shipwreck Survivor (35,25,1) |
+| `hota-beyond-the-horizon` | T1* | FETCHED | Scenario **HotA** (`source = hota`, `cback = hota fif 2`) — Seer's Hut (2,27,0) đòi **bốn** artifact (Skull Helmet, Rib Cage, Amulet of the Undertaker, Vampire's Cowl) → Golden Bow. ⭐ Chứa câu priest **cố ý bỏ lửng nguồn gốc artifact**: "Their creator was... Bah, that doesn't matter." |
+| `hota-tomb-raiders` | T1* | FETCHED | Scenario **HotA** (`cback = hota fif 4`) — Seer's Hut **lặp lại** (`rpt=y`) tại (16,172,0) → +1 primary skill tự chọn; và Quest Guard (12,178,0) đòi Amulet để sửa **Skeleton Transformer** |
+| `hota-frontier` | T1* | FETCHED | Scenario **HotA** (`cback = hota hota 1`) — Seer's Hut (70,18,0) → Ring of Vitality |
+| `hota-nine-day-wonder` | T6 | FETCHED | Trang đặc tả template `Nine-day Wonder` của HotA — do cộng đồng viết. ⚠️ Amulet of the Undertaker nằm trong `Banned artifacts`, **ngược chiều** với `hota-apocalypse-template` |
 
 ### Artifact
 
@@ -215,6 +219,8 @@ Chỉ dùng để dẫn đường tới T1–T4.
 | `ch-walkthrough-307` | T6 | FETCHED | Celestial Heavens walkthrough *Fall of Sandro*. Số liệu hữu ích: Sandro trận cuối có 13 Attack / 14 Defense / 17 Power / 7 Knowledge, bị chặn sau Quest Gate cần Boots of Levitation |
 | `mm8-guide-walkthrough` | T6 | FETCHED | Walkthrough MM8 độc lập với Fandom, `tumblr.com/mm8-guide/663630859431231488` — **xác nhận độc lập** phần MM8 và **sửa** một chi tiết: Sandro là **lãnh đạo**, Thant là **phó**, không phải đồng lãnh đạo |
 | `fandom-sandro-xeen` | T6 | FETCHED | Trang `Sandro (Xeen)` — nhân vật **riêng** trong *Might and Magic V: Darkside of Xeen*, lich, questgiver/boss ở Necropolis. **Quan trọng:** sprite của nhân vật này là gốc của portrait Sandro Enroth |
+| `fandom-h4-artifact-list` | T6 | FETCHED | `List of Heroes IV artifacts` — mục `=== Minor artifacts ===`. **Nguồn duy nhất** cho thông số artifact ở Heroes IV. Fandom **không dẫn nguồn**. ⚠️ Xem lỗ nguồn H4 ở `BACKLOG.md` B-019 |
+| `fandom-prelude-to-invasion` | T6 | FETCHED | Scenario H4 đầu tiên của campaign *Death March* (`version = H4X2`, *Winds of War*) — Amulet of the Undertaker là một trong năm artifact đổi lấy Dwarven Hammer/Shield/Ring of Protection mang sang map sau |
 
 ---
 
