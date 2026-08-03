@@ -39,7 +39,7 @@ sources_used:
   - roe-season-of-harvest
   - roe-corporeal-punishment
   - t2-necromancy-origin
-  - 3do-mm7-diaries-archibald
+  - mm7-diaries-3do
   - fulton-names-2023
   - h3wiki-lord-falorel
   - hota-changelog
@@ -197,8 +197,10 @@ Phần "và tiếng Iceland" thì Fulton không nói; nó chỉ có ở Fandom.
 **Christian Vanover**, nhân viên NWC, viết và đăng trên diễn đàn 3DO — nay đã đóng cửa.
 Người kể trong truyện là một nhân vật tên Marcus Finch. {T2* EXPLICIT: t2-necromancy-origin}
 
-Đây là nguồn duy nhất kể nguồn gốc Deyja, và nó **không thể tiếp cận ở dạng gốc** —
-archive.org bị chặn.
+Đây là nguồn duy nhất kể nguồn gốc Deyja, và bản gốc trên diễn đàn 3DO **chưa lấy được**.
+
+⚠️ Bản đầu của bài ghi lý do là "archive.org bị chặn" — điều đó **sai**, `web.archive.org` vào được
+bình thường. Nên đây là việc **chưa thử**, không phải việc **không thể**. Xem `REGISTRY.md`.
 
 **Chuỗi phát sinh của necromancy:**
 
@@ -305,7 +307,7 @@ không tên**, mà viết văn xuôi sẽ che mất.
 |---|---|---|---|---|
 | 1 | **"the old King"** — không tên | Finneas phản bội ông; số phận không rõ | `EXPLICIT` | {T1*: sod-finneas-vilmar} |
 | 2 | **"the new king"** — không tên | Bị Sandro phế để lập Finneas | `EXPLICIT` | {T1*: sod-duke-alarice} |
-| 3 | **Finneas Vilmar** — còn gọi **Deathknell** | Bị chính lich hắn hồi sinh giết | `EXPLICIT` | {T2: 3do-mm7-diaries-archibald} |
+| 3 | **Finneas Vilmar** — còn gọi **Deathknell** | Bị chính lich hắn hồi sinh giết | `EXPLICIT` | {T2: mm7-diaries-3do} |
 | 4 | **Lich King Nicolas Gryphonheart** | Bị Catherine tiêu diệt (~1168) | `EXPLICIT` | {T1*: roe-safe-passage} |
 | 5 | **Archibald Ironfist** | Bị Kastore phế (~1169) | `INFERENCE` | {T6: fandom-timeline-ancient} |
 | 6 | **Kastore** | Vua cuối cùng được biết | `INFERENCE` | {T1* + T6: h3wiki-kastore} |
@@ -423,13 +425,13 @@ một cái tên mà game Heroes III không dùng, và kể vụ giết trực ti
 > binding did not take. **Instead, the lich killed Deathknell.** Now Erathia and Deyja have a new
 > king…and the guild has a new leader."
 
-{T2 EXPLICIT: 3do-mm7-diaries-archibald — Entry 37}
+{T2 EXPLICIT: mm7-diaries-3do — Entry 37}
 
 Và Entry 143 xác nhận chuỗi kế vị:
 
 > "For as the lich, Gryphonheart, **replaced Deathknell**, so have I replaced Gryphonheart."
 
-{T2 EXPLICIT: 3do-mm7-diaries-archibald — Entry 143}
+{T2 EXPLICIT: mm7-diaries-3do — Entry 143}
 
 **Định danh chắc chắn:** "the guild leader and king of Deyja" bị "the lich" giết ngay sau nghi thức
 hồi sinh — điều đó chỉ có thể là Finneas Vilmar, và khớp từng chi tiết với game text Heroes III
@@ -457,13 +459,13 @@ phải chức guildmaster, và **không** có chữ "đấu tay đôi" nào.
 
 > "…and so it was that I won the **Challenge of Dominance**… and with it, **this little mission**."
 
-{T2 EXPLICIT: 3do-mm7-diaries-archibald — Entry 37}
+{T2 EXPLICIT: mm7-diaries-3do — Entry 37}
 
 Ngai Deyja đến **sau và riêng biệt**, chỉ khi Gryphonheart bị Catherine tiêu diệt:
 
 > "For as the lich, Gryphonheart, replaced Deathknell, **so have I replaced Gryphonheart**."
 
-{T2 EXPLICIT: 3do-mm7-diaries-archibald — Entry 143}
+{T2 EXPLICIT: mm7-diaries-3do — Entry 143}
 
 ⚠️ **Cả hai wiki lớn gộp hai sự kiện này và gán nhân quả sai** — và **thelazy tự mâu thuẫn**: trang
 `Nimbus` tách đúng, trang `Archibald` gộp sai. Xem `REGISTRY.md`. Chi tiết ở [[archibald-ironfist]].
@@ -679,7 +681,7 @@ Và có một liên hệ **gián tiếp nhưng có thật**: Necromancers' Guild
 Nimbus) chính là tổ chức về sau di cư sang Deyja để phục vụ Lich King — theo *Diaries of Archibald*
 Entry 37, tức **1167**.
 {T6 INFERENCE: h3wiki-nimbus}
-{T2 EXPLICIT: 3do-mm7-diaries-archibald — Entry 37, ngày 23 October **1167**}
+{T2 EXPLICIT: mm7-diaries-3do — Entry 37, ngày 23 October **1167**}
 
 ⚠️ Bản đầu của bài ghi "khoảng năm **1166**" — đó là con số thelazy **chép sai**. Nguồn chính thức 3DO
 ghi **1167**.
@@ -841,14 +843,14 @@ là bị chặn), nên bản gốc trên diễn đàn 3DO **có thể còn lấy
 
 | Loại | Số lượng | Ghi chú |
 |---|---|---|
-| **`T2`** — manual chính thức, site 3DO | **1** | ⭐⭐ `3do-mm7-diaries-archibald` — **nguồn không-phải-wiki** duy nhất của bài. Chốt `Deathknell` = Finneas, và **bắt được thelazy chép sai hai con số năm** |
+| **`T2`** — manual chính thức, site 3DO | **1** | ⭐⭐ `mm7-diaries-3do` — **nguồn không-phải-wiki** duy nhất của bài. Chốt `Deathknell` = Finneas, và **bắt được thelazy chép sai hai con số năm** |
 | **`T4`** — phát ngôn developer | **1** | ⭐ `fulton-names-2023` — Lead Designer nói về từ nguyên Deyja |
 | `T1*` — text in-game qua trung gian | 17 | heroes.thelazy.net |
 | `T2*` — truyện ngắn của nhân viên NWC | 1 | `t2-necromancy-origin` — nguồn duy nhất về nguồn gốc |
 | `T6` — wiki cộng đồng | 6 | ⚠️ `fandom-timeline-ancient` — chất lượng ref không đều, nhưng **không** "không xác minh được" như bài từng nói |
 
 Nguồn giá trị nhất: `sod-finneas-vilmar` region text (phát hiện hai vị vua),
-`3do-mm7-diaries-archibald` (nguồn chính thức, chốt Deathknell và sửa niên đại), và
+`mm7-diaries-3do` (nguồn chính thức, chốt Deathknell và sửa niên đại), và
 `t2-necromancy-origin` (nguồn gốc).
 
 ⭐ **Bài này là bài đầu tiên trong Codex có nguồn cấp `T2` chính thức không qua wiki.** Nó có được nhờ

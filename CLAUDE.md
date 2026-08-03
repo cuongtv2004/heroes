@@ -85,14 +85,20 @@ Tóm lại, push cần thỏa **hai** phần độc lập:
   `verified`) · `mkdocs build --strict` · `lint_site.py --strict`.
 - **B — thẩm quyền:** user **yêu cầu** push, hoặc đã cho phép trước với phạm vi rõ.
 
-> **Bốn cửa xanh KHÔNG phải là lệnh push.** Nó chỉ có nghĩa push sẽ không làm hỏng site.
+✅ **Cho phép thường trực của dự án (user đặt 2026-08-03):**
 
-**Không tự ý push** — kể cả khi mọi bài đã `verified` và mọi cửa đều xanh. Dồn commit
-chưa push là trạng thái **bình thường và an toàn**, không phải nợ cần dọn. `main` là
-thứ Pages phục vụ, và push là hành động hướng ra ngoài, khó thu hồi.
+> **"Entity nào `verified` thì push luôn, không cần hỏi."**
 
-Cho phép tự động ("làm tiếp cho tới xong") áp cho công việc **trong repo** — nó
-**không** tự bao gồm push.
+Nghĩa là entity đạt `verified` + bốn cửa xanh → **push, không hỏi**. Không cần chờ dồn.
+Lần push đó đi kèm mọi thay đổi đang chờ (tooling, tài liệu, registry) — bình thường,
+vì A2 đã bảo đảm không có bài `draft` nào lọt lên.
+
+⚠️ **Cho phép này làm Phần B nhẹ đi, KHÔNG làm nhẹ Phần A.** Bốn cửa vẫn phải chạy
+**mỗi lần** và vẫn phải xanh.
+
+**Vẫn phải hỏi khi:** còn bài `draft`/`needs-rework` trong cây · một cửa Phần A không
+chạy được (ví dụ thiếu `mkdocs`) · thay đổi động tới `mkdocs.yml`, `.github/workflows/`,
+`tools/` mà chưa build thử được · bất kỳ `--force` hay sửa lịch sử đã push.
 
 ---
 

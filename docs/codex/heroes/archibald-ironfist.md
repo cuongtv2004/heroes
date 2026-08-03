@@ -23,7 +23,6 @@ playable_in:
       - archibalds-campaign
 sources_used:
   - mm7-diaries-3do
-  - 3do-mm7-diaries-archibald
   - h2-first-blood
   - h2-apocalypse
   - h2-final-justice

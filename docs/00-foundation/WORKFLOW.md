@@ -57,28 +57,53 @@ Push cần **người dùng cho phép**, và sự cho phép đó phải thuộc 
 
 1. **Yêu cầu trực tiếp** — "push đi", "đẩy lên", "xuất bản", "publish", hoặc gọi skill
    `heroes-publish`.
-2. **Cho phép trước có phạm vi rõ** — ví dụ *"làm xong entity nào thì push luôn entity đó"*.
-   Phạm vi đó **hết hiệu lực** khi công việc được nêu kết thúc; nó **không** mở rộng sang
-   loại thay đổi khác.
+2. **Cho phép trước có phạm vi rõ** — xem *cho phép thường trực* ngay dưới.
 3. **Được chọn trong một câu hỏi** — nếu đã hỏi và user chọn "push", thì đó là cho phép.
+
+#### ✅ Cho phép thường trực của dự án (user đặt 2026-08-03)
+
+> **"Entity nào `verified` thì push luôn, không cần hỏi."**
+
+Đây là **mặc định của dự án**, không phải cho phép một lần. Nghĩa là:
+
+- Khi một entity đạt `status: verified` và **bốn cửa Phần A đều xanh** → **push, không hỏi**.
+- Không cần chờ dồn nhiều entity. Xong bài nào, push bài đó.
+- Vì `main` mang **toàn bộ** trạng thái cây, lần push đó **đi kèm** mọi thay đổi đang chờ
+  (tooling, tài liệu nền, registry). Đó là bình thường — A2 đã bảo đảm không có bài `draft`
+  nào lọt lên.
+
+**Cho phép này KHÔNG bao gồm:**
+
+- ❌ Push khi còn bài `draft` hoặc `needs-rework` trong cây — A2 vẫn chặn, và không có ngoại lệ.
+- ❌ Push khi một cửa Phần A **không chạy được** (ví dụ máy chưa có `mkdocs`) — khi đó nói rõ
+  với user rồi hỏi.
+- ❌ Push thay đổi động tới `mkdocs.yml`, `.github/workflows/`, hoặc `tools/` mà **chưa build
+  thử được** tại chỗ.
+- ❌ `git push --force`, sửa lịch sử đã push, hay push lên nhánh khác `main`.
+
+⚠️ **Cho phép thường trực làm Phần B nhẹ đi, nhưng Phần A thì không.** Bốn cửa vẫn phải chạy
+**mỗi lần**, và vẫn phải xanh. Cửa chặn là thứ bảo vệ người đọc, không phải thủ tục xin phép.
 
 ### ⛔ Những thứ KHÔNG phải là lý do để push
 
 Ghi ra vì tất cả đều nghe hợp lý:
 
+Các mục dưới đây áp cho **thay đổi không phải entity đạt `verified`** — vì trường hợp đó đã
+được *cho phép thường trực* ở trên bao phủ.
+
 - ❌ "Bốn cửa đều xanh" — đó là Phần A, không phải Phần B.
 - ❌ "Đã dồn nhiều commit ở local, trông chưa gọn" — **dồn commit chưa push là trạng thái
   bình thường và an toàn.** Nó không phải nợ kỹ thuật, và không tự sinh ra quyền push.
-- ❌ "Entity vừa đạt `verified`" — `verified` là điều kiện của Phần A, không phải giấy phép.
 - ❌ "User đang ở chế độ tự động, nói làm tiếp cho tới xong" — cho phép tự động áp cho công
   việc **trong repo**. Nó **không** tự bao gồm hành động hướng ra ngoài.
-- ❌ "Lần trước user đã cho push" — cho phép **không** tự động kéo sang lần sau.
-- ❌ "Thay đổi chỉ là tooling / tài liệu nền, không phải bài viết" — vẫn cần Phần B, và vẫn
-  phải qua A2 (vì push mang theo **toàn bộ** trạng thái cây).
+- ❌ "Thay đổi chỉ là tooling / tài liệu nền" — nếu **không** đi kèm một entity vừa `verified`
+  thì vẫn cần Phần B, và vẫn phải qua A2.
 
-**Tiền lệ (2026-08-03):** một phiên tích **12 commit** ở local — 10 entity `verified`, bốn cửa
-xanh. Vẫn **không** push, vì trước đó user được hỏi và **đã không chọn** mục push. Đó là xử lý
-đúng: trạng thái sạch, chờ người quyết.
+**Tiền lệ (2026-08-03), và vì sao nó dẫn tới luật hiện tại:** một phiên tích **12 commit** ở
+local — 10 entity `verified`, bốn cửa xanh — vẫn **không** push, vì user được hỏi và đã không
+chọn mục push. Xử lý đó **đúng theo luật lúc ấy**, nhưng nó cho thấy luật đang quá chặt cho một
+dự án mà `verified` vốn đã là cửa chặn nghiêm. User sau đó đặt *cho phép thường trực* ở trên,
+và 13 commit được đẩy trong cùng phiên.
 
 ### Khi nào phải DỪNG và hỏi, dù đã có Phần B
 

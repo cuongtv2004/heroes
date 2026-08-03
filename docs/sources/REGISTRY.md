@@ -2,6 +2,27 @@
 
 Sổ nguồn của dự án. **Mọi source key dùng trong Codex và Saga phải có mặt ở đây.**
 
+## ⚠️ Ràng buộc định dạng source key — key KHÔNG được bắt đầu bằng số
+
+`tools/check.py` nhận diện source key bằng:
+
+```python
+SOURCE_KEY_RE = re.compile(r"\b([a-z][a-z0-9]*(?:-[a-z0-9]+){1,})\b")
+```
+
+Key **phải bắt đầu bằng chữ cái thường**. Nếu đặt tên kiểu `3do-mm7-diaries`, regex **không**
+khớp từ đầu — nó nhặt được phần sau dấu gạch (`mm7-diaries`) và báo *"nhãn dùng source key ngoài
+registry"* cho một key **không tồn tại**. Cảnh báo trông như lỗi chính tả, nhưng gốc là định dạng.
+
+**Đã xảy ra thật (2026-08-03):** key `3do-mm7-diaries-archibald` sinh ra key ma
+`mm7-diaries-archibald`, **và** tồn tại song song với `mm7-diaries-3do` — hai key cho **cùng một
+nguồn**. Đã gộp về `mm7-diaries-3do`.
+
+**Quy ước:** đặt phần định danh nguồn ở **cuối**, không ở đầu — `mm7-diaries-3do`,
+`h4-official-artifacts-minor`, `roe-all-for-one`.
+
+---
+
 Cách đọc một entry:
 
 - `key` — mã dùng trong nhãn, ví dụ `{T1* EXPLICIT: sod-target-prologue}`
@@ -197,7 +218,7 @@ gốc **một bước**.
 
 | key | tier | access | Nội dung |
 |-----|------|--------|----------|
-| `mm7-diaries-3do` | **T2** | FETCHED | ⭐⭐ *The Diaries of Archibald* trên **site chính thức 3DO** qua archive — **Archibald tự kể**. Ba entry: 1165 / **1167** / **1168**. Là nguồn duy nhất kể đúng cách hắn lên ngôi Deyja. Cùng trang với `3do-mm7-diaries-archibald` |
+| `mm7-diaries-3do` | **T2** | FETCHED | ⭐⭐ *The Diaries of Archibald* — **text manual MM7 trên website CHÍNH THỨC của 3DO**, lấy qua archive: `web.archive.org/web/20001017212754/http://www.3do.com/products/pc/mm7/story/story.htm`. **Archibald tự kể ở ngôi thứ nhất.** Ba entry: 1165 / **1167** / **1168**. Nguồn **không-phải-wiki** tốt nhất dự án có cho niên đại Antagarich 1165–1168, và là nguồn duy nhất kể **đúng** cách hắn lên ngôi Deyja. Chốt được `Deathknell` = Finneas Vilmar. ⚠️ **thelazy chép sai hai con số năm từ nguồn này** |
 | `fandom-path-of-darkness` | T6 | FETCHED | Bảng quest Dark Path MM7 — Archibald **mời** party vào The Pit sau khi chọn Sleen |
 | `fandom-archibald-ironfist` | T6 | FETCHED | Bài dài nhất về nhân vật. ⚠️ **Gộp sai** Challenge of Dominance với việc lên ngôi Deyja — xem cảnh báo bên dưới |
 | `fandom-archibald-disambig` | T6 | FETCHED | ⚠️ **BH-2:** chứng minh có **`Archibald Dawnsglow`** — expert Light Magic trainer trong MM8, nhân vật **khác**. Đối xứng trớ trêu: Ironfist là Grandmaster **Dark** Magic trainer ở MM7 |
@@ -336,7 +357,6 @@ kiểm định độc lập tìm được nguồn T4 thật. Ghi lại sai sót 
 | `fulton-fanstratics-27` | **T4** | FETCHED | Fulton, Newsletter #27 — ghi lại yêu cầu thiết kế ở buổi họp khởi động H3: "Keep specific heroes from HoMM2, like **Sandro the Necromancer**, Halon the Wizard, Lord Haart..." |
 | `fulton-fanstratics-3` | **T4** | FETCHED | Fulton, Newsletter #3 — xác nhận **Bullard là Lead Designer của SoD**: "I was not involved in the conception or creation of SoD... Jennifer Bullard was the project's Lead Designer, and any questions you have about SoD would best be directed to her" |
 | `fulton-names-2023` | **T4** | FETCHED | ⭐⭐ `Gregory Fulton/On Names in Heroes of Might and Magic III` trên thelazy — **98.499 byte**. Thư từ Amelrix ↔ Fulton 2022–2023, công bố 08/AUG/2023 trên Celestial Heavens, **~200 câu hỏi** về nguồn gốc tên town và hero, **do chính Fulton xem lại trước khi công bố**. Xem `B-020` — nguồn này chưa được khai thác hết |
-| `3do-mm7-diaries-archibald` | **T2** | FETCHED | ⭐⭐ *The Diaries of Archibald* — **text manual MM7 trên website CHÍNH THỨC của 3DO**, lấy qua archive: `web.archive.org/web/20001017212754/http://www.3do.com/products/pc/mm7/story/story.htm`. Đây là nguồn **không-phải-wiki** tốt nhất dự án có cho niên đại Antagarich 1165–1168. ⚠️ **thelazy chép sai hai con số năm từ nguồn này** — xem cảnh báo bên dưới. Chốt được `Deathknell` = Finneas Vilmar |
 
 ### Jennifer Bullard là ai
 
