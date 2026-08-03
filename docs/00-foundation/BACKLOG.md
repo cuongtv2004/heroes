@@ -53,12 +53,16 @@ nguyên vượt 15 bài, mọi kỷ nguyên khác phải có ít nhất một en
 
 | # | Entity | Kỷ nguyên | Ghi chú |
 |---|---|---|---|
-| 1 | `archibald-ironfist` | Age of Kings (H1–H2) | Đi trước vì **dùng chung nguồn** với chuỗi Deyja đã có |
+| 1 | ~~`archibald-ironfist`~~ ✅ **XONG 2026-08-03** | Age of Kings (H1–H2) | Đi trước vì **dùng chung nguồn** với chuỗi Deyja đã có. Kết quả: mở được nguồn `T2` chính thức (*Diaries of Archibald*) và phát hiện **cả hai wiki hiểu sai** cách hắn lên ngôi Deyja |
 | 2 | `the-reckoning` (event) | The Reckoning | Ranh giới Enroth → Axeoth; `TIMELINE-SPINE.md` mục 6 ghi "chưa có nguồn" |
 | 3 | `gauldoth-half-dead` | Kỷ Axeoth (H4) | Dọn luôn B-007 |
 | 4 | `tarnum` | Xuyên kỷ | Buộc phải chốt B-010 (cấu trúc Book V) |
 
-**Trạng thái:** luật đã vào `WORKFLOW.md` (2026-08-03). `archibald-ironfist` là bài kế tiếp.
+**Trạng thái:** luật đã vào `WORKFLOW.md` (2026-08-03). **Mục 1 xong** — `archibald-ironfist` đã
+`verified`, kỷ nguyên Age of Kings không còn trống. Còn ba entity trụ.
+
+⚠️ **Hai mục còn lại bị `B-019` chặn:** `gauldoth-half-dead` (kỷ Axeoth/H4) và `tarnum` (xuyên kỷ qua
+Chronicles) đều sẽ gặp lỗ nguồn Heroes IV. Nên làm `the-reckoning` trước, hoặc giải `B-019` trước.
 
 ### B-017 · `codex/events/` rỗng hoàn toàn — trục dọc chưa thành dữ liệu
 
