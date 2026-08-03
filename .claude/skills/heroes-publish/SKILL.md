@@ -2,14 +2,31 @@
 name: heroes-publish
 description: >-
   Commit và push nội dung Heroes Codex lên main, kèm cửa chặn chất lượng.
-  Dùng khi một entity vừa đạt status:verified, hoặc khi user nói "publish",
-  "đẩy lên", "push", "commit đi", "xuất bản". CHỈ dùng trong dự án
-  /home/cuongtv/heroes — không dùng ở repo khác.
+  Dùng khi user YÊU CẦU xuất bản — "publish", "đẩy lên", "push", "commit đi",
+  "xuất bản" — hoặc khi user đã cho phép trước với phạm vi rõ ràng.
+  KHÔNG tự gọi skill này chỉ vì một entity vừa đạt status:verified hay vì
+  các cửa chặn đều xanh: đó là điều kiện CẦN, không phải giấy phép.
+  Xem WORKFLOW.md bước 7 để biết định nghĩa đầy đủ.
+  CHỈ dùng trong dự án /home/cuongtv/heroes — không dùng ở repo khác.
 ---
 
 # Xuất bản Heroes Codex
 
 Đẩy nội dung lên `main`, GitHub Action sẽ tự build và deploy Pages.
+
+## ⚠️ Trước hết: kiểm xem có được phép push chưa
+
+Skill này chỉ lo **cửa chặn kỹ thuật**. Nó **không** trả lời câu hỏi "đã được phép
+push chưa". Định nghĩa đầy đủ ở `docs/00-foundation/WORKFLOW.md` **bước 7**, gồm hai
+phần phải thỏa cả hai:
+
+- **Phần A — cửa chặn kỹ thuật:** bốn cửa ở dưới. Cần, nhưng **chưa đủ**.
+- **Phần B — thẩm quyền:** user yêu cầu trực tiếp, hoặc đã cho phép trước với phạm vi rõ.
+
+> **Bốn cửa xanh không phải là lệnh push.** Nó chỉ có nghĩa là push sẽ không làm hỏng site.
+
+Nếu được gọi mà **không** có Phần B — ví dụ chỉ vì một entity vừa `verified`, hoặc vì
+đã dồn nhiều commit ở local — thì **dừng và hỏi user**, đừng push.
 
 ## Nguyên tắc: chỉ push thứ đã qua kiểm
 

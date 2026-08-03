@@ -76,10 +76,23 @@ Lớp thứ ba tồn tại vì có tiền lệ: cú pháp icon hiện thành ch�
 Viết entity mới: dùng `/heroes-entity <tên>`. Nó chạy đủ sáu bước của
 `docs/00-foundation/WORKFLOW.md`.
 
-Xuất bản: dùng skill `heroes-publish`. Chỉ push khi entity đã `verified` và
-`check.py` 0 lỗi.
+Xuất bản: dùng skill `heroes-publish`. **Định nghĩa đầy đủ điều kiện push ở
+`docs/00-foundation/WORKFLOW.md` bước 7.**
 
-**Không tự ý push** nội dung `draft` lên `main` — `main` là thứ Pages phục vụ.
+Tóm lại, push cần thỏa **hai** phần độc lập:
+
+- **A — cửa chặn kỹ thuật:** `check.py` 0 lỗi · `check.py --publish-gate` (mọi bài
+  `verified`) · `mkdocs build --strict` · `lint_site.py --strict`.
+- **B — thẩm quyền:** user **yêu cầu** push, hoặc đã cho phép trước với phạm vi rõ.
+
+> **Bốn cửa xanh KHÔNG phải là lệnh push.** Nó chỉ có nghĩa push sẽ không làm hỏng site.
+
+**Không tự ý push** — kể cả khi mọi bài đã `verified` và mọi cửa đều xanh. Dồn commit
+chưa push là trạng thái **bình thường và an toàn**, không phải nợ cần dọn. `main` là
+thứ Pages phục vụ, và push là hành động hướng ra ngoài, khó thu hồi.
+
+Cho phép tự động ("làm tiếp cho tới xong") áp cho công việc **trong repo** — nó
+**không** tự bao gồm push.
 
 ---
 

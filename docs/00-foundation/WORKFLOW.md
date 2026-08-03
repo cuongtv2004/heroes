@@ -7,7 +7,7 @@ Tài liệu này tồn tại vì các bài học dưới đây **đã phải tr�
 
 ---
 
-## Sáu bước
+## Bảy bước
 
 ```
 1. Research          → sources/raw/<entity>-dossier-<ngày>.md
@@ -16,9 +16,87 @@ Tài liệu này tồn tại vì các bài học dưới đây **đã phải tr�
 4. Kiểm máy          → python3 tools/check.py  (phải 0 lỗi)
 5. Verify độc lập    → sources/notes/verify-<entity>-<ngày>.md
 6. Xử lý + verified  → sửa hết BLOCKER/MAJOR, đặt status: verified
+7. Xuất bản          → CHỈ khi có đủ cửa chặn VÀ có người cho phép (xem dưới)
 ```
 
 **Không được bỏ bước 5.** Cả ba entity đầu tiên đều có lỗi mà chỉ luồng kiểm định bắt được.
+
+**Bước 1–6 làm được không cần hỏi ai. Bước 7 thì không.**
+
+---
+
+## Bước 7 — Khi nào được push lên `main`
+
+`main` là thứ GitHub Pages phục vụ cho người đọc. Push là hành động **hướng ra ngoài** và
+**khó thu hồi** — nội dung đã lên Pages có thể bị cache hoặc index kể cả sau khi xóa.
+
+Điều kiện push gồm **hai phần độc lập**, phải thỏa **cả hai**:
+
+### Phần A — Cửa chặn kỹ thuật (cần, nhưng CHƯA đủ)
+
+Bốn cửa, chạy đúng thứ tự này:
+
+| # | Lệnh | Yêu cầu |
+|---|---|---|
+| A1 | `python3 tools/check.py` | **0 lỗi.** Cảnh báo "bài chưa tồn tại" là bình thường |
+| A2 | `python3 tools/check.py --publish-gate` | **Mọi** bài phải `verified`. Một bài `draft` là dừng |
+| A3 | `python3 tools/wikilinks.py --build && mkdocs build --strict` | Không lỗi cấu trúc |
+| A4 | `python3 tools/lint_site.py --strict` | Không markup lọt ra thành chữ thô |
+
+A2 áp cho **toàn bộ cây**, không chỉ bài sắp push. Một bài `draft` ở chỗ khác vẫn chặn — vì
+nó cũng sẽ lên Pages. Lý do có luật này: đã có tiền lệ 6 bài `draft` bị đẩy lên `main`.
+
+A4 tồn tại vì `mkdocs build --strict` **không** bắt được loại lỗi đó — icon `:material-xxx:`
+từng hiện thành chữ trên site thật mà build vẫn báo thành công.
+
+### Phần B — Thẩm quyền (cần, và đây là phần hay bị bỏ qua)
+
+> **Bốn cửa xanh KHÔNG phải là lệnh push. Nó chỉ có nghĩa là push sẽ không làm hỏng site.**
+
+Push cần **người dùng cho phép**, và sự cho phép đó phải thuộc một trong ba dạng:
+
+1. **Yêu cầu trực tiếp** — "push đi", "đẩy lên", "xuất bản", "publish", hoặc gọi skill
+   `heroes-publish`.
+2. **Cho phép trước có phạm vi rõ** — ví dụ *"làm xong entity nào thì push luôn entity đó"*.
+   Phạm vi đó **hết hiệu lực** khi công việc được nêu kết thúc; nó **không** mở rộng sang
+   loại thay đổi khác.
+3. **Được chọn trong một câu hỏi** — nếu đã hỏi và user chọn "push", thì đó là cho phép.
+
+### ⛔ Những thứ KHÔNG phải là lý do để push
+
+Ghi ra vì tất cả đều nghe hợp lý:
+
+- ❌ "Bốn cửa đều xanh" — đó là Phần A, không phải Phần B.
+- ❌ "Đã dồn nhiều commit ở local, trông chưa gọn" — **dồn commit chưa push là trạng thái
+  bình thường và an toàn.** Nó không phải nợ kỹ thuật, và không tự sinh ra quyền push.
+- ❌ "Entity vừa đạt `verified`" — `verified` là điều kiện của Phần A, không phải giấy phép.
+- ❌ "User đang ở chế độ tự động, nói làm tiếp cho tới xong" — cho phép tự động áp cho công
+  việc **trong repo**. Nó **không** tự bao gồm hành động hướng ra ngoài.
+- ❌ "Lần trước user đã cho push" — cho phép **không** tự động kéo sang lần sau.
+- ❌ "Thay đổi chỉ là tooling / tài liệu nền, không phải bài viết" — vẫn cần Phần B, và vẫn
+  phải qua A2 (vì push mang theo **toàn bộ** trạng thái cây).
+
+**Tiền lệ (2026-08-03):** một phiên tích **12 commit** ở local — 10 entity `verified`, bốn cửa
+xanh. Vẫn **không** push, vì trước đó user được hỏi và **đã không chọn** mục push. Đó là xử lý
+đúng: trạng thái sạch, chờ người quyết.
+
+### Khi nào phải DỪNG và hỏi, dù đã có Phần B
+
+- `check.py` còn lỗi, hoặc còn bài `needs-rework` chưa xử lý
+- Đang có luồng verify chạy dở cho chính entity sắp push
+- Thay đổi động tới `mkdocs.yml`, `.github/workflows/`, hoặc `tools/` mà **chưa build thử được**
+  tại chỗ
+- Máy chưa cài `mkdocs` nên A3 không chạy được → nói rõ với user rằng chỉ CI sẽ bắt
+
+### Nếu user chủ động muốn push nội dung chưa `verified`
+
+Hỏi lại **một lần** để chắc chắn. Nếu user xác nhận, đó là quyết định của họ — làm, và **ghi rõ
+trong commit message** rằng có bài chưa verify. Không tranh luận tiếp.
+
+### Cách thực hiện
+
+Dùng skill `heroes-publish` — nó chạy đúng bốn cửa trên rồi commit và push. Đừng `git push` tay,
+vì như vậy sẽ bỏ qua cửa chặn.
 
 ---
 
@@ -215,6 +293,12 @@ mọi bài vẫn có nguồn, không luồng verify nào bắt được. Nó ch�
 nguyên có bao nhiêu bài — nên phải đếm chủ động, định kỳ.
 
 ---
+
+## Lịch sử sửa đổi
+
+| Ngày | Thay đổi | Lý do |
+|---|---|---|
+| 2026-08-03 | Thêm **bước 7 — điều kiện push**, tách *cửa chặn kỹ thuật* khỏi *thẩm quyền* | WORKFLOW trước đó **không nhắc push một lần nào**: sáu bước kết thúc ở `verified` rồi im lặng. Điều kiện push rải ở ba nơi (CLAUDE.md, skill `heroes-publish`, không nơi nào ở đây) và **không nơi nào định nghĩa ai được quyết**. Mô tả skill còn ghi "dùng khi một entity vừa đạt `verified`" — đọc như agent được tự push |
 
 ## Lịch sử
 
