@@ -26,6 +26,7 @@ sources_used:
   - hota-frontier
   - hota-apocalypse-template
   - hota-nine-day-wonder
+  - h4-official-artifacts-minor
   - fandom-h4-artifact-list
   - fandom-prelude-to-invasion
 # component_of khai o cloak-of-the-undead-king (assembled_from);
@@ -174,10 +175,18 @@ ghi nhận điều này có thể rút ngắn scenario:
 | Hiệu ứng | +5% Necromancy | **+10% Necromancy** |
 | Khi hero không có skill Necromancy | Vô tác dụng *(văn wiki, không phải game text)* | **Hoạt động như Basic Necromancy** |
 
-Mô tả ở Heroes IV: "Increases the hero's Necromancy skill by 10% if the hero has the skill.
-Otherwise, it acts as the Basic Necromancy skill."
+Mô tả ở Heroes IV, nguyên văn từ **site chính thức của New World Computing**:
 
-{T6 EXPLICIT: fandom-h4-artifact-list — Fandom **không dẫn nguồn**}
+> "Name: **Amulet of the Undertaker** · Slot: **Neck** · Description: Increases the hero's Necromancy
+> skill by 10% if the hero has the skill. **Otherwise, it acts as the Basic Necromancy skill.**"
+
+{T2 EXPLICIT: h4-official-artifacts-minor}
+
+⭐ **Đây là `T2` — nguồn chính thức của nhà phát triển, không phải wiki.** Bản đầu của bài dẫn Fandom
+(`T6`, không dẫn nguồn) cho cùng câu này; hai nguồn khớp **từng chữ**, nên Fandom đúng là bản chép.
+Nhưng giờ không cần dùng bản chép nữa.
+
+{T6 EXPLICIT: fandom-h4-artifact-list — giữ làm nguồn xác nhận trùng khớp}
 
 Nó cũng có vai trò quest thật ở H4, không chỉ là một dòng dữ liệu. Trong `Prelude to Invasion` —
 scenario đầu của campaign *Death March* (*Winds of War*) — Amulet là một trong **năm** artifact đem
@@ -189,9 +198,12 @@ scenario đầu của campaign *Death March* (*Winds of War*) — Amulet là m�
 
 {T6 EXPLICIT: fandom-prelude-to-invasion — Fandom **không dẫn nguồn**}
 
-⚠️ **Cả mục này chỉ có nguồn `T6`.** thelazy gần như chỉ phủ Heroes III, nên phần H4 hiện không có
-nguồn nào tốt hơn Fandom. Đây là **lỗ nguồn thật của dự án**, đã ghi thành `B-019` trong
-`BACKLOG.md` — không phải chuyện của riêng bài này.
+✅ **`B-019` đã giải (2026-08-03):** mục Heroes IV không còn chỉ có `T6`. Site chính thức của NWC
+(`heroesofmightandmagic.com/heroes4/`) **lấy được qua archive** — khoảng 200 URL, gồm cả bảng artifact
+và toàn bộ năm campaign. thelazy vẫn không phủ H4, nhưng điều đó không còn là bế tắc.
+
+*(Phần vai trò quest ở `Prelude to Invasion` bên dưới vẫn là `T6` — chưa đối chiếu với trang campaign
+chính thức tương ứng.)*
 
 ### Thay đổi qua các bản
 
@@ -268,10 +280,13 @@ file map gốc (liên quan `B-001`).
 Tìm được nguồn `T1` thật: `Talk:Artifact/descriptions` trên thelazy, tự ghi đầu bảng `Information
 from H3Bitmap.lod > artraits.txt`. Xem mục *Cơ chế trong Heroes III*.
 
-**Q3. Thông số Heroes IV có nguồn nào tốt hơn Fandom không?**
+**~~Q3. Thông số Heroes IV có nguồn nào tốt hơn Fandom không?~~ — ✅ ĐÃ GIẢI QUYẾT (2026-08-03)**
 
-Toàn bộ mục *Cơ chế trong Heroes IV* hiện chỉ dựa vào Fandom (`T6`, không dẫn nguồn). thelazy gần
-như chỉ phủ Heroes III. Đây là lỗ nguồn cấp dự án — xem `B-019`.
+**Có, và tốt hơn hai bậc.** Site **chính thức của New World Computing** có mục `heroes4/` được lưu đầy
+đủ trong archive — `artifacts_minor.shtml` chứa đúng câu mô tả artifact này, ở tier **`T2`**.
+
+Câu hỏi này từng bị coi là bế tắc vì hai giả định sai cùng lúc: rằng `web.archive.org` bị chặn, và
+rằng `heroesofmightandmagic.com` đã chết. Cả hai đã được sửa trong `REGISTRY.md`.
 
 ---
 

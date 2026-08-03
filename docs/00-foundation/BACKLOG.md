@@ -61,8 +61,18 @@ nguyên vượt 15 bài, mọi kỷ nguyên khác phải có ít nhất một en
 **Trạng thái:** luật đã vào `WORKFLOW.md` (2026-08-03). **Mục 1 xong** — `archibald-ironfist` đã
 `verified`, kỷ nguyên Age of Kings không còn trống. Còn ba entity trụ.
 
-⚠️ **Hai mục còn lại bị `B-019` chặn:** `gauldoth-half-dead` (kỷ Axeoth/H4) và `tarnum` (xuyên kỷ qua
-Chronicles) đều sẽ gặp lỗ nguồn Heroes IV. Nên làm `the-reckoning` trước, hoặc giải `B-019` trước.
+✅ **Đánh giá "hai mục còn lại bị `B-019` chặn" đã sai — và cả hai lý do đều sai:**
+
+- `gauldoth-half-dead` — **không còn bị chặn**: `B-019` đã giải, và site chính thức NWC có **đủ sáu
+  trang** campaign *Half-Dead* ở tier `T2`. Đây giờ là entity trụ **dễ làm nhất** trong ba mục còn lại.
+- `tarnum` — **chưa bao giờ bị chặn**. Đã kiểm: trang `Tarnum` trên thelazy có **18.754 byte**, phủ
+  đủ tám campaign *Heroes Chronicles* kèm bảng class, và nhắc Axeoth/Reckoning. Tarnum là nhân vật
+  **Chronicles**, không phải nhân vật H4 — mà Chronicles thì thelazy phủ tốt. Việc xếp hắn vào diện
+  "chặn bởi lỗ nguồn H4" là **lỗi phân loại**.
+
+**Thứ tự đề xuất cho ba mục còn lại:** `gauldoth-half-dead` (nguồn `T2` đã sẵn) → `tarnum` (nguồn
+`T1*` đã sẵn, nhưng phải chốt `B-010` về cấu trúc Book V) → `the-reckoning` (khó nhất, `TIMELINE-SPINE`
+mục 6 ghi "chưa có nguồn").
 
 ### B-017 · `codex/events/` rỗng hoàn toàn — trục dọc chưa thành dữ liệu
 
@@ -118,7 +128,31 @@ lẻ sẽ tạo trạng thái nửa vời, tệ hơn hiện tại.
 
 **Trạng thái:** chưa bắt đầu. Chặn bởi việc phải quyết định policy ở mục 1 trước.
 
-### B-019 · Lỗ nguồn Heroes IV — không có nguồn nào tốt hơn Fandom
+### ✅ B-019 · ~~Lỗ nguồn Heroes IV~~ — **ĐÃ GIẢI (2026-08-03)**
+
+**Lời giải:** mục `heroes4/` của `heroesofmightandmagic.com` — **site chính thức của New World
+Computing** — được lưu **đầy đủ** trong `web.archive.org`: khoảng **200 URL**, tier **`T2`**.
+
+Gồm: `artifacts_{minor,major,relic,treasure,potion,tgs}.shtml`,
+`heroes_{necromancers,deathknights,lords,magi,priests,sorcerers,thieves,archers,barbarians,druids,knights,campaign}.shtml`,
+`creatures_*.shtml`, `buildings_*.shtml`, và **toàn bộ sáu campaign** (`halfdead`, `blade`, `daughter`,
+`elwin`, `glory`, `price`).
+
+**Đã dùng ngay:** bài `amulet-of-the-undertaker` nâng mục Heroes IV từ `T6` lên **`T2`** và **đóng
+câu hỏi mở Q3**. Câu mô tả artifact trên site chính thức khớp **từng chữ** với bản Fandom — nên Fandom
+đúng là bản chép, nhưng giờ không cần dùng bản chép.
+
+**Vì sao trước đây tưởng là bế tắc:** hai giả định sai cùng lúc trong `REGISTRY.md` — rằng
+`web.archive.org` **bị chặn**, và rằng `heroesofmightandmagic.com` **đã chết**. Cả hai đều đã được sửa
+cùng ngày. Bản thân `B-019` là hệ quả của hai cái sai đó, không phải một lỗ nguồn thật.
+
+⚠️ **thelazy vẫn KHÔNG phủ Heroes IV** — đã kiểm: `Heroes_of_Might_and_Magic_IV` và
+`Gauldoth_Half-Dead` đều trả **0 byte**, và cả **56 trang `Translation Data/`** đều là file **Heroes
+III**. Nên vẫn không có string table `T1` cho H4. Nhưng `T2` chính thức thì đủ tốt.
+
+**Việc còn lại:** phần lớn 200 URL đó **chưa khai thác**. Xem `B-022`.
+
+### ~~B-019 (bản gốc)~~ · Lỗ nguồn Heroes IV — không có nguồn nào tốt hơn Fandom
 
 **Vấn đề:** `CANON-POLICY.md` mục 1 xác định phạm vi Old Universe gồm **Heroes I–IV**. Nhưng
 `heroes.thelazy.net` — nguồn `T1*` xương sống của cả dự án — gần như **chỉ phủ Heroes III**.
@@ -147,7 +181,27 @@ không bao giờ lên được `verified`.
 ⚠️ **Không được xử lý bằng cách bỏ H4 khỏi Codex.** Đó là thu hẹp phạm vi dự án để né một lỗ nguồn,
 và nó sẽ tái diễn đúng vấn đề mà B-016 đang sửa.
 
-**Trạng thái:** chưa bắt đầu. Nên làm trước mục 3 và 4 của B-016.
+**Trạng thái:** ✅ đã giải — xem phần trên. Giữ lại mô tả gốc để thấy lập luận sai ở đâu: nó xếp
+"thelazy không phủ H4" thành "dự án không có nguồn H4", trong khi nguồn **chính thức** vẫn còn đó.
+
+### B-022 · Khai thác nốt ~200 URL Heroes IV trên site chính thức NWC
+
+**Là gì:** `B-019` mở ra khoảng 200 URL `T2` trên `heroesofmightandmagic.com/heroes4/`. Hiện chỉ dùng
+**hai** trang (`artifacts_minor.shtml`, `campaign_halfdead.shtml`).
+
+**Ưu tiên khai thác:**
+
+1. `campaign_halfdead.shtml` 1–6 — **đủ cho entity trụ `gauldoth-half-dead`** (`B-016` mục 3). Trang
+   đầu đã fetch: có điều kiện thắng/thua từng scenario, carryover, và văn kể **ngôi thứ nhất**.
+2. `heroes_necromancers.shtml` + `heroes_deathknights.shtml` — thông số hero phe Death.
+3. `artifacts_{major,relic,treasure}.shtml` — hoàn thiện phần H4 cho các bài artifact đã có.
+4. Năm campaign còn lại — cần cho `the-reckoning` và mọi entity kỷ Axeoth.
+
+⚠️ **Bẫy kỹ thuật:** CDX trả cả **URL cắt lỗi** (`artifactinor.shtml`, `buildinlife.shtml`,
+`creaturorder.shtml`…). Chúng trả trang rỗng ~2,3 KB. Tên đúng có gạch dưới đầy đủ
+(`artifacts_minor.shtml`). Đã mất một lượt fetch vì cái này.
+
+**Trạng thái:** chưa bắt đầu.
 
 ### B-020 · Khai thác `fulton-names-2023` — 98 KB phát ngôn developer chưa dùng
 

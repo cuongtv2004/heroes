@@ -204,6 +204,28 @@ gốc **một bước**.
 | `thelazy-nimbus` | T6 | FETCHED | ⚠️ Trang này **tách đúng** hai sự kiện (thắng Nimbus ≠ lên ngôi Deyja), trong khi trang `Archibald` của **cùng wiki** gộp sai. Bằng chứng thelazy tự mâu thuẫn |
 | `hota-beyond-the-horizon-rumors` | T1* | FETCHED | ⭐ Rumor game text HotA: "Zog named his powerful artifact **in memory of Archibald**. The usurper king and the Jackal were **allies during the Succession Wars**." Changelog HotA **0 hit** Archibald — nên chỉ tìm ra bằng cách đọc content, không đọc changelog |
 
+### ⭐⭐ Heroes IV — site CHÍNH THỨC của NWC (T2), lấy qua archive
+
+**Đây là lời giải cho `B-019`.** Mục `heroes4/` của `heroesofmightandmagic.com` — site chính thức của
+New World Computing — **được lưu đầy đủ trong archive**, khoảng **200 URL**. Registry từng ghi domain
+này là `FAILED (403 web filter)`; qua archive thì vào được bình thường.
+
+**Cách lấy:** liệt kê bằng CDX API rồi fetch theo timestamp —
+
+```
+curl -s "http://web.archive.org/cdx/search/cdx?url=heroesofmightandmagic.com/heroes4*&output=text&fl=original,timestamp&collapse=urlkey&limit=200"
+curl -sL "https://web.archive.org/web/<timestamp>/<url>"
+```
+
+⚠️ CDX trả cả **URL cắt lỗi** (`artifactinor.shtml`, `buildinlife.shtml`…) — chúng trả trang rỗng
+~2,3 KB. Tên đúng có dấu gạch dưới đầy đủ: `artifacts_minor.shtml`, `buildings_life.shtml`.
+
+| key | tier | access | Nội dung |
+|-----|------|--------|----------|
+| `h4-official-artifacts-minor` | **T2** | FETCHED | ⭐ `heroes4/artifacts_minor.shtml` (24.206 byte) — bảng artifact **Minor** của H4 kèm Slot + Description nguyên văn. Chứa `Amulet of the Undertaker`: "Increases the hero's Necromancy skill by 10% if the hero has the skill. **Otherwise, it acts as the Basic Necromancy skill.**" **Thay được `fandom-h4-artifact-list` (`T6`)** — hai nguồn khớp từng chữ |
+| `h4-official-campaign-halfdead` | **T2** | FETCHED | ⭐⭐ `heroes4/campaign_halfdead.shtml` (12.894 byte) — **toàn bộ campaign *Half-Dead*** của Gauldoth: điều kiện thắng/thua từng scenario, carryover, và văn kể ở **ngôi thứ nhất**. Mở đường cho entity trụ `gauldoth-half-dead` (`B-016` mục 3) |
+| `h4-official-index` | **T2** | FETCHED | Mục `heroes4/` nói chung — còn `artifacts_{major,relic,treasure,potion,tgs}.shtml`, `heroes_{necromancers,deathknights,lords,…}.shtml`, `creatures_death.shtml`, `buildings_death.shtml`, và **năm campaign khác** (`blade`, `daughter`, `elwin`, `glory`, `price`). **Phần lớn chưa khai thác** |
+
 ### Phát ngôn developer về Archibald (T4)
 
 | key | tier | access | Nội dung |
@@ -293,7 +315,7 @@ Ghi lại để lần sau thử tiếp. **Không được dùng làm nguồn.**
 | `mightandmagic.fandom.com/wiki/*` | FAILED (402/403) | Chỉ vào được qua `api.php` |
 | `homm.miraheze.org/wiki/Sandro` | FAILED (403) | |
 | `strategywiki.org/.../Rise_of_the_Necromancer` | FAILED (403) | |
-| `heroesofmightandmagic.com/heroes3sod/campaigns.shtml` | FAILED (**403 web filter**, không phải site chết) | **Site chính thức của NWC** — nguồn không-phải-wiki tốt nhất có thể có. ⚠️ Ghi chú cũ "connection refused → có thể đã chết" là **SAI**: verify `dead-mans-boots` (2026-08-03) fetch lại được HTTP **403** với body `<title>Web Filter Violation</title>` — bị **filter mạng của môi trường dev** chặn, site có thể vẫn sống. Phải thử qua đường khác, **không** được coi là đã chết |
+| `heroesofmightandmagic.com/*` | ✅ **FETCHED qua archive** (truy cập trực tiếp vẫn 403) | **Site chính thức của NWC** — nguồn không-phải-wiki tốt nhất có thể có. **Đường vào: `web.archive.org` + CDX API.** Đã lấy được ~200 URL mục `heroes4/` ở tier `T2` — xem mục Heroes IV ở Nhóm 1 và `B-019`. ⚠️ Hai ghi chú cũ đều **SAI**: "connection refused → có thể đã chết" (thực ra 403 web filter của môi trường dev), rồi "phải thử qua đường khác" (đường đó là archive, và nó hoạt động) |
 | ~~`web.archive.org`~~ | ✅ **FETCHED — cảnh báo cũ SAI** | Xem mục cảnh báo bên dưới. Trả **302 → nội dung thật**; đã fetch 151 KB. Dùng dạng có timestamp: `web.archive.org/web/<YYYYMMDDhhmmss>/<url>` |
 | `en.namu.wiki/.../Sandro` | NOT_FETCHED | Chỉ thấy trong kết quả tìm kiếm |
 | File campaign `.h3c` gốc | NOT_FETCHED | **Đây là việc cần làm để nâng T1\* thành T1** |
