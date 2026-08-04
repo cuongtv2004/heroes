@@ -117,6 +117,8 @@ nav:
           - codex/heroes/tarnum.md
       - Nhân vật:
           - codex/characters/ethric.md
+      - Sự kiện:
+          - codex/events/the-reckoning.md
       - Quốc gia:
           - codex/kingdoms/deyja.md
       - Vật phẩm:
@@ -139,6 +141,7 @@ nav:
           - sources/notes/verify-archibald-ironfist-2026-08-03.md
           - sources/notes/verify-gauldoth-half-dead-2026-08-03.md
           - sources/notes/verify-tarnum-2026-08-03.md
+          - sources/notes/verify-the-reckoning-2026-08-04.md
 
 extra_css:
   - assets/extra.css

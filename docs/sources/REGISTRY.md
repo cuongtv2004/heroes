@@ -134,7 +134,7 @@ gốc **một bước**.
 | `hc-truth-within-nightmares` | T1* | FETCHED | Heroes Chronicles *Conquest of the Underworld* — Tarnum vs Sandro. **Xem cảnh báo DISPUTED bên dưới** |
 | `hc-the-dragon-mothers` | T1* | FETCHED | **Heroes Chronicles** (`source = hc`, `cback = chronicles 4` = *Clash of the Dragons*) — Jeddite chỉ có mặt trong roster. ⚠️ Bài `jeddite` từng gán sai là SoD |
 | `hc-dragons-of-deepest-blue` | T1* | FETCHED | **Heroes Chronicles** (`cback = chronicles 4` = *Clash of the Dragons*) — Jeddite chỉ trong roster. ⚠️ Từng bị gán sai là SoD |
-| `hc-tarnum-the-overlord` | T1* | FETCHED | **Heroes Chronicles** (`cback = chronicles 8` = *The Sword of Frost*) — Jeddite chỉ trong roster. ⚠️ Từng bị gán sai là SoD |
+| `hc-tarnum-the-overlord` | T1* | FETCHED | **Heroes Chronicles** (`cback = chronicles 8` = *The Sword of Frost*) — Jeddite chỉ trong roster. ⚠️ Từng bị gán sai là SoD. ⭐⭐ **VÀ ĐÂY LÀ NGUỒN CỦA LỜI TIÊN TRI trung tâm cho `the-reckoning`** (phát hiện 2026-08-04): `==== Events ====` day 1 chứa *"If the Sword of Frost and Armageddon's Blade should ever meet, it would mean the end of the world!"* — **BH-1 lại đúng một lần nữa**: câu quan trọng nhất của cả entity nằm trong timed event, **không** ở prologue. Đợt trước đọc trang này mà chỉ lấy roster |
 | `hc-old-wounds` | T1* | FETCHED | **Heroes Chronicles** (`cback = chronicles 2` = *Conquest of the Underworld*) — Jeddite chỉ trong roster. ⚠️ Từng bị gán sai là SoD, campaign *Contested Underworld* — **tên campaign đó không tồn tại** |
 | `hota-a-friendly-visit` | T1* | FETCHED | Scenario **HotA**, campaign ***All In*** (`cback = hota ai 1`) — Jeddite chỉ trong roster. ⚠️ Từng bị gán sai là AB / *Armageddon's Blade* |
 | `hota-homecoming` | T1* | FETCHED | Scenario **HotA**, campaign ***Forged in Fire*** (`cback = hota fif 8`) — Jeddite chỉ trong roster. ⚠️ Từng bị gán sai campaign là *Terror of the Seas* (là campaign HotA **khác**) |
@@ -292,9 +292,107 @@ curl -sL "https://web.archive.org/web/<timestamp>/<url>"
 | `ray-interview-ubisoft-2015` | **T4** | FETCHED | ⭐⭐ **Phỏng vấn Terry B. Ray — người VIẾT cốt truyện Heroes IV.** Trên site chính thức Ubisoft MMH7, đăng **09/11/2015**. URL sống **đã chết** (redirect sang store); phải dùng `web.archive.org/web/20151020063103/…`. Ubisoft gọi ông là "**Heroes IV's master bard**". Ray tự thuật: *"I made maps, edited the stories, worked on the manual"* và *"I was hired to work on Heroes IV, but also wrote the **Heroes III Chronicles** series"* — nên nguồn này còn dùng được cho `tarnum`. ⚠️ Xem cảnh báo về dòng dõi Gauldoth bên dưới |
 | `fandom-gauldoth` | T6 | FETCHED | Bài Fandom về Gauldoth. ⚠️ Infobox ghi bốn quan hệ gia đình dẫn **cùng một** `<ref>` về bài Ray — nhưng nguồn đó **phủ định** đúng chi tiết ấy. Xem cảnh báo |
 | `fandom-iduna` | T6 | FETCHED | ⚠️ Khẳng định Iduna "**was the mother of** Lysander, Waerjak, and Gauldoth", dẫn ref về bài Ray. **Ray nói ngược.** Xem cảnh báo |
-| `thelazy-the-reckoning` | T6 | FETCHED | Ngày Reckoning: "On **February 10th, 1177 AS**…". ⚠️ Wiki tự dẫn nguồn là `Lost Manuscripts#11-08-1178` — **chưa fetch**, nên ngày này chưa truy tận nguồn. Và **hai số hiệu lệch nhau** (1177 vs 1178) |
+| `thelazy-the-reckoning` | T6 | FETCHED | Trang `The_Reckoning` (13.958 byte) — văn xuôi wiki. Mở đầu: "On **February 10th, 1177 AS**…". 🔴 **HAI ĐÍNH CHÍNH so với bản ghi chú cũ, xem mục cảnh báo riêng bên dưới:** (1) "hai số hiệu lệch nhau (1177 vs 1178)" là **SAI** — 1178 là năm Lysander *viết lại*, không phải năm xảy ra; (2) `Lost Manuscripts` giờ **đã fetch**, và nó **không phải text in-game** mà là outline nội bộ chưa xuất bản (`h3wiki-lost-manuscripts`, `T4`). ⚠️ Mục `== Lysander's account of The Reckoning ==` gắn icon `{{wll}}` = *"Only found in the Lost Lore"* → **nằm ngoài game**. Đây là **trang wiki duy nhất trong đợt này thực sự dẫn nguồn** (2 footnote, cả hai đã truy tận gốc) |
 | `h4-official-3do-story` | **T2** | FETCHED | ⭐ Site **chính thức 3DO**, `3do.com/mightandmagic/heroes4/story.html` qua archive (`20011005033543`). Dòng bản quyền: *"© 2001 The 3DO Company. All Rights Reserved."* ⚠️ **Chỉ ~630 ký tự chữ hiển thị** — văn giới thiệu bán game, **không nhắc** `Axeoth`/`Reckoning`/`Gauldoth`. Mục `heroes4/` có **58 trang** sạch (`char_*`, `expansion-tgs`, `expansion-wow`, `features`, `gallery_*`, `intro`, `gameplay`, `story`). ⚠️ Đường dẫn là `/mightandmagic/heroes4/`, **không** phải `/heroes4` hay `/products/pc/heroes4` — lần quét CDX đầu tìm sai path và báo âm |
 | `fandom-necromancer-h4` | T6 | FETCHED | Trang `Necromancer (H4)` — class cơ bản magic của Necropolis, khởi đầu Basic Death Magic + Basic Occultism |
+
+### ⭐ The Reckoning — ranh giới Enroth → Axeoth (đợt 2026-08-04)
+
+**Cấu trúc bằng chứng của sự kiện này lệch một cách đáng chú ý, và đó là điều quan trọng nhất
+cần biết trước khi dùng các key dưới đây:**
+
+| Mảng nội dung | Có text game? | Nguồn tốt nhất |
+|---|---|---|
+| **Nguyên nhân** — hai lưỡi gặp nhau = tận thế | ✅ CÓ | Chronicles book 8, `==== Events ====` |
+| **Điều kiện dẫn tới** — Kija trộm Sword, Gelu giữ Blade | ✅ CÓ | Chronicles book 8 epilogue; H3:AB |
+| **Tên gọi "the Reckoning"** | ✅ CÓ | 16 bio hero H4 |
+| **Hệ quả** — Erathia mất, Kreegan sụp, dân tị nạn | ✅ CÓ | 16 bio hero H4 |
+| **Diễn biến thảm hoạ** — động đất, dung nham, ba giờ | ❌ **KHÔNG** | chỉ `h3wiki-lost-manuscripts` = **T4 non-canonical** |
+| **Portal & cách người ta thoát** | ❌ **KHÔNG** | `h3wiki-lost-manuscripts` + `bullard-interview-2013`, cả hai **T4** |
+| **Ravenwood** | ❌ **KHÔNG** | chỉ `h3wiki-lost-manuscripts` |
+| **Ngày tháng chính xác** | ❌ **KHÔNG** | phép cộng của wiki trên nền T4 |
+| **Nguồn chính thức T2** | ❌ | **chưa đọc được** — không phải "đã đọc và không có" |
+
+> Nói cách khác: **cái mà mọi wiki kể như "tường thuật chính" của The Reckoning — Ravenwood,
+> portal, ba giờ hỗn loạn, ngày 10/02/1177 — toàn bộ nằm trong một tài liệu chưa bao giờ vào
+> game, và chính wiki dán nhãn "at least partially non-canonical".** Thứ *có* text game chống
+> lưng lại là hai đầu: **nguyên nhân** (Chronicles) và **hệ quả** (bio hero H4).
+
+| key | tier | access | Nội dung |
+|-----|------|--------|----------|
+| `h3wiki-lost-manuscripts` | **T4** | FETCHED | 🔴 **KEY QUAN TRỌNG NHẤT, VÀ TIER CỦA NÓ LÀ CÁI BẪY.** Trang `Lost_Manuscripts` (22.552 byte) — nhật ký General Kendal + hồi ký King Lysander, tường thuật đầy đủ nhất về The Reckoning. **KHÔNG PHẢI `T1*`.** Trang tự khai: *"In 2017 Jennifer Bullard shared various outlines for the backstory of Heroes of Might and Magic IV, written in the early 2000s… Note that the information here **might not be entirely canonical**"*. Tức là **outline hậu trường, chưa bao giờ vào game** → `T4`. Chứa: lời cảnh báo Ravenwood, cơ chế portal, "three hours", quốc gia mới **Iranese** bên **Brystol Sea**, và biệt danh **"Day of Undoing"**. ⚠️ **Tự mâu thuẫn nội tại:** mục Kendal `02-04-1177` nói người đàn bà đến *"last night"*, bản dài Lysander nói *"three nights ago"* |
+| `h3wiki-lost-lore` | T6 | FETCHED | Trang `Lost_Lore` (6.621 byte) — **đây là bằng chứng tier** cho key trên. Verbatim: *"these outlines were written during the game's development and **never officially published. They are at least partially non-canonical**"*. Cũng liệt kê rõ **hai** mục Bullard: `Lost Manuscripts` và `The Reckoning (Lysander's account)` → **cả hai** tường thuật dài đều ngoài game. Template `Inll` định nghĩa icon `{{wll}}` = *"Only found in the Lost Lore"* — thấy icon đó ở đâu thì chỗ đó **không** phải text game |
+| `h3wiki-h4-hero-bios` | **T1\*** | FETCHED | ⭐⭐ **Nguồn text game tốt nhất cho entity này, và là thứ chốt câu hỏi quyết định.** 16 bio hero Heroes IV gọi thẳng tên "the Reckoning" → **thuật ngữ này LÀ text game, và xuất hiện lần đầu ở Heroes IV** (không phải H3/AB/Chronicles). Lấy bằng `api.php?action=query&generator=backlinks&gbltitle=The Reckoning&gbllimit=500&prop=revisions&rvprop=content&rvslots=main` rồi trích template `{{H4Story}}` (tham số 2 = *"The Heroes 4 biography text"*, render kèm chữ *"— Biography"*). **Mỗi bio kiểm lại được riêng** tại `index.php?title=<Hero>&action=raw`. 16 hero: `Sephinroth` `Sandro` `Gruezak` `Bron` `Oris` `Calh` `Fiona` `Tamika` `Ignatius` `Mephala` `Labetha` `Ingham` `Mirlanda` `Shiva` `Lorelei` `Theodorus`. ⚠️ **Chú ý ngược dòng:** không bio nào nhắc `Enroth`, `Axeoth`, `portal`, `Gelu`, `Sword of Frost` hay `Armageddon's Blade` — chúng chỉ nói *"the old world"* / *"the new world"*. Nghĩa là **cơ chế** thảm hoạ **không** nằm trong text game H4 |
+| `hc-the-barbarians-wife` | T1* | FETCHED | Chronicles book 8, `==== Events ====` day 1 — gốc gác Sword of Frost: *"Volee was the first city of the Vori Elves, but it disappeared more than a thousand years ago shortly after the Sword of Frost was created… Some speculate that the Sword of Frost itself is responsible for the creation of the glaciers that buried the ancient city"* |
+| `hc-the-land-of-the-vori` | T1* | FETCHED | Chronicles book 8, `==== Events ====` day 1 — Tarnum tự nói đã kể lời tiên tri cho người Vori: *"even told them about the prophecy linking the Sword of Frost and Armageddon's Blade, but they wouldn't listen"*. Cũng ghi Gelu **là half-Vori** |
+| `h3wiki-the-sword-of-frost-campaign` | T1* | FETCHED | Mô tả campaign book 8 (5.619 byte): *"The Elven Hero, Gelu, sets out to find the arcane Sword of Frost despite an apocalyptic prophecy"* |
+| `ab-oblivions-edge` | T1* | FETCHED | ⭐⭐ Scenario **cuối** của H3: *Armageddon's Blade* (13.571 byte). **Hai timed event quan trọng, và cả hai đều là bẫy suy luận** — xem cảnh báo riêng. (1) event 14 *"Tamar's Return"*: *"Oceans will boil, the ground shall swallow entire cities, and everyone will die a horrifying death"* — hình ảnh **gần trùng khít** The Reckoning **nhưng điều kiện NGƯỢC** (thảm hoạ xảy ra nếu Gelu **thất bại**). (2) event 10 *"Seduced by the Blade"*: giấc mơ tiên tri của Gelu, có *"steel-haired woman"* |
+| `h3wiki-armageddons-blade-artifact` | T1* | FETCHED | Text game khi nhặt artifact: *"Deep beneath the earth, you find a vault of the Ancients from before the Silence… you break the seal"*. Hiệu ứng SoD/AB: +3 Attack/Defense/Power, +6 Knowledge, *"Gain Armageddon while equipped"*, class `Relic`, giá 50.000. Do forgesmith **Khazandar** rèn trong `Maker of Sorrows` |
+| `ab-to-kill-a-hero` | T1* | FETCHED | Mô tả Blade bằng text game: *"Armageddon's Blade was born of Chaos, shaped by Magic, and bound by steel and flesh."* |
+| `fulton-tavern-interview-2018` | **T4** | FETCHED | ⭐⭐ **Greg Fulton, Lead Designer Heroes III** — phỏng vấn *Tavern of Might and Magic* do **XEL** thực hiện, đăng **02/JUL/2018** (thelazy 35.730 byte). **Câu chốt hạ:** *"Lore work for HoMM4, and the idea for 'the Reckoning', **did not begin until long after I had left NWC**."* Và về người đàn bà tóc thép trong giấc mơ Gelu: *"**Officially, there were no plans for the steel-haired woman.**"* — Marcus Pregent dựng chi tiết campaign AB chỉ để *"laying the groundwork for potential storylines"*, và *"At the time, this 'story hook' was **unrelated to HoMM4**"*. ✅ Fulton **in lại nguyên văn** trong Fanstratics Newsletter #3 — đã đối chiếu hai trang thelazy, **khớp từng chữ**. ⚠️ URL gốc `celestialheavens.com/forum/topic/16786` và `fanstratics.com/fstnewsletter03` đều **KHÔNG vào được** |
+| `h3wiki-ravenwood` | **T4** | FETCHED | Trang `Ravenwood` (685 byte) — **toàn trang gắn `{{inll}}`**, tức 100% là Lost Lore, không có gì trong game. Nhân vật mở portal theo lời kể Kendal/Lysander |
+| `h3wiki-talk-timeline` | T6 | FETCHED | ⭐ Trang `Talk:Timeline` (81.324 byte) — **tự khai ra phép cộng** tạo nên ngày `10/02/1177`: *"Lost Manuscripts: 11-08-1178: The Reckoning occurs six days after 02-04-1177, on February 10th, 1177."* Cả hai dòng gắn `{{wll}}`. **Không nguồn nào — game hay ngoài game — viết ra ngày đó** |
+| `h3wiki-enroth-planet` | T6 | FETCHED | Trang `Enroth (planet)` (4.697 byte): *"Enroth was rendered uninhabitable after the Reckoning **in the 1170s AS**"*. ⭐ Đáng chú ý: **ở đây chính wiki chỉ dám nói "1170s"**, không dám nói 1177 — mâu thuẫn với trang `The_Reckoning` của cùng wiki. ⚠️ `Enroth` là **trang disambiguation ba nghĩa** (`nation` / `continent` / `planet`) — BH-2 |
+| `h3wiki-axeoth` | T6 | FETCHED | Trang `Axeoth` (2.096 byte) — danh sách quốc gia hậu-Reckoning (Palaedra, Aranorn, Nekross, Great Arcan, The Wheel, Tribal Lands). ⚠️ **Không citation nào**, và ⚠️ **không có một mốc năm nào** trên trang |
+| `h3wiki-kilgor` | T6 | FETCHED | Trang `Kilgor` (6.213 byte). ⚠️ *"Kilgor acquires the Sword of Frost and **forces** Gelu to confront him"* — chữ **"forces"** **không có nguồn nào chống lưng**; text game Chronicles cho thấy Gelu chủ động đi tìm Sword để **phá huỷ** nó |
+| `h3wiki-gelu` | T6 | FETCHED | Trang `Gelu` (7.190 byte). ⚠️ **KHÔNG nói gì về số phận Gelu sau Reckoning** — đáng ghi vì Fandom liệt Gelu vào danh sách người chết mà **không citation**, và wiki này im lặng. Hai wiki không đồng ý nhau |
+| `fandom-reckoning` | T6 | FETCHED | Trang Fandom tên `Reckoning` (**không** phải `The Reckoning` — tên đó trả `missingtitle`). ⚠️⚠️ **`grep -c "<ref"` = 0 — toàn trang KHÔNG CÓ MỘT CITATION NÀO.** Ghi `date = 1175 AS`, **lệch 2 năm** với thelazy. Kèm danh sách `==Deaths==` và hai câu quote không attribution. Xem cảnh báo riêng |
+| `fandom-great-reckoning` | T6 | FETCHED | ⚠️ **SỰ KIỆN KHÁC HẲN** — thần thoại tận thế **tương lai** của Axeoth (MM9), không liên quan việc Enroth bị phá. Chỉ dùng để **phân biệt**, không bao giờ làm nguồn cho `the-reckoning` |
+| `fandom-h4-hero-bios` | **T1\*** | FETCHED | ⭐⭐ Bộ bio hero Heroes IV trên Fandom, gói trong template `{{text}}` / `{{quote}}` — tooltip `Template:Text` ghi rõ *"This is the background/description from the game/official game guide itself"*. Lấy bằng `api.php?action=query&generator=backlinks&gbltitle=Reckoning&gbllimit=500&prop=revisions&rvprop=content&rvslots=main`. **Đếm chính xác (2026-08-04): 45 block game text gọi tên "Reckoning"** trên 180 trang backlink. ✅ **Khớp từng chữ với `h3wiki-h4-hero-bios`** ở các bio đối chiếu được → hai trung gian độc lập cùng chép một text. ⚠️⚠️ **BẪY QUAN TRỌNG:** tên `Enroth` và `Axeoth` trong các block này **chỉ là ĐÍCH WIKILINK do người sửa wiki thêm** (`[[Axeoth|new world]]`, `[[Enroth (planet)|old world]]`) — **text hiển thị trong game là "the old world" / "the new world"**. Đừng đọc đích link thành text game. ⚠️ Tooltip nói *"game **or official game guide**"* — trung gian này không luôn phân biệt hai thứ đó |
+| `h3wiki-day-of-reckoning` | T6 | FETCHED | ⚠️ **KHÔNG phải nguồn lore.** Trang `Day of Reckoning` (16.898 byte) — một **mod expansion fan chưa phát hành** cho Heroes III, tự gắn `{{speculative}}`. Đáng ghi vì nó *"designed in consultation with Heroes III lead designer Gregory Fulton"*, nên dễ bị nhầm là có thẩm quyền. Tối đa `FAN_THEORY`. Chỉ dùng để **phân biệt tên** với `the-reckoning` |
+| `fandom-palaedra` | T6 | FETCHED | ⭐ Trang `Palaedra` — **bằng chứng khẳng định rằng Fandom KHÔNG dùng lịch "AS" cho Axeoth**: đề *"ca 525 A.C."*, và `A.C.` chuyển hướng tới `Great Cataclysm`. Mạnh hơn lập luận "trang `Axeoth` không có mốc năm nào" |
+| `fandom-fahtrim` | **T1\*** | FETCHED | ⭐ Bio hero H4 `Fahtrim` (1.050 byte) — **phản ví dụ duy nhất** cho claim "không bio nào nhắc portal": *"During the Reckoning, he revealed his bold selflessness by **staying behind until the last possible moment to help others through the portals**"*. Chữ "portals" là **text hiển thị**, không phải đích link. → **Portal CÓ trong text game H4**, dù cơ chế và người mở thì không. ⚠️ **Trang này KHÔNG tồn tại trên thelazy (0 byte)** — nên đây là ca thelazy thiếu mà Fandom có |
+| `fandom-gauldoth-refs` | T6 | FETCHED | Đối chứng chất lượng: trang `Gauldoth` của Fandom (16.682 byte) **CÓ `<ref>` đầy đủ**, dẫn từng scenario H4 kèm transcript — trong khi trang `Reckoning` của **cùng wiki** có **0 ref**. ⭐ Bài học: **đừng gán "Fandom = T6 kém" cho mọi trang**; chất lượng lệch rất xa giữa các trang, phải kiểm từng trang |
+
+### ⚠️⚠️⚠️ `heroesofmightandmagic.com` và `3do.com` — đã ĐỊNH VỊ CHÍNH XÁC 63 trang mà KHÔNG đọc được
+
+Đợt `the-reckoning` (2026-08-04) enumerate được **đầy đủ** hai bộ trang mà `B-022` và `B-023` cần,
+kèm **timestamp chính xác cho từng trang**, nhưng **không đọc được một trang nào** — vì `web.archive.org`
+bị chặn nội dung (xem mục dưới). Ghi lại timestamp để đợt sau **không phải quét lại**:
+
+- **Age of Heroes, 39 trang campaign H4** (nhiều hơn 6 trang mà `B-022` tưởng — có trang con theo từng
+  scenario): `campaign_halfdead` `20060118021947` · `halfdead2` `20071102140229` ·
+  `halfdead3` `20070808181955` · `halfdead4` `20070808032934` · `halfdead5` `20061209093603` ·
+  `halfdead6` `20070811121343` · `campaign_blade` `20060118020340` · `blade2` `20070116140110` ·
+  `blade3` `20070116140223` · `blade4` `20070129045001` · `blade5` `20070129082526` ·
+  `blade6` `20070129082536` · `campaign_daughter` `20060118020415` · `daughter2` `20070716194303` ·
+  `daughter3` `20070808032723` · `daughter4` `20070808033147` · `daughter5` `20070808032541` ·
+  `daughter6` `20070808032912` · `campaign_elwin` `20060118015731` · `elwin2` `20070510174106` ·
+  `elwin3` `20070510173224` · `elwin4` `20070428055736` · `elwin5` `20070510174043` ·
+  `elwin6` `20070510174208` · `campaign_glory` `20060118021419` · `glory2` `20070708123801` ·
+  `glory3` `20070708123532` · `glory4` `20070708123633` · `glory5` `20070708123415` ·
+  `campaign_price` `20060118020700` · `price2` `20070808181643` · `price3` `20070808032319` ·
+  `price4` `20071109110852` · `price5` `20071109110857` · `price6` `20070808032407` ·
+  `price7` `20070808182203` · `price8` `20070808182106` · `price9` `20071109222348` ·
+  `campaigns` `20060118021016` · `heroes_campaign` `20060118010939`
+- **3DO chính thức, 24 trang HTML thật** dưới `3do.com/mightandmagic/heroes4/`:
+  `story.html` `20011005033543` · `intro.html` `20011011114108` · `features.html` `20011211180001` ·
+  `gameplay.html` `20011024014406` · `gallery_characters.html` `20011030080150` ·
+  `preview.html` `20011030080439` · `expansions.html` `20020809075912` ·
+  `expansion-tgs.html` `20030129092715` · `expansion-wow.html` `20030117102012` ·
+  `downloads.html` `20011004075524` · và 14 trang `char_*`
+- ⚠️ **Đừng kỳ vọng bio ở 14 trang `char_*`: chúng chỉ 530–544 byte.** Đây đúng dấu hiệu đã biết ở
+  trang artifact/hero thelazy (660–1.718 byte) — kích thước đó không đủ chứa bio. Trang đáng đọc nhất
+  là `gameplay.html`, `gallery_characters.html`, `features.html`, `intro.html`, `expansion-*`.
+- ⚠️ CDX cũng trả rất nhiều **URL méo** kiểu `heroes4%22target=new_window` — bỏ, chúng 404.
+
+🔴 **Và vì thế, phủ định về nguồn T2 phải nói cho đúng mức:**
+
+> Dự án **chưa đọc được** nguồn chính thức nào nhắc "Reckoning". Đây **KHÔNG** phải
+> *"đã đọc và không có"*. 24 trang 3DO đã được định vị chính xác kèm timestamp, chúng **tồn tại**,
+> chỉ là bị chặn ở tầng mạng của máy dev.
+
+Đây đúng loại claim phủ định mà bài học lớn nhất của dự án cảnh báo — *"nó trông giống sự cẩn trọng"*.
+
+### ⚠️⚠️ Ba thứ TÊN GẦN GIỐNG mà KHÔNG phải The Reckoning
+
+Bẫy lẫn entity, đã kiểm cả ba:
+
+| Tên | Nó thật ra là gì |
+|---|---|
+| `Great Reckoning` / `Day of Wrath` | Thần thoại **Axeoth** (Might and Magic IX) về một ngày tận thế **tương lai**: *"the day 'when even the gods must atone for their lives'. Njam the Meddler will break out, and bind and slay Krohn"*. Dựa trên Ragnarök. Chính trang Fandom phải mở bằng hatnote để phân biệt. Key: `fandom-great-reckoning` (T6) |
+| `Day of Fire` | Thảm hoạ vũ khí Ancient **thời cổ**, tạo ra Dragonsand. Khác hẳn. Cũng gắn `{{inll}}` |
+| `Day of Reckoning` (`DoR`) | ⚠️ **Một mod expansion FAN cho Heroes III**, trang gắn `{{speculative}}`. **Tuyệt đối không phải nguồn lore** |
 
 ### ⚠️⚠️ Dòng dõi Gauldoth — Fandom lấy tiền đề từ CÂU HỎI rồi trình bày như tác giả xác nhận
 
@@ -409,8 +507,8 @@ Ghi lại để lần sau thử tiếp. **Không được dùng làm nguồn.**
 | `mightandmagic.fandom.com/wiki/*` | FAILED (402/403) | Chỉ vào được qua `api.php` |
 | `homm.miraheze.org/wiki/Sandro` | FAILED (403) | |
 | `strategywiki.org/.../Rise_of_the_Necromancer` | FAILED (403) | |
-| `heroesofmightandmagic.com/*` | ✅ **FETCHED qua archive** (truy cập trực tiếp vẫn 403) | **Site chính thức của NWC** — nguồn không-phải-wiki tốt nhất có thể có. **Đường vào: `web.archive.org` + CDX API.** Đã lấy được ~200 URL mục `heroes4/` ở tier `T2` — xem mục Heroes IV ở Nhóm 1 và `B-019`. ⚠️ Hai ghi chú cũ đều **SAI**: "connection refused → có thể đã chết" (thực ra 403 web filter của môi trường dev), rồi "phải thử qua đường khác" (đường đó là archive, và nó hoạt động) |
-| ~~`web.archive.org`~~ | ✅ **FETCHED — cảnh báo cũ SAI** | Xem mục cảnh báo bên dưới. Trả **302 → nội dung thật**; đã fetch 151 KB. Dùng dạng có timestamp: `web.archive.org/web/<YYYYMMDDhhmmss>/<url>` |
+| `heroesofmightandmagic.com/*` | ⚠️ **FETCHED 2026-08-03, FAILED 2026-08-04** | 🔴 **ĐÍNH CHÍNH: đây KHÔNG phải "site chính thức của NWC" và KHÔNG phải tier `T2`.** Nó là **site fan `Age of Heroes`** (footer: *"©2005 Valera Koltsov"*; grep `New World Computing` = **0 lần**), tier đúng là **`T1*`** — xem mục *Heroes IV — Age of Heroes* ở Nhóm 1. Ghi chú cũ ở dòng này còn sót lại cái sai đó sau khi đợt `e7c5ec5` đã sửa ở chỗ khác. Đường vào là `web.archive.org` + CDX API, nhưng **từ 2026-08-04 nội dung wayback bị chặn** — xem mục cảnh báo bên dưới |
+| ~~`web.archive.org`~~ | ⚠️ **CDX chạy · NỘI DUNG bị chặn (2026-08-04)** | 🔴 **Trạng thái đã ĐỔI, không phải bị ghi sai.** 2026-08-03 đọc được thật (151 KB). 2026-08-04 **nội dung** bị **FortiGuard của mạng công ty** chặn theo category *"Games"*, trong khi **CDX index vẫn chạy bình thường**. Hai thứ khác nhau, trước giờ chưa phân biệt. Xem mục cảnh báo bên dưới để biết **dấu hiệu nhận biết** — trang chặn trả **HTTP 200** nên `curl` trông như thành công |
 | `en.namu.wiki/.../Sandro` | NOT_FETCHED | Chỉ thấy trong kết quả tìm kiếm |
 | File campaign `.h3c` gốc | NOT_FETCHED | **Đây là việc cần làm để nâng T1\* thành T1** |
 
@@ -424,7 +522,8 @@ kiểm định độc lập tìm được nguồn T4 thật. Ghi lại sai sót 
 
 | key | tier | access | Nội dung |
 |-----|------|--------|----------|
-| `bullard-interview-2013` | **T4** | FETCHED | **Phỏng vấn Jennifer Bullard**, do Alchemik thực hiện năm 2013 cho Acid Cave. `acidcave.net/jennifer_bullard_interview.html` — **còn sống, truy cập trực tiếp được, không cần archive.org**. Mirror/index tại `heroes.thelazy.net/index.php/Jennifer_Bullard` |
+| `bullard-interview-2013` | **T4** | FETCHED | **Phỏng vấn Jennifer Bullard**, do Alchemik thực hiện năm 2013 cho Acid Cave. `acidcave.net/jennifer_bullard_interview.html` — **còn sống, truy cập trực tiếp được, không cần archive.org**. Mirror/index tại `heroes.thelazy.net/index.php/Jennifer_Bullard`. ✅ **Đã đối chiếu bản thelazy với bản gốc acidcave.net — khớp từng chữ.** Đây là **corroboration hai domain thật sự độc lập**, loại tốt nhất dự án có. ⭐⭐ **Còn là nguồn T4 duy nhất trả lời "vì sao thế giới bị phá"** (bổ sung 2026-08-04): *"The Guardian opened the portals. **We wanted to wash a lot of the history away from the old world and needed a mechanism to do so.**"* · *"**It was Corak - it is always Corak.**"* · và lý do biên tập: *"The main reason behind wiping the history was because it had become **convoluted and hard to manage**."* · về Axeoth: *"We actually had a fairly fleshed out world… however, **the layoffs happened so soon after the launch**"*. ⚠️ Chú ý: **không text game nào** nhắc portal hay Corak — đây là T4 thuần |
+| `fulton-tavern-interview-2018` | **T4** | FETCHED | Xem entry đầy đủ ở Nhóm 1, mục *The Reckoning*. ⭐ *"Lore work for HoMM4, and the idea for 'the Reckoning', did not begin until long after I had left NWC."* |
 | `bullard-papers-ut-austin` | **T3** | NOT_FETCHED | **Tài liệu thiết kế gốc do chính Bullard tập hợp**, lưu tại Dolph Briscoe Center for American History, University of Texas. `repositories.lib.utexas.edu/items/e3abd6e5-b6be-4547-8900-17b2c9e237da` — mục lục ghi "Heroes [of Might and Magic] documents" |
 | `fulton-fanstratics-13` | **T4** | FETCHED | **Greg Fulton, Lead Designer Heroes III** — Fanstratics Newsletter #13. Gọi Sandro là hero mang tính biểu tượng: "Astral, Crag Hack, Dracon, **Sandro**, Solmyr, Tazar..." |
 | `fulton-fanstratics-27` | **T4** | FETCHED | Fulton, Newsletter #27 — ghi lại yêu cầu thiết kế ở buổi họp khởi động H3: "Keep specific heroes from HoMM2, like **Sandro the Necromancer**, Halon the Wizard, Lord Haart..." |
@@ -714,6 +813,46 @@ luận rằng phần lớn `<ref>` của timeline Fandom "không xác minh đư�
 **Hệ quả:** `3do.com` — site chính thức của 3DO, "nguồn
 không-phải-wiki tốt nhất có thể có" — **tiếp cận được qua archive**. Việc này liên quan trực tiếp tới
 `B-001` (nâng `T1*` → `T1`) và `B-002`.
+
+#### 🔴 CẬP NHẬT 2026-08-04 — nội dung wayback GIỜ BỊ CHẶN, nhưng CDX thì không
+
+Mục trên **vẫn đúng về phía archive.org**. Cái đổi là **mạng của máy dev**. Phát hiện khi research
+`the-reckoning`: **`web.archive.org` bị firewall FortiGuard chặn theo category "Games"**, và nó chặn
+**nội dung** chứ không chặn **index**.
+
+Body trả về thay cho trang, verbatim:
+
+> Web Filter Violation — FortiGuard Intrusion Prevention - Access Blocked — Web Page Blocked
+> You have tried to access a web page that is in violation of your Internet usage policy.
+> **Category: Games**
+
+⚠️⚠️ **DẤU HIỆU NHẬN BIẾT — ĐỌC KỸ, ĐÂY LÀ BẪY IM LẶNG:**
+trang chặn trả về **HTTP 200** và **~35,3 KB HTML**, nên `curl` báo **thành công**. Strip tag xuống
+chỉ còn **~360–376 ký tự**. Cả 39 file Age of Heroes và 24 file 3DO đều ra **đúng ~35,3 KB**.
+
+> **Kích thước giống nhau đến từng trăm byte trên nhiều file khác nhau = dấu hiệu chắc chắn bị chặn.**
+> Nếu đợt sau thấy file wayback ~35 KB mà text ~370 ký tự: **đó là trang chặn**, KHÔNG phải trang rỗng
+> của archive.org, và **KHÔNG** có nghĩa là URL đó "không được archive".
+
+**Tám đường vượt đã thử, tất cả FAILED** — ghi lại để không thử lại từ đầu:
+`curl` trực tiếp · percent-encode URL nhúng (filter decode trước khi rate) · chế độ raw `id_` ·
+proxy `r.jina.ai` (403, *"Anonymous access to domain web.archive.org blocked until Sun Sep 30 2035"*) ·
+proxy `api.allorigins.win` (522) · proxy `api.codetabs.com` (521) ·
+**tool `WebFetch`** (*"Claude Code is unable to fetch from web.archive.org"* — chặn ở **tầng tool**, nên
+WebFetch **không** cứu được ca này) · site Age of Heroes **live** (`ECONNREFUSED` — không chạy HTTPS).
+
+✅ **CÁI GÌ VẪN CHẠY ĐƯỢC:**
+
+- **CDX API chạy tốt** → vẫn **enumerate** được, chỉ không **đọc** được:
+  `http://web.archive.org/cdx/search/cdx?url=...&filter=...&output=text&fl=timestamp,original,statuscode,length`
+  (gặp `504` một lần với `filter=` phức tạp; **retry với `url=<prefix>/*` đơn giản hơn thì được ngay**)
+- **`archive.org` KHÔNG có tiền tố `web.` chạy tốt:** `advancedsearch.php`, `metadata/<id>`
+- `heroes.thelazy.net` (cả `action=raw` và `api.php`), `mightandmagic.fandom.com/api.php`,
+  `acidcave.net` — đều tốt
+
+**Hệ quả thực hành:** nguồn nào chỉ vào được qua wayback thì **tạm thời không lấy thêm được** — kể cả
+`ray-interview-ubisoft-2015`, `ch-h4-might-texts`, `h4-death-texts-ch`, `mm7-diaries-3do`. Các quote
+**đã trích trong registry vẫn dùng được**; chỉ là không mở rộng được cho tới khi có mạng khác.
 
 ### ⚠️⚠️ thelazy CHÉP SAI hai con số năm trong *The Diaries of Archibald*
 

@@ -16,7 +16,7 @@ verify_pass: verify-deyja-2026-08-03
 capital: the-pit
 capital_certainty: DISPUTED
 existed_from: null
-existed_until: reckoning
+existed_until: the-reckoning
 sources_used:
   - h3wiki-deyja
   - h3wiki-the-pit

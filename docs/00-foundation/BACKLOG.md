@@ -81,7 +81,27 @@ nguyên nào trống hoàn toàn.** Còn hai entity trụ.
   the first hours of the Reckoning"* (`h4-death-texts-ch`), và việc Reckoning **giết Kilgor**. Cộng
   với `B-024` (Ray có thể nói về Reckoning) thì mục này **đã bớt trống**.
 
-**Còn đúng MỘT entity trụ: `the-reckoning`.**
+### ✅ B-016 — **HOÀN THÀNH 2026-08-04**
+
+`the-reckoning` đã `verified`. **Cả bốn entity trụ xong**, và Codex không còn kỷ nguyên nào trống:
+Age of Kings (`archibald-ironfist`) · Antagarich (cụm SoD) · The Reckoning (`the-reckoning`) ·
+Axeoth (`gauldoth-half-dead`) · xuyên kỷ (`tarnum`).
+
+⭐ **Điều B-016 dự đoán đúng, và điều nó dự đoán sai:**
+
+- **Đúng:** viết entity ngoài cụm SoD **mở được nguồn mới** mỗi lần. Bài `the-reckoning` mở thêm hai
+  nguồn `T4` (`fulton-tavern-interview-2018`, và phần Reckoning của `bullard-interview-2013`) cùng
+  một nguồn `T1*` lớn (**45** block bio hero H4).
+- **Sai:** mục này xếp `the-reckoning` là *"khó nhất"* vì `TIMELINE-SPINE.md` ghi "chưa có nguồn".
+  Thực tế **nguồn dồi dào hơn dự đoán** ở phần nhân quả và hệ quả — cái thiếu là **niên đại**, và
+  thiếu theo cách không sửa được bằng research thêm: con số đang lưu hành **không tồn tại trong bất
+  kỳ nguồn nào**, nó là phép cộng của wiki.
+
+**Bài học giữ lại cho các đợt cân bằng sau:** "chưa có nguồn" trong một ghi chú cũ **không** nói lên
+độ khó thật. Ở đây nó chỉ đúng với **một trong ba** mảng nội dung, và đợt research đầu tiên đã dựng
+được hai mảng còn lại bằng text game.
+
+**~~Còn đúng MỘT entity trụ: `the-reckoning`.~~**
 
 ⭐ Và nó **đã bớt trống nhiều** sau ba bài vừa xong. Các mảnh đã gom được, đều có nguồn:
 
@@ -140,11 +160,99 @@ có gì đứng trước nó — trục thời gian chỉ đi được một chi
 **✅ Đã hiện thực hóa:** `wikilinks.py --build` giờ sinh mục **Quan hệ nghịch đảo** vào bản
 `_build/` (không bao giờ vào `docs/`), gồm cả quan hệ thời gian. Có test hồi quy 4 điểm.
 
-**Việc còn lại:** viết những bài `event` đầu tiên. Ứng viên tốt nhất hiện có, đều đã có nguồn
-`T1*` từ các bài đã `verified`: `the-reckoning` (bốn mảnh, xem `B-016`), và chuỗi Deyja/Sandro ở
-`TIMELINE-SPINE.md` mục 3.
+**✅ Bài `event` đầu tiên đã có (2026-08-04):** `the-reckoning`, `verified`. Convention đã qua thử lửa
+một lần và **không phải sửa** — cả ba câu trả lời (khai `before` một chiều · `date_certainty` là trục
+riêng · chia theo trục thế giới/nhân vật) đều dùng được như viết.
 
-**Trạng thái:** convention xong, tooling xong. Chưa có bài `event` nào.
+⭐ **Và ca đầu tiên này xác nhận đúng thứ convention mục 2 dự đoán:** `date_absolute: null` +
+`date_certainty: DISPUTED` là **trạng thái đúng**, không phải trạng thái tạm. Sự kiện chắc chắn xảy
+ra mà năm thì không truy được — hai trục thật sự độc lập.
+
+🔴 **Nhưng nó lộ ra một lỗ hổng mới trong bộ quan hệ, và lỗ này thuộc `SCHEMA.md` mục 3, không thuộc
+convention `event`:**
+
+`the-reckoning` phải để `relations: []`. Không phải vì thiếu dữ liệu — mà vì **mọi quan hệ của một
+`event` với thứ khác đều có chiều khai chuẩn đi TỪ PHÍA KIA**: `participated_in` từ nhân vật,
+`wielded_in` từ artifact, `depicted_in` từ chính event nhưng trỏ tới `campaign` (mà `codex/campaigns/`
+cũng rỗng). Convention `event` chỉ cho ngoại lệ "khai chiều nghịch khi bài kia chưa có" với
+`before`/`after`.
+
+**Kết quả:** entity `event` đầu tiên là một **đảo trong graph**, dù nội dung nó nối tới sáu entity.
+
+**Việc cần quyết:** có nên mở rộng ngoại lệ đó cho `involves`/`featured_artifact` không, hay chấp nhận
+rằng `event` chỉ vào graph khi các entity quanh nó được viết? Bài đã ghi rõ bốn quan hệ cần khai
+(`kilgor`, `gelu`, `armageddons-blade`, `sword-of-frost`) để không mất dấu.
+
+**Việc còn lại:** chuỗi Deyja/Sandro ở `TIMELINE-SPINE.md` mục 3 — giờ **không còn bị chặn** gì cả.
+
+**Trạng thái:** convention xong, tooling xong, **một bài `event` đã `verified`**.
+
+### B-025 · 🔴 `web.archive.org` bị FortiGuard chặn nội dung — chặn TẤT CẢ nguồn official của dự án
+
+**Là gì:** từ 2026-08-04, máy dev **không đọc được nội dung** `web.archive.org` — firewall FortiGuard
+của mạng công ty chặn theo category **"Games"**. **CDX index vẫn chạy**, nên vẫn enumerate được, chỉ
+không đọc được.
+
+⚠️⚠️ **Bẫy im lặng, phải biết trước:** trang chặn trả **HTTP 200** và **~35,3 KB** HTML → `curl` báo
+**thành công**. Strip tag còn **~370 ký tự**. Mọi file bị chặn ra **cùng kích thước**.
+
+> Thấy file wayback ~35 KB mà text ~370 ký tự → **đó là trang chặn**, không phải trang rỗng của
+> archive.org, và **không** có nghĩa URL đó chưa được archive.
+
+**Vì sao đây là nợ P1, không phải chuyện môi trường:** wayback là **đường duy nhất** vào mọi nguồn
+official của dự án. Bị chặn nghĩa là **không mở rộng được** `mm7-diaries-3do`, `chronicles-official-3do`,
+`h4-official-3do-story`, `ray-interview-ubisoft-2015`, `ch-h4-might-texts`, `h4-death-texts-ch`, và
+**toàn bộ** `aoh-h4-*`. Quote đã trích thì vẫn dùng được; chỉ là đóng băng.
+
+**Ảnh hưởng đã thấy:** `B-022` (39 trang Age of Heroes) và `B-023` (24 trang 3DO) **đã được định vị
+chính xác kèm timestamp** trong đợt `the-reckoning` — ghi sẵn trong `REGISTRY.md` — nhưng không đọc
+được trang nào. Và verify `the-reckoning` không đối chiếu lại được `h4-death-texts-ch` (xem Q7 của bài).
+
+**Tám đường vượt đã thử, tất cả thất bại:** curl trực tiếp · percent-encode URL nhúng · chế độ raw
+`id_` · `r.jina.ai` · `api.allorigins.win` · `api.codetabs.com` · `WebFetch` (chặn ở **tầng tool**) ·
+site Age of Heroes live (`ECONNREFUSED`).
+
+**Việc cần làm:** cần một mạng không bị FortiGuard (hotspot điện thoại, VPN, hoặc chạy ở nơi khác) rồi
+fetch **một loạt** 63 URL đã có timestamp. Đây là việc **gom lô**, không phải việc lẻ.
+
+**Trạng thái:** chưa có giải pháp trong môi trường hiện tại. Đã ghi đầy đủ vào `REGISTRY.md`.
+
+### B-026 · Search API của thelazy KHÔNG dùng được cho claim phủ định
+
+**Là gì:** phát hiện khi verify `the-reckoning`. Index full-text của `heroes.thelazy.net` **bị cũ**:
+
+- `srsearch=Volee` → **3** hit, trong khi từ đó có trên cả chục trang scenario
+- `srsearch="February 10th"` → **0** hit, trong khi cụm đó nằm ngay trên trang `The Reckoning`
+
+**Vì sao đây là nợ cấp dự án:** `B-003` bắt dự án rà mọi claim phủ định, và bài học lớn nhất trong
+`CLAUDE.md` nói claim phủ định là loại lỗi nguy hiểm nhất. Nếu một claim phủ định được dựng bằng
+`list=search` của thelazy thì **nó vô giá trị** — và không có gì trong quy trình hiện tại chặn việc đó.
+
+**Cách đúng, đã dùng thành công:** enumerate bằng `list=categorymembers` hoặc `list=allpages`, rồi
+bulk-fetch `prop=revisions&rvprop=content` và grep tại chỗ. Đợt verify đã quét **172 trang scenario**
+và **180 trang backlink** bằng cách này.
+
+**Việc cần làm:**
+
+1. Ghi thẳng vào `VERIFY-PROTOCOL.md`: claim phủ định **không được** dựng trên `list=search`.
+2. Rà lại các claim phủ định đã có trong Codex xem cái nào dựng bằng search API.
+
+**Trạng thái:** đã ghi vào `REGISTRY.md`. Chưa vào `VERIFY-PROTOCOL.md`.
+
+### B-027 · Đích wikilink KHÔNG phải text game — biến thể mới của lằn ranh `T1*`
+
+**Là gì:** trong các block text game của bio hero H4, tên `Enroth` và `Axeoth` **có** xuất hiện —
+nhưng **chỉ với tư cách đích wikilink do người sửa wiki thêm**: `[[Axeoth|new world]]`,
+`[[Enroth (planet)|old world]]`. **Text hiển thị trong game là *"the old world"* / *"the new world"*.**
+
+**Vì sao đáng làm:** dự án đã biết lằn ranh "text game vs văn wiki" giữa **hai đoạn văn**. Đây là lằn
+ranh ấy **bên trong một block text game** — tinh vi hơn, và không công cụ nào bắt được. Đọc đích link
+thành text game là `T1*`-hóa một biên tập của wiki.
+
+**Việc cần làm:** rà các bài đã `verified` xem có claim nào dựa vào **đích wikilink** thay vì chữ hiển
+thị — đặc biệt nhóm artifact, nơi nhiều claim trích từ bảng có link dày.
+
+**Trạng thái:** đã ghi vào `REGISTRY.md` ở entry `fandom-h4-hero-bios`. Chưa rà lại bài cũ.
 
 ### B-018 · `hota-changelog` đang mang tier `T1*` — sai **loại** nguồn, không chỉ sai cấp
 

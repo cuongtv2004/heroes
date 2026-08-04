@@ -331,11 +331,15 @@ thời Enroth) thuộc **Book II hoặc III** — chưa định vị được ch
 
 | Việc | Vì sao |
 |---|---|
-| Tìm nguồn cho hệ lịch "AS" | Hiện dùng mà chưa biết viết tắt của gì, gốc từ đâu |
-| Lập entity `event` cho chuỗi Sandro | Chuỗi ở mục 3 hiện chỉ là văn bản, chưa thành dữ liệu query được |
+| Tìm nguồn cho hệ lịch "AS" | Hiện dùng mà chưa biết viết tắt của gì, gốc từ đâu. ⭐ **Và đợt 2026-08-04 làm việc này cấp hơn**: không nguồn nào cho phép dùng "AS" cho sự kiện **Axeoth** — xem [[the-reckoning]] mục *Điểm tranh chấp canon* 5 |
+| Lập entity `event` cho chuỗi Sandro | Chuỗi ở mục 3 hiện chỉ là văn bản, chưa thành dữ liệu query được. ⭐ **Không còn bị chặn** — `the-reckoning` đã mở `codex/events/` và chốt xong convention |
 | Tìm timeline trong manual Heroes III | `h3-manual-timeline` được nhắc nhưng **chưa fetch được** |
 | Quyết định cấu trúc Book V | Xem cảnh báo ở mục 5 |
-| Xác lập mốc Reckoning | Ranh giới Enroth → Axeoth, hiện chưa có nguồn |
+| ~~Xác lập mốc Reckoning~~ ✅ **XONG 2026-08-04** | Đã có bài [[the-reckoning]]. 🔴 **Nhưng kết quả là NGƯỢC với kỳ vọng:** ghi chú cũ "hiện chưa có nguồn" **lỗi thời** ở phần diễn biến (có bốn mảnh `T1*`), **nhưng ĐÚNG ở phần niên đại** — và đúng nặng hơn tưởng. Mốc `10/02/1177 AS` là **phép cộng của wiki** trên nền tài liệu ngoài game, và chính wiki tô màu nó là *"Inferred Dates"*. Fandom thì ghi **1175**. Bài đặt `date_absolute: null`, `date_certainty: DISPUTED` |
+
+⚠️ **Hệ quả cho T1 của tài liệu này:** The Reckoning là ca mẫu cho luật "không có nguồn thì để trống,
+không lấp". Sự kiện **chắc chắn đã xảy ra** (có text game ở cả hai đầu nhân quả) mà **năm thì không
+truy được**. Hai trục đó độc lập — đúng như convention `event` ở `SCHEMA.md` mục 5 quy định.
 
 ---
 

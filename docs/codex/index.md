@@ -35,6 +35,15 @@ Nhân vật có vai trò lore nhưng không chơi được.
 - [**Ethric**](characters/ethric.md) — "Ethric the Mad", lich đầu tiên của thế giới, thầy của
   Sandro. Và là nhân vật **không nói một câu nào** trong toàn bộ Heroes III.
 
+### Sự kiện
+
+Thứ đã xảy ra trong thế giới — định vị được trên timeline.
+
+- [**The Reckoning**](events/the-reckoning.md) — thảm họa làm hành tinh Enroth không còn ở được,
+  đường biên giữa Heroes III và Heroes IV. Bài `event` **đầu tiên** của Codex, và là bài mà **cấu
+  trúc bằng chứng quan trọng hơn nội dung**: tường thuật mà mọi wiki kể lại hóa ra nằm trong một
+  tài liệu **chưa bao giờ vào game**.
+
 ### Quốc gia
 
 - [**Deyja**](kingdoms/deyja.md) — vương quốc necromancer, nơi **ám sát là thủ tục kế vị**.
