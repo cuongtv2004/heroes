@@ -582,11 +582,100 @@ kiểm định độc lập tìm được nguồn T4 thật. Ghi lại sai sót 
 |-----|------|--------|----------|
 | `bullard-interview-2013` | **T4** | FETCHED | **Phỏng vấn Jennifer Bullard**, do Alchemik thực hiện năm 2013 cho Acid Cave. `acidcave.net/jennifer_bullard_interview.html` — **còn sống, truy cập trực tiếp được, không cần archive.org**. Mirror/index tại `heroes.thelazy.net/index.php/Jennifer_Bullard`. ✅ **Đã đối chiếu bản thelazy với bản gốc acidcave.net — khớp từng chữ.** Đây là **corroboration hai domain thật sự độc lập**, loại tốt nhất dự án có. ⭐⭐ **Còn là nguồn T4 duy nhất trả lời "vì sao thế giới bị phá"** (bổ sung 2026-08-04): *"The Guardian opened the portals. **We wanted to wash a lot of the history away from the old world and needed a mechanism to do so.**"* · *"**It was Corak - it is always Corak.**"* · và lý do biên tập: *"The main reason behind wiping the history was because it had become **convoluted and hard to manage**."* · về Axeoth: *"We actually had a fairly fleshed out world… however, **the layoffs happened so soon after the launch**"*. ⚠️ Chú ý: **không text game nào** nhắc portal hay Corak — đây là T4 thuần |
 | `fulton-tavern-interview-2018` | **T4** | FETCHED | Xem entry đầy đủ ở Nhóm 1, mục *The Reckoning*. ⭐ *"Lore work for HoMM4, and the idea for 'the Reckoning', did not begin until long after I had left NWC."* |
-| `bullard-papers-ut-austin` | **T3** | NOT_FETCHED | **Tài liệu thiết kế gốc do chính Bullard tập hợp**, lưu tại Dolph Briscoe Center for American History, University of Texas. `repositories.lib.utexas.edu/items/e3abd6e5-b6be-4547-8900-17b2c9e237da` — mục lục ghi "Heroes [of Might and Magic] documents" |
+| `bullard-papers-ut-austin` | **T3** | ⚠️ **RESTRICTED (401)** | **Tài liệu thiết kế gốc do chính Bullard tập hợp**, lưu tại Dolph Briscoe Center for American History, University of Texas. `repositories.lib.utexas.edu/items/e3abd6e5-b6be-4547-8900-17b2c9e237da`. 🔴 **Trang item VÀO ĐƯỢC (200), nhưng `Heroes.zip` — 21.684.916 byte — trả HTTP 401 "Authentication is required".** Nội dung cần xin phép; xem `bullard-papers-manifest` cho phần **công khai** |
+| `bullard-papers-manifest` | **T3** | ✅ **FETCHED** | ⭐⭐⭐ **Danh sách file đầy đủ của bộ tài liệu trên — 10.896 byte, CÔNG KHAI.** Đây là `Heroes_2012-212_110512.txt`, lấy qua `server/api/core/bitstreams/ae7dcde7-1ba3-42d6-826e-82a5e341053c/content`. ⚠️⚠️ **PHẠM VI DÙNG RẤT HẸP: nó chỉ chứng minh MỘT tài liệu CÓ TỒN TẠI và tên nó là gì. Nó KHÔNG chứa nội dung, nên KHÔNG chống lưng được bất kỳ claim lore nào.** Mọi nhãn dẫn key này phải là claim dạng *"tồn tại một tài liệu thiết kế tên X"* |
 | `fulton-fanstratics-13` | **T4** | FETCHED | **Greg Fulton, Lead Designer Heroes III** — Fanstratics Newsletter #13. Gọi Sandro là hero mang tính biểu tượng: "Astral, Crag Hack, Dracon, **Sandro**, Solmyr, Tazar..." |
 | `fulton-fanstratics-27` | **T4** | FETCHED | Fulton, Newsletter #27 — ghi lại yêu cầu thiết kế ở buổi họp khởi động H3: "Keep specific heroes from HoMM2, like **Sandro the Necromancer**, Halon the Wizard, Lord Haart..." |
 | `fulton-fanstratics-3` | **T4** | FETCHED | Fulton, Newsletter #3 — xác nhận **Bullard là Lead Designer của SoD**: "I was not involved in the conception or creation of SoD... Jennifer Bullard was the project's Lead Designer, and any questions you have about SoD would best be directed to her" |
 | `fulton-names-2023` | **T4** | FETCHED | ⭐⭐ `Gregory Fulton/On Names in Heroes of Might and Magic III` trên thelazy — **98.499 byte**. Thư từ Amelrix ↔ Fulton 2022–2023, công bố 08/AUG/2023 trên Celestial Heavens, **~200 câu hỏi** về nguồn gốc tên town và hero, **do chính Fulton xem lại trước khi công bố**. Xem `B-020` — nguồn này chưa được khai thác hết |
+
+### ⭐⭐⭐ Bộ tài liệu thiết kế gốc của Bullard — CÓ GÌ TRONG ĐÓ (mở 2026-08-04)
+
+`bullard-papers-manifest` cho biết **chính xác** bộ `Heroes.zip` chứa gì. Nội dung bị khóa, nhưng
+**biết nó tồn tại đã đổi bản đồ ưu tiên của dự án**. Mô tả chính thức của item:
+
+> "Zip file compiled by Bullard, containing documents related to her work on **"Heroes of Might and
+> Magic III: Shadow of Death"** and **"Heroes of Might and Magic IV."**"
+
+Tác giả ghi trên item: **New World Computing; Bullard, Jennifer**.
+
+#### 🔴 Nhóm 1 — Text campaign SoD Ở DẠNG FILE NGUỒN. Đây là chìa khóa của `B-001`
+
+`Heroes/Shadow of Death/Campaign Text/` — **44 file `.txt`**, đặt tên theo nhân vật:
+
+`Sandro.txt` · `Sandro A.txt`–`Sandro D.txt` · `Gem.txt` · `Gem1.txt`–`Gem4.txt` · `Crag.txt` ·
+`gelu.txt` · `gelu1.txt`–`gelu4.txt` · `Yog.txt` · `Yog A.txt`–`Yog E.txt` · `Final.txt` ·
+`Final A.txt`–`Final L.txt` · `Secret.txt` · `Secret A.txt`–`Secret D.txt` · `Has01.txt`–`Has04.txt`
+
+⭐ **Đây chính xác là thứ `B-001` cần.** `B-001` giả định phải trích từ file `.h3c` đã build; thực ra
+**text nguồn của người thiết kế tồn tại ở dạng `.txt` rời**, và nằm trong một thư viện đại học. Nếu lấy
+được, mọi nhãn `T1*` của cụm SoD lên **`T1` thật**, và có thể **đối chiếu độc lập** với thelazy.
+
+#### Nhóm 2 — Dữ liệu bảng (XLS), tức game data thật
+
+`Heroes/Shadow of Death/Working/Excel/`: `H3X1_Characters.xls` · `Combo Artifacts.xls` ·
+`H3X2_Spells_Artifacts.xls` · `Adv Objects.xls` · `H3X1_Objects.xls` · `H3X1_Maplist.xls` ·
+`H3X1_RMGTemplates.xls` · `H3x1_RMGSpec.xls` · `Objects.xls`
+
+→ `Combo Artifacts.xls` và `H3X2_Spells_Artifacts.xls` phủ **toàn bộ năm bài artifact** của Codex.
+`H3X1_Characters.xls` phủ Sandro/Ethric/Jeddite.
+
+#### Nhóm 3 — Tài liệu cốt truyện SoD, gồm sơ đồ Visio
+
+`Working/Word/`: `Story line for Sandro.doc` · `Combo Artifacts.doc` · `Combo artifacts2.doc`
+`Working/Visio Files/`: **`Sandro's Rise to Power.vsd`** · `Sandro.vsd` · **`To Stop Sandro.vsd`** ·
+`Gem.vsd` · `Gelu.vsd` · `Crack Hack.vsd` *(gõ sai `Crag`, nguyên văn)* · `Yog.vsd`
+
+#### Nhóm 4 — Đặc tả thiết kế Heroes IV đầy đủ, tức lời giải cho lỗ nguồn kỷ Axeoth
+
+`Heroes/Heroes IV/Design/` có sáu mục: `01_OVERVIEW` `02_GAMEPLAY` `03_INTERFACE` `04_REFERENCE`
+`06_MAPS` `08_TOOLS`.
+
+**`06_MAPS/Campaigns/Storyline/`** — quan trọng nhất cho lore:
+
+`End of Erathia.htm` · `Story.htm` · **`Opening Sequence.htm`** · `Gods.htm` · `Kingdoms.htm` ·
+`Kingdom List.htm` · `The Immortal Hero.doc` · `H4 Campaign Voice Over Text 1.doc` ·
+`Campaign Text.htm` · và trang riêng cho từng quốc gia Axeoth: **`Palaedra.htm` · `Aranorn.htm` ·
+`Nekross.htm` · `Great Arcan.htm` · `Tribal Lands.htm` · `Yanathrae.htm`**
+Cộng ~60 file `.doc` kịch bản campaign theo phe (`death a`–`e`, `might a`–`d`, `order a`–`h`,
+`nature a`–`e`, `chaos a`–`e`, `life a`–`e`, `secret a`–`c`).
+
+**`04_REFERENCE/Special Heroes/`**: `Gauldoth.htm` · **`Ravenwood.htm`** · `Lysander.htm` ·
+`Waerjak.htm` · `Elwin.htm` · `Emilia.htm` · `Gavin Magnus.htm` · `Genevieve.htm` · `Tawni.htm` ·
+`Neener.htm` · `Pherlon.htm` · `Worton.html` · `Kentaine and Desette.htm` · `Shaera and Harke.htm` ·
+`Minor Artifact Creators.htm`
+
+⭐ **Ba điều bộ này giải quyết được mà không nguồn nào khác giải quyết nổi:**
+
+1. **Danh sách quốc gia Axeoth** — hiện là claim `UNVERIFIED` vì wiki **không dẫn nguồn**. Ở đây mỗi
+   quốc gia có **trang thiết kế riêng**.
+2. **`Ravenwood.htm` nằm trong mục *Special Heroes* của đặc tả H4 chính thức** — tức bà ta là **nhân
+   vật được THIẾT KẾ**, không phải chi tiết chỉ có trong outline chưa xuất bản.
+3. **`Opening Sequence.htm`** — trả lời trực tiếp `Q1` của [[the-reckoning]] (cinematic mở đầu H4 có
+   diễn ra vụ nổ hay không), câu mà dự án không xem được video để kiểm.
+
+#### ⛔ Vì sao chưa lấy được, và cần gì để lấy
+
+`Heroes.zip` trả **HTTP 401 "Authentication is required"** — kiểm bằng REST API từng bitstream:
+
+| File | Bytes | Trạng thái |
+|---|---|---|
+| `Heroes.zip` | 21.684.916 | ⛔ **401 RESTRICTED** |
+| `Heroes_2012-212_110512.txt` (manifest) | 10.896 | ✅ 200 |
+| `license.txt` | 1.698 | ✅ 200 |
+
+⚠️ **Đây KHÔNG phải chặn mạng** — khác hẳn ca FortiGuard. Đây là **hạn chế truy cập của thư viện**, gần
+như chắc vì bản quyền: `license.txt` là giấy phép nộp lưu tiêu chuẩn của TDL, và ghi rõ *"the Work's
+copyright owner(s) will continue to own copyright"* — chủ quyền là **New World Computing/3DO**, không
+phải Bullard, nên thư viện không thể mở công khai.
+
+**Đường đi tiếp, và nó cần con người, không cần công cụ:**
+
+1. DSpace có sẵn luồng **"Request a Copy"** trên trang item — điền email, lý do nghiên cứu.
+2. Hoặc liên hệ trực tiếp Dolph Briscoe Center for American History, dẫn số hiệu **`2012-212`**
+   (nằm trong tên file manifest) và handle `hdl.handle.net/2152/18586`.
+
+→ Việc này **user phải làm**, vì cần danh tính và địa chỉ email thật.
 
 ### Jennifer Bullard là ai
 

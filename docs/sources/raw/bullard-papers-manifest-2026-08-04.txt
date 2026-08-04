@@ -1,0 +1,666 @@
+Adventure Locations.doc
+End of Erathia.doc
+Heroes IV
+Level Design.doc
+MapEditorHelp.doc
+Scripting System.doc
+Shadow of Death
+Unholy Alliance.doc
+maranthea
+
+Heroes/Heroes IV:
+Design
+Testing
+
+Heroes/Heroes IV/Design:
+01_OVERVIEW
+02_GAMEPLAY
+03_INTERFACE
+04_REFERENCE
+06_MAPS
+08_TOOLS
+HELP.hhc
+HELP.hhk
+HELP.hhp
+HELP.toc
+HELP.txt
+Images
+XLS
+_errorlog.txt
+index.htm
+vssver.scc
+
+Heroes/Heroes IV/Design/01_OVERVIEW:
+Changes.htm
+Features.htm
+Fundamentals.htm
+General
+Goals.htm
+SystemReqs.htm
+WS_FTP.LOG
+vssver.scc
+
+Heroes/Heroes IV/Design/01_OVERVIEW/General:
+Changes.htm
+Features.htm
+Fundamentals.htm
+Goals.htm
+SystemReqs.htm
+WS_FTP.LOG
+vssver.scc
+
+Heroes/Heroes IV/Design/02_GAMEPLAY:
+Adventure Screen
+Armies
+Combat
+Multiplayer
+Scoring
+Towns
+
+Heroes/Heroes IV/Design/02_GAMEPLAY/Adventure Screen:
+Adventure Locations.htm
+Adventure Map.htm
+Heroes and Armies.htm
+Income.htm
+Movement.htm
+Scripting System.htm
+WS_FTP.LOG
+Wandering Creatures.htm
+Week and Month of Event.htm
+neutral_player.htm
+vssver.scc
+
+Heroes/Heroes IV/Design/02_GAMEPLAY/Armies:
+Creature Screen.htm
+Hero Screen.htm
+Skills.htm
+Spells.htm
+WS_FTP.LOG
+hero_classes.htm
+vssver.scc
+
+Heroes/Heroes IV/Design/02_GAMEPLAY/Combat:
+Combat.htm
+Luck_Morale.htm
+WS_FTP.LOG
+castle combat.gif
+castle_features.htm
+combat mockup.gif
+counterattacks.htm
+damage_calculation.htm
+ending_combat.htm
+facing.htm
+formations.gif
+formations.htm
+grid_sizes.htm
+heroes_in_combat.htm
+new_features.htm
+siege_combat.htm
+terrain_in_combat.htm
+troop_actions.htm
+vssver.scc
+
+Heroes/Heroes IV/Design/02_GAMEPLAY/Multiplayer:
+Allies.htm
+Multiplayer Rules.htm
+WS_FTP.LOG
+vssver.scc
+
+Heroes/Heroes IV/Design/02_GAMEPLAY/Scoring:
+Score System.htm
+WS_FTP.LOG
+vssver.scc
+
+Heroes/Heroes IV/Design/02_GAMEPLAY/Towns:
+Chaos Building Tree.gif
+Chaos Town.htm
+Death Building Tree.gif
+Death Town.htm
+Life Building Tree.gif
+Life Town.htm
+Might Building Tree.gif
+Might Town.htm
+Nature Building Tree.gif
+Nature Town.htm
+Order Building Tree.gif
+Order Town.htm
+Town Buildlings.htm
+WS_FTP.LOG
+alignments.htm
+vssver.scc
+
+Heroes/Heroes IV/Design/03_INTERFACE:
+Adventure Objects.htm
+Adventure Screen.htm
+Campaign Description Screen.htm
+Caravan.htm
+Castle.htm
+Creature Army Screen.htm
+Creature Purchase Screen.htm
+Hero Army Screen.htm
+KO Creature Generator List.htm
+KO Hero List.htm
+KO Party List.htm
+KO Town List.htm
+Mage Guild.htm
+Main Menu.htm
+Marketplace.htm
+Prison.htm
+Puzzle Map.htm
+Quest Log.htm
+Single Scenario Selection Screen.htm
+Spellbook.htm
+System Options.htm
+Tavern Layout.htm
+Thieves Guild Layout.htm
+Town Building.htm
+Town Screen.htm
+Trade Resources.htm
+Trade Screen.htm
+WS_FTP.LOG
+combat_screen.htm
+vssver.scc
+
+Heroes/Heroes IV/Design/04_REFERENCE:
+Adventure Objects
+Artifacts
+Creatures
+General Heroes
+New ACDSee BMP Image.bmp
+Skills
+Special Heroes
+Spells
+Terrain
+Towns
+WS_FTP.LOG
+
+Heroes/Heroes IV/Design/04_REFERENCE/Adventure Objects:
+AdvObjects.htm
+Creature Dwellings.htm
+Customizing Creature Banks.htm
+Right Click Text.htm
+WS_FTP.LOG
+vssver.scc
+
+Heroes/Heroes IV/Design/04_REFERENCE/Artifacts:
+Artifacts.htm
+Combinations.htm
+CreateYourOwn.htm
+Merchants.htm
+Right Click Text.htm
+WS_FTP.LOG
+vssver.scc
+
+Heroes/Heroes IV/Design/04_REFERENCE/Creatures:
+Creature Special Abilities.htm
+Creatures.htm
+Party Screen Creature Information.htm
+WS_FTP.LOG
+creature_descriptions.htm
+vssver.scc
+
+Heroes/Heroes IV/Design/04_REFERENCE/General Heroes:
+Attributes.htm
+Barbarian_Heroes.htm
+Chaos_Heroes.htm
+Evil_Heroes.htm
+Generic Bios.htm
+Hero Changes.htm
+Hero Icons.htm
+Life Heroes.htm
+Nature_Heroes.htm
+Order_Heroes.htm
+Sorcerers.htm
+Thieves.htm
+WS_FTP.LOG
+generic_names.htm
+vssver.scc
+
+Heroes/Heroes IV/Design/04_REFERENCE/Skills:
+WS_FTP.LOG
+combat_skills.htm
+death_magic_skills.htm
+druid_magic_skills.htm
+enchantment_skills.htm
+life_magic_skills.htm
+noble_skills.htm
+scouting_skills.htm
+skill_chance.xls
+skill_choice_chances.htm
+sorcery_skills.htm
+tactics_skills.htm
+vssver.scc
+
+Heroes/Heroes IV/Design/04_REFERENCE/Special Heroes:
+Elwin.htm
+Emilia.htm
+Gauldoth.htm
+Gavin Magnus.htm
+Genevieve.htm
+Kentaine and Desette.htm
+Lysander.htm
+Minor Artifact Creators.htm
+Neener.htm
+Pherlon.htm
+Ravenwood.htm
+Shaera and Harke.htm
+Tawni.htm
+WS_FTP.LOG
+Waerjak.htm
+Worton.html
+vssver.scc
+
+Heroes/Heroes IV/Design/04_REFERENCE/Spells:
+Chaos.htm
+Death.htm
+Life.htm
+Nature.htm
+Order.htm
+Spell Categories.htm
+WS_FTP.LOG
+vssver.scc
+
+Heroes/Heroes IV/Design/04_REFERENCE/Terrain:
+Art_Terrain Objects.htm
+Special Terrains.htm
+WS_FTP.LOG
+vssver.scc
+
+Heroes/Heroes IV/Design/04_REFERENCE/Towns:
+Chaos Town Buildings.htm
+Death Town Buildings.htm
+Life Town Buildings.htm
+Might Town Buildings.htm
+Nature Town Buildings.htm
+Order Town Buildings.htm
+Rumors.htm
+Town Names.htm
+WS_FTP.LOG
+building calculation.xls
+vssver.scc
+
+Heroes/Heroes IV/Design/06_MAPS:
+Campaigns
+Map Specifications.htm
+MapList.xls
+Single
+WS_FTP.LOG
+vssver.scc
+
+Heroes/Heroes IV/Design/06_MAPS/Campaigns:
+Barbarian.htm
+Campaign Text.htm
+Chaos.htm
+Evil.htm
+Good.htm
+Nature.htm
+No Town.htm
+Order.htm
+Secret.htm
+Storyline
+WS_FTP.LOG
+vssver.scc
+
+Heroes/Heroes IV/Design/06_MAPS/Campaigns/Storyline:
+Aranorn.htm
+End of Erathia.htm
+Gods.htm
+Great Arcan.htm
+H4 Campaign Voice Over Text 1.doc
+Kingdom List.htm
+Kingdoms.htm
+Nekross.htm
+No Town a.doc
+No Town b.doc
+No Town c 1-1.doc
+No Town c.doc
+No Town d 1-1.doc
+No Town d.doc
+No Town e 1-1.doc
+No Town e.doc
+Opening Sequence.htm
+Palaedra.htm
+Story.htm
+The Immortal Hero.doc
+Tribal Lands.htm
+WS_FTP.LOG
+Yanathrae.htm
+chaos a.doc
+chaos b.doc
+chaos c.doc
+chaos d.doc
+chaos e.doc
+death a.doc
+death b.doc
+death c.doc
+death d.doc
+death e.doc
+life a.doc
+life b.doc
+life c.doc
+life d.doc
+life e.doc
+might a.doc
+might b.doc
+might c.doc
+might d.doc
+nature a 1-1.doc
+nature a.doc
+nature b 1-1.doc
+nature b.doc
+nature c 1-1.doc
+nature c.doc
+nature d 1-1.doc
+nature d.doc
+nature e 1-1.doc
+nature e.doc
+order a 1-1.doc
+order a.doc
+order b 1-1.doc
+order b.doc
+order c 1-1.doc
+order c.doc
+order d 1-1.doc
+order d.doc
+order e 1-1.doc
+order e.doc
+order f 1-1.doc
+order f.doc
+order g 1-1.doc
+order g.doc
+order h 1-1.doc
+order h.doc
+secret a.doc
+secret b.doc
+secret c.doc
+vssver.scc
+
+Heroes/Heroes IV/Design/06_MAPS/Single:
+MapList.xls
+MapList2.xls
+WS_FTP.LOG
+vssver.scc
+
+Heroes/Heroes IV/Design/08_TOOLS:
+MapEditor
+MapMakersKit
+
+Heroes/Heroes IV/Design/08_TOOLS/MapEditor:
+Adventure Objects.htm
+Adventure Objects2.htm
+Create Your Own Artifact.htm
+Editor Design.htm
+Menu Buttons.htm
+Scripting System.htm
+WS_FTP.LOG
+neutral_player.htm
+vssver.scc
+
+Heroes/Heroes IV/Design/08_TOOLS/MapMakersKit:
+Adventure Objects.htm
+Artifact Combos.htm
+Artifacts.htm
+Campaign Creation.htm
+Creatures.htm
+Heroes.htm
+Level Design.htm
+Map Concept.htm
+Map Maker's Kit.htm
+Notes.htm
+Resources Needed.htm
+Score System.htm
+Scripting System.htm
+Skills.htm
+Spells.htm
+Terms.htm
+Town Buildings.htm
+WS_FTP.LOG
+vssver.scc
+
+Heroes/Heroes IV/Design/Images:
+Adventure Objects.gif
+Alchemist Shop.gif
+Armory.gif
+Arsenal.gif
+Campaign Description Screen.gif
+Caravan.gif
+Castle.gif
+Creature Party Screen.gif
+Creature Purchase Screen.gif
+Exit Button.gif
+Hero Party Screen.gif
+Kingdom Overview Creature Gen list 800x600.gif
+Kingdom Overview Hero List 800x600.gif
+Kingdom Overview Party List 800x600.gif
+Kingdom Overview Town List 800x600.gif
+Luck Icon.gif
+Mage Guild.gif
+Marketplace.gif
+Order of Paladins.gif
+Party Trade Screen.gif
+Prison.gif
+Puzzle Map.gif
+Quest Log.gif
+Ranger's Guild.gif
+Single Scenario Option Screen.gif
+Single Scenario Selection Screens.gif
+Spellbook.gif
+System Options.gif
+Tavern.gif
+Thieves Guild.gif
+Trade Resources.gif
+Warlock's Guild.gif
+buy_building.gif
+vssver.scc
+
+Heroes/Heroes IV/Design/XLS:
+Adventure Object.xls
+Artifacts.xls
+Campaign.xls
+Interface.xls
+Spells.xls
+Text.xls
+buildings.xls
+campaign_editor.dialogs.xls
+campaign_editor.text.xls
+combat_obstacles.xls
+creature_abilities.xls
+creature_banks.xls
+creatures.xls
+gateways.xls
+heroes.xls
+skill_weights.xls
+skills.xls
+toll_gate.xls
+
+Heroes/Heroes IV/Testing:
+Character Tests
+Creature Test.xls
+H4 Spell Testing
+Heroes.xls
+Map Test.xls
+Saved games
+Scripting Testing.xls
+Technical Template.doc
+drawing problem 1.jpg
+drawing problem.jpg
+
+Heroes/Heroes IV/Testing/Character Tests:
+magi bip03.max
+magi_Attack01.max
+magi_Walk01.max
+
+Heroes/Heroes IV/Testing/H4 Spell Testing:
+ECampos Magic Comment Sheet .doc
+ECampos_EWillamsonlvl 1 Spell Test by Battles.xls
+ECampos_EWillamsonlvl 2 Spell Test by Battles.xls
+ECampos_EWillamsonlvl 3 Spell Test by Battles.xls
+H4 magic test Erics Notes.doc
+
+Heroes/Heroes IV/Testing/Saved games:
+2k creatures.h4s
+Behemothcrash.h4s
+Blue not doin much.h4s
+Can't Move.h4s
+Cant get to  creatures.h4s
+Cant see X.h4s
+Die after combat.h4s
+EndTurnfreeze.h4s
+Endturncrash2.h4s
+Endturnfreeze2.h4s
+Ignoring Mines.h4s
+LurkersDenCrash.h4s
+MightA endturncrash.h4s
+Month of bug.h4s
+Move IN.h4s
+No cast.h4s
+No run.h4s
+Phantom creature.h4s
+afterwin.h4s
+before boarshoof2.h4s
+caravan crash.h4s
+distbug.h4s
+endturncrash.h4s
+garrison freeze2.h4s
+green freeze.h4s
+nature d5.h4s
+orange doing nothing.h4s
+pass mine.h4s
+quicksand1.h4s
+redstuck.h4s
+revolution.h4s
+run and die.h4s
+shoudlnt I win.h4s
+should win z.h4s
+take garrison crash.h4s
+two tower.h4s
+why no take town.h4s
+wolf crash.h4s
+wrong teleport.h4s
+
+Heroes/Shadow of Death:
+Campaign Editor
+Campaign Text
+Game
+Map Editor
+Working
+
+Heroes/Shadow of Death/Campaign Editor:
+AFXHELP.HM
+Campaign Editor.hpj
+CampaignEditor.rtf
+H3CCMPED.HLP
+h3ccmped.LOG
+h3ccmped.cnt
+h3ccmped.hm
+
+Heroes/Shadow of Death/Campaign Text:
+Crag.txt
+Final A.txt
+Final B.txt
+Final C.txt
+Final D.txt
+Final E.txt
+Final F.txt
+Final G.txt
+Final H.txt
+Final I.txt
+Final J .txt
+Final K.txt
+Final L.txt
+Final.txt
+Gem.txt
+Gem1.txt
+Gem2.txt
+Gem3.txt
+Gem4.txt
+Has01.txt
+Has02.txt
+Has03.txt
+Has04.txt
+Sandro A.txt
+Sandro B.txt
+Sandro C.txt
+Sandro D.txt
+Sandro.txt
+Secret A.txt
+Secret B.txt
+Secret C.txt
+Secret D.txt
+Secret.txt
+Yog A.txt
+Yog B.txt
+Yog C.txt
+Yog D.txt
+Yog E.txt
+Yog.txt
+gelu.txt
+gelu1.txt
+gelu2.txt
+gelu3.txt
+gelu4.txt
+
+Heroes/Shadow of Death/Game:
+00000001.RTF
+00000002.rtf
+ERRORLOG.$$$
+HEROES3.HLP
+Heroes3.cnt
+Heroes3.hpj
+
+Heroes/Shadow of Death/Map Editor:
+AFXHELP.HM
+H3MAPED.HLP
+H3MapEdHelp.doc
+Map Editor.hpj
+MapEditor.rtf
+ObjectHelp.hm
+Shipyard_Correct01.bmp
+Shipyard_Incorrect_01.bmp
+Shipyard_Incorrect_02.bmp
+Shipyard_Incorrect_03.bmp
+h3maped.GID
+h3maped.LOG
+h3maped.cnt
+h3maped.hm
+
+Heroes/Shadow of Death/Working:
+Excel
+Miscellaneous
+Visio Files
+Word
+
+Heroes/Shadow of Death/Working/Excel:
+Adv Objects.xls
+Combo Artifacts.xls
+H3X1_Characters.xls
+H3X1_Maplist.xls
+H3X1_Objects.xls
+H3X1_RMGTemplates.xls
+H3X2_Spells_Artifacts.xls
+H3x1_RMGSpec.xls
+Objects.xls
+
+Heroes/Shadow of Death/Working/Miscellaneous:
+
+Heroes/Shadow of Death/Working/Visio Files:
+Crack Hack.vsd
+Gelu.vsd
+Gem.vsd
+Sandro's Rise to Power.vsd
+Sandro.vsd
+To Stop Sandro.vsd
+Yog.vsd
+
+Heroes/Shadow of Death/Working/Word:
+Combo Artifacts.doc
+Combo artifacts2.doc
+Story line for Sandro.doc
+
+Heroes/maranthea:
+receive
+shared
+
+Heroes/maranthea/receive:
+
+Heroes/maranthea/shared:

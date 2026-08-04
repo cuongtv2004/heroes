@@ -40,6 +40,7 @@ sources_used:
   - h3wiki-lost-manuscripts
   - h3wiki-lost-lore
   - h3wiki-ravenwood
+  - bullard-papers-manifest
   - bullard-interview-2013
   - fulton-tavern-interview-2018
   - ray-interview-ubisoft-2015
@@ -424,10 +425,24 @@ nhận có thể lệch bản phát hành. Đọc như *ý định của ngườ
 
 {T4 EXPLICIT: h3wiki-lost-manuscripts}
 
-Người nói là **Ravenwood**, một nhân vật **chỉ tồn tại trong tài liệu ngoài game** — trang wiki về
-nhân vật này gắn nhãn "chỉ có trong Lost Lore" cho **toàn bộ** nội dung.
+Người nói là **Ravenwood**, một nhân vật **không xuất hiện trong game** — trang wiki về nhân vật này
+gắn nhãn "chỉ có trong Lost Lore" cho **toàn bộ** nội dung.
 
 {T4 EXPLICIT: h3wiki-ravenwood}
+
+⭐ **Nhưng "không trong game" KHÔNG có nghĩa "chỉ là chi tiết trong outline bị bỏ".** Bộ tài liệu thiết
+kế gốc của Bullard lưu ở UT Austin có một file tên **`Ravenwood.htm`**, và nó nằm trong mục
+`04_REFERENCE/Special Heroes/` của **đặc tả thiết kế Heroes IV** — cùng thư mục với `Gauldoth.htm`,
+`Lysander.htm`, `Elwin.htm`, `Emilia.htm`.
+
+{T3 EXPLICIT: bullard-papers-manifest — manifest công khai chứng minh file tồn tại và nằm ở thư mục nào}
+
+→ Nghĩa là Ravenwood là **nhân vật được thiết kế chính thức**, có trang tham chiếu riêng trong đặc tả
+nội bộ, chứ không phải chi tiết chỉ tồn tại trong một bản nháp.
+
+⚠️⚠️ **Giới hạn của claim này phải nói thật rõ:** dự án **chỉ đọc được DANH SÁCH FILE**, không đọc được
+nội dung — `Heroes.zip` trả **HTTP 401**. Nên điều khẳng định được là **file đó tồn tại và nằm ở đâu**.
+**Không** khẳng định được nó viết gì. Xem `B-002`.
 
 ### Vụ nổ và ba giờ sau đó
 
@@ -948,6 +963,13 @@ Wiki nhúng file video mở đầu với caption *"Gelu battles Kilgor causing T
 **duy nhất** thật sự *diễn ra* sự kiện.
 {T6 UNVERIFIED: thelazy-the-reckoning — caption wiki, chưa xem được video}
 
+⭐ **Và giờ đã biết CHÍNH XÁC tài liệu nào trả lời được câu này.** Đặc tả thiết kế Heroes IV của Bullard
+có file **`Opening Sequence.htm`**, nằm trong `06_MAPS/Campaigns/Storyline/` — cùng thư mục với
+`End of Erathia.htm` và `Story.htm`.
+{T3 EXPLICIT: bullard-papers-manifest — manifest chứng minh file tồn tại; nội dung bị khóa 401}
+
+→ Câu hỏi đổi từ *"không biết tìm ở đâu"* thành *"biết tìm ở đâu, cần xin quyền truy cập"*. Xem `B-002`.
+
 **Q2. Hai câu quote trên trang Fandom đến từ đâu?**
 *"To all things comes an end."* và *"And to all things comes a beginning."* — không attribution, và
 tìm trên cả hai wiki đều **0 kết quả khớp**. Nghe như narration cinematic. Chưa truy được.
@@ -996,6 +1018,7 @@ họ**. Có thể Ravenwood là người thực thi cho Guardian, nhưng đó l�
 | **`T4`** — phát ngôn / tài liệu developer | **4** | ⭐⭐ `bullard-interview-2013` (Corak + lý do thật, **đã đối chiếu bản gốc `acidcave.net`**) · `fulton-tavern-interview-2018` (phủ định mạch cài sẵn) · `h3wiki-lost-manuscripts` · `ray-interview-ubisoft-2015` |
 | **`T2*`** — manual in qua trung gian | **1** | ⭐⭐ `ab-manual-thelazy` — *Letter from Lucifer Kreegan*, nguồn tier cao nhất bài này có cho Armageddon's Blade |
 | `T2` — nguồn chính thức | 1 | ⚠️ Chỉ dùng để ghi rằng dự án **chưa đọc được** nó |
+| **`T3`** — tài liệu thiết kế gốc | **1** | ⭐⭐ `bullard-papers-manifest` — **chỉ chứng minh tài liệu TỒN TẠI**, không chứa nội dung (`Heroes.zip` trả 401) |
 | `T6` — wiki cộng đồng | 11 | ⚠️ `fandom-reckoning` có **0 citation** trên toàn trang |
 
 **Nguồn giá trị nhất: bộ bio hero Heroes IV.** Không có nó, bài này sẽ phải dựng gần như toàn bộ

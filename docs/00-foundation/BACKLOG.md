@@ -28,7 +28,41 @@ dấu bằng `{{sic}}`, và tách bạch text chính thức khỏi ý kiến fan
 **Ảnh hưởng nếu làm được:** mọi claim `T1*` nâng lên `T1` thật. Đây là nâng cấp chất
 lượng lớn nhất có thể có cho dự án.
 
-**Trạng thái:** chưa bắt đầu. Cần user xác nhận có bản game không.
+---
+
+### ⭐⭐ ĐƯỜNG THỨ HAI, phát hiện 2026-08-04 — và nó DỄ HƠN đường `.h3c`
+
+`B-002` (bộ tài liệu Bullard ở UT Austin) chứa
+**`Heroes/Shadow of Death/Campaign Text/` — 44 file `.txt` text campaign ở DẠNG NGUỒN của người
+thiết kế**, đặt tên theo nhân vật: `Sandro.txt`, `Sandro A.txt`–`Sandro D.txt`, `Gem.txt`,
+`Gem1.txt`–`Gem4.txt`, `Crag.txt`, `gelu.txt`, `Yog.txt`, `Final A.txt`–`Final L.txt`,
+`Secret A.txt`–`D`, `Has01`–`04`.
+
+{T3 EXPLICIT: bullard-papers-manifest — manifest chứng minh các file này tồn tại; nội dung chưa lấy được}
+
+🔴 **Điều này sửa một giả định của chính `B-001`:** mục này giả định phải **trích từ file `.h3c` đã
+build**, tức cần bản game + công cụ parse. Thực ra **text nguồn tồn tại ở dạng `.txt` rời** trong một
+thư viện đại học — không cần bản game, không cần viết parser.
+
+**So sánh hai đường:**
+
+| | Đường `.h3c` (bản gốc của B-001) | Đường Bullard `.txt` (mới) |
+|---|---|---|
+| Cần | Bản cài Heroes III + công cụ trích | Xin phép thư viện |
+| Được gì | Text **đã build vào game** | Text **nguồn của người thiết kế** |
+| Rủi ro | Phải viết parser cho định dạng không tài liệu | Có thể bị từ chối cấp quyền |
+| Trạng thái | Chưa có bản game | Manifest đã có; nội dung 401 |
+
+⚠️ **Hai đường KHÔNG thay thế nhau — và khác biệt này quan trọng về mặt tier:** file `.txt` của Bullard
+là **bản thảo của người viết**, còn `.h3c` là **thứ thật sự chạy trong game**. Nếu hai bản lệch nhau thì
+`.h3c` thắng theo `CANON-POLICY.md` R1 (in-game thắng tài liệu). Nên đường Bullard cho **`T3`**
+(tài liệu thiết kế), **không tự động cho `T1`**.
+
+→ Dù vậy nó vẫn là **bước tiến lớn nhất `B-001` từng có**: nó cho một nguồn **độc lập với thelazy** để
+đối chiếu, tức bắt được đúng loại lỗi "wiki chép sai" mà dự án đã gặp hai lần.
+
+**Trạng thái:** đường `.h3c` chưa bắt đầu, cần user xác nhận có bản game không. Đường Bullard cần user
+xin quyền truy cập — xem `B-002`.
 
 ---
 
@@ -536,7 +570,56 @@ Sandro** (quá trình thành lich — điều không nguồn nào hiện có tr�
 
 **Cần gì:** thử fetch trực tiếp. Nếu không được, có thể phải liên hệ thư viện.
 
-**Trạng thái:** chưa fetch. **Lead giá trị nhất chưa khai thác của dự án.**
+---
+
+### 🔴 CẬP NHẬT 2026-08-04 — repo VÀO ĐƯỢC, MANIFEST đã lấy, nội dung bị KHÓA
+
+**Đã thử fetch, và kết quả tách làm hai nửa rõ rệt:**
+
+| File | Bytes | Trạng thái |
+|---|---|---|
+| Trang item | — | ✅ 200 |
+| `Heroes_2012-212_110512.txt` — **danh sách file đầy đủ** | 10.896 | ✅ **200, ĐÃ LẤY** |
+| `license.txt` | 1.698 | ✅ 200 |
+| **`Heroes.zip`** | **21.684.916** | ⛔ **401 "Authentication is required"** |
+
+⚠️ **KHÔNG phải chặn mạng** (khác ca FortiGuard ở `B-025`) — đây là **hạn chế truy cập của thư viện**,
+gần như chắc vì bản quyền: `license.txt` ghi *"the Work's copyright owner(s) will continue to own
+copyright"*, và chủ quyền là **NWC/3DO**, không phải Bullard.
+
+**Nhưng manifest công khai đã đổi bản đồ ưu tiên của dự án** — giờ biết **chính xác** trong đó có gì.
+Chi tiết đầy đủ ở `REGISTRY.md`, mục *Bộ tài liệu thiết kế gốc của Bullard*. Bốn nhóm:
+
+1. 🔴 **`Shadow of Death/Campaign Text/` — 44 file `.txt` text campaign Ở DẠNG NGUỒN**
+   (`Sandro.txt`, `Sandro A`–`D`, `Gem.txt`, `Gem1`–`4`, `gelu`, `Yog`, `Final A`–`L`, `Crag`, …).
+   **Đây là chìa khóa của `B-001`** — xem mục đó.
+2. **XLS dữ liệu:** `Combo Artifacts.xls`, `H3X2_Spells_Artifacts.xls`, `H3X1_Characters.xls` —
+   phủ **cả năm** bài artifact và ba bài nhân vật của Codex.
+3. **Cốt truyện SoD:** `Story line for Sandro.doc`, và sơ đồ Visio `Sandro's Rise to Power.vsd`,
+   `To Stop Sandro.vsd`.
+4. **Đặc tả thiết kế Heroes IV đầy đủ** — `End of Erathia.htm`, **`Opening Sequence.htm`**,
+   `Story.htm`, trang riêng cho **từng quốc gia Axeoth** (`Palaedra`, `Aranorn`, `Nekross`,
+   `Great Arcan`, `Tribal Lands`, `Yanathrae`), và `Special Heroes/` gồm `Gauldoth.htm` **và
+   `Ravenwood.htm`**.
+
+⭐ **Ba câu hỏi mở của Codex mà bộ này giải được, không nguồn nào khác giải nổi:**
+
+- Danh sách quốc gia Axeoth — hiện `UNVERIFIED` vì wiki không dẫn nguồn; ở đây **mỗi quốc gia một
+  trang thiết kế**.
+- `Ravenwood.htm` nằm trong mục *Special Heroes* của đặc tả H4 → bà ta là **nhân vật được thiết kế**,
+  không phải chi tiết chỉ có trong outline chưa xuất bản.
+- `Opening Sequence.htm` → trả lời trực tiếp **`Q1` của `the-reckoning`** (cinematic mở đầu H4 có diễn
+  ra vụ nổ không) — câu dự án không xem được video để kiểm.
+
+**⛔ VIỆC NÀY GIỜ CẦN USER, KHÔNG CẦN CÔNG CỤ:**
+
+1. Dùng luồng **"Request a Copy"** có sẵn trên trang item (cần email thật + lý do nghiên cứu), **hoặc**
+2. Liên hệ Dolph Briscoe Center for American History, dẫn số hiệu **`2012-212`** và handle
+   `hdl.handle.net/2152/18586`.
+
+**Trạng thái:** manifest ✅ đã lấy và đã vào registry. Nội dung ⛔ chờ xin phép — **cần user quyết định
+có liên hệ thư viện không.** Vẫn là lead giá trị nhất của dự án, và giờ **biết rõ giá trị của nó là gì**
+thay vì phỏng đoán.
 
 ### B-003 · Rà lại mọi claim phủ định trong Codex
 
