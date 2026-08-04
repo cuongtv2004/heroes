@@ -247,7 +247,7 @@ def check_relation_consistency(entities: list) -> None:
                         f"`{target} {b} {eid}` trong {paths[target]}"
                     )
 
-            # (3) nghịch đảo viết tay hai chiều — sinh tự động, không viết tay
+            # (3) nghịch đảo viết tay hai chiều — wikilinks.py --build sinh nó
             inv = INVERSE.get(rtype)
             if inv and eid in graph.get((target, inv), set()):
                 # (3b) Nếu đã viết tay cả hai chiều, ít nhất hai bên phải khớp
@@ -264,7 +264,7 @@ def check_relation_consistency(entities: list) -> None:
                 else:
                     warn(
                         f"{paths[eid]}: `{rtype}` → {target} đã có nghịch đảo `{inv}` "
-                        f"viết tay ở {paths[target]} — nghịch đảo do công cụ sinh, "
+                        f"viết tay ở {paths[target]} — `wikilinks.py --build` sinh nó, "
                         f"không viết tay (SCHEMA.md mục 3)"
                     )
 

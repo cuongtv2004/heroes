@@ -365,6 +365,62 @@ after: [event-y]
 concurrent_with: []
 ```
 
+#### Convention cho `event` — chốt 2026-08-04 (`B-017`)
+
+Ba câu hỏi phải trả lời trước khi `codex/events/` dùng được. Đây là câu trả lời.
+
+**1. Khai `before` hay `after`? → Khai `before`, và CHỈ `before`.**
+
+`before` và `after` là **cặp nghịch đảo của nhau**, nên khai cả hai là trùng lặp — đúng thứ luật
+"chỉ khai một chiều" ở mục 3 cấm. `check.py` chuẩn hóa `A after B` thành `B before A` khi kiểm,
+và `wikilinks.py --build` sinh chiều nghịch thành mục *Quan hệ nghịch đảo*, nên **người đọc bài
+đứng sau vẫn thấy cái gì đứng trước nó** mà không ai phải khai tay.
+
+> Quy tắc: **A `before` B** nghĩa là A xảy ra **trước** B. Luôn khai từ sự kiện **sớm hơn**.
+
+⚠️ Ngoại lệ duy nhất: nếu sự kiện sớm hơn **chưa có bài**, được phép khai `after` ở bài muộn hơn
+để không mất dữ liệu. Khi bài kia ra đời thì **chuyển về `before`** và xóa `after`.
+
+`concurrent_with` là **đối xứng** — khai ở một trong hai bài là đủ, và `check.py` không sinh
+chiều nghịch cho nó.
+
+**2. `date_certainty` gán thế nào? → Nó là trục RIÊNG, không phải độ chắc của claim.**
+
+`date_certainty` chỉ nói về **con số năm**, không nói gì về việc sự kiện có xảy ra hay không.
+Một sự kiện có thể `EXPLICIT` chắc chắn mà năm vẫn `UNVERIFIED`.
+
+| Giá trị | Khi nào dùng |
+|---|---|
+| `EXPLICIT` | Nguồn `T1`–`T4` nói thẳng năm đó |
+| `INFERENCE` | Suy ra từ neo tương đối (*"nearly a millennium"*, *"a year has passed since…"*). **Bắt buộc** ghi bước suy luận ở mục *Định vị thời gian* |
+| `DISPUTED` | ≥2 nguồn cho hai năm khác nhau. Trình bày cả hai, không chọn ngầm |
+| `UNVERIFIED` | Có con số lưu hành nhưng chưa truy được tận nguồn |
+
+⚠️ **`date_absolute: null` là trạng thái HỢP LỆ và thường đúng hơn việc lấp bừa.** Theo
+`TIMELINE-SPINE.md` T1, không có nguồn thì để trống. Quan hệ tương đối mới là xương sống — một
+sự kiện không năm nhưng có `before`/`after` chắc chắn thì **định vị được tốt hơn** một sự kiện
+có năm bịa.
+
+**3. Tránh trùng lặp với bài entity thế nào? → Chia theo TRỤC, không theo nội dung.**
+
+Đây là câu hỏi khó nhất, vì cùng một sự kiện sẽ được kể ở cả bài `event` lẫn bài nhân vật.
+
+> **Bài `event` kể sự kiện từ góc nhìn THẾ GIỚI. Bài entity kể nó từ góc nhìn NHÂN VẬT.**
+
+| | Bài `event` | Bài entity |
+|---|---|---|
+| Trả lời | *Chuyện gì xảy ra, khi nào, ai dính vào, hệ quả gì* | *Việc đó nghĩa là gì với nhân vật này* |
+| Trích game text | Trích đoạn **tường thuật** sự kiện | Trích đoạn **nhân vật nói/nghĩ** về nó |
+| Timeline | Là chỗ **duy nhất** khai `before`/`after` | Không khai quan hệ thời gian |
+| Độ dài | Đủ để hiểu sự kiện mà không cần mở bài khác | Không lặp lại diễn biến — **dẫn link** sang bài `event` |
+
+**Quy tắc thực hành:** nếu một đoạn xuất hiện gần như y hệt ở hai bài, nó thuộc về bài `event`,
+và bài entity thay bằng một câu tóm cộng `[[link]]`.
+
+⚠️ **Không lập `event` cho mốc chỉ có nguồn `UNVERIFIED`.** Ví dụ `1164-09-27` (ngày đầu độc
+Nicolas) — chính xác tới ngày nhưng dòng nguồn **không có ref**. Theo `TIMELINE-SPINE.md` T1,
+không có nguồn thì để trống, **không lấp**.
+
 ### `kingdom`
 
 ```yaml

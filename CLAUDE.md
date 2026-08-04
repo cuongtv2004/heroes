@@ -163,8 +163,13 @@ sao, và ghi lại phát hiện đáng chú ý nếu có. Kết thúc bằng
 **Liên kết chéo:** `[[entity-id]]`, kể cả tới bài chưa viết — chúng render thành chữ
 nghiêng có tooltip, không phải link chết.
 
-**Quan hệ:** chỉ khai **một chiều**; công cụ sinh chiều nghịch đảo. Khai cả hai chiều
+**Quan hệ:** chỉ khai **một chiều**. `wikilinks.py --build` sinh chiều nghịch đảo thành mục
+*Quan hệ nghịch đảo* trong `_build/` — **không bao giờ** ghi vào `docs/`. Khai cả hai chiều
 sẽ bị `check.py` cảnh báo, và nếu hai bên gán độ chắc khác nhau thì đó là **lỗi**.
+
+⚠️ Lời hứa này **mới thành thật từ 2026-08-04**. Trước đó `CLAUDE.md` và `check.py` đều nói
+"công cụ sinh chiều nghịch đảo" nhưng **không công cụ nào sinh gì cả** — chiều nghịch chỉ đơn
+giản không hiện ra. Xem `B-017`.
 
 ---
 

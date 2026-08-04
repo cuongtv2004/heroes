@@ -117,10 +117,34 @@ trục dọc tồn tại dưới dạng người-đọc-được, không phải 
 `UNVERIFIED` như `1164-09-27` — theo T1 của `TIMELINE-SPINE.md`, không có nguồn thì để trống,
 không lấp.
 
-**Cần gì trước:** chốt convention cho `event` — quan hệ `before`/`after`/`concurrent_with`,
-cách gắn `date_certainty`, và cách tránh trùng lặp với nội dung đã có trong bài entity.
+**✅ Convention đã chốt (2026-08-04)** — vào `SCHEMA.md` mục 5, phần *Convention cho `event`*.
+Ba câu hỏi và ba câu trả lời:
 
-**Trạng thái:** chưa bắt đầu. Làm sau B-016 mục 1.
+1. **Khai `before`, và chỉ `before`** — luôn khai từ sự kiện **sớm hơn**. `after` chỉ được dùng
+   khi bài sớm hơn **chưa tồn tại**, và phải chuyển về `before` khi bài đó ra đời.
+   `concurrent_with` là đối xứng, khai một bên là đủ.
+2. **`date_certainty` là trục RIÊNG**, chỉ nói về con số năm — một sự kiện có thể `EXPLICIT`
+   chắc chắn mà năm vẫn `UNVERIFIED`. Và `date_absolute: null` là **trạng thái hợp lệ**, thường
+   đúng hơn lấp bừa.
+3. **Chia theo TRỤC, không theo nội dung:** bài `event` kể từ góc nhìn **thế giới**, bài entity
+   kể từ góc nhìn **nhân vật**. Bài `event` là chỗ **duy nhất** khai `before`/`after`.
+
+🔴 **Và việc này lộ ra một lỗ hổng lớn hơn chính B-017:** `CLAUDE.md`, `SCHEMA.md` mục 3 và
+`check.py` đều nói *"chỉ khai một chiều, **công cụ sinh chiều nghịch đảo**"* — nhưng **không công
+cụ nào sinh gì cả**. `INVERSE` trong `check.py` chỉ dùng để **phát hiện** khai trùng hai chiều;
+`wikilinks.py` không đụng tới `relations`. Chiều nghịch đơn giản **không hiện ra cho người đọc**.
+
+Điều đó đặc biệt tai hại với `event`: một sự kiện khai `before: [x]` thì bài `x` **không hề biết**
+có gì đứng trước nó — trục thời gian chỉ đi được một chiều, tức đúng thứ B-017 muốn sửa.
+
+**✅ Đã hiện thực hóa:** `wikilinks.py --build` giờ sinh mục **Quan hệ nghịch đảo** vào bản
+`_build/` (không bao giờ vào `docs/`), gồm cả quan hệ thời gian. Có test hồi quy 4 điểm.
+
+**Việc còn lại:** viết những bài `event` đầu tiên. Ứng viên tốt nhất hiện có, đều đã có nguồn
+`T1*` từ các bài đã `verified`: `the-reckoning` (bốn mảnh, xem `B-016`), và chuỗi Deyja/Sandro ở
+`TIMELINE-SPINE.md` mục 3.
+
+**Trạng thái:** convention xong, tooling xong. Chưa có bài `event` nào.
 
 ### B-018 · `hota-changelog` đang mang tier `T1*` — sai **loại** nguồn, không chỉ sai cấp
 
