@@ -270,6 +270,18 @@ curl -sL "https://web.archive.org/web/<timestamp>/<url>"
 | `aoh-h4-campaign-halfdead` | **T1*** | FETCHED | ⭐⭐ `heroes4/campaign_halfdead.shtml` (12.894 byte) — **toàn bộ campaign *Half-Dead*** của Gauldoth: điều kiện thắng/thua từng scenario, carryover, và văn kể ở **ngôi thứ nhất**. Mở đường cho entity trụ `gauldoth-half-dead` (`B-016` mục 3) |
 | `aoh-h4-index` | **T1*** | FETCHED | Mục `heroes4/` nói chung — còn `artifacts_{major,relic,treasure,potion,tgs}.shtml`, `heroes_{necromancers,deathknights,lords,…}.shtml`, `creatures_death.shtml`, `buildings_death.shtml`, và **năm campaign khác** (`blade`, `daughter`, `elwin`, `glory`, `price`). **Phần lớn chưa khai thác** |
 
+### Heroes Chronicles — Tarnum
+
+| key | tier | access | Nội dung |
+|-----|------|--------|----------|
+| `h3wiki-tarnum` | T1* | FETCHED | Trang `Tarnum` (18.754 byte) — ⭐ **bảng sáu class** kèm danh hiệu riêng cho từng class (King Tarnum / Sir Tarnum / Lord Tarnum / Tarnum Dragonfriend / Tarnum Hopewielder / Overlord Tarnum). ⚠️ Mục `== Deaths ==` và `== Relationships ==` là **văn wiki không dẫn nguồn** |
+| `hc-tunnels-of-ice` | T1* | FETCHED | ⭐⭐ Scenario *The Sword of Frost* — **game text tường minh cho cơ chế bất tử**, nằm trong `=== Timed events ===` day 23–24 (đúng BH-1: đọc prologue thôi là trượt). Tarnum **tự đâm dao vào tim** trước mặt Ufretin để chứng minh, hôm sau **không còn sẹo** |
+| `hc-the-protectors-of-the-sword` | T1* | FETCHED | ⭐⭐ **Epilogue của toàn bộ Heroes Chronicles** — chuỗi nhân quả dẫn tới The Reckoning: Tarnum **tha mạng Kija** → ả trộm Sword of Frost → giao Kilgor. Kết bằng lời cầu: *"Ancestors, please don't let my compassion destroy the world!"* |
+| `chronicles-official-3do` | **T2** | FETCHED | ⭐⭐ **Site chính thức 3DO**, `3do.com/products/pc/chronicles/` qua archive — **80 trang**, gồm trang riêng cho từng campaign. Bản quyền *"Heroes Chronicles © 2000 The 3DO Company. All Rights Reserved."* Ví dụ text: *"the **Immortal Hero, Tarnum**, rides forth to battle… the Dragon Queen, Mutare"*. ⚠️ Đường dẫn có **thêm một tầng** (`/products/pc/`); index `/mightandmagic/` **không** link tới đây |
+| `ch-h4-might-texts` | T1* | FETCHED | Transcript campaign *Glory of Days Past* (Heroes IV Might), 61.771 byte RTF trên Celestial Heavens qua archive. ⭐ Chứa **cái chết cuối** của Tarnum trên Axeoth và cảnh hắn **TỪ CHỐI Paradise**. ⚠️ URL sống trả **403** — phải qua archive |
+| `h3wiki-heroes-chronicles` | T6 | FETCHED | Trang tổng quan tám campaign. ⚠️ Số map và cách bán là **văn wiki không dẫn nguồn** |
+| `fandom-tarnum` | T6 | FETCHED | ⚠️ Ghi Waerjak là "son"; game text nói **"foster father"** xuyên suốt — xem cảnh báo |
+
 ### Kỷ Axeoth — Heroes IV, campaign *The Half-Dead*
 
 | key | tier | access | Nội dung |

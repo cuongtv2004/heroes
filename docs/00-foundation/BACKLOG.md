@@ -56,7 +56,7 @@ nguyên vượt 15 bài, mọi kỷ nguyên khác phải có ít nhất một en
 | 1 | ~~`archibald-ironfist`~~ ✅ **XONG 2026-08-03** | Age of Kings (H1–H2) | Đi trước vì **dùng chung nguồn** với chuỗi Deyja đã có. Kết quả: mở được nguồn `T2` chính thức (*Diaries of Archibald*) và phát hiện **cả hai wiki hiểu sai** cách hắn lên ngôi Deyja |
 | 2 | `the-reckoning` (event) | The Reckoning | Ranh giới Enroth → Axeoth; `TIMELINE-SPINE.md` mục 6 ghi "chưa có nguồn" |
 | 3 | ~~`gauldoth-half-dead`~~ ✅ **XONG 2026-08-03** | Kỷ Axeoth (H4) | Dọn luôn B-007. Kết quả: mở được `h4-death-texts-ch` (89 KB transcript in-game) và nguồn `T4` Terry B. Ray |
-| 4 | `tarnum` | Xuyên kỷ | Buộc phải chốt B-010 (cấu trúc Book V) |
+| 4 | ~~`tarnum`~~ ✅ **XONG 2026-08-03** | Xuyên kỷ | Ghi chú cũ "buộc phải chốt B-010" **sai** — đó là thứ tự kể của Saga, không chặn Codex. Schema giữ nguyên: `class: Barbarian` + bảng sáu class trong thân bài. Kết quả: mở được `chronicles-official-3do` (`T2`) và `ch-h4-might-texts` |
 
 **Trạng thái:** luật đã vào `WORKFLOW.md` (2026-08-03). **Mục 1 và mục 3 xong** —
 `archibald-ironfist` mở kỷ Age of Kings, `gauldoth-half-dead` mở kỷ Axeoth. **Codex không còn kỷ
@@ -67,14 +67,36 @@ nguyên nào trống hoàn toàn.** Còn hai entity trụ.
 - `tarnum` — **chưa bao giờ bị chặn** (đánh giá cũ xếp hắn vào diện "chặn bởi lỗ nguồn H4" là **lỗi
   phân loại**: hắn là nhân vật **Chronicles**, không phải H4, và thelazy phủ Chronicles tốt — trang
   `Tarnum` có **18.754 byte**, đủ tám campaign kèm bảng class). ⭐ Và giờ có thêm nguồn `T4`: Terry
-  B. Ray nói ông **cũng viết cả series Heroes Chronicles** — xem `B-024`. **Vẫn phải chốt `B-010`**
-  (cấu trúc Book V) trước.
+  B. Ray nói ông **cũng viết cả series Heroes Chronicles** — xem `B-024`.
+
+  ⚠️ **Đính chính:** ghi chú cũ nói `tarnum` "buộc phải chốt `B-010`" — **sai**. `B-010` là quyết định
+  **thứ tự kể của Saga** (Book V xếp theo thời gian hay theo thứ tự đọc), không liên quan tới việc
+  viết một entity Codex. Codex là tra cứu, Saga là tự sự — hai việc khác nhau.
+
+  **Vướng thật nằm ở schema:** `SCHEMA.md` cho loại `hero` **một** trường `class`, nhưng Tarnum đổi
+  class qua **tám** campaign (Barbarian → Knight → …). Cần quyết cách biểu diễn trước khi viết
+  frontmatter — xem `B-025`.
 - `the-reckoning` — khó nhất, `TIMELINE-SPINE.md` mục 6 ghi "chưa có nguồn". Nhưng hai bài vừa xong
   đã gom được **ba mảnh**: ngày 10/02/1177 AS (`thelazy-the-reckoning`), game text Gauldoth *"During
   the first hours of the Reckoning"* (`h4-death-texts-ch`), và việc Reckoning **giết Kilgor**. Cộng
   với `B-024` (Ray có thể nói về Reckoning) thì mục này **đã bớt trống**.
 
-**Thứ tự đề xuất:** `tarnum` → `the-reckoning`.
+**Còn đúng MỘT entity trụ: `the-reckoning`.**
+
+⭐ Và nó **đã bớt trống nhiều** sau ba bài vừa xong. Các mảnh đã gom được, đều có nguồn:
+
+| Mảnh | Nguồn | Tier |
+|---|---|---|
+| Ngày 10/02/1177 AS, do Armageddon's Blade đụng Sword of Frost | `thelazy-the-reckoning` | `T6` |
+| **Nguyên nhân gián tiếp**: Tarnum tha Kija → ả trộm Sword of Frost → giao Kilgor | `hc-the-protectors-of-the-sword` | **`T1*`** |
+| Gauldoth thành half-dead *"During the first hours of the Reckoning"* | `h4-death-texts-ch` | **`T1*`** |
+| Reckoning **giết Kilgor** | `h4-death-texts-ch` | **`T1*`** |
+| Dân tị nạn sang Axeoth; *"The Reckoning and endless centuries of warfare have brought the Barbarian people to the brink of extinction"* | `ch-h4-might-texts` | **`T1*`** |
+
+Nghĩa là `TIMELINE-SPINE.md` mục 6 ghi "chưa có nguồn" **đã lỗi thời** — giờ có bốn mảnh `T1*`.
+
+**Việc cần trước khi viết:** `the-reckoning` là loại `event`, mà `codex/events/` **vẫn rỗng** —
+nên phải chốt convention cho `event` trước (`B-017`).
 
 ### B-017 · `codex/events/` rỗng hoàn toàn — trục dọc chưa thành dữ liệu
 

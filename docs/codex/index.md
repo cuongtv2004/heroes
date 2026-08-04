@@ -18,6 +18,9 @@ Nhân vật điều khiển được trong game.
   được của hai campaign trọn vẹn, và là kẻ thao túng bị thao túng.
 - [**Jeddite**](heroes/jeddite.md) — người đã giới thiệu Sandro với Ethric, và không tha thứ
   cho mình được. Bio chính thức của hắn **không nhắc một chữ nào** về điều đó.
+- [**Tarnum**](heroes/tarnum.md) — *The Immortal Hero*, nhân vật chính của **cả tám** campaign
+  Heroes Chronicles và mang **sáu class**. Bị Ancestors từ chối cho vào Paradise — và chính lòng
+  nhân từ của hắn dẫn tới The Reckoning.
 - [**Gauldoth Half-Dead**](heroes/gauldoth-half-dead.md) — necromancer nửa sống nửa chết, vua của
   Nekross trên Axeoth. Nhân vật duy nhất trong Codex mà **chính tác giả gọi là "hero"**, và bài đầu
   tiên của kỷ nguyên *Axeoth*.
