@@ -32,6 +32,7 @@ sources_used:
   - h3wiki-the-sword-of-frost-campaign
   - ab-oblivions-edge
   - ab-to-kill-a-hero
+  - ab-manual-thelazy
   - h3wiki-armageddons-blade-artifact
   - h4-death-texts-ch
   - ch-h4-might-texts
@@ -300,6 +301,49 @@ Và một câu mô tả nữa, **nhưng phải ghi rõ nó là lời nào**:
 ⚠️ Câu này là **tin quán trọ / Thieves' Guild rumour** trong một scenario của *Armageddon's Blade*,
 không phải mô tả artifact. Trong truyện nó là **lời truyền miệng**, nên không dùng nó để khẳng định
 bản chất thanh kiếm.
+
+#### ⭐⭐ Nhưng có nguồn `T2*` tốt hơn — manual in, và nó mô tả thanh kiếm ĐỐT CẢ THẾ GIỚI
+
+Mục **Section I** của manual *Armageddon's Blade* là một **thư ngôi thứ nhất của Lucifer Kreegan**,
+kể lại giấc mơ trong đó thanh kiếm được rèn từ ba artifact và được thử:
+
+> "…he **folded the artifacts together** creating a new sword. He then repeated this feat, folding the
+> sword into the breastplate, creating a final artifact: **a sword with a strong blade and a golden
+> bird lifting its wings at the hilt.** […] Taking the blade in his hands, Xenofex looked in my
+> direction, grinned, then with great strength, **drove the blade into the ground.** In an instant, a
+> flash of white blinded me. My vision returned in time to see the blade **conjure an ocean of fire to
+> wash over the world.** These waves of fire spread, fast as lightning, burning all in its path. When
+> it was over, Xenofex and I stood face to face, **on a world charred black.** […] he stepped backward,
+> away from the blade as it spoke to me; **"I am the blade of Armageddon."**"
+
+{T2* EXPLICIT: ab-manual-thelazy}
+
+Và ý định được nói thẳng, cũng trong thư đó:
+
+> "it is my destiny and duty to possess Armageddon's Blade. **With it, I will set the world on fire.**"
+
+{T2* EXPLICIT: ab-manual-thelazy}
+
+⭐ **Vì sao mục này đáng có:** nó cho thấy **ở tier `T2*`, in năm 1999**, thanh kiếm đã được mô tả là
+thứ có thể *"đốt cả thế giới"* và biến nó thành *"charred black"*. Tức khi The Reckoning xảy ra ở
+Heroes IV, **tiềm năng hủy diệt thế giới của Armageddon's Blade đã có trong nguồn chính thức từ
+trước** — không phải điều Heroes IV thêm vào sau.
+
+⚠️ **Nhưng KHÔNG được đọc thành "manual đã báo trước The Reckoning".** Ba lý do, và chúng cộng dồn:
+
+1. Đây là **giấc mơ của một nhân vật Kreegan**, không phải tường thuật của người kể chuyện.
+2. Kịch bản trong mơ là Xenofex/Lucifer dùng Blade để **thiêu** thế giới — **khác** cơ chế The
+   Reckoning, vốn là **hai lưỡi gặp nhau**, và Sword of Frost thì manual **không nhắc một chữ**.
+3. Fulton đã nói thẳng ý tưởng The Reckoning **chưa tồn tại** ở thời điểm đó.
+   {T4 EXPLICIT: fulton-tavern-interview-2018}
+
+⚠️ Và một chi tiết cho thấy **manual thận trọng hơn wiki**: người rèn thanh kiếm trong thư là một
+**"old man" KHÔNG TÊN**, và Lucifer tự nói *"I do not know who he is"*. Trang artifact của thelazy thì
+gán thẳng cho forgesmith **Khazandar**. Hai điều đó **không xung đột** (Khazandar rèn nó trong
+scenario `Maker of Sorrows`), nhưng nếu cần dẫn danh tính người rèn ở tier cao nhất thì **manual
+không cho**.
+
+{T2* EXPLICIT: ab-manual-thelazy}
 
 **Sword of Frost** — nguồn gốc và tiền lệ về sức mạnh, cũng trong khối `Events`:
 
@@ -950,6 +994,7 @@ họ**. Có thể Ravenwood là người thực thi cho Guardian, nhưng đó l�
 |---|---|---|
 | `T1*` — text in-game qua trung gian | **15** | ⭐⭐ `fandom-h4-hero-bios` + `h3wiki-h4-hero-bios` (**45** block text game, chốt tên gọi là text game) · `hc-tarnum-the-overlord` (lời tiên tri, trong timed event) · `fandom-fahtrim` (phản ví dụ portal) |
 | **`T4`** — phát ngôn / tài liệu developer | **4** | ⭐⭐ `bullard-interview-2013` (Corak + lý do thật, **đã đối chiếu bản gốc `acidcave.net`**) · `fulton-tavern-interview-2018` (phủ định mạch cài sẵn) · `h3wiki-lost-manuscripts` · `ray-interview-ubisoft-2015` |
+| **`T2*`** — manual in qua trung gian | **1** | ⭐⭐ `ab-manual-thelazy` — *Letter from Lucifer Kreegan*, nguồn tier cao nhất bài này có cho Armageddon's Blade |
 | `T2` — nguồn chính thức | 1 | ⚠️ Chỉ dùng để ghi rằng dự án **chưa đọc được** nó |
 | `T6` — wiki cộng đồng | 11 | ⚠️ `fandom-reckoning` có **0 citation** trên toàn trang |
 

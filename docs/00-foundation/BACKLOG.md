@@ -189,9 +189,33 @@ rằng `event` chỉ vào graph khi các entity quanh nó được viết? Bài 
 
 ### B-025 · 🔴 `web.archive.org` bị FortiGuard chặn nội dung — chặn TẤT CẢ nguồn official của dự án
 
-**Là gì:** từ 2026-08-04, máy dev **không đọc được nội dung** `web.archive.org` — firewall FortiGuard
-của mạng công ty chặn theo category **"Games"**. **CDX index vẫn chạy**, nên vẫn enumerate được, chỉ
-không đọc được.
+**Là gì:** từ 2026-08-04, máy dev **không đọc được nội dung** `web.archive.org` cho các domain game —
+firewall FortiGuard của mạng công ty chặn theo category **"Games"**. **CDX index vẫn chạy**, nên vẫn
+enumerate được, chỉ không đọc được.
+
+🔬 **CHẨN ĐOÁN CHÍNH XÁC — đã kiểm bằng thí nghiệm đối chứng, mỗi URL MỘT request nguội:**
+
+| Request | Kết quả |
+|---|---|
+| wayback → `3do.com/…/heroes4/story.html` | **403** + FortiGuard |
+| wayback → `3do.com/` (gốc, path không có từ khóa game) | **403** + FortiGuard |
+| wayback → `heroesofmightandmagic.com/` (gốc) | **403** + FortiGuard |
+| wayback → `example.com/` | ✅ **200**, sạch |
+| wayback → `example.com/mightandmagic/heroes4/story.html` | ✅ **404 của archive.org**, sạch |
+
+**Ba kết luận, cả ba đảo ngược phỏng đoán ban đầu:**
+
+1. **`web.archive.org` KHÔNG bị chặn** — nó chạy tốt. Cái bị chặn là **tên miền ĐÍCH** trong URL.
+2. 🔴 **KHÔNG phải rate limit. Giảm tần suất KHÔNG giúp gì** — một request nguội duy nhất vẫn 403.
+   Đây là chính sách theo category, **tất định**.
+3. **Không phải từ khóa trong path** — `example.com/mightandmagic/heroes4/…` đi qua bình thường.
+   `3do.com` và `heroesofmightandmagic.com` bị xếp category "Games" ở **mức domain**.
+
+⛔ **Nên đường duy nhất là đổi mạng** (hotspot / VPN / máy khác) hoặc xin whitelist hai domain.
+Không có mẹo tầng URL nào vượt được. `timetravel.mementoweb.org` cũng không kết nối nổi (`http=000`).
+
+⚠️ **Sửa mã HTTP:** bản ghi đầu ghi trang chặn trả `200`; đo lại là `403`. **Đừng nhận diện bằng mã
+HTTP** — nhận diện bằng **~35,3 KB + text ~370 ký tự** và grep chữ `FortiGuard`.
 
 ⚠️⚠️ **Bẫy im lặng, phải biết trước:** trang chặn trả **HTTP 200** và **~35,3 KB** HTML → `curl` báo
 **thành công**. Strip tag còn **~370 ký tự**. Mọi file bị chặn ra **cùng kích thước**.
@@ -635,14 +659,65 @@ Hai phương án: kể theo thời gian (rải vào các Book khác) hay theo th
 
 Chưa đủ dữ liệu để chốt. Xem `TIMELINE-SPINE.md` mục 5.
 
-### B-011 · Tìm nguồn cho hệ lịch "AS"
+### B-011 · Tìm nguồn cho hệ lịch "AS" — **thu hẹp mạnh 2026-08-04, vẫn mở**
 
 Dự án đang dùng ký hiệu năm "AS" mà chưa biết nó viết tắt của gì và bắt nguồn từ đâu.
 
-### B-012 · Fetch timeline trong manual Heroes III
+**Đã loại trừ được một khả năng lớn:** grep **toàn bộ 803 KB** manual in Heroes III / SoD /
+Armageddon's Blade cho `\bAS\b` (phân biệt chữ hoa) và `A.S.` → **0 hit**. Cũng 0 hit cho
+`years ago` và `centur`.
 
-`h3-manual-timeline` được nhắc tới trong nhiều nguồn nhưng **chưa fetch được**. Sẽ giúp
-nhiều cho `TIMELINE-SPINE.md`, hiện chỉ có **hai** mốc năm tuyệt đối.
+→ **Manual chính thức KHÔNG dùng hệ lịch "AS", và không chứa mốc năm tuyệt đối nào.** Đây là phủ
+định đã truy trên toàn văn, không phải suy từ im lặng.
+
+⭐ **Và đợt `the-reckoning` cho thấy vấn đề rộng hơn tên viết tắt:** không nguồn nào cho phép dùng
+"AS" cho các sự kiện **Axeoth** — trong khi cả hai wiki vẫn dùng. Tệ hơn, chỗ Fandom *chịu* gán năm
+cho một quốc gia Axeoth thì nó dùng **hệ lịch khác** (`Palaedra`: *"ca 525 A.C."*, và `A.C.` chuyển
+hướng tới `Great Cataclysm`). Xem `the-reckoning` mục *Điểm tranh chấp canon* 5.
+
+**Chỗ chưa tìm:** manual Might and Magic VI–VIII, và `mm7-diaries-3do` (nguồn niên đại `T2` tốt nhất
+dự án có — nó *dùng* năm, nên có thể định nghĩa hệ lịch).
+
+### ✅ B-012 · ~~Fetch timeline trong manual Heroes III~~ — **ĐÓNG 2026-08-04: TIỀN ĐỀ SAI**
+
+**Mục này hỏi sai câu.** Không phải "chưa fetch được" — mà là **không có cái để fetch**.
+
+2026-08-04 đã lấy được **toàn bộ 214 trang** manual in của cả ba sản phẩm Heroes III, chép nguyên
+trang trên thelazy (`roe-manual-thelazy` 146 trang · `sod-manual-thelazy` 38 trang ·
+`ab-manual-thelazy` 30 trang — **803 KB**, tier `T2*`). Rồi grep toàn văn:
+
+| Truy gì | Kết quả trên 803 KB |
+|---|---|
+| `timeline`, `chronolog` | **0 hit** |
+| `\bAS\b` (phân biệt hoa) và `A.S.` | **0 hit** |
+| `years ago`, `centur` | **0 hit** |
+| Mốc năm `11xx` | **0 hit thật** — mọi kết quả là giá lính (`1100 Gold`) |
+
+Và mục lục `Restoration of Erathia Manual` xác nhận cấu trúc: Introduction · Interface Reference ·
+Main Menu · Adventure Map · Heroes and the Hero Screen · Skills · Combat…
+
+→ **Manual Heroes III là manual GAMEPLAY. Nó không có mục timeline, và không chứa một mốc năm tuyệt
+đối nào.** Cái tên `h3-manual-timeline` mô tả một thứ không tồn tại.
+
+⚠️ **Bài học, và nó thuộc loại đã trả giá nhiều lần:** `B-012` tồn tại từ 2026-07-31 như một việc
+"chưa làm được", trong khi thực chất nó là một **claim khẳng định chưa kiểm** — rằng manual *có*
+timeline. Không ai kiểm tiền đề, chỉ kiểm cách lấy. Cùng loại lỗi với `B-019` và `B-023`, cả hai cũng
+dựng trên một kết quả âm/tiền đề sai.
+
+> **Việc cần làm cho mọi mục backlog dạng "chưa fetch được X":** kiểm **X có tồn tại không** trước khi
+> kiểm cách lấy X.
+
+**Việc còn lại thật:** `TIMELINE-SPINE.md` vẫn chỉ có hai mốc năm tuyệt đối, và **manual không giúp
+được**. Nguồn niên đại phải tìm ở chỗ khác — `mm7-diaries-3do` (`T2`, đã có) là nguồn niên đại tốt
+nhất dự án đang có.
+
+**Bù lại, 214 trang đó KHÔNG vô ích** — chúng là nguồn `T2*` lớn nhất dự án có, và cho ngay ba thứ:
+
+1. Kiểm ngược được số trang của ba key `T2*` cũ (`h3-manual-*`) → **đúng cả ba**.
+2. `ab-manual-thelazy` mục *Letter from Lucifer Kreegan* — nguồn `T2*` cho gốc gác Armageddon's Blade,
+   đã dùng cho [[the-reckoning]], thay cho một tin quán trọ `T1*`.
+3. Manual in **cũng** gọi Sandro là `Race Male Lich` — corroboration `T2*` cho một claim trước đây chỉ
+   có `T1*`.
 
 ### B-013 · Nội dung ChatGPT share của user
 

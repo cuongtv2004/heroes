@@ -76,6 +76,64 @@ gốc **một bước**.
 | `h3-manual-unholy-alliance` | T2* | FETCHED | Manual tr.15 — mô tả campaign *Unholy Alliance* |
 | `h3-manual-specter-of-power` | T2* | FETCHED | Manual tr.16 — mô tả campaign *Specter of Power* |
 
+### ⭐⭐ Manual chính thức, chép nguyên trang trên thelazy (`T2*`) — 214 trang, mở 2026-08-04
+
+**Là gì:** thelazy chép **nguyên văn từng trang** manual in của cả ba sản phẩm Heroes III. Đây là
+nguồn `T2*` lớn nhất dự án có, và nó **fetch được bình thường** trong khi mọi nguồn official khác
+đang bị chặn (xem cảnh báo FortiGuard).
+
+| key | tier | access | Nội dung |
+|-----|------|--------|----------|
+| `roe-manual-thelazy` | **T2\*** | FETCHED | ⭐⭐ *Restoration of Erathia Player Manual* — **146 trang**, 280 KB. Bìa ghi *"NEW WORLD COMPUTING · 3DO"*. Enumerate: `api.php?action=query&list=allpages&apprefix=Restoration of Erathia Manual&aplimit=500` |
+| `sod-manual-thelazy` | **T2\*** | FETCHED | ⭐ *The Shadow of Death User Manual* — **38 trang**, 51 KB. Dòng bản quyền: *"© 2000 The 3DO Company. All Rights Reserved."* Trang 15–16 chứa mô tả **cả năm campaign** |
+| `ab-manual-thelazy` | **T2\*** | FETCHED | ⭐⭐ *Armageddon's Blade manual* — **30 trang**, 51 KB. Mục **Section I là *"Letter from Lucifer Kreegan"*** — thư ngôi thứ nhất, nguồn `T2*` cho gốc gác Armageddon's Blade |
+
+⚠️ **Tier là `T2*`, KHÔNG phải `T2`.** Đây là manual in **tiếp cận qua bản chép của fan wiki**, đúng
+định nghĩa dấu sao — cùng logic với `T1*`. Dự án **đã hai lần** lạm phát tier vì bỏ qua dấu sao
+(`heroesofmightandmagic.com` gán `T2` khi là site fan; `hota-changelog` gán `T1*` khi không phải
+in-game text). Đừng lặp lần thứ ba.
+
+**Cách lấy hiệu quả VÀ nhẹ tay với server:** dùng `generator=allpages` + `prop=revisions` để lấy
+**50 trang mỗi request** — cả 214 trang chỉ cần **~7 request**, không phải 214:
+
+```
+api.php?action=query&generator=allpages&gapprefix=<TÊN MANUAL>&gaplimit=50
+        &prop=revisions&rvprop=content&rvslots=main&format=json
+```
+
+#### ✅ Kiểm chứng ngược: ba key manual cũ của dự án đều ĐÚNG trang
+
+Ba key `h3-manual-rise-of-necromancer`, `h3-manual-unholy-alliance` (ghi "tr.15") và
+`h3-manual-specter-of-power` (ghi "tr.16") **đã đối chiếu được** với bản chép nguyên trang:
+
+- `Shadow of Death Manual Page 15` **thật sự** chứa *cả hai* mô tả *Rise of the Necromancer* và
+  *Unholy Alliance*.
+- `Shadow of Death Manual Page 16` **thật sự** chứa *Specter of Power*, và quote
+  *"With a little help from **the corrupted Lord Haart**"* khớp **từng chữ** với điều registry đã ghi.
+
+⭐ Đây là lần đầu dự án **kiểm ngược được số trang** của một nhãn `T2*` đã dùng. Kết quả: đúng cả ba.
+
+Thêm hai dữ kiện `T2*` từ trang 15 chưa dùng: Sandro được ghi **`Race Male Lich`** trong manual in
+(tức bản in **cũng** gọi hắn là lich), kèm chỉ số khởi đầu và unique ability *"5% per level bonus to
+his Sorcery skill"*. ⚠️ Bản chép có lỗi gõ **`Powe 2`** (nguyên văn) — dấu hiệu chép trung thực.
+
+#### 🔴 Ba kết quả PHỦ ĐỊNH, đã truy trên toàn bộ 803 KB — quan trọng cho `B-011` và `B-012`
+
+Cả ba đều grep trên **toàn văn 214 trang**, không phải suy từ im lặng:
+
+| Truy gì | Kết quả |
+|---|---|
+| `\bAS\b` (phân biệt chữ hoa) và `A.S.` | **0 hit** → manual **chưa bao giờ** dùng hệ lịch "AS" |
+| `timeline`, `chronolog` | **0 hit** |
+| `years ago`, `centur` | **0 hit** |
+| Mốc năm `11xx` | **0 hit thật** — mọi kết quả là **giá lính** (`1100 Gold`) |
+
+→ **Cả ba manual Heroes III KHÔNG chứa mốc năm tuyệt đối nào, và không có mục timeline.** Mục lục
+`Restoration of Erathia Manual` xác nhận: Introduction · Interface Reference · Main Menu · Adventure
+Map · Heroes and the Hero Screen · Skills · Combat… — đây là **manual gameplay**, không phải sách lore.
+
+🔴 **Hệ quả: `B-012` dựng trên tiền đề SAI.** Xem `BACKLOG.md`.
+
 ### Campaign: Rise of the Necromancer (Sandro là người chơi)
 
 | key | tier | access | Nội dung |
@@ -826,9 +884,42 @@ Body trả về thay cho trang, verbatim:
 > You have tried to access a web page that is in violation of your Internet usage policy.
 > **Category: Games**
 
+#### 🔬 CHẨN ĐOÁN CHÍNH XÁC (2026-08-04) — chặn theo TÊN MIỀN ĐÍCH, không phải theo tần suất
+
+Đã kiểm bằng thí nghiệm đối chứng, **mỗi URL một request nguội duy nhất** — nên rate limit bị loại
+trừ ngay từ thiết kế:
+
+| Request | Kết quả |
+|---|---|
+| wayback → `3do.com/mightandmagic/heroes4/story.html` | **403**, 35.311 byte, FortiGuard |
+| wayback → `3do.com/` (gốc, path **không** có từ khóa game) | **403**, 35.241 byte, FortiGuard |
+| wayback → `heroesofmightandmagic.com/` (gốc) | **403**, 35.277 byte, FortiGuard |
+| wayback → `example.com/` | ✅ **200**, 2.914 byte, **không** FortiGuard |
+| wayback → `example.com/mightandmagic/heroes4/story.html` (từ khóa game, host vô hại) | ✅ **404 của chính archive.org**, 151 KB, **không** FortiGuard |
+| `archive.org/metadata/...` (không có tiền tố `web.`) | ✅ **200** |
+
+**Kết luận, ba điều và cả ba đều đảo ngược phỏng đoán ban đầu:**
+
+1. **`web.archive.org` KHÔNG bị chặn.** Nó chạy tốt. Cái bị chặn là **tên miền được archive** nằm
+   trong URL — FortiGuard đọc URL đích rồi tra category của **domain đó**.
+2. **KHÔNG phải rate limit, và giảm tần suất KHÔNG giúp gì.** Một request nguội duy nhất vẫn 403.
+   Đây là **chính sách theo category**, mang tính tất định — chậm lại bao nhiêu cũng cho cùng kết quả.
+3. **Không phải từ khóa trong path.** `example.com/mightandmagic/heroes4/…` đi qua bình thường;
+   `3do.com/` trơ trọi thì bị chặn. Tức `3do.com` và `heroesofmightandmagic.com` bị **xếp category
+   "Games"** ở mức domain.
+
+⚠️ **Sửa lại mã HTTP:** ghi chú đầu ghi trang chặn trả **200**; đo lại thì là **403**. Có thể khác
+theo lần. **Đừng dựa vào mã HTTP để nhận diện** — dựa vào **kích thước ~35,3 KB + text ~370 ký tự**,
+và grep chữ `FortiGuard`.
+
+⛔ **Đường duy nhất còn lại là đổi mạng** (hotspot điện thoại / VPN / máy khác) hoặc xin whitelist hai
+domain đó. Không có mẹo kỹ thuật nào ở tầng URL vượt được — đã thử tám cách, xem dưới.
+✅ `timetravel.mementoweb.org` cũng **không** cứu được: không kết nối nổi (`http=000`).
+
 ⚠️⚠️ **DẤU HIỆU NHẬN BIẾT — ĐỌC KỸ, ĐÂY LÀ BẪY IM LẶNG:**
-trang chặn trả về **HTTP 200** và **~35,3 KB HTML**, nên `curl` báo **thành công**. Strip tag xuống
-chỉ còn **~360–376 ký tự**. Cả 39 file Age of Heroes và 24 file 3DO đều ra **đúng ~35,3 KB**.
+trang chặn trả về **HTTP 200 hoặc 403** và **~35,3 KB HTML**, nên `curl` có thể báo **thành công**.
+Strip tag xuống chỉ còn **~360–376 ký tự**. Cả 39 file Age of Heroes và 24 file 3DO đều ra
+**đúng ~35,3 KB**.
 
 > **Kích thước giống nhau đến từng trăm byte trên nhiều file khác nhau = dấu hiệu chắc chắn bị chặn.**
 > Nếu đợt sau thấy file wayback ~35 KB mà text ~370 ký tự: **đó là trang chặn**, KHÔNG phải trang rỗng
