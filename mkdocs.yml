@@ -118,6 +118,7 @@ nav:
       - Nhân vật:
           - codex/characters/ethric.md
       - Sự kiện:
+          - codex/events/vu-dau-doc-nicolas-gryphonheart.md
           - codex/events/the-reckoning.md
       - Quốc gia:
           - codex/kingdoms/deyja.md
@@ -142,6 +143,7 @@ nav:
           - sources/notes/verify-gauldoth-half-dead-2026-08-03.md
           - sources/notes/verify-tarnum-2026-08-03.md
           - sources/notes/verify-the-reckoning-2026-08-04.md
+          - sources/notes/verify-vu-dau-doc-nicolas-gryphonheart-2026-08-05.md
 
 extra_css:
   - assets/extra.css

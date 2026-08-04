@@ -39,6 +39,9 @@ Nhân vật có vai trò lore nhưng không chơi được.
 
 Thứ đã xảy ra trong thế giới — định vị được trên timeline.
 
+- [**Vụ đầu độc Nicolas Gryphonheart**](events/vu-dau-doc-nicolas-gryphonheart.md) — vụ ám sát mở
+  màn Restoration Wars. Gỡ được một mục `DISPUTED` của dự án bằng cách phát hiện nó là **lỗi tier**,
+  và truy ra mốc `27/9` lưu hành khắp nơi thực chất là **dateline xuất bản năm 1998**.
 - [**The Reckoning**](events/the-reckoning.md) — thảm họa làm hành tinh Enroth không còn ở được,
   đường biên giữa Heroes III và Heroes IV. Bài `event` **đầu tiên** của Codex, và là bài mà **cấu
   trúc bằng chứng quan trọng hơn nội dung**: tường thuật mà mọi wiki kể lại hóa ra nằm trong một
@@ -99,7 +102,7 @@ Loại đã dùng được đánh dấu ✅.
 | `creature` | Loại sinh vật dùng làm quân | — |
 | `race` | Chủng tộc có văn hóa riêng | — |
 | `magic` | Trường phái phép, spell | — |
-| `event` | Sự kiện lịch sử | — |
+| `event` | Sự kiện lịch sử | ✅ |
 | `campaign` | Campaign game (đơn vị tư liệu) | — |
 | `organization` | Tổ chức, triều đại | — |
 | `timeline` | Mốc hoặc giai đoạn thời gian | — |

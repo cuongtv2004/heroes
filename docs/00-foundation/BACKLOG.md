@@ -219,7 +219,14 @@ rằng `event` chỉ vào graph khi các entity quanh nó được viết? Bài 
 
 **Việc còn lại:** chuỗi Deyja/Sandro ở `TIMELINE-SPINE.md` mục 3 — giờ **không còn bị chặn** gì cả.
 
-**Trạng thái:** convention xong, tooling xong, **một bài `event` đã `verified`**.
+**Trạng thái:** convention xong, tooling xong, **hai bài `event` đã `verified`**
+(`the-reckoning`, `vu-dau-doc-nicolas-gryphonheart`).
+
+⭐ **Bài thứ hai chứng minh convention chịu được tải:** nó khai `before: [the-reckoning]` — quan hệ
+thời gian **đầu tiên** giữa hai event thật — và `check.py` kiểm được chuỗi đó (không chu trình, không
+lệch năm). Trục dọc giờ **thật sự là dữ liệu**, không còn là ASCII art.
+
+⚠️ Nhưng `relations: []` vẫn đúng cho cả hai bài, vì lý do hệ thống ở trên **chưa được giải**.
 
 ### B-025 · 🔴 `web.archive.org` bị FortiGuard chặn nội dung — chặn TẤT CẢ nguồn official của dự án
 

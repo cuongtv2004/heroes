@@ -143,6 +143,80 @@ Map · Heroes and the Hero Screen · Skills · Combat… — đây là **manual 
 | `sod-finneas-vilmar` | T1* | FETCHED | Scenario *Finneas Vilmar* — prologue, text "puppet king" Day 1, cảnh cải trang giết dwarf (event 5,28) |
 | `sod-duke-alarice` | T1* | FETCHED | Scenario *Duke Alarice* — prologue, **epilogue**, danh sách hero (chứng minh Necromancer ≠ Death Knight) |
 
+### ⭐⭐ Vụ đầu độc Nicolas Gryphonheart — nguồn mở 2026-08-04
+
+| key | tier | access | Nội dung |
+|-----|------|--------|----------|
+| `roe-for-king-and-country` | **T1\*** | FETCHED | ⭐⭐⭐ **Nguồn load-bearing nhất của cả vụ án.** RoE, *Song for the Father* map 3 (3.917 byte). Prologue Catherine là **đoạn duy nhất trong toàn franchise** nêu đủ **bốn** thứ: phương thức (độc trong **thức ăn**), đường tiếp cận (Haart vào được Steadwick), **kẻ ra lệnh** (*"Acting on orders from King Vilmar"*), và động cơ (báo thù vụ trục xuất necromancer). Epilogue: Catherine **giao Haart cho cha đã thành lich**. ⚠️ Wikitext `[[Finneas\|King Vilmar]]` → **chữ hiện là "King Vilmar"**, phải trích đúng chữ hiện. ⚠️ `loss = Lose Hero Catherine or Lord Haart` — người chơi **bị buộc giữ kẻ sát nhân sống** |
+| `roe-homecoming` | T1* | FETCHED | RoE *Long Live the Queen* map 1 (8.875 byte). ⭐ Hai tin đồn về vụ đầu độc nằm trong block `=== Rumors ===`, **không** ở prologue — `BH-1` lần thứ tư: *"King Gryphonheart did not die of natural causes"* và *"King Gryphonheart died from poison **in his food**"*. Cùng block có *"There was no warning. During the night, we found ourselves surrounded by dungeon dwellers and devils"* |
+| `sod-finneas-vilmar` | T1* | FETCHED | Trang **scenario** *Finneas Vilmar* (9.499 byte) — ⚠️ **là scenario, KHÔNG phải trang nhân vật** (nhân vật là `Finneas`). Prologue chứa câu chốt tầng ba của chuỗi chỉ huy: *"Of course, **I will be the shadow whispering orders into his ear**."* |
+| `sod-to-strive-to-seek` | T1* | FETCHED | SoD — timed event ngày 25 *"Shades of Betrayal"*: *"he was using **Vilmar as a puppet to control Deyja from the shadows**… allow him to remain in control and **not be a target**"*. Ngày 1 gọi thẳng *"his puppet, King Vilmar"* |
+| `roe-steadwicks-liberation` | T1* | FETCHED | RoE — câu về General Kendal nằm ở **timed event ngày 8** |
+| `roe-long-live-the-king` | T1* | FETCHED | RoE — campaign description |
+| `roe-manual-p5` | **T2\*** | FETCHED | ⭐ *Restoration of Erathia Manual* tr.5, thư Wilbur Humphrey. 🔴 **Manual in CHỈ nói *"the possibility foul play was involved"* — KHÔNG dùng chữ "poison", không nêu ai.** Nghĩa là claim "bị đầu độc" **không có nguồn `T2` chính thức**; chỉ có `T1*` trong game và `T2*` từ diễn đàn |
+| `sod-manual-p5` | **T2\*** | FETCHED | *Shadow of Death Manual* tr.5, thư Yog: Sandro *"vaulted **a puppet king, Finneas Vilmar**, to the throne"* — xác nhận tầng ba ở tier in |
+| `h3wiki-dannil-darvin` | **T2\*** | FETCHED | Proclamation chính thức sau cái chết (2.512 byte). ⚠️ Ghi *"**no bloodline heir** to the Throne of Erathia exists"* — **xung đột với chính Catherine**, con gái ruột, người về nhận ngôi. `DISPUTED` |
+
+#### 🔴 Loạt truyện tiền phát hành trên diễn đàn 3DO — một LOẠI nguồn `T2*` dự án chưa từng dùng
+
+**Christian Vanover — assistant director của Heroes III tại NWC** — viết một loạt truyện đăng trên
+**diễn đàn chính thức 3DO** trong tháng 9–10/1998, **trước khi game phát hành**. Chúng chứa chi
+tiết **không có trong game**, và `h3wiki-fulton-on-names` (`T4`) độc lập xác nhận Vanover viết lore
+với tư cách nhân viên NWC — đó là cơ sở cho tier `T2*`.
+
+| key | tier | access | Nội dung |
+|-----|------|--------|----------|
+| `rumors-from-the-court-3do` | **T2\*** | FETCHED | ⭐⭐ Kỳ *"Death"*, **đăng 28/9/1998**. Hiện trường vụ đầu độc: *"They say he **died in his sleep**"* · *"**54 years** isn't THAT old"* · *"since **none of the other guests at last night's feast took ill**, this can mean only one thing… POISON!"*. ⭐ Đây là chỗ **truy ra gốc** của mốc `27/9` mà mọi wiki dùng mà không dẫn nguồn — xem cảnh báo riêng. Bản chép trên thelazy (`The Courtier`, 7.642 byte) **khớp từng chữ**, dùng làm kiểm chéo |
+| `the-legacy-3do` | **T2\*** | FETCHED | ⭐⭐ Cùng loạt. General Morgan Kendal: *"**As best as our investigation could determine, he was poisoned.**"* và cụm *"a **leaderless** Erathia"*. 🔴 Chi tiết đắt nhất: **Lord Haart CÓ MẶT trong hội đồng điều tra** — kẻ giết người ngồi trong phòng điều tra chính vụ của mình. Mở bằng *"It was a warm, **southern-hemisphere spring day**… all winter"* → định vị được **mùa**. ⚠️ Mốc "1165" và "Temple of Baa" trên trang wiki là **wiki tự thêm**, không có trong văn bản gốc |
+| `queen-catherine-3do` | **T2\*** | FETCHED | Cùng loạt, viết khi Nicolas **còn sống**. Bối cảnh gia đình; cụm *"ten years ago"* hậu thuẫn mốc ~1164 |
+
+⚠️ **URL gốc `homm3.ga-strategy.com` nằm trên archive và bị FortiGuard chặn KHÔNG ĐỒNG ĐỀU** — xem
+đính chính về cơ chế chặn ở mục cảnh báo `web.archive.org`. Cả ba nguồn trên **đều có bản chép trên
+thelazy**, tìm qua trang index `h3wiki-lost-lore` — đó là đường lấy đáng tin hơn.
+
+#### ⚠️⚠️ Mốc `1164-09-27` — TRUY RA GỐC: đó là dateline xuất bản 1998, không phải ngày trong truyện
+
+Đây là ca *"chính xác giả"* rõ nhất dự án gặp, và lần này **giải thích được**.
+
+1. **Fandom** ghi *"September 27: Lord Haart poisons Nicolas Gryphonheart"* — dòng đó **KHÔNG có
+   `<ref>`**, trong khi dòng **liền dưới** thì có. Trang này dẫn nguồn rất dày ở mọi mốc khác.
+2. **thelazy `Talk:Timeline`** (81 KB, có mã màu: **đỏ = Explicit, cam = Inferred**) đặt campaign ở
+   `1164` **màu CAM**, tức **tự nhận là suy luận**, và **không đưa ra ngày–tháng nào**. Grep toàn bộ
+   81 KB: **0 lần** nhắc "September 27".
+3. **Gốc thật:** kỳ *"Death"* của `rumors-from-the-court-3do` **đăng ngày 28/9/1998**, kể vua chết
+   *"in his sleep"* sau *"last night's feast"* ⇒ trong truyện, hạ độc là **tối 27**, phát hiện
+   **sáng 28**. Loạt bài chạy theo **đồng hồ thực 1:1** (20/9 → 2/10/1998).
+
+→ **`September 27` gần như chắc là dateline thực tế 1998 được bê vào năm 1164 AS.**
+
+**Cách dùng đúng:** ❌ không ghi `1164-09-27` như mốc canon. ✅ được ghi *"mùa xuân bán cầu Nam
+(khoảng tháng 9–10) của năm được **suy** là 1164 AS, sau một bữa tiệc, phát hiện sáng hôm sau"*.
+✅ Chặn trên chắc nhất là `T2`: Archibald viết **11/6/1165** rằng Catherine đi dự tang **5 tháng
+trước** ⇒ vua chết **trước ~11/1/1165**.
+
+#### ⚠️ Hai claim của Fandom KHÔNG được vào thân bài
+
+| Claim | Vì sao loại |
+|---|---|
+| *"goblet of poisoned wine"* | **Ba nguồn độc lập** đều nói **thức ăn** (`roe-for-king-and-country`, rumor `roe-homecoming`, `rumors-from-the-court-3do`). Citation của Fandom trỏ tới một URL `3do.com` mà bản lưu chỉ **1.333 byte** — quá nhỏ để chứa câu đó |
+| *"Ritual of Endless Night"* | Quét **toàn bộ 172 scenario** Heroes III: **0 hit**. Nghi là thuật ngữ nhập từ universe khác |
+
+| key | tier | access | Nội dung |
+|-----|------|--------|----------|
+| `fandom-haart-enroth` | T6 | FETCHED | Trang `Haart (Enroth)` (17.592 byte). Nguồn của claim *"goblet of poisoned wine"* — ⚠️ **và claim này CÓ dẫn nguồn**, xem cảnh báo *thức ăn hay rượu* |
+| `roe-story-3do` | **T2** | ⚠️ **FAILED trong phiên 2026-08-04** | Trang `3do.com/products/pc/heroes3/story/story.htm` qua archive — **website chính thức của 3DO cho Restoration of Erathia**. Là nguồn Fandom dẫn cho *"poisoned with a goblet of wine"*. ⛔ Cả ba timestamp đã thử (`20000525045621`, `20001027222129`, `20001207135100`) đều **403 FortiGuard** khi người viết bài thử; **luồng kiểm định báo fetch được** cùng URL. Không đọc trực tiếp được ⇒ mọi claim dẫn key này phải ghi rõ điều đó |
+| `fandom-haart-cron` | T6 | FETCHED | ⚠️⚠️ **Trang `Haart (Cron)` — bằng chứng rằng Old Universe có HAI nhân vật tên Haart.** Nhân vật *Might and Magic II*, **lãnh chúa** của Haart Hold ở Ice Tundra trên **CRON**. Không liên quan Lord Haart của Erathia. **Đây là bẫy `BH-2` đã sập một lần** — bản đầu bài `vu-dau-doc-nicolas-gryphonheart` viết "chỉ có một Lord Haart trong Old Universe" |
+| `fandom-cron` | T6 | FETCHED | Trang `CRON` — xác nhận CRON **thuộc Old Universe** (gắn bản mẫu *"Worlds in the Ancient Universe"*), nên `Haart (Cron)` **trong phạm vi** `CANON-POLICY.md` mục 1. Đây là mảnh làm claim phủ định về "một Lord Haart" thành sai |
+| `sod-search-for-a-killer` | T1* | FETCHED | ⚠️⚠️ **BẪY GREP, phải biết trước.** Scenario này là vụ đầu độc **Lord Falorel**, KHÔNG phải Nicolas — và Nicolas **còn sống** trong đó (*"King Gryphonheart understands the situation and supports your current position"*, ngày 18). 🔴 Nguy hiểm ở chỗ: ngày 36 chứa **đúng cụm** *"may be the one who **ordered his poisoning**"* **gắn với Sandro** — tức cụm "ordered … poisoning" **có** trong game text nhưng **về Falorel**. Ai grep cụm đó rồi quy về vụ Gryphonheart sẽ sai |
+| `fandom-nicolas-gryphonheart` | T6 | FETCHED | Trang `Nicolas Gryphonheart` (11.223 byte). ⚠️ Mục *"Untimely Death"* **không có một `<ref>` nào**; và là nguồn của cụm *"Ritual of Endless Night"* — **loại** |
+
+⚠️ Ngoài ra: `Vial of Poison` **không phải artifact Heroes III** — thelazy không có trang (0 byte),
+Fandom **redirect sang danh sách artifact Heroes IV**. Trong vụ này nó là **đạo cụ tự sự**; điều kiện
+thắng máy móc của scenario chỉ là *"Capture Town Haart Castle"*.
+
+⚠️ **Tên trang phải viết đúng:** `Poison Fit for a King` — **`for a` CHỮ THƯỜNG**. Dạng
+`Poison Fit For A King` trả về **0 byte**.
+
 ### Campaign: New Beginning (Gem bị lừa)
 
 | key | tier | access | Nội dung |
@@ -524,7 +598,8 @@ vua giữa hai nguồn.)*
 | `h3wiki-finneas` | T1* | FETCHED | Puppet king; hero campaign-only; portrait dựa trên Thant |
 | `h3wiki-thant` | T1* | FETCHED | **Xác nhận Thant KHÔNG có vai trò cốt truyện trong H3** |
 | `h3wiki-nimbus` | T1* | FETCHED | Vai trò MM7/RoE; **xác nhận không có liên hệ với Sandro** |
-| `h3wiki-lord-haart` | T1* | FETCHED | **Nguồn của mâu thuẫn "theo lệnh Finneas Vilmar"** |
+| `h3wiki-lord-haart` | **T1\* (infobox) / T6 (prose)** | FETCHED | 🔴 **ĐÍNH CHÍNH TIER 2026-08-04 — trang này PHẢI tách hai phần, và việc gộp chúng đã tạo ra một mục `DISPUTED` giả suốt nhiều đợt.** ✅ `biography` trong infobox = **text trong game**, `T1*`: *"his service to the crown of Erathia has been as spotless as it was to Roland Ironfist before the Succession Wars"*. ❌ Mục `== Story ==` — nơi có câu *"poisoned King Gryphonheart under orders from Finneas Vilmar"* — là **văn xuôi wiki KHÔNG có một `<ref>` nào**, tức `T6`. Vì cả trang bị gán `T1*`, một câu wiki không nguồn đã được **cân ngang với game text thật**. ⚠️ Thêm lỗi kỹ thuật: `[[Finneas Vilmar]]` trên trang này **link sai** — trỏ tới **trang scenario** cùng tên, không tới trang nhân vật `Finneas` |
+| `h3wiki-lord-haart-death-knight` | T1*/T6 | FETCHED | Trang `Lord Haart the Death Knight` (2.462 byte). ⭐ **Chốt rằng KHÔNG có hai Lord Haart trong Old Universe**: *"Prior to his death at the hands of the Lich King Nicolas Gryphonheart, Lord Haart is available under the profile Lord Haart."* → **một nhân vật, hai profile hero** (trước/sau khi chết). `Haart Lich` chỉ là redirect. ⚠️ Fandom **có** trang disambiguation `Haart` với **ba** mục, nhưng chỉ `Haart (Enroth)` thuộc Old Universe — `Haart (Cron)` là NPC MM2, `Haart (Ashan)` thuộc universe khác |
 | `h3wiki-jabarkas` | T1* | FETCHED | Hero Stronghold; bio ghi là **con trai cả của Duke Boragus**, race Ogre của Krewlod — **xung đột** với claim "em trai Ethric" trong `sod-target` |
 | `h3wiki-necromancer` | T1* | FETCHED | Định nghĩa class Necromancer — chỉ số khởi đầu 1/0/2/2 |
 | `h3wiki-death-knight` | T1* | FETCHED | Định nghĩa class Death Knight — 1/2/2/1, khởi đầu có Spell Book. **Bằng chứng thật** cho việc hai class khác nhau |
@@ -810,7 +885,44 @@ phải dùng đúng lập luận mạnh.
 tra cứu mà là **thuộc tính của tư liệu** — theo Bullard, chưa từng có thứ tự cụ thể nào
 được tạo ra.
 
-### `h3wiki-lord-haart` vs `sod-poison-fit-for-a-king` — ai ra lệnh đầu độc?
+### ✅ ~~`h3wiki-lord-haart` vs `sod-poison-fit-for-a-king` — ai ra lệnh đầu độc?~~ — **GỠ 2026-08-04**
+
+🔴 **Đây KHÔNG BAO GIỜ là mâu thuẫn nguồn. Nó là một lỗi tier của chính registry này.**
+
+Mục `DISPUTED` cũ (giữ lại bên dưới) cân `h3wiki-lord-haart` với `sod-poison-fit-for-a-king` như
+hai nguồn ngang cấp. Nhưng câu *"theo lệnh Finneas Vilmar"* nằm ở mục `== Story ==` của trang wiki —
+**văn xuôi không có `<ref>`**, tức `T6` — còn `sod-poison-fit-for-a-king` là **game text**. Vì cả
+trang bị gán `T1*`, một câu wiki không nguồn được cân ngang game text suốt nhiều đợt.
+
+**Sự thật theo game text: một chuỗi chỉ huy BA TẦNG, không tầng nào phủ định tầng nào.**
+
+| Tầng | Ai | Nguồn | Tier |
+|---|---|---|---|
+| Thi hành | **Lord Haart** bỏ độc vào **thức ăn** | `roe-for-king-and-country` | `T1*` EXPLICIT |
+| Ra lệnh | **King Vilmar** | `roe-for-king-and-country` + `mm7-diaries-3do` | `T1*` + **`T2`** EXPLICIT |
+| Điều khiển | **Sandro** giao thuốc độc, dùng Vilmar làm con rối | `sod-poison-fit-for-a-king` · `sod-finneas-vilmar` · `sod-to-strive-to-seek` · `sod-manual-p5` | `T1*` + `T2*` EXPLICIT |
+
+Câu quyết định, game text RoE (`For King and Country`, prologue Catherine):
+
+> "**Lord Haart was part of King Vilmar's necromantic cult. With Lord Haart's access to Steadwick,
+> poisoning King Gryphonheart's food was a simple task. Acting on orders from King Vilmar**, he
+> sought to avenge the banishment of the necromancers from Erathia."
+
+Ba sản phẩm **bổ sung** nhau theo trình tự phát hành, không viết lại nhau: RoE (1999) → MM7 manual
+(1999) → SoD (2000) thêm Sandro **bên trên** Vilmar.
+
+⚠️ **Giới hạn phải giữ:** **không nguồn nào nói "Sandro ra lệnh giết vua".** Ghép "Sandro điều khiển
+Vilmar" + "Vilmar ra lệnh" thành "Sandro ra lệnh" là **INFERENCE**, không phải trích dẫn.
+
+⚠️ **Và thelazy tự đá nhau trên NĂM trang, tất cả không ref:** `Lord Haart`→Vilmar · `Sandro`→Sandro ·
+`Deyja`→**cả hai** · `Erathia` và `Nicolas`→**không nêu**. Đây là ca mẫu cho `B-021`: wiki làm
+**nguồn tin** thì không dùng được ở đây, nhưng làm **đối tượng nghiên cứu** thì rất đáng ghi.
+
+**Bài học cấp registry:** khi một trang wiki trộn **infobox in-game** với **văn xuôi biên tập**,
+gán một tier cho cả trang là **sinh ra mâu thuẫn giả**. Phải tách tier theo **mục**, không theo
+**trang**. Đã có tiền lệ tương tự ở `h3wiki-hack-and-slash-campaign` (ba tier trộn trong một trang).
+
+<details><summary>Bản ghi <code>DISPUTED</code> cũ, giữ lại để thấy lập luận sai ở đâu</summary>
 
 - `h3wiki-lord-haart`: Haart đầu độc nhà vua **"theo lệnh Finneas Vilmar"**
 - `sod-poison-fit-for-a-king` (prologue, chính Sandro nói): đây là kế của **Sandro**,
@@ -819,9 +931,9 @@ tra cứu mà là **thuộc tính của tư liệu** — theo Bullard, chưa t�
   Lord Haart"
 - `fandom-sandro-enroth` dung hòa bằng cách gọi Haart là "điệp viên hai mang của Vilmar"
 
-**Xử lý:** `DISPUTED`. Cách diễn đạt an toàn: Sandro cung cấp thuốc độc và dàn kế;
-Haart ra tay; **lòng trung thành cuối cùng của Haart (Sandro hay Finneas) thì các
-nguồn nói khác nhau**.
+**Xử lý cũ:** `DISPUTED`. — Sai ở chỗ coi văn xuôi wiki không ref là nguồn ngang cấp với game text.
+
+</details>
 
 ### ⚠️⚠️ `fandom-timeline-ancient` — phần lớn `<ref>` KHÔNG xác minh được
 
@@ -1004,6 +1116,29 @@ và grep chữ `FortiGuard`.
 ⛔ **Đường duy nhất còn lại là đổi mạng** (hotspot điện thoại / VPN / máy khác) hoặc xin whitelist hai
 domain đó. Không có mẹo kỹ thuật nào ở tầng URL vượt được — đã thử tám cách, xem dưới.
 ✅ `timetravel.mementoweb.org` cũng **không** cứu được: không kết nối nổi (`http=000`).
+
+##### 🔴 ĐÍNH CHÍNH 2026-08-04 (đợt `vu-dau-doc-nicolas-gryphonheart`): chặn theo **URL**, không theo **DOMAIN**
+
+Kết luận *"chặn ở mức domain"* ở trên **quá rộng, và nó làm mất nguồn lấy được**.
+
+Bằng chứng: trên **cùng một domain** `homm3.ga-strategy.com` qua archive —
+
+| URL | Kết quả |
+|---|---|
+| `rumors.htm` · `queen.htm` · `timber_wars.htm` | ✅ **200, đọc được bình thường** |
+| `legacy.htm` · `storyline.htm` · `kreegan.htm` | ⛔ **403 FortiGuard ở MỌI timestamp CDX** |
+
+→ Filter rate **từng URL**, không rate cả domain. Với `3do.com` và `heroesofmightandmagic.com` thì
+**mọi** URL đã thử đều bị chặn (kể cả root) — nên **quan sát cũ không sai về hai domain đó**, nhưng
+**kết luận tổng quát thì sai**.
+
+⚠️ **Hệ quả thực hành, quan trọng:** **đừng gạch bỏ cả một domain** sau vài lần 403. Thử từng URL —
+đợt này thu được ba nguồn `T2*` mới (`rumors-from-the-court-3do`, `queen-catherine-3do`,
+`timber_wars`) nhờ **không** gạch bỏ `ga-strategy.com` sau lần 403 đầu.
+
+✅ **Và đường vòng tốt hơn tồn tại:** cả ba URL bị chặn đều **có bản chép trên thelazy**, tìm được
+qua trang index `h3wiki-lost-lore`. Khi archive chặn một trang lore, **kiểm `Lost Lore` index của
+thelazy trước khi kết luận là mất**.
 
 ⚠️⚠️ **DẤU HIỆU NHẬN BIẾT — ĐỌC KỸ, ĐÂY LÀ BẪY IM LẶNG:**
 trang chặn trả về **HTTP 200 hoặc 403** và **~35,3 KB HTML**, nên `curl` có thể báo **thành công**.
