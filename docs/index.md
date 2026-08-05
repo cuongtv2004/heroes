@@ -81,24 +81,34 @@ Ví dụ thật từ [bài về Sandro](codex/heroes/sandro.md):
 ## Trạng thái
 
 !!! info "Giai đoạn 1 — Xây nền: đã xong"
-    Sáu tài liệu nền · [Sổ nguồn](sources/REGISTRY.md) 77 key · công cụ kiểm 3 tầng
+    Sáu tài liệu nền · [Sổ nguồn](sources/REGISTRY.md) **243 key** · công cụ kiểm 3 tầng
 
-**Codex hiện có 9 bài trên 4 loại schema:**
+**Codex hiện có 15 bài trên 5 loại schema — và mọi bài đều đã qua kiểm định độc lập.**
 
 | Bài | Loại | Trạng thái |
 |---|---|---|
 | [Sandro](codex/heroes/sandro.md) | hero | ✅ verified |
+| [Jeddite](codex/heroes/jeddite.md) | hero | ✅ verified |
+| [Archibald Ironfist](codex/heroes/archibald-ironfist.md) | hero | ✅ verified |
+| [Gauldoth Half-Dead](codex/heroes/gauldoth-half-dead.md) | hero | ✅ verified |
+| [Tarnum](codex/heroes/tarnum.md) | hero | ✅ verified |
+| [Gem](codex/heroes/gem.md) | hero | ✅ verified |
 | [Ethric](codex/characters/ethric.md) | character | ✅ verified |
+| [The Reckoning](codex/events/the-reckoning.md) | event | ✅ verified |
+| [Vụ đầu độc Nicolas Gryphonheart](codex/events/vu-dau-doc-nicolas-gryphonheart.md) | event | ✅ verified |
+| [Deyja](codex/kingdoms/deyja.md) | kingdom | ✅ verified |
 | [Cloak of the Undead King](codex/artifacts/cloak-of-the-undead-king.md) | artifact | ✅ verified |
-| [Jeddite](codex/heroes/jeddite.md) | hero | draft |
-| [Deyja](codex/kingdoms/deyja.md) | kingdom | draft |
-| [Armor of the Damned](codex/artifacts/armor-of-the-damned.md) | artifact | draft |
-| [Amulet of the Undertaker](codex/artifacts/amulet-of-the-undertaker.md) | artifact | draft |
-| [Vampire's Cowl](codex/artifacts/vampires-cowl.md) | artifact | draft |
-| [Dead Man's Boots](codex/artifacts/dead-mans-boots.md) | artifact | draft |
+| [Armor of the Damned](codex/artifacts/armor-of-the-damned.md) | artifact | ✅ verified |
+| [Amulet of the Undertaker](codex/artifacts/amulet-of-the-undertaker.md) | artifact | ✅ verified |
+| [Vampire's Cowl](codex/artifacts/vampires-cowl.md) | artifact | ✅ verified |
+| [Dead Man's Boots](codex/artifacts/dead-mans-boots.md) | artifact | ✅ verified |
 
-Saga chưa bắt đầu — theo `SAGA-STYLE.md` S6, chỉ được viết khi entity Codex liên
-quan đã `verified`.
+**Cả năm kỷ nguyên đều đã có bài trụ** — Age of Kings, Antagarich, The Reckoning, Axeoth,
+và tuyến xuyên kỷ của Heroes Chronicles.
+
+Saga chưa bắt đầu — theo `SAGA-STYLE.md` **S6**, một chương chỉ được viết khi các entity
+Codex **mà nó dựa vào** đã `verified`. Đó là điều kiện **theo từng chương**, không phải
+"chờ xong cả Codex": cụm *Shadow of Death* hiện đã đủ nền cho Book IV.
 
 ---
 

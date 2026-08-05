@@ -217,6 +217,47 @@ thắng máy móc của scenario chỉ là *"Capture Town Haart Castle"*.
 ⚠️ **Tên trang phải viết đúng:** `Poison Fit for a King` — **`for a` CHỮ THƯỜNG**. Dạng
 `Poison Fit For A King` trả về **0 byte**.
 
+### ⭐ Gem — nguồn mở 2026-08-05
+
+| key | tier | access | Nội dung |
+|-----|------|--------|----------|
+| `h3wiki-gem` | ⚠️ **HỖN HỢP — gắn tier THEO MỤC** | FETCHED | Trang `Gem` (6.066 byte), `grep -c '<ref'` = **0**. ✅ infobox `biography` → **`T1`** (khớp từng chữ `HeroBios.txt`) · ❌ mục `== Story ==` → **`T6`**, và nó **ghi SAI trình tự**: nói *"Once her quest for Sandro was complete, she changed her allegiance to AvLee and became a Druid"* trong khi text game cho thấy việc chuyển sang Druid xảy ra **TRONG scenario cuối, TRƯỚC khi** giao xong artifact · mục `== Trivia ==` dẫn scenario → `T1*`. ⚠️ Trang này cũng ghi hero HotA **`Dryope` dùng lại chân dung Gem** — bẫy nhận dạng bằng ảnh |
+| `h3wiki-gem-sorceress` | T1* (infobox) / T6 (prose) | FETCHED | Trang `Gem (Sorceress)` (2.095 byte), `refs` = **0** — bản campaign của hero, class ghi là **Sorceress (Campaign)**. Đây là **một phía** của tranh chấp class |
+| `fandom-gem-enroth` | T1* (khối `{{text}}`) / T6 (prose) | FETCHED | Trang `Gem (Enroth)` (5.340 ký tự, 3 ref). Chứa **bio Heroes IV** — *"over eighty years… thanks to the waters of a special fountain"*. ⚠️ **STEP D:** câu này viết `[[Reckoning\|destruction of the old world]]` — **chữ "Reckoning" KHÔNG hiển thị trong game**. ⭐ Quét 200 backlink xác nhận Gem **không có trong campaign H4 nào** |
+| `roe-manual-p125` | **T2\*** | FETCHED | *Restoration of Erathia Manual* tr.125 — khối chỉ số class **Druid** |
+| `sod-manual-p4` | **T2\*** | FETCHED | *Shadow of Death Manual* tr.4 — mở đầu thư Yog |
+| `sod-final-peace` | T1* | FETCHED | Scenario `Final Peace` (7.695 byte) — tuyến Lord Fayette |
+| `sod-new-beginning-campaign` | T1* | FETCHED | Trang **campaign** `New Beginning` (3.732 byte) — khác các trang scenario con |
+| `h3wiki-herospec-txt` | **T1** | FETCHED | `Translation Data/HeroSpec.txt` (105.850 byte) — specialty hero, trích từ file game. ⚠️ **Đánh chỉ số theo THỨ TỰ hero, không theo tên** — phải map cẩn thận |
+| `h3wiki-heroes-from-other-games` | T1*/T6 | FETCHED | Bảng roster hero xuất hiện xuyên nhiều game — dùng để xác nhận Gem có mặt ở H1/H2 |
+| `h3wiki-clancy` | T6 | FETCHED | ⚠️ **Phản bác một claim của chính thelazy:** trang `Gem` nói nàng *"recruited Clancy"*, nhưng trang `Clancy` nói ngược — *"He offered to help Gem"* |
+
+#### ⚠️⚠️ Tranh chấp class Gem — HAI nguồn chính thức nói khác nhau
+
+| Bối cảnh | Class | Nguồn | Tier |
+|---|---|---|---|
+| SoD *New Beginning* | **Sorceress (Campaign)** | game | `T1*` |
+| SoD *New Beginning* | **Druid** | **sách in** `sod-manual-p14` | **`T2*`** |
+
+🔴 **Không phải lỗi wiki** — đã đọc nguyên văn cả hai. Theo `CANON-POLICY.md` R1 (in-game thắng
+manual) thì trong campaign đó nàng là **Sorceress**, nhưng phải ghi cả hai phía.
+
+⭐ Và game có câu trả lời hay hơn cả hai wiki: `sod-driving-for-the-boots` chứa **trọn tuyến chuyển
+đổi Sorceress → Druid diễn ra NGAY TRONG campaign đó** — nên "vừa Sorceress vừa Druid" là **trạng
+thái thật của nhân vật**, không phải lỗi dữ liệu. ⚠️ Câu hòa giải của wiki (*"her class is listed as
+Sorceress though she is still technically a Druid"*) là **suy diễn không dẫn nguồn** — đừng dùng.
+
+#### ⚠️ Ba cái tên gần giống Gem — kiểm trước khi trích (STEP A)
+
+| Tên | Là gì |
+|---|---|
+| **`Gem (Ashan)`** | Hero **Heroes VII**. ⚠️ Bio **cố ý nhại** bio Old Universe → **rất dễ trích nhầm**. `CANON-POLICY.md` R5: Ashan không có quyền gì với Old Universe |
+| **`Dryope`** | Hero HotA **dùng lại chân dung Gem** |
+| **`Dargem`** | Nhân vật khác hẳn, chỉ trùng chuỗi ký tự |
+
+⭐ Đây là lần **đầu tiên** `BH-2` được chạy như **bước bắt buộc trước mọi fetch khác**, và nó bắt được
+**ba** bẫy — thay vì sập như hai lần trước (`Sandro (Xeen)`, `Haart (Cron)`).
+
 ### Campaign: New Beginning (Gem bị lừa)
 
 | key | tier | access | Nội dung |
@@ -961,15 +1002,51 @@ dòng đó **không có ref nào**. Độ chính xác kiểu này mà không ngu
 **Mốc đáng tin nhất:** `1168-08-05` (Archibald lên ngôi) và `1169` (đảo chính Kastore) —
 cả hai truy được về text MM7 trích thẳng.
 
-### ⭐ `h3wiki-herobios-txt` là `T1` THẬT, không phải `T1*`
+### 🔴 `h3wiki-herobios-txt` — ĐÍNH CHÍNH TIER 2026-08-05: là `T1*`, KHÔNG phải `T1`
 
-Phát hiện đáng chú ý: thelazy có trang `Translation Data/HeroBios.txt` — **file string table
-trích trực tiếp từ game** (168KB, bốn cột EN/FR/PL/RU).
+<details><summary>Bản ghi cũ (SAI) — giữ lại để thấy lập luận hỏng ở đâu</summary>
 
-Đây **không phải** bản chép do người viết lại, mà là **dữ liệu trích từ file game**. Theo
-`CANON-POLICY.md`, nó xứng đáng tier **`T1`** không có dấu sao.
+> Phát hiện đáng chú ý: thelazy có trang `Translation Data/HeroBios.txt` — **file string table
+> trích trực tiếp từ game** (168KB, bốn cột EN/FR/PL/RU).
+>
+> Đây **không phải** bản chép do người viết lại, mà là **dữ liệu trích từ file game**. Theo
+> `CANON-POLICY.md`, nó xứng đáng tier **`T1`** không có dấu sao.
+>
+> **Đây là nguồn tốt nhất dự án có được tính tới nay**, và là bước tiến nhỏ hướng tới `B-001`.
 
-**Đây là nguồn tốt nhất dự án có được tính tới nay**, và là bước tiến nhỏ hướng tới `B-001`.
+</details>
+
+**Vì sao sai:** lập luận trên **giả định** trang đó là dữ liệu trích, chứ không **kiểm** được điều
+đó. Đã kiểm lại (luồng verify `gem`, 2026-08-05):
+
+| | `Talk:Artifact/descriptions` (`h3wiki-artraits-txt`) | `Translation Data/HeroBios.txt` |
+|---|---|---|
+| Câu khai xuất xứ | ✅ **CÓ** — `Information from H3Bitmap.lod > artraits.txt` | ❌ **KHÔNG có gì** |
+| `grep -c '<ref'` | — | **0** |
+| Phân loại trang | — | `[[Category:Contributor resources]]` |
+| Nội dung | bảng, kèm dòng xuất xứ | bảng 4 cột trơ, không header, không chú thích |
+
+→ **Hai trang này KHÔNG tương đương, nhưng registry đã đối xử như nhau.** `artraits` có **câu tự
+khai xuất xứ tới tận tên file `.lod`** — đó là cơ sở cho `T1`. `HeroBios.txt` **không có gì cả**;
+nó chỉ là một bảng do người sửa wiki dán lên.
+
+⚠️ Và dự án **đã có bằng chứng thelazy chép sai** (hai con số năm trong *Diaries of Archibald*).
+Một bản chép không khai xuất xứ thì **đúng định nghĩa `T1*`**: text in-game tiếp cận **qua trung
+gian**.
+
+**Quyết định:** `h3wiki-herobios-txt` → **`T1*`**. Đã sửa nhãn ở cả ba bài dùng nó
+(`archibald-ironfist`, `jeddite`, `gem`).
+
+✅ **`h3wiki-artraits-txt` GIỮ NGUYÊN `T1`** — nó có câu khai xuất xứ, và đó chính là thứ phân biệt.
+
+🔴 **Bài học cấp registry, và nó lặp lại một mẫu đã thấy:** đây là lần **thứ hai** trong hai ngày
+một tier bị gán quá cao vì **suy từ hình thức trang thay vì kiểm bằng chứng bên trong nó** — lần
+trước là `h3wiki-lord-haart` (gộp infobox in-game với văn xuôi wiki thành một tier).
+
+> **Quy tắc rút ra: một bảng dữ liệu trông giống file game KHÔNG phải là file game.**
+> Chỉ nâng lên `T1` khi trang **tự khai xuất xứ** (tên file gốc, archive, hoặc hash).
+
+**Con đường lên `T1` thật cho bio hero vẫn là `B-001`** — trích `HeroBios.txt` từ bản cài game.
 
 *(Chi tiết phụ thú vị từ chính file: bản dịch **Ba Lan và Nga đều để Jeddite là nữ**. Lỗi
 dịch, không phải lore.)*

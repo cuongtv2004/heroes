@@ -405,7 +405,7 @@ Bio chính thức của Jeddite — lấy từ **file string table trích trực
 > is still alive, the rumor of a meeting could not possibly be true. Jeddite has never
 > confirmed nor denied the rumor."
 
-{T1 EXPLICIT: h3wiki-herobios-txt}
+{T1* EXPLICIT: h3wiki-herobios-txt}
 
 **Không một chữ nào** về Ethric, Sandro, necromancy, hay các sự kiện trong `Target`.
 
@@ -419,7 +419,7 @@ Kreegan; campaign cho ta một người bạn cũ mang mặc cảm. **Chúng kh�
 *(Chi tiết phụ: cùng file string table cho thấy bản dịch **Ba Lan và Nga đều để Jeddite là nữ** —
 bản Nga đổi **cả tên** thành `Джедитта`, dạng nữ tính. Đây là lỗi dịch, không phải lore — text tiếng
 Anh và portrait H3 đều là nam.)*
-{T1 EXPLICIT: h3wiki-herobios-txt}
+{T1* EXPLICIT: h3wiki-herobios-txt}
 
 ### Lỗi địa lý trong game text
 
@@ -523,7 +523,7 @@ such insane beliefs." Đây **không phải** lỗ hổng lấy được.
 
 **Q2. Tin đồn về Zenofex là gì?**
 Ngõ cụt hoàn toàn. Không nguồn nào nhắc lại.
-{T1 UNVERIFIED: h3wiki-herobios-txt — **không được nhắc lại ở đâu**}
+{T1* UNVERIFIED: h3wiki-herobios-txt — **không được nhắc lại ở đâu**}
 
 **Q3. Vì sao Ethric chọn Jeddite làm người nhận artifact thay vì tự đi lấy?**
 Không nguồn nào nói. {T1* UNVERIFIED: sod-target — **không được giải thích**}

@@ -158,7 +158,7 @@ canonically true one").
 | Bio Gem, `HeroBios.txt` | "Shortly after **Roland had secured the throne** of Enroth" | **T1** |
 | Prologue `Clearing the Border` (SoD) | "a year has passed since **Archibald and his Necromancer allies were defeated**, ending the Succession Wars" | T1* |
 
-{T1 EXPLICIT: h3wiki-herobios-txt}
+{T1* EXPLICIT: h3wiki-herobios-txt}
 {T1* EXPLICIT: sod-clearing-the-border}
 
 ⭐ Hai bio đầu là **string table trích trực tiếp từ file game** — `T1` không dấu sao. Đây là ví dụ cho
@@ -339,7 +339,7 @@ khi hắn là địch. Game cho hắn mạnh gấp bội khi hắn là kẻ ph�
 
 Archibald **không** là hero trong Heroes III — hắn không có mặt trong roster hero của bất kỳ tộc nào.
 
-{T1 INFERENCE: h3wiki-herobios-txt — suy ra từ việc liệt kê roster, không phải từ sự vắng mặt của tên}
+{T1* INFERENCE: h3wiki-herobios-txt — suy ra từ việc liệt kê roster, không phải từ sự vắng mặt của tên}
 
 ⚠️ **Bản đầu của bài lập luận sai ở đây, và nó tự mâu thuẫn với chính mình.** Bài viết rằng đã grep
 bảy string table và tên `Archibald` xuất hiện **0 lần**. Điều đó **không đúng**: `HeroBios.txt` chứa
@@ -352,7 +352,7 @@ trích dẫn từ chính file đó là lỗi không thể biện hộ.
 Điều nói đúng: tên hắn **có** trong string table, nhưng chỉ **trong bio của hero khác**, chứ không có
 bản ghi hero nào của riêng hắn.
 
-{T1 EXPLICIT: h3wiki-herobios-txt — tên xuất hiện 5 lần, tất cả trong bio Alamar}
+{T1* EXPLICIT: h3wiki-herobios-txt — tên xuất hiện 5 lần, tất cả trong bio Alamar}
 
 Nhưng hắn **có** trong game text Heroes III, dưới dạng được nhắc tới. Đáng chú ý nhất là một rumor
 trong HotA:
@@ -381,7 +381,7 @@ không nói gì về hắn.
 | **Heroes III** | Chỉ được nhắc trong game text | ❌ |
 
 {T6 INFERENCE: fandom-archibald-ironfist + fandom-path-of-darkness}
-{T1 EXPLICIT: h3wiki-herobios-txt — cho dòng Heroes III}
+{T1* EXPLICIT: h3wiki-herobios-txt — cho dòng Heroes III}
 
 ⚠️ **Vai trò MM7 cần nói chính xác:** Archibald **không phải** một trong hai người mà party chọn giữa
 trên Path of Darkness. Hai người đó là **Devon Sleen** và **Brandis Fairweather**. Archibald là người

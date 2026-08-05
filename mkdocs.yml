@@ -115,6 +115,7 @@ nav:
           - codex/heroes/archibald-ironfist.md
           - codex/heroes/gauldoth-half-dead.md
           - codex/heroes/tarnum.md
+          - codex/heroes/gem.md
       - Nhân vật:
           - codex/characters/ethric.md
       - Sự kiện:
@@ -144,6 +145,7 @@ nav:
           - sources/notes/verify-tarnum-2026-08-03.md
           - sources/notes/verify-the-reckoning-2026-08-04.md
           - sources/notes/verify-vu-dau-doc-nicolas-gryphonheart-2026-08-05.md
+          - sources/notes/verify-gem-2026-08-05.md
 
 extra_css:
   - assets/extra.css

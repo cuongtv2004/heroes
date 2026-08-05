@@ -28,6 +28,10 @@ Nhân vật điều khiển được trong game.
   khoảng mười năm, rồi lên ngôi một vương quốc **thứ hai**. Bài đầu tiên của kỷ nguyên
   *Age of Kings*, và là bài duy nhất có nguồn **Archibald tự kể ở ngôi thứ nhất**.
 
+- [**Gem**](heroes/gem.md) — nữ Sorceress trở thành Druid, và là người [[sandro]] lừa. Gốc gác của
+  nàng — **cả làng bị skeleton giết, nàng là người sống sót duy nhất** — nằm trong một timed event
+  ngày 1, không có ở bio hay prologue.
+
 ### Nhân vật
 
 Nhân vật có vai trò lore nhưng không chơi được.
