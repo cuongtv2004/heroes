@@ -48,7 +48,7 @@ sources_used:
   - h3-manual-specter-of-power
   - fandom-h4-hero-bios
 relations: []
-open_questions: 4
+open_questions: 5
 ---
 
 # Vụ đầu độc Nicolas Gryphonheart
@@ -711,7 +711,14 @@ Fandom dùng cụm này cho việc hồi sinh Nicolas. Quét **toàn bộ 172 sc
 xuất hiện. Nghi là thuật ngữ nhập từ universe khác.
 {T6 UNVERIFIED: fandom-nicolas-gryphonheart — 0 hit trên toàn bộ scenario}
 
-**Q5. Lòng trung thành cuối của Haart thuộc về ai?**
+**Q5. Trang story chính thức của 3DO thực sự viết gì?**
+Đây là **phía `T2` của mâu thuẫn thức ăn/rượu** ở *Điểm tranh chấp canon* mục 6, và dự án **chưa
+tự đọc được nó**: cả ba timestamp đã thử đều `403` FortiGuard. Hiện nó đứng trên citation của Fandom
+cộng một lần fetch của luồng kiểm định — **không phải** một lần đối chiếu trực tiếp.
+Cần đọc lại khi có mạng khác, cùng lượt với 63 URL của `B-025`.
+{T2 UNVERIFIED: roe-story-3do — chưa fetch được, không xác minh trực tiếp được trong phiên này}
+
+**Q6. Lòng trung thành cuối của Haart thuộc về ai?**
 Game text nói hắn thuộc *"King Vilmar's necromantic cult"* và hành động theo lệnh Vilmar. Nhưng
 Sandro là người **giao thuốc độc** và **dàn xếp** với hắn. Không nguồn nào nói Haart biết Sandro
 đứng sau Vilmar.
