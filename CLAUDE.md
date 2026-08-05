@@ -54,9 +54,13 @@ python3 tools/check.py           # kiểm toàn vẹn dữ liệu — PHẢI 0 l
 python3 tools/check.py --next    # entity nào được nhắc nhiều nhất mà chưa viết
 python3 tools/wikilinks.py --check   # liệt kê liên kết treo
 python3 tools/wikilinks.py --build   # sinh _build/ cho MkDocs
-mkdocs build --strict            # kiểm cấu trúc site
+.venv/bin/mkdocs build --strict  # kiểm cấu trúc site
 python3 tools/lint_site.py       # kiểm hiển thị — markup lọt ra thành chữ thô
 ```
+
+⚠️ **`mkdocs` KHÔNG có trên PATH — nó nằm trong `.venv/`.** Gõ `mkdocs` trơn sẽ ra
+`command not found`, và điều đó **không** có nghĩa là máy thiếu mkdocs. Đừng kết luận
+"cửa A3 không chạy được" rồi dừng lại hỏi user; dùng `.venv/bin/mkdocs`.
 
 **Ba lớp kiểm, mỗi lớp bắt loại lỗi khác nhau — không thay thế nhau được:**
 
@@ -175,27 +179,47 @@ giản không hiện ra. Xem `B-017`.
 
 ## Trạng thái
 
-Giai đoạn 1 (xây nền) đã xong. Codex có **12/12 entity `verified`** trên 4 loại schema khác
-nhau. Saga chưa bắt đầu — theo `SAGA-STYLE.md` S6, chỉ được viết khi entity Codex liên
-quan đã `verified`.
+Giai đoạn 1 (xây nền) đã xong. Codex có **15/15 entity `verified`** trên 5 loại schema khác
+nhau (`hero` ×6, `artifact` ×5, `event` ×2, `character` ×1, `kingdom` ×1). Saga chưa bắt đầu —
+theo `SAGA-STYLE.md` S6, chỉ được viết khi entity Codex liên quan đã `verified`.
 
-`B-016` **còn đúng một mục**: `archibald-ironfist` (Age of Kings), `gauldoth-half-dead` (Axeoth) và
-`tarnum` (xuyên kỷ) đã xong. Chỉ còn `the-reckoning` — và nó bị `B-017` chặn, vì `codex/events/`
-vẫn rỗng nên chưa có convention cho loại `event`.
+✅ **`B-016` (cân bằng kỷ nguyên) ĐÃ XONG 2026-08-04** — cả bốn entity trụ đều `verified`:
+`archibald-ironfist` (Age of Kings), `gauldoth-half-dead` (Axeoth), `tarnum` (xuyên kỷ),
+`the-reckoning` (ranh giới Enroth → Axeoth).
 
-Việc còn tồn: `docs/00-foundation/BACKLOG.md`. Ưu tiên cao nhất là `B-001` — nâng
-`T1*` lên `T1` thật bằng cách trích text từ file game gốc.
+✅ **`B-017` cũng xong** — convention cho loại `event` đã vào `SCHEMA.md` mục 5, `wikilinks.py --build`
+thật sự sinh *Quan hệ nghịch đảo*, và `codex/events/` đã có **hai** bài `verified`.
 
-**Đợt kiểm định 2026-08-03 (6 bài) để lại ba thứ phải biết trước khi viết bài mới:**
+Việc còn tồn: `docs/00-foundation/BACKLOG.md`. Ưu tiên cao nhất vẫn là `B-001` — nâng
+`T1*` lên `T1` thật. **Đường vào đã đổi:** không còn chỉ trông vào file `.h3c` nữa, vì bộ tài liệu
+Bullard ở UT Austin có **44 file text campaign SoD ở dạng nguồn** (`B-002`).
 
-1. ⚠️ **`web.archive.org` KHÔNG bị chặn.** Cảnh báo cũ trong `REGISTRY.md` là **sai** — nó biến
-   nguồn chính thức NWC/3DO thành "không lấy được" trong khi thực ra lấy được. Dùng `curl -L` với
-   **timestamp đầy đủ** (`/web/YYYYMMDDhhmmss/`); dạng `/web/2005/` hay trả trang wrapper rỗng.
+**Hai việc lớn nhất hiện tại đều CẦN USER, không cần thêm công cụ:**
+
+| # | Việc | Cần gì |
+|---|---|---|
+| `B-002` | Nội dung `Heroes.zip` (21,7 MB) trả **401** — manifest đã lấy, biết rõ bên trong có gì | User quyết định có liên hệ Dolph Briscoe Center (số hiệu `2012-212`) hay dùng luồng "Request a Copy" |
+| `B-025` | FortiGuard chặn **mọi** nguồn official qua wayback | Một mạng khác (hotspot/VPN) để fetch **một lô 63 URL đã có sẵn timestamp** |
+
+**Bốn điều phải biết trước khi viết bài mới:**
+
+1. 🔴 **`web.archive.org` — nội dung BỊ CHẶN từ 2026-08-04.** FortiGuard chặn theo **domain đích**
+   (`3do.com`, `heroesofmightandmagic.com` xếp category "Games"), **không** phải rate limit và
+   **không** phải chặn archive.org. CDX index vẫn chạy → vẫn enumerate được, chỉ không đọc được.
+   ⚠️ **Bẫy im lặng:** trang chặn trả **HTTP 200**, **~35,3 KB** HTML, strip tag còn **~370 ký tự** —
+   `curl` báo thành công. Nhận diện bằng **kích thước + grep chữ `FortiGuard`**, đừng nhận diện bằng
+   mã HTTP. Xem `B-025`.
+   *(Ghi chú cũ ở đây từng nói "KHÔNG bị chặn" — đúng vào 2026-08-03, sai từ 2026-08-04.)*
 2. ⚠️ **thelazy chép trung thực nhưng KHÔNG luôn chép đúng.** Đã bắt được nó ghi sai hai con số năm
-   so với manual chính thức. Mọi mốc niên đại 1165–1169 phải đối chiếu nguồn 3DO qua archive.
+   so với manual chính thức. Mọi mốc niên đại 1165–1169 phải đối chiếu nguồn 3DO — **hiện không đối
+   chiếu được**, xem mục 1.
 3. ⚠️ **Trang artifact/hero trên thelazy KHÔNG chứa danh sách scenario** (660–1.718 byte). Mọi bảng
    "Xuất hiện trong game" phải dựng bằng `api.php?action=query&list=backlinks`, dẫn **key riêng cho
    từng dòng**, và đọc `| source =` để ghi đúng sản phẩm.
+4. 🔴 **`list=search` của thelazy KHÔNG dùng được cho claim phủ định** — index bị cũ, đã đo được
+   `0 hit` cho một cụm nằm ngay trên trang đang xét. Enumerate bằng `list=categorymembers` /
+   `list=allpages` rồi grep tại chỗ. Đây là **V5** của `VERIFY-PROTOCOL.md`.
 
-Ba nguồn mới đáng khai thác: `3do-mm7-diaries-archibald` (`T2`, site chính thức),
-`fulton-names-2023` (`T4`, ~200 câu hỏi — xem `B-020`), `h3wiki-artraits-txt` (`T1` thật).
+Nguồn đáng khai thác tiếp: `fulton-names-2023` (`T4`, ~200 câu hỏi — `B-020`),
+`ray-interview-ubisoft-2015` (`T4` cho kỷ Axeoth — `B-024`), `h3wiki-artraits-txt` (`T1` thật),
+và **214 trang manual in `T2*`** mở được trong đợt 2026-08-04.

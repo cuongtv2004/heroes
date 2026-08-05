@@ -203,6 +203,23 @@ Ghi ra để trung thực:
   lỗi phổ biến nhất và nguy hiểm nhất khi dùng AI viết lore.
 - Không có bản game gốc để đối chiếu là hạn chế cấu trúc, không sửa được bằng
   quy trình.
+- 🔴 **CÔNG CỤ TÌM KIẾM CÓ THỂ NÓI DỐI BẰNG SỰ IM LẶNG — và `list=search` của thelazy đang nói dối.**
+  Index full-text của `heroes.thelazy.net` **bị cũ**, đo được ngày 2026-08-04 khi verify
+  `the-reckoning`:
+
+  | Truy vấn | Search API trả về | Sự thật |
+  |---|---|---|
+  | `srsearch=Volee` | **3** hit | từ này nằm trên **trên chục** trang scenario |
+  | `srsearch="February 10th"` | **0** hit | cụm này nằm ngay trên trang `The Reckoning` |
+
+- ✅ **Quy tắc bổ sung — V5: claim phủ định KHÔNG ĐƯỢC dựng trên `list=search`.** Một kết quả rỗng từ
+  search API **không phải bằng chứng vắng mặt** — nó chỉ là bằng chứng rằng index chưa bắt kịp. Cách
+  đúng, đã dùng thành công trong chính đợt đó: enumerate bằng `list=categorymembers` hoặc
+  `list=allpages`, bulk-fetch `prop=revisions&rvprop=content`, rồi **grep tại chỗ**. Đợt verify
+  `the-reckoning` quét **172 trang scenario** và **180 trang backlink** theo cách này.
+- **Vì sao V5 phải nằm ở tầng protocol chứ không phải mẹo vặt:** `CLAUDE.md` xác định claim phủ định
+  là **loại lỗi nguy hiểm nhất của dự án** — "nó trông giống sự cẩn trọng". V5 chặn đúng con đường
+  rẻ nhất để tạo ra một claim phủ định sai: gõ một truy vấn, thấy `0 hit`, và viết "không tồn tại".
 
 ---
 
@@ -213,3 +230,4 @@ Ghi ra để trung thực:
 | 2026-07-31 | Bản đầu | Theo yêu cầu: phải có luồng verdict độc lập, không tin kết quả một chiều |
 | 2026-08-03 | Thêm mục 7: người điều phối có thể gieo lỗi cho verifier | Xảy ra thật — một cách đọc sai mục 5.3 được ghi vào bảng claim dưới nhãn "đã xác lập", hai verifier sau nhận làm tiền đề và cùng báo `BLOCKER` sai. V1 (cấm đọc bài gốc) khiến verifier không thể tự bắt |
 | 2026-08-03 | **Thêm V4: người điều phối phải tự fetch lại mọi trích dẫn verifier dùng làm bằng chứng quyết định** | 🔴 Verifier bài `deyja` **bịa một câu trích** và nó lọt vào bài đã đóng dấu `verified`. Nó lọt vì kết luận nó chống lưng thì **đúng** — trích dẫn bịa kèm kết luận đúng là ca khó bắt nhất. V3 không tự bảo vệ được chính nó, vì verifier cũng là mô hình ngôn ngữ |
+| 2026-08-05 | **Thêm V5: claim phủ định không được dựng trên `list=search`** | Đóng mục 1 của `B-026`, mở từ đợt verify `the-reckoning` (2026-08-04). Index full-text của thelazy bị cũ và **trả `0 hit` cho một cụm nằm ngay trên trang đang xét**. Một công cụ tìm kiếm hỏng biến thành cỗ máy sản xuất claim phủ định sai, mà `check.py` không có cách nào bắt |

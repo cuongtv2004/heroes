@@ -299,10 +299,14 @@ và **180 trang backlink** bằng cách này.
 
 **Việc cần làm:**
 
-1. Ghi thẳng vào `VERIFY-PROTOCOL.md`: claim phủ định **không được** dựng trên `list=search`.
+1. ~~Ghi thẳng vào `VERIFY-PROTOCOL.md`: claim phủ định **không được** dựng trên `list=search`.~~
+   ✅ **XONG 2026-08-05** — thành **V5** ở `VERIFY-PROTOCOL.md` mục 7, kèm bảng đo hai truy vấn.
+   Cũng đã vào `CLAUDE.md` mục *Trạng thái* điểm 4.
 2. Rà lại các claim phủ định đã có trong Codex xem cái nào dựng bằng search API.
 
-**Trạng thái:** đã ghi vào `REGISTRY.md`. Chưa vào `VERIFY-PROTOCOL.md`.
+**Trạng thái:** mục 1 ✅ xong. **Còn mục 2** — chưa rà lại bài cũ. Đây là việc **đọc lại**, không cần
+mạng ngoài, nên **không bị `B-025` chặn**: quét các bài `verified` tìm claim phủ định, rồi với mỗi cái
+hỏi "claim này dựng bằng gì?". Gộp được với mục 2 của `B-027` và với `B-003` thành **một đợt rà**.
 
 ### B-027 · Đích wikilink KHÔNG phải text game — biến thể mới của lằn ranh `T1*`
 
@@ -847,3 +851,8 @@ verifier độc lập tìm nguồn T1–T4 cho từng cái — đúng luồng đ
 | 2026-08-03 | Thêm B-019 (lỗ nguồn Heroes IV) từ verify `amulet-of-the-undertaker`. Phát hiện: thelazy gần như chỉ phủ H3, nên mọi nội dung H4 hiện chỉ có nguồn `T6`. **Việc này chặn B-016** — hai trong bốn entity trụ (`gauldoth-half-dead`, `tarnum`) sẽ gặp đúng lỗ đó |
 | 2026-08-03 | Thêm B-020 (`fulton-names-2023`, `T4`) từ verify `jeddite`. **B-001 tiến bước lớn nhất tính tới nay** từ verify `deyja`: `web.archive.org` **không bị chặn** — cảnh báo cũ trong registry là sai — nên **site chính thức 3DO tiếp cận được**, cho nguồn `T2` đầu tiên không qua wiki. Cùng đợt bắt được **thelazy chép sai hai con số năm** so với manual chính thức, ca đầu tiên thelazy sai |
 | 2026-08-03 | **Xong đợt verify 6 bài draft** → Codex 9/9 `verified`. Tổng: 10 BLOCKER + 49 MAJOR đã sửa. Sáu lỗi nặng nhất đều là **claim phủ định hoặc claim độc quyền** ("không có", "duy nhất", "cả bốn") — khớp đúng bài học lớn nhất trong `CLAUDE.md` |
+| 2026-08-04 | ✅ **B-016 ĐÓNG** — `the-reckoning` `verified`, entity `event` đầu tiên, và cả bốn kỷ nguyên đều có entity trụ. ✅ **B-017 ĐÓNG** — convention `event` vào `SCHEMA.md`, và `wikilinks.py --build` **hiện thực hóa** lời hứa sinh quan hệ nghịch đảo vốn ba tài liệu cùng nói mà không công cụ nào làm |
+| 2026-08-04 | 🔴 **Thêm B-025 — và nó đảo ngược một điều `CLAUDE.md` đang dạy.** FortiGuard chặn `web.archive.org` theo **domain đích**, không phải rate limit. Chẩn đoán bằng thí nghiệm đối chứng 5 URL. Chặn **toàn bộ** nguồn official của dự án. Bẫy nặng nhất: trang chặn trả **HTTP 200 + 35,3 KB** nên `curl` báo thành công |
+| 2026-08-04 | Thêm B-026 (`list=search` của thelazy hỏng) và B-027 (đích wikilink không phải text game) — cả hai từ đợt verify `the-reckoning`. Mở **214 trang manual in** (`T2*`) và **đóng B-012 vì tiền đề sai**. **B-002 mở được một nửa**: repo UT Austin vào được, **manifest đã lấy**, nội dung `Heroes.zip` trả **401** — nhưng manifest đủ để **đổi bản đồ ưu tiên của cả dự án** |
+| 2026-08-05 | Bài `event` thứ hai (`vu-dau-doc-nicolas-gryphonheart`) và `gem` đạt `verified` → Codex **15/15**. Gỡ một `DISPUTED` vốn chỉ là **lỗi gán tier**, và truy ra mốc 27/9 là **dateline bài báo 1998**, không phải ngày trong truyện |
+| 2026-08-05 | ✅ **Đóng mục 1 của B-026** → thành **V5** của `VERIFY-PROTOCOL.md`. Cùng lượt: sửa mục *Trạng thái* của `CLAUDE.md`, vốn còn ghi **12/12** và còn dạy rằng `web.archive.org` **không bị chặn** — tức tài liệu điều hướng chính của dự án đang mâu thuẫn trực tiếp với B-025 |
